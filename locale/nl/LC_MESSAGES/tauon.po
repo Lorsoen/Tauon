@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2024-10-11 21:35+0200\n"
+"POT-Creation-Date: 2024-10-08 13:45+0200\n"
 "PO-Revision-Date: 2024-06-05 13:09+0000\n"
 "Last-Translator: zeskeertwee <zeskeertwee@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/tauon-music-box/"
@@ -17,6 +17,62 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.6-dev\n"
 "Generated-By: pygettext.py 1.5\n"
+
+#: t_modules/t_dbus.py:59
+msgid "Failed to start indicator"
+msgstr ""
+
+#: t_modules/t_extra.py:135 t_modules/t_extra.py:151
+msgid " B"
+msgstr ""
+
+#: t_modules/t_extra.py:138 t_modules/t_extra.py:154
+msgid " KB"
+msgstr ""
+
+#: t_modules/t_extra.py:141 t_modules/t_extra.py:157
+msgid " MB"
+msgstr ""
+
+#: t_modules/t_extra.py:144
+msgid " GB"
+msgstr ""
+
+#: t_modules/t_jellyfin.py:74
+msgid "Check server is running and URL is correct."
+msgstr ""
+
+#: t_modules/t_jellyfin.py:74
+msgid "Could not establish connection to server."
+msgstr ""
+
+#: t_modules/t_jellyfin.py:83
+msgid "Connection and authorisation successful"
+msgstr ""
+
+#: t_modules/t_jellyfin.py:86
+msgid "401 Authentication failed"
+msgstr ""
+
+#: t_modules/t_jellyfin.py:86
+msgid "Check username and password."
+msgstr ""
+
+#: t_modules/t_jellyfin.py:88
+msgid "Jellyfin auth error"
+msgstr ""
+
+#: t_modules/t_jellyfin.py:367
+msgid "Error connecting to Jellyfin"
+msgstr ""
+
+#: t_modules/t_jellyfin.py:400
+msgid "Error connecting to Jellyfin for Import"
+msgstr ""
+
+#: t_modules/t_jellyfin.py:418
+msgid "Error accessing Jellyfin"
+msgstr ""
 
 #: t_modules/t_main.py:1921 t_modules/t_main.py:1923
 msgid "No artist image found."
@@ -491,22 +547,6 @@ msgstr ""
 
 #: t_modules/t_main.py:14840
 msgid "AFTER"
-msgstr ""
-
-#: t_modules/t_main.py:14846
-msgid "Warning: This may change the file extension"
-msgstr ""
-
-#: t_modules/t_main.py:14852
-msgid "Warning: The filename might not be unique"
-msgstr ""
-
-#: t_modules/t_main.py:14856
-msgid "Warning: A track has incomplete metadata"
-msgstr ""
-
-#: t_modules/t_main.py:14864
-msgid "Physically renames all the tracks in the folder"
 msgstr ""
 
 #: t_modules/t_main.py:14925 t_modules/t_main.py:14929
@@ -1084,73 +1124,6 @@ msgstr ""
 msgid "Rescanning folders..."
 msgstr ""
 
-#: t_modules/t_main.py:17693
-msgid "Playlist:\n"
-msgstr ""
-
-#: t_modules/t_main.py:17694
-msgid "Generated:\n"
-msgstr ""
-
-#: t_modules/t_main.py:17695
-msgid "Tracks in playlist:\n"
-msgstr ""
-
-#: t_modules/t_main.py:17697
-msgid "Repeats in playlist:\n"
-msgstr ""
-
-#: t_modules/t_main.py:17701
-msgid "Total local size:\n"
-msgstr ""
-
-#: t_modules/t_main.py:17702
-msgid "Playlist duration:\n"
-msgstr ""
-
-#: t_modules/t_main.py:17703
-msgid "Total playtime:\n"
-msgstr ""
-
-#: t_modules/t_main.py:17705
-msgid "Track types:\n"
-msgstr ""
-
-#: t_modules/t_main.py:17721
-msgid "Percent of tracks are CUE type:\n"
-msgstr ""
-
-#: t_modules/t_main.py:17734
-msgid "MP3 bitrates (kbps):\n"
-msgstr ""
-
-#: t_modules/t_main.py:17753
-msgid "OGG bitrates (kbps):\n"
-msgstr ""
-
-#: t_modules/t_main.py:17791
-msgid ""
-"\n"
-"-------------- Top Artists --------------------\n"
-"\n"
-msgstr ""
-
-#: t_modules/t_main.py:17797
-msgid ""
-"\n"
-"\n"
-"-------------- Top Albums --------------------\n"
-"\n"
-msgstr ""
-
-#: t_modules/t_main.py:17801
-msgid ""
-"\n"
-"\n"
-"-------------- Top Genres --------------------\n"
-"\n"
-msgstr ""
-
 #: t_modules/t_main.py:17821 t_modules/t_main.py:17832
 #: t_modules/t_main.py:17851 t_modules/t_main.py:22294
 msgid "Playlist is locked"
@@ -1195,7 +1168,7 @@ msgid ""
 msgstr ""
 
 #: t_modules/t_main.py:18796 t_modules/t_main.py:22926
-#: t_modules/t_main.py:22930 t_modules/t_main.py:45980
+#: t_modules/t_main.py:22930
 msgid "New Playlist"
 msgstr ""
 
@@ -1929,7 +1902,6 @@ msgstr ""
 #: t_modules/t_main.py:21643 t_modules/t_main.py:21906
 #: t_modules/t_main.py:21930 t_modules/t_main.py:21960
 #: t_modules/t_main.py:23585 t_modules/t_main.py:23721
-#: t_modules/t_main.py:24998
 msgid "No results found"
 msgstr ""
 
@@ -2063,7 +2035,6 @@ msgid "Time"
 msgstr ""
 
 #: t_modules/t_main.py:22396 t_modules/t_main.py:22427
-#: t_modules/t_main.py:36790
 msgid "Filepath"
 msgstr ""
 
@@ -2423,18 +2394,6 @@ msgstr ""
 msgid "Scrobbling is Active"
 msgstr ""
 
-#: t_modules/t_main.py:24146 t_modules/t_main.py:24151
-msgid "Unknown Track"
-msgstr ""
-
-#: t_modules/t_main.py:24156
-msgid "Unknown Album"
-msgstr ""
-
-#: t_modules/t_main.py:24196
-msgid "Error - Discord not running?"
-msgstr ""
-
 #: t_modules/t_main.py:24211
 msgid "Exit Shuffle Lockdown"
 msgstr ""
@@ -2443,53 +2402,16 @@ msgstr ""
 msgid "Donate"
 msgstr ""
 
-#: t_modules/t_main.py:24219
-msgid "User clicked menu exit button"
-msgstr ""
-
 #: t_modules/t_main.py:24230
 msgid "Disengage Quick Add"
-msgstr ""
-
-#: t_modules/t_main.py:24326
-msgid "Disable Columns"
-msgstr ""
-
-#: t_modules/t_main.py:24328
-msgid "Enable Columns"
-msgstr ""
-
-#: t_modules/t_main.py:24339
-msgid "Disable Title Breaks"
-msgstr ""
-
-#: t_modules/t_main.py:24341
-msgid "Enable Title Breaks"
 msgstr ""
 
 #: t_modules/t_main.py:24393
 msgid "Encoding warning: Missing one or more files"
 msgstr ""
 
-#: t_modules/t_main.py:24399
-msgid "output"
-msgstr ""
-
 #: t_modules/t_main.py:25003
 msgid "Press Tab key to switch to Spotify search"
-msgstr ""
-
-#: t_modules/t_main.py:25204
-msgid "(Include multi-tag results)"
-msgstr ""
-
-#: t_modules/t_main.py:25209 t_modules/t_main.py:25217
-#: t_modules/t_main.py:25230 t_modules/t_main.py:25248
-msgid "BY"
-msgstr ""
-
-#: t_modules/t_main.py:25236
-msgid "FROM"
 msgstr ""
 
 #: t_modules/t_main.py:25330
@@ -2498,31 +2420,6 @@ msgstr ""
 
 #: t_modules/t_main.py:25330
 msgid "This may take a moment"
-msgstr ""
-
-#: t_modules/t_main.py:25512
-msgid "Welcome to v7.2.0!"
-msgstr ""
-
-#: t_modules/t_main.py:25516
-msgid "You can check out the release notes on the https://"
-msgstr ""
-
-#: t_modules/t_main.py:25517
-msgid "Github release page."
-msgstr ""
-
-#: t_modules/t_main.py:25523
-msgid "New supporter bonuses!"
-msgstr ""
-
-#: t_modules/t_main.py:25527
-msgid ""
-"A new supporter bonus theme is now available! Check it out at the above link!"
-msgstr ""
-
-#: t_modules/t_main.py:25532
-msgid "Your support means a lot! Love you!"
 msgstr ""
 
 #: t_modules/t_main.py:25597
@@ -2874,10 +2771,6 @@ msgstr ""
 msgid "Cache size"
 msgstr ""
 
-#: t_modules/t_main.py:28284
-msgid " GB"
-msgstr ""
-
 #: t_modules/t_main.py:28300
 msgid "Set audio output device"
 msgstr ""
@@ -3173,7 +3066,7 @@ msgstr ""
 msgid "Missing dependency python-pypresence"
 msgstr ""
 
-#: t_modules/t_main.py:28679 t_modules/t_main.py:36824
+#: t_modules/t_main.py:28679
 msgid "Disabled"
 msgstr ""
 
@@ -3388,10 +3281,6 @@ msgstr ""
 
 #: t_modules/t_main.py:29415
 msgid "Reset flips"
-msgstr ""
-
-#: t_modules/t_main.py:29425 t_modules/t_main.py:36822
-msgid "OK"
 msgstr ""
 
 #: t_modules/t_main.py:29494 t_modules/t_main.py:29495
@@ -3634,10 +3523,6 @@ msgstr ""
 msgid "Open source software used (cont'd)"
 msgstr ""
 
-#: t_modules/t_main.py:30091
-msgid "Public Domain"
-msgstr ""
-
 #: t_modules/t_main.py:30213 t_modules/t_main.py:30216
 msgid "Credits"
 msgstr ""
@@ -3819,12 +3704,7 @@ msgid "Tauon Music Box ALBUM SHUFFLE!"
 msgstr "Open Tauon Music Box"
 
 #: t_modules/t_main.py:31462 t_modules/t_main.py:36567
-#: t_modules/t_main.py:40931
 msgid "Added station to: "
-msgstr ""
-
-#: t_modules/t_main.py:31677
-msgid "MENU"
 msgstr ""
 
 #: t_modules/t_main.py:31757
@@ -3865,12 +3745,14 @@ msgid "File copy in progress..."
 msgstr ""
 
 #: t_modules/t_main.py:31803
+#, fuzzy
 msgid "Cleaning db...  "
-msgstr ""
+msgstr "Open Map"
 
 #: t_modules/t_main.py:31806
+#, fuzzy
 msgid "Rescanning Tags...  "
-msgstr ""
+msgstr "Open Map"
 
 #: t_modules/t_main.py:31809
 msgid "Accessing PLEX library..."
@@ -3917,7 +3799,7 @@ msgstr ""
 #: t_modules/t_main.py:31848
 #, fuzzy
 msgid "Scanning Scrobbles..."
-msgstr "Zoeken naar Chromecasts..."
+msgstr "Open Map"
 
 #: t_modules/t_main.py:31851
 msgid "Buffering... "
@@ -4047,10 +3929,6 @@ msgstr ""
 msgid "Failed to connect!"
 msgstr ""
 
-#: t_modules/t_main.py:36269
-msgid "kbps"
-msgstr ""
-
 #: t_modules/t_main.py:36302
 msgid "Name / Title"
 msgstr ""
@@ -4102,170 +3980,6 @@ msgstr ""
 
 #: t_modules/t_main.py:36570 t_modules/t_main.py:40703
 msgid "Visit Website"
-msgstr ""
-
-#: t_modules/t_main.py:36675
-msgid "Type codes separated by spaces. Codes will be executed left to right."
-msgstr ""
-
-#: t_modules/t_main.py:36678
-msgid "Select sources: (default: all playlists)"
-msgstr ""
-
-#: t_modules/t_main.py:36681
-msgid "Select source playlist by name"
-msgstr ""
-
-#: t_modules/t_main.py:36684
-msgid "Select playlist itself"
-msgstr ""
-
-#: t_modules/t_main.py:36687
-msgid "Add tracks from sources: (at least 1 required)"
-msgstr ""
-
-#: t_modules/t_main.py:36691
-#, fuzzy
-msgid "Search artist name"
-msgstr "Artiestnaam"
-
-#: t_modules/t_main.py:36694
-msgid "Search genre"
-msgstr ""
-
-#: t_modules/t_main.py:36701
-msgid "Find / Search / Path"
-msgstr ""
-
-#: t_modules/t_main.py:36709
-msgid "Add all tracks"
-msgstr ""
-
-#: t_modules/t_main.py:36712
-msgid "Filters"
-msgstr ""
-
-#: t_modules/t_main.py:36715
-msgid "Limit to number of tracks"
-msgstr ""
-
-#: t_modules/t_main.py:36718
-msgid "Year: >, <, ="
-msgstr ""
-
-#: t_modules/t_main.py:36721
-msgid "Play count: >, <"
-msgstr ""
-
-#: t_modules/t_main.py:36724
-msgid "Duration (seconds): >, <"
-msgstr ""
-
-#: t_modules/t_main.py:36727
-msgid "Track rating 0-5: >, <, ="
-msgstr ""
-
-#: t_modules/t_main.py:36730
-msgid "Loved tracks"
-msgstr ""
-
-#: t_modules/t_main.py:36733
-msgid "Has lyrics"
-msgstr ""
-
-#: t_modules/t_main.py:36736
-msgid "Search and keep"
-msgstr ""
-
-#: t_modules/t_main.py:36739
-msgid "Search and exclude"
-msgstr ""
-
-#: t_modules/t_main.py:36753
-msgid "Sorters"
-msgstr ""
-
-#: t_modules/t_main.py:36757
-msgid "Shuffle tracks"
-msgstr ""
-
-#: t_modules/t_main.py:36760
-msgid "Shuffle albums"
-msgstr ""
-
-#: t_modules/t_main.py:36763
-msgid "Year: >, <"
-msgstr ""
-
-#: t_modules/t_main.py:36766
-msgid "Duration: >, <"
-msgstr ""
-
-#: t_modules/t_main.py:36769
-msgid "Track Playtime: >, <"
-msgstr ""
-
-#: t_modules/t_main.py:36772
-#, fuzzy
-msgid "Album playtime: >, <"
-msgstr "Albumtitel"
-
-#: t_modules/t_main.py:36775
-#, fuzzy
-msgid "Invert tracks"
-msgstr "Volgend Nummer"
-
-#: t_modules/t_main.py:36778
-msgid "Invert albums"
-msgstr ""
-
-#: t_modules/t_main.py:36781
-msgid "Track rating: >, <"
-msgstr ""
-
-#: t_modules/t_main.py:36784
-msgid "Album rating: >, <"
-msgstr ""
-
-#: t_modules/t_main.py:36787
-msgid "Modification date: >, <"
-msgstr ""
-
-#: t_modules/t_main.py:36793
-msgid "Track number per album"
-msgstr ""
-
-#: t_modules/t_main.py:36796
-msgid "Year per artist"
-msgstr ""
-
-#: t_modules/t_main.py:36799
-msgid "Sort by column name: >, <"
-msgstr ""
-
-#: t_modules/t_main.py:36802
-msgid "Special"
-msgstr ""
-
-#: t_modules/t_main.py:36805
-msgid "Automatically reload on imports"
-msgstr ""
-
-#: t_modules/t_main.py:36810
-msgid "Status:"
-msgstr ""
-
-#: t_modules/t_main.py:36814
-#, fuzzy
-msgid "Playlist not found"
-msgstr "Afspeellijsten + Wachtrij"
-
-#: t_modules/t_main.py:36816
-msgid "Result is empty"
-msgstr ""
-
-#: t_modules/t_main.py:36818
-msgid "Close quotation..."
 msgstr ""
 
 #: t_modules/t_main.py:37283
@@ -4372,11 +4086,6 @@ msgstr ""
 msgid "Up Next:"
 msgstr ""
 
-#: t_modules/t_main.py:39400
-#, fuzzy
-msgid " Track"
-msgstr "Volgend Nummer"
-
 #: t_modules/t_main.py:39862
 #, fuzzy
 msgid "No artist name found"
@@ -4426,10 +4135,6 @@ msgstr ""
 msgid "Edit..."
 msgstr ""
 
-#: t_modules/t_main.py:40927
-msgid "New"
-msgstr ""
-
 #: t_modules/t_main.py:41056
 msgid "Playing"
 msgstr ""
@@ -4468,14 +4173,6 @@ msgstr ""
 
 #: t_modules/t_main.py:42017
 msgid "Image download failed."
-msgstr ""
-
-#: t_modules/t_main.py:42027 t_modules/t_main.py:42042
-msgid "You"
-msgstr ""
-
-#: t_modules/t_main.py:42053 t_modules/t_main.py:42068
-msgid "Liked on Spotify"
 msgstr ""
 
 #: t_modules/t_main.py:42305
@@ -4524,10 +4221,6 @@ msgstr ""
 msgid "Error loading theme file"
 msgstr ""
 
-#: t_modules/t_main.py:45698 t_modules/t_main.py:45712
-msgid "Various Artists"
-msgstr ""
-
 #: t_modules/t_main.py:45944
 msgid "Rescan folders complete."
 msgstr ""
@@ -4554,10 +4247,6 @@ msgstr ""
 
 #: t_modules/t_main.py:47053
 msgid "Samplerate"
-msgstr ""
-
-#: t_modules/t_main.py:47070
-msgid " kbps"
 msgstr ""
 
 #: t_modules/t_main.py:47112 t_modules/t_main.py:47134
@@ -4616,18 +4305,6 @@ msgstr ""
 msgid "Deletes some unnecessary files from folder"
 msgstr "Verwijder onnodige bestanden uit de map"
 
-#: t_modules/t_main.py:47350
-msgid "PATH"
-msgstr ""
-
-#: t_modules/t_main.py:47357
-msgid "OLD"
-msgstr ""
-
-#: t_modules/t_main.py:47362
-msgid "NEW"
-msgstr ""
-
 #: t_modules/t_main.py:47444
 msgid "Folder filter mode. Enter path segment."
 msgstr ""
@@ -4650,4 +4327,92 @@ msgstr ""
 
 #: t_modules/t_main.py:47863
 msgid "Lines copied to clipboard"
+msgstr ""
+
+#: t_modules/t_phazor.py:113
+msgid "SPP: Error, librespot not found"
+msgstr ""
+
+#: t_modules/t_phazor.py:510
+msgid "Server: File not found"
+msgstr ""
+
+#: t_modules/t_phazor.py:514
+msgid "Server Error"
+msgstr ""
+
+#: t_modules/t_phazor.py:520
+msgid "Error"
+msgstr ""
+
+#: t_modules/t_phazor.py:1114
+msgid "Error loading track"
+msgstr ""
+
+#: t_modules/t_spot.py:71
+msgid "Dependency Tekore not found"
+msgstr ""
+
+#: t_modules/t_spot.py:135
+msgid "Please re-authenticate Spotify in settings"
+msgstr ""
+
+#: t_modules/t_spot.py:139
+msgid "Please authenticate Spotify in settings"
+msgstr ""
+
+#: t_modules/t_spot.py:149
+msgid "python-tekore not installed"
+msgstr ""
+
+#: t_modules/t_spot.py:150
+msgid ""
+"If you installed via AUR, you'll need to install this optional dependency, "
+"then restart Tauon."
+msgstr ""
+
+#: t_modules/t_spot.py:153
+msgid "Invalid client ID. See Spotify tab in settings."
+msgstr ""
+
+#: t_modules/t_spot.py:215
+msgid "It looks like there are no more active Spotify devices"
+msgstr ""
+
+#: t_modules/t_spot.py:416
+msgid "Nothing playing"
+msgstr ""
+
+#: t_modules/t_spot.py:427
+msgid "Error - Tauon device not found"
+msgstr ""
+
+#: t_modules/t_spot.py:441
+msgid ""
+"Error. You may need to click Authorise in Settings > Accounts > Spotify."
+msgstr ""
+
+#: t_modules/t_spot.py:885
+msgid "Spotify upload error!"
+msgstr ""
+
+#: t_modules/t_spot.py:1218
+#, fuzzy
+msgid "No Spotify context found"
+msgstr "Spotify account verbonden"
+
+#: t_modules/t_stream.py:137
+msgid "Failed to establish a connection"
+msgstr ""
+
+#: t_modules/t_stream.py:515
+msgid "Data malformation detected. Stream aborted."
+msgstr ""
+
+#: t_modules/t_tidal.py:33 t_modules/t_tidal.py:56
+msgid "Tidalapi package not loaded"
+msgstr ""
+
+#: t_modules/t_tidal.py:83
+msgid "Failed to load TIDAL login, please try log in again"
 msgstr ""
