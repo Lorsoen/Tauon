@@ -3059,7 +3059,7 @@ msgstr "Relancez Tauon pour appliquer les changements"
 
 #: t_modules/t_main.py:28613
 msgid "Enable use of gamepad as input"
-msgstr "Activer le contrôle à la manette"
+msgstr "Activer le contrôle à la manette de jeu"
 
 #: t_modules/t_main.py:28614 t_modules/t_main.py:28621
 msgid "Change requires restart"
