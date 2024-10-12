@@ -3303,7 +3303,7 @@ msgstr "Nécessaire pour Nextcloud Music"
 
 #: t_modules/t_main.py:29200
 msgid "Jellyfin network streaming"
-msgstr "Streaming sur le réseau Jellyfin"
+msgstr "Streaming réseau Jellyfin"
 
 #: t_modules/t_main.py:29210
 msgid "Username"
