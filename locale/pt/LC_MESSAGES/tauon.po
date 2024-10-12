@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2024-10-12 13:03+0200\n"
+"POT-Creation-Date: 2024-10-12 23:40+0200\n"
 "PO-Revision-Date: 2023-06-28 20:47+0000\n"
 "Last-Translator: ssantos <ssantos@web.de>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/tauon-music-"
@@ -17,6 +17,67 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 4.18.1\n"
 "Generated-By: pygettext.py 1.5\n"
+
+#: t_modules/t_dbus.py:59
+#, fuzzy
+msgid "Failed to start indicator"
+msgstr "Falha ao conectar!"
+
+#: t_modules/t_extra.py:135 t_modules/t_extra.py:151
+msgid " B"
+msgstr ""
+
+#: t_modules/t_extra.py:138 t_modules/t_extra.py:154
+msgid " KB"
+msgstr ""
+
+#: t_modules/t_extra.py:141 t_modules/t_extra.py:157
+msgid " MB"
+msgstr ""
+
+#: t_modules/t_extra.py:144 t_modules/t_main.py:28284
+msgid " GB"
+msgstr ""
+
+#: t_modules/t_jellyfin.py:74
+msgid "Check server is running and URL is correct."
+msgstr ""
+
+#: t_modules/t_jellyfin.py:74
+#, fuzzy
+msgid "Could not establish connection to server."
+msgstr "Não foi possível conectar"
+
+#: t_modules/t_jellyfin.py:83
+msgid "Connection and authorisation successful"
+msgstr ""
+
+#: t_modules/t_jellyfin.py:86
+msgid "401 Authentication failed"
+msgstr ""
+
+#: t_modules/t_jellyfin.py:86
+msgid "Check username and password."
+msgstr ""
+
+#: t_modules/t_jellyfin.py:88
+msgid "Jellyfin auth error"
+msgstr ""
+
+#: t_modules/t_jellyfin.py:367
+#, fuzzy
+msgid "Error connecting to Jellyfin"
+msgstr "Erro ao ligar ao servidor PLEX"
+
+#: t_modules/t_jellyfin.py:400
+#, fuzzy
+msgid "Error connecting to Jellyfin for Import"
+msgstr "Erro ao ligar ao servidor PLEX"
+
+#: t_modules/t_jellyfin.py:418
+#, fuzzy
+msgid "Error accessing Jellyfin"
+msgstr "Erro ao apagar o ficheiro"
 
 #: t_modules/t_main.py:1921 t_modules/t_main.py:1923
 msgid "No artist image found."
@@ -2537,10 +2598,6 @@ msgstr "Sair de Trava de Embaralho"
 msgid "Donate"
 msgstr "Doar"
 
-#: t_modules/t_main.py:24219
-msgid "User clicked menu exit button"
-msgstr ""
-
 #: t_modules/t_main.py:24230
 msgid "Disengage Quick Add"
 msgstr "Desistir de Inclusão Rápida"
@@ -2997,10 +3054,6 @@ msgstr "Usar cache persistente de rede"
 #: t_modules/t_main.py:28281
 msgid "Cache size"
 msgstr "Tamanho do cache"
-
-#: t_modules/t_main.py:28284
-msgid " GB"
-msgstr ""
 
 #: t_modules/t_main.py:28300
 msgid "Set audio output device"
@@ -4850,49 +4903,100 @@ msgstr "Desgostar da faixa"
 msgid "Lines copied to clipboard"
 msgstr "URL copiado para o clipboard"
 
+#: t_modules/t_phazor.py:113
 #, fuzzy
-#~ msgid "Failed to start indicator"
-#~ msgstr "Falha ao conectar!"
+msgid "SPP: Error, librespot not found"
+msgstr "Apagar todas outras pastas no alvo"
 
-#, fuzzy
-#~ msgid "Could not establish connection to server."
-#~ msgstr "Não foi possível conectar"
+#: t_modules/t_phazor.py:510
+msgid "Server: File not found"
+msgstr ""
 
+#: t_modules/t_phazor.py:514
 #, fuzzy
-#~ msgid "Error connecting to Jellyfin"
-#~ msgstr "Erro ao ligar ao servidor PLEX"
+msgid "Server Error"
+msgstr "URL do Servidor"
 
-#, fuzzy
-#~ msgid "Error connecting to Jellyfin for Import"
-#~ msgstr "Erro ao ligar ao servidor PLEX"
+#: t_modules/t_phazor.py:520
+msgid "Error"
+msgstr ""
 
+#: t_modules/t_phazor.py:1114
 #, fuzzy
-#~ msgid "Error accessing Jellyfin"
-#~ msgstr "Erro ao apagar o ficheiro"
+msgid "Error loading track"
+msgstr "Erro ao apagar o ficheiro"
 
-#, fuzzy
-#~ msgid "Server Error"
-#~ msgstr "URL do Servidor"
+#: t_modules/t_spot.py:71
+msgid "Dependency Tekore not found"
+msgstr ""
 
+#: t_modules/t_spot.py:135
 #, fuzzy
-#~ msgid "Error loading track"
-#~ msgstr "Erro ao apagar o ficheiro"
+msgid "Please re-authenticate Spotify in settings"
+msgstr "Por favor autorize o Spotify nas configurações!"
 
+#: t_modules/t_spot.py:139
 #, fuzzy
-#~ msgid "Please re-authenticate Spotify in settings"
-#~ msgstr "Por favor autorize o Spotify nas configurações!"
+msgid "Please authenticate Spotify in settings"
+msgstr "Por favor autorize o Spotify nas configurações!"
 
-#, fuzzy
-#~ msgid "Please authenticate Spotify in settings"
-#~ msgstr "Por favor autorize o Spotify nas configurações!"
+#: t_modules/t_spot.py:149
+msgid "python-tekore not installed"
+msgstr ""
 
-#, fuzzy
-#~ msgid "No Spotify context found"
-#~ msgstr "Conta do Spotify conectada"
+#: t_modules/t_spot.py:150
+msgid ""
+"If you installed via AUR, you'll need to install this optional dependency, "
+"then restart Tauon."
+msgstr ""
 
+#: t_modules/t_spot.py:153
 #, fuzzy
-#~ msgid "Failed to establish a connection"
-#~ msgstr "Não foi possível conectar"
+msgid "Invalid client ID. See Spotify tab in settings."
+msgstr "Por favor autorize o Spotify nas configurações!"
+
+#: t_modules/t_spot.py:215
+msgid "It looks like there are no more active Spotify devices"
+msgstr ""
+
+#: t_modules/t_spot.py:416
+msgid "Nothing playing"
+msgstr ""
+
+#: t_modules/t_spot.py:427
+msgid "Error - Tauon device not found"
+msgstr ""
+
+#: t_modules/t_spot.py:441
+msgid ""
+"Error. You may need to click Authorise in Settings > Accounts > Spotify."
+msgstr ""
+
+#: t_modules/t_spot.py:885
+msgid "Spotify upload error!"
+msgstr ""
+
+#: t_modules/t_spot.py:1218
+#, fuzzy
+msgid "No Spotify context found"
+msgstr "Conta do Spotify conectada"
+
+#: t_modules/t_stream.py:137
+#, fuzzy
+msgid "Failed to establish a connection"
+msgstr "Não foi possível conectar"
+
+#: t_modules/t_stream.py:515
+msgid "Data malformation detected. Stream aborted."
+msgstr ""
+
+#: t_modules/t_tidal.py:33 t_modules/t_tidal.py:56
+msgid "Tidalapi package not loaded"
+msgstr ""
+
+#: t_modules/t_tidal.py:83
+msgid "Failed to load TIDAL login, please try log in again"
+msgstr ""
 
 #~ msgid ""
 #~ "DANGER! This will delete the original files. You may want to have backups "

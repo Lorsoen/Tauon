@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2024-10-12 13:03+0200\n"
+"POT-Creation-Date: 2024-10-12 23:43+0200\n"
 "PO-Revision-Date: 2024-10-06 10:39+0000\n"
 "Last-Translator: Lorsoen <fashim99@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/tauon-music-box/"
@@ -18,6 +18,62 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 5.8-dev\n"
 "Generated-By: pygettext.py 1.5\n"
+
+#: t_modules/t_dbus.py:59
+msgid "Failed to start indicator"
+msgstr "Impossible de lancer l'indicateur"
+
+#: t_modules/t_extra.py:135 t_modules/t_extra.py:151
+msgid " B"
+msgstr " o"
+
+#: t_modules/t_extra.py:138 t_modules/t_extra.py:154
+msgid " KB"
+msgstr " Ko"
+
+#: t_modules/t_extra.py:141 t_modules/t_extra.py:157
+msgid " MB"
+msgstr " Mo"
+
+#: t_modules/t_extra.py:144 t_modules/t_main.py:28284
+msgid " GB"
+msgstr " Go"
+
+#: t_modules/t_jellyfin.py:74
+msgid "Check server is running and URL is correct."
+msgstr "Vérifiez si le serveur tourne et que le lien est correct."
+
+#: t_modules/t_jellyfin.py:74
+msgid "Could not establish connection to server."
+msgstr "Impossible d'établir une connection au serveur."
+
+#: t_modules/t_jellyfin.py:83
+msgid "Connection and authorisation successful"
+msgstr "Connection et autorisation réussie"
+
+#: t_modules/t_jellyfin.py:86
+msgid "401 Authentication failed"
+msgstr "401, authentification échouée"
+
+#: t_modules/t_jellyfin.py:86
+msgid "Check username and password."
+msgstr "Vérifiez l'utilisateur et le mot de passe."
+
+#: t_modules/t_jellyfin.py:88
+msgid "Jellyfin auth error"
+msgstr "Erreur d'auth. à Jellyfin"
+
+#: t_modules/t_jellyfin.py:367
+msgid "Error connecting to Jellyfin"
+msgstr "Erreur de connexion à Jellyfin"
+
+#: t_modules/t_jellyfin.py:400
+msgid "Error connecting to Jellyfin for Import"
+msgstr "Erreur de connexion à Jellyfin pour l'import"
+
+#: t_modules/t_jellyfin.py:418
+msgid "Error accessing Jellyfin"
+msgstr "Erreur d'accès à Jellyfin"
 
 #: t_modules/t_main.py:1921 t_modules/t_main.py:1923
 msgid "No artist image found."
@@ -2493,10 +2549,6 @@ msgstr "Déverrouiller le mode aléatoire"
 msgid "Donate"
 msgstr "Faire un don"
 
-#: t_modules/t_main.py:24219
-msgid "User clicked menu exit button"
-msgstr ""
-
 #: t_modules/t_main.py:24230
 msgid "Disengage Quick Add"
 msgstr "Désactiver l’ajout rapide"
@@ -2953,10 +3005,6 @@ msgstr "Utiliser le cache réseau persistent"
 #: t_modules/t_main.py:28281
 msgid "Cache size"
 msgstr "Taille du cache"
-
-#: t_modules/t_main.py:28284
-msgid " GB"
-msgstr " Go"
 
 #: t_modules/t_main.py:28300
 msgid "Set audio output device"
@@ -4208,7 +4256,7 @@ msgstr "Visiter le site Web"
 
 #: t_modules/t_main.py:36675
 msgid "Type codes separated by spaces. Codes will be executed left to right."
-msgstr 
+msgstr ""
 "Entrez des codes séparés par des espaces. Les codes seront exécutés de "
 "droite à gauche."
 
@@ -4756,118 +4804,100 @@ msgstr "Piste défavorisée"
 msgid "Lines copied to clipboard"
 msgstr "Lignes copiées dans le presse-papiers"
 
-#~ msgid "Failed to start indicator"
-#~ msgstr "Impossible de lancer l'indicateur"
+#: t_modules/t_phazor.py:113
+msgid "SPP: Error, librespot not found"
+msgstr "Erreur SPP, librespot est introuvable."
 
-#~ msgid " B"
-#~ msgstr " o"
+#: t_modules/t_phazor.py:510
+msgid "Server: File not found"
+msgstr "Fichier serveur introuvable"
 
-#~ msgid " KB"
-#~ msgstr " Ko"
+#: t_modules/t_phazor.py:514
+msgid "Server Error"
+msgstr "Erreur serveur"
 
-#~ msgid " MB"
-#~ msgstr " Mo"
+#: t_modules/t_phazor.py:520
+msgid "Error"
+msgstr "Erreur"
 
-#~ msgid "Check server is running and URL is correct."
-#~ msgstr "Vérifiez si le serveur tourne et que le lien est correct."
+#: t_modules/t_phazor.py:1114
+msgid "Error loading track"
+msgstr "Erreur au chargement de la piste"
 
-#~ msgid "Could not establish connection to server."
-#~ msgstr "Impossible d'établir une connection au serveur."
+#: t_modules/t_spot.py:71
+msgid "Dependency Tekore not found"
+msgstr "La dépendance Tekore est introuvable"
 
-#~ msgid "Connection and authorisation successful"
-#~ msgstr "Connection et autorisation réussie"
+#: t_modules/t_spot.py:135
+msgid "Please re-authenticate Spotify in settings"
+msgstr "Veuillez ré-autoriser Spotify dans les options"
 
-#~ msgid "401 Authentication failed"
-#~ msgstr "401, authentification échouée"
+#: t_modules/t_spot.py:139
+msgid "Please authenticate Spotify in settings"
+msgstr "Veuillez autoriser Spotify dans les options"
 
-#~ msgid "Check username and password."
-#~ msgstr "Vérifiez l'utilisateur et le mot de passe."
+#: t_modules/t_spot.py:149
+msgid "python-tekore not installed"
+msgstr "python-tekore n'est pas installé"
 
-#~ msgid "Jellyfin auth error"
-#~ msgstr "Erreur d'auth. à Jellyfin"
+#: t_modules/t_spot.py:150
+msgid ""
+"If you installed via AUR, you'll need to install this optional dependency, "
+"then restart Tauon."
+msgstr ""
+"Si vous avez téléchargé Tauon via l'AUR, vous devez installer cette "
+"dépendance optionnelle, puis redémarrer l'application."
 
-#~ msgid "Error connecting to Jellyfin"
-#~ msgstr "Erreur de connexion à Jellyfin"
+#: t_modules/t_spot.py:153
+msgid "Invalid client ID. See Spotify tab in settings."
+msgstr "ID client invalide. Vérifiez l'onglet Spotify dans les options."
 
-#~ msgid "Error connecting to Jellyfin for Import"
-#~ msgstr "Erreur de connexion à Jellyfin pour l'import"
+#: t_modules/t_spot.py:215
+msgid "It looks like there are no more active Spotify devices"
+msgstr "On dirait que vous n'avez plus d'appareils Spotify actifs"
 
-#~ msgid "Error accessing Jellyfin"
-#~ msgstr "Erreur d'accès à Jellyfin"
+#: t_modules/t_spot.py:416
+msgid "Nothing playing"
+msgstr "Lecture en attente"
+
+#: t_modules/t_spot.py:427
+msgid "Error - Tauon device not found"
+msgstr "Erreur - Appareil Tauon introuvable"
+
+#: t_modules/t_spot.py:441
+msgid ""
+"Error. You may need to click Authorise in Settings > Accounts > Spotify."
+msgstr ""
+"Erreur. Cliquez sur « Autoriser » dans les Options > Comptes > Spotify."
+
+#: t_modules/t_spot.py:885
+msgid "Spotify upload error!"
+msgstr "Erreur de téléversement sur Spotify !"
+
+#: t_modules/t_spot.py:1218
+msgid "No Spotify context found"
+msgstr "Contexte Spotify introuvable"
+
+#: t_modules/t_stream.py:137
+msgid "Failed to establish a connection"
+msgstr "Impossible d'établir la connexion"
+
+#: t_modules/t_stream.py:515
+msgid "Data malformation detected. Stream aborted."
+msgstr "Données corrompues détectées. Stream interrompu."
+
+#: t_modules/t_tidal.py:33 t_modules/t_tidal.py:56
+msgid "Tidalapi package not loaded"
+msgstr "Le paquet Tidalapi n'est pas chargé"
+
+#: t_modules/t_tidal.py:83
+msgid "Failed to load TIDAL login, please try log in again"
+msgstr ""
+"Échec du chargement de l'authentification. Veuillez réessayer de vous "
+"connecter."
 
 #~ msgid "Generate..."
 #~ msgstr "Génération..."
-
-#~ msgid "SPP: Error, librespot not found"
-#~ msgstr "Erreur SPP, librespot est introuvable."
-
-#~ msgid "Server: File not found"
-#~ msgstr "Fichier serveur introuvable"
-
-#~ msgid "Server Error"
-#~ msgstr "Erreur serveur"
-
-#~ msgid "Error"
-#~ msgstr "Erreur"
-
-#~ msgid "Error loading track"
-#~ msgstr "Erreur au chargement de la piste"
-
-#~ msgid "Dependency Tekore not found"
-#~ msgstr "La dépendance Tekore est introuvable"
-
-#~ msgid "Please re-authenticate Spotify in settings"
-#~ msgstr "Veuillez ré-autoriser Spotify dans les options"
-
-#~ msgid "Please authenticate Spotify in settings"
-#~ msgstr "Veuillez autoriser Spotify dans les options"
-
-#~ msgid "python-tekore not installed"
-#~ msgstr "python-tekore n'est pas installé"
-
-#~ msgid ""
-#~ "If you installed via AUR, you'll need to install this optional "
-#~ "dependency, then restart Tauon."
-#~ msgstr ""
-#~ "Si vous avez téléchargé Tauon via l'AUR, vous devez installer cette "
-#~ "dépendance optionnelle, puis redémarrer l'application."
-
-#~ msgid "Invalid client ID. See Spotify tab in settings."
-#~ msgstr "ID client invalide. Vérifiez l'onglet Spotify dans les options."
-
-#~ msgid "It looks like there are no more active Spotify devices"
-#~ msgstr "On dirait que vous n'avez plus d'appareils Spotify actifs"
-
-#~ msgid "Nothing playing"
-#~ msgstr "Lecture en attente"
-
-#~ msgid "Error - Tauon device not found"
-#~ msgstr "Erreur - Appareil Tauon introuvable"
-
-#~ msgid ""
-#~ "Error. You may need to click Authorise in Settings > Accounts > Spotify."
-#~ msgstr ""
-#~ "Erreur. Cliquez sur « Autoriser » dans les Options > Comptes > Spotify."
-
-#~ msgid "Spotify upload error!"
-#~ msgstr "Erreur de téléversement sur Spotify !"
-
-#~ msgid "No Spotify context found"
-#~ msgstr "Contexte Spotify introuvable"
-
-#~ msgid "Failed to establish a connection"
-#~ msgstr "Impossible d'établir la connexion"
-
-#~ msgid "Data malformation detected. Stream aborted."
-#~ msgstr "Données corrompues détectées. Stream interrompu."
-
-#~ msgid "Tidalapi package not loaded"
-#~ msgstr "Le paquet Tidalapi n'est pas chargé"
-
-#~ msgid "Failed to load TIDAL login, please try log in again"
-#~ msgstr ""
-#~ "Échec du chargement de l'authentification. Veuillez réessayer de vous "
-#~ "connecter."
 
 #~ msgid "See here to learn more:https://github.com/krateng/maloja"
 #~ msgstr ""

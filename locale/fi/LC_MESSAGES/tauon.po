@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2024-10-12 13:03+0200\n"
+"POT-Creation-Date: 2024-10-12 23:40+0200\n"
 "PO-Revision-Date: 2024-04-03 09:02+0000\n"
 "Last-Translator: Roosa Huovinen <roosa.h@proton.me>\n"
 "Language-Team: Finnish <https://hosted.weblate.org/projects/tauon-music-box/"
@@ -17,6 +17,62 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.5-dev\n"
 "Generated-By: pygettext.py 1.5\n"
+
+#: t_modules/t_dbus.py:59
+msgid "Failed to start indicator"
+msgstr ""
+
+#: t_modules/t_extra.py:135 t_modules/t_extra.py:151
+msgid " B"
+msgstr ""
+
+#: t_modules/t_extra.py:138 t_modules/t_extra.py:154
+msgid " KB"
+msgstr ""
+
+#: t_modules/t_extra.py:141 t_modules/t_extra.py:157
+msgid " MB"
+msgstr ""
+
+#: t_modules/t_extra.py:144 t_modules/t_main.py:28284
+msgid " GB"
+msgstr ""
+
+#: t_modules/t_jellyfin.py:74
+msgid "Check server is running and URL is correct."
+msgstr ""
+
+#: t_modules/t_jellyfin.py:74
+msgid "Could not establish connection to server."
+msgstr ""
+
+#: t_modules/t_jellyfin.py:83
+msgid "Connection and authorisation successful"
+msgstr ""
+
+#: t_modules/t_jellyfin.py:86
+msgid "401 Authentication failed"
+msgstr ""
+
+#: t_modules/t_jellyfin.py:86
+msgid "Check username and password."
+msgstr ""
+
+#: t_modules/t_jellyfin.py:88
+msgid "Jellyfin auth error"
+msgstr ""
+
+#: t_modules/t_jellyfin.py:367
+msgid "Error connecting to Jellyfin"
+msgstr ""
+
+#: t_modules/t_jellyfin.py:400
+msgid "Error connecting to Jellyfin for Import"
+msgstr ""
+
+#: t_modules/t_jellyfin.py:418
+msgid "Error accessing Jellyfin"
+msgstr ""
 
 #: t_modules/t_main.py:1921 t_modules/t_main.py:1923
 msgid "No artist image found."
@@ -2446,10 +2502,6 @@ msgstr ""
 msgid "Donate"
 msgstr ""
 
-#: t_modules/t_main.py:24219
-msgid "User clicked menu exit button"
-msgstr ""
-
 #: t_modules/t_main.py:24230
 msgid "Disengage Quick Add"
 msgstr ""
@@ -2875,10 +2927,6 @@ msgstr ""
 
 #: t_modules/t_main.py:28281
 msgid "Cache size"
-msgstr ""
-
-#: t_modules/t_main.py:28284
-msgid " GB"
 msgstr ""
 
 #: t_modules/t_main.py:28300
@@ -4650,14 +4698,94 @@ msgstr ""
 msgid "Lines copied to clipboard"
 msgstr ""
 
+#: t_modules/t_phazor.py:113
 #, fuzzy
-#~ msgid "Please re-authenticate Spotify in settings"
-#~ msgstr "Valtuutathan Spotifyn asetuksissa!"
+msgid "SPP: Error, librespot not found"
+msgstr "Esittäjän kuvaa ei löydy."
 
-#, fuzzy
-#~ msgid "Please authenticate Spotify in settings"
-#~ msgstr "Valtuutathan Spotifyn asetuksissa!"
+#: t_modules/t_phazor.py:510
+msgid "Server: File not found"
+msgstr ""
 
+#: t_modules/t_phazor.py:514
+msgid "Server Error"
+msgstr ""
+
+#: t_modules/t_phazor.py:520
+msgid "Error"
+msgstr ""
+
+#: t_modules/t_phazor.py:1114
+msgid "Error loading track"
+msgstr ""
+
+#: t_modules/t_spot.py:71
+msgid "Dependency Tekore not found"
+msgstr ""
+
+#: t_modules/t_spot.py:135
 #, fuzzy
-#~ msgid "No Spotify context found"
-#~ msgstr "Spotify-tili yhdistetty"
+msgid "Please re-authenticate Spotify in settings"
+msgstr "Valtuutathan Spotifyn asetuksissa!"
+
+#: t_modules/t_spot.py:139
+#, fuzzy
+msgid "Please authenticate Spotify in settings"
+msgstr "Valtuutathan Spotifyn asetuksissa!"
+
+#: t_modules/t_spot.py:149
+msgid "python-tekore not installed"
+msgstr ""
+
+#: t_modules/t_spot.py:150
+msgid ""
+"If you installed via AUR, you'll need to install this optional dependency, "
+"then restart Tauon."
+msgstr ""
+
+#: t_modules/t_spot.py:153
+#, fuzzy
+msgid "Invalid client ID. See Spotify tab in settings."
+msgstr "Valtuutathan Spotifyn asetuksissa!"
+
+#: t_modules/t_spot.py:215
+msgid "It looks like there are no more active Spotify devices"
+msgstr ""
+
+#: t_modules/t_spot.py:416
+msgid "Nothing playing"
+msgstr ""
+
+#: t_modules/t_spot.py:427
+msgid "Error - Tauon device not found"
+msgstr ""
+
+#: t_modules/t_spot.py:441
+msgid ""
+"Error. You may need to click Authorise in Settings > Accounts > Spotify."
+msgstr ""
+
+#: t_modules/t_spot.py:885
+msgid "Spotify upload error!"
+msgstr ""
+
+#: t_modules/t_spot.py:1218
+#, fuzzy
+msgid "No Spotify context found"
+msgstr "Spotify-tili yhdistetty"
+
+#: t_modules/t_stream.py:137
+msgid "Failed to establish a connection"
+msgstr ""
+
+#: t_modules/t_stream.py:515
+msgid "Data malformation detected. Stream aborted."
+msgstr ""
+
+#: t_modules/t_tidal.py:33 t_modules/t_tidal.py:56
+msgid "Tidalapi package not loaded"
+msgstr ""
+
+#: t_modules/t_tidal.py:83
+msgid "Failed to load TIDAL login, please try log in again"
+msgstr ""
