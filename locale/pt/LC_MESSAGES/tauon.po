@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2024-10-08 13:45+0200\n"
+"POT-Creation-Date: 2024-10-12 13:03+0200\n"
 "PO-Revision-Date: 2023-06-28 20:47+0000\n"
 "Last-Translator: ssantos <ssantos@web.de>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/tauon-music-"
@@ -17,67 +17,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 4.18.1\n"
 "Generated-By: pygettext.py 1.5\n"
-
-#: t_modules/t_dbus.py:59
-#, fuzzy
-msgid "Failed to start indicator"
-msgstr "Falha ao conectar!"
-
-#: t_modules/t_extra.py:135 t_modules/t_extra.py:151
-msgid " B"
-msgstr ""
-
-#: t_modules/t_extra.py:138 t_modules/t_extra.py:154
-msgid " KB"
-msgstr ""
-
-#: t_modules/t_extra.py:141 t_modules/t_extra.py:157
-msgid " MB"
-msgstr ""
-
-#: t_modules/t_extra.py:144
-msgid " GB"
-msgstr ""
-
-#: t_modules/t_jellyfin.py:74
-msgid "Check server is running and URL is correct."
-msgstr ""
-
-#: t_modules/t_jellyfin.py:74
-#, fuzzy
-msgid "Could not establish connection to server."
-msgstr "Não foi possível conectar"
-
-#: t_modules/t_jellyfin.py:83
-msgid "Connection and authorisation successful"
-msgstr ""
-
-#: t_modules/t_jellyfin.py:86
-msgid "401 Authentication failed"
-msgstr ""
-
-#: t_modules/t_jellyfin.py:86
-msgid "Check username and password."
-msgstr ""
-
-#: t_modules/t_jellyfin.py:88
-msgid "Jellyfin auth error"
-msgstr ""
-
-#: t_modules/t_jellyfin.py:367
-#, fuzzy
-msgid "Error connecting to Jellyfin"
-msgstr "Erro ao ligar ao servidor PLEX"
-
-#: t_modules/t_jellyfin.py:400
-#, fuzzy
-msgid "Error connecting to Jellyfin for Import"
-msgstr "Erro ao ligar ao servidor PLEX"
-
-#: t_modules/t_jellyfin.py:418
-#, fuzzy
-msgid "Error accessing Jellyfin"
-msgstr "Erro ao apagar o ficheiro"
 
 #: t_modules/t_main.py:1921 t_modules/t_main.py:1923
 msgid "No artist image found."
@@ -577,6 +516,22 @@ msgstr "ANTES"
 #: t_modules/t_main.py:14840
 msgid "AFTER"
 msgstr "DEPOIS"
+
+#: t_modules/t_main.py:14846
+msgid "Warning: This may change the file extension"
+msgstr ""
+
+#: t_modules/t_main.py:14852
+msgid "Warning: The filename might not be unique"
+msgstr ""
+
+#: t_modules/t_main.py:14856
+msgid "Warning: A track has incomplete metadata"
+msgstr ""
+
+#: t_modules/t_main.py:14864
+msgid "Physically renames all the tracks in the folder"
+msgstr ""
 
 #: t_modules/t_main.py:14925 t_modules/t_main.py:14929
 msgid "Rename complete."
@@ -1168,6 +1123,81 @@ msgstr "Tem certeza que quer apagar esta playlist: %s?"
 msgid "Rescanning folders..."
 msgstr "A reexaminar pastas..."
 
+#: t_modules/t_main.py:17693
+#, fuzzy
+msgid "Playlist:\n"
+msgstr "Playlist…"
+
+#: t_modules/t_main.py:17694
+#, fuzzy
+msgid "Generated:\n"
+msgstr "Gerar"
+
+#: t_modules/t_main.py:17695
+#, fuzzy
+msgid "Tracks in playlist:\n"
+msgstr "Faixas da lista de reprodução"
+
+#: t_modules/t_main.py:17697
+#, fuzzy
+msgid "Repeats in playlist:\n"
+msgstr "Repetir lista de reprodução"
+
+#: t_modules/t_main.py:17701
+#, fuzzy
+msgid "Total local size:\n"
+msgstr "Tempo total de reprodução"
+
+#: t_modules/t_main.py:17702
+#, fuzzy
+msgid "Playlist duration:\n"
+msgstr "Duração da lista de reprodução"
+
+#: t_modules/t_main.py:17703
+#, fuzzy
+msgid "Total playtime:\n"
+msgstr "Tempo total de reprodução"
+
+#: t_modules/t_main.py:17705
+#, fuzzy
+msgid "Track types:\n"
+msgstr "Título da Faixa"
+
+#: t_modules/t_main.py:17721
+msgid "Percent of tracks are CUE type:\n"
+msgstr ""
+
+#: t_modules/t_main.py:17734
+msgid "MP3 bitrates (kbps):\n"
+msgstr ""
+
+#: t_modules/t_main.py:17753
+msgid "OGG bitrates (kbps):\n"
+msgstr ""
+
+#: t_modules/t_main.py:17791
+msgid ""
+"\n"
+"-------------- Top Artists --------------------\n"
+"\n"
+msgstr ""
+
+#: t_modules/t_main.py:17797
+msgid ""
+"\n"
+"\n"
+"-------------- Top Albums --------------------\n"
+"\n"
+msgstr ""
+
+#: t_modules/t_main.py:17801
+msgid ""
+"\n"
+"\n"
+"-------------- Top Genres --------------------\n"
+"\n"
+msgstr ""
+
 #: t_modules/t_main.py:17821 t_modules/t_main.py:17832
 #: t_modules/t_main.py:17851 t_modules/t_main.py:22294
 msgid "Playlist is locked"
@@ -1215,7 +1245,7 @@ msgstr ""
 "\""
 
 #: t_modules/t_main.py:18796 t_modules/t_main.py:22926
-#: t_modules/t_main.py:22930
+#: t_modules/t_main.py:22930 t_modules/t_main.py:45980
 msgid "New Playlist"
 msgstr "Nova Lista de Reprodução"
 
@@ -1979,6 +2009,7 @@ msgstr "URL copiado para o clipboard"
 #: t_modules/t_main.py:21643 t_modules/t_main.py:21906
 #: t_modules/t_main.py:21930 t_modules/t_main.py:21960
 #: t_modules/t_main.py:23585 t_modules/t_main.py:23721
+#: t_modules/t_main.py:24998
 msgid "No results found"
 msgstr "Sem resultados"
 
@@ -2113,6 +2144,7 @@ msgid "Time"
 msgstr "Tempo"
 
 #: t_modules/t_main.py:22396 t_modules/t_main.py:22427
+#: t_modules/t_main.py:36790
 msgid "Filepath"
 msgstr "Caminho do ficheiro"
 
@@ -2483,6 +2515,20 @@ msgstr "ListenBrainz está Ativo"
 msgid "Scrobbling is Active"
 msgstr "Scrobbling está Ativo"
 
+#: t_modules/t_main.py:24146 t_modules/t_main.py:24151
+#, fuzzy
+msgid "Unknown Track"
+msgstr "Desgostar da Faixa"
+
+#: t_modules/t_main.py:24156
+#, fuzzy
+msgid "Unknown Album"
+msgstr "Álbuns Aleatórios"
+
+#: t_modules/t_main.py:24196
+msgid "Error - Discord not running?"
+msgstr ""
+
 #: t_modules/t_main.py:24211
 msgid "Exit Shuffle Lockdown"
 msgstr "Sair de Trava de Embaralho"
@@ -2491,18 +2537,60 @@ msgstr "Sair de Trava de Embaralho"
 msgid "Donate"
 msgstr "Doar"
 
+#: t_modules/t_main.py:24219
+msgid "User clicked menu exit button"
+msgstr ""
+
 #: t_modules/t_main.py:24230
 msgid "Disengage Quick Add"
 msgstr "Desistir de Inclusão Rápida"
+
+#: t_modules/t_main.py:24326
+#, fuzzy
+msgid "Disable Columns"
+msgstr "Colunas"
+
+#: t_modules/t_main.py:24328
+#, fuzzy
+msgid "Enable Columns"
+msgstr "Colunas"
+
+#: t_modules/t_main.py:24339
+#, fuzzy
+msgid "Disable Title Breaks"
+msgstr "Alternar Intervalos"
+
+#: t_modules/t_main.py:24341
+#, fuzzy
+msgid "Enable Title Breaks"
+msgstr "Alternar Intervalos"
 
 #: t_modules/t_main.py:24393
 #, fuzzy
 msgid "Encoding warning: Missing one or more files"
 msgstr "Erro de permissão a acessar um ou mais ficheiros"
 
+#: t_modules/t_main.py:24399
+msgid "output"
+msgstr ""
+
 #: t_modules/t_main.py:25003
 msgid "Press Tab key to switch to Spotify search"
 msgstr "Pressione Tab para trocar para busca Spotify"
+
+#: t_modules/t_main.py:25204
+#, fuzzy
+msgid "(Include multi-tag results)"
+msgstr "Incluir Todos Artistas"
+
+#: t_modules/t_main.py:25209 t_modules/t_main.py:25217
+#: t_modules/t_main.py:25230 t_modules/t_main.py:25248
+msgid "BY"
+msgstr ""
+
+#: t_modules/t_main.py:25236
+msgid "FROM"
+msgstr ""
 
 #: t_modules/t_main.py:25330
 msgid "Searching for albums by artist: "
@@ -2511,6 +2599,31 @@ msgstr "Buscar por álguns por artista: "
 #: t_modules/t_main.py:25330
 msgid "This may take a moment"
 msgstr "Isto pode levar um tempo"
+
+#: t_modules/t_main.py:25512
+msgid "Welcome to v7.2.0!"
+msgstr ""
+
+#: t_modules/t_main.py:25516
+msgid "You can check out the release notes on the https://"
+msgstr ""
+
+#: t_modules/t_main.py:25517
+msgid "Github release page."
+msgstr ""
+
+#: t_modules/t_main.py:25523
+msgid "New supporter bonuses!"
+msgstr ""
+
+#: t_modules/t_main.py:25527
+msgid ""
+"A new supporter bonus theme is now available! Check it out at the above link!"
+msgstr ""
+
+#: t_modules/t_main.py:25532
+msgid "Your support means a lot! Love you!"
+msgstr ""
 
 #: t_modules/t_main.py:25597
 msgid ""
@@ -2885,6 +2998,10 @@ msgstr "Usar cache persistente de rede"
 msgid "Cache size"
 msgstr "Tamanho do cache"
 
+#: t_modules/t_main.py:28284
+msgid " GB"
+msgstr ""
+
 #: t_modules/t_main.py:28300
 msgid "Set audio output device"
 msgstr "Definir aparelho de saída áudio"
@@ -3193,7 +3310,7 @@ msgstr ""
 msgid "Missing dependency python-pypresence"
 msgstr ""
 
-#: t_modules/t_main.py:28679
+#: t_modules/t_main.py:28679 t_modules/t_main.py:36824
 msgid "Disabled"
 msgstr ""
 
@@ -3411,6 +3528,10 @@ msgstr "Mudar atual"
 
 #: t_modules/t_main.py:29415
 msgid "Reset flips"
+msgstr ""
+
+#: t_modules/t_main.py:29425 t_modules/t_main.py:36822
+msgid "OK"
 msgstr ""
 
 #: t_modules/t_main.py:29494 t_modules/t_main.py:29495
@@ -3661,6 +3782,10 @@ msgstr ""
 msgid "Open source software used (cont'd)"
 msgstr ""
 
+#: t_modules/t_main.py:30091
+msgid "Public Domain"
+msgstr ""
+
 #: t_modules/t_main.py:30213 t_modules/t_main.py:30216
 msgid "Credits"
 msgstr "Méritos"
@@ -3847,8 +3972,13 @@ msgid "Tauon Music Box ALBUM SHUFFLE!"
 msgstr "Abrir Tauon Music Box"
 
 #: t_modules/t_main.py:31462 t_modules/t_main.py:36567
+#: t_modules/t_main.py:40931
 msgid "Added station to: "
 msgstr "Estação adicionada para: "
+
+#: t_modules/t_main.py:31677
+msgid "MENU"
+msgstr ""
 
 #: t_modules/t_main.py:31757
 msgid "It looks like something is being downloaded..."
@@ -4082,6 +4212,10 @@ msgstr "A conectar..."
 msgid "Failed to connect!"
 msgstr "Falha ao conectar!"
 
+#: t_modules/t_main.py:36269
+msgid "kbps"
+msgstr ""
+
 #: t_modules/t_main.py:36302
 msgid "Name / Title"
 msgstr "Nome / Título"
@@ -4134,6 +4268,193 @@ msgstr "Gravado"
 #: t_modules/t_main.py:36570 t_modules/t_main.py:40703
 msgid "Visit Website"
 msgstr "Visitar Página Web"
+
+#: t_modules/t_main.py:36675
+msgid "Type codes separated by spaces. Codes will be executed left to right."
+msgstr ""
+
+#: t_modules/t_main.py:36678
+#, fuzzy
+msgid "Select sources: (default: all playlists)"
+msgstr "Escolha uma playlist fonte"
+
+#: t_modules/t_main.py:36681
+#, fuzzy
+msgid "Select source playlist by name"
+msgstr "Escolha uma playlist fonte"
+
+#: t_modules/t_main.py:36684
+#, fuzzy
+msgid "Select playlist itself"
+msgstr "Playlist selecionada:"
+
+#: t_modules/t_main.py:36687
+msgid "Add tracks from sources: (at least 1 required)"
+msgstr ""
+
+#: t_modules/t_main.py:36691
+#, fuzzy
+msgid "Search artist name"
+msgstr "Buscar Artista no Bandcamp"
+
+#: t_modules/t_main.py:36694
+#, fuzzy
+msgid "Search genre"
+msgstr "Procurar etiqueta"
+
+#: t_modules/t_main.py:36701
+msgid "Find / Search / Path"
+msgstr ""
+
+#: t_modules/t_main.py:36709
+#, fuzzy
+msgid "Add all tracks"
+msgstr "Faixa \"gostada\""
+
+#: t_modules/t_main.py:36712
+#, fuzzy
+msgid "Filters"
+msgstr "Alternar Letras"
+
+#: t_modules/t_main.py:36715
+msgid "Limit to number of tracks"
+msgstr ""
+
+#: t_modules/t_main.py:36718
+msgid "Year: >, <, ="
+msgstr ""
+
+#: t_modules/t_main.py:36721
+#, fuzzy
+msgid "Play count: >, <"
+msgstr "Reproduzido"
+
+#: t_modules/t_main.py:36724
+msgid "Duration (seconds): >, <"
+msgstr ""
+
+#: t_modules/t_main.py:36727
+#, fuzzy
+msgid "Track rating 0-5: >, <, ="
+msgstr "Avaliação de faixa"
+
+#: t_modules/t_main.py:36730
+#, fuzzy
+msgid "Loved tracks"
+msgstr "Faixa \"gostada\""
+
+#: t_modules/t_main.py:36733
+#, fuzzy
+msgid "Has lyrics"
+msgstr "Tem Letra"
+
+#: t_modules/t_main.py:36736
+#, fuzzy
+msgid "Search and keep"
+msgstr "Procurar etiqueta"
+
+#: t_modules/t_main.py:36739
+#, fuzzy
+msgid "Search and exclude"
+msgstr "Procurar Faixa no Genius"
+
+#: t_modules/t_main.py:36753
+msgid "Sorters"
+msgstr ""
+
+#: t_modules/t_main.py:36757
+#, fuzzy
+msgid "Shuffle tracks"
+msgstr "Baralhar Faixas"
+
+#: t_modules/t_main.py:36760
+#, fuzzy
+msgid "Shuffle albums"
+msgstr "Álbuns Baralhados"
+
+#: t_modules/t_main.py:36763
+msgid "Year: >, <"
+msgstr ""
+
+#: t_modules/t_main.py:36766
+#, fuzzy
+msgid "Duration: >, <"
+msgstr "Duração"
+
+#: t_modules/t_main.py:36769
+#, fuzzy
+msgid "Track Playtime: >, <"
+msgstr "Limpar Tempos de Reprodução"
+
+#: t_modules/t_main.py:36772
+#, fuzzy
+msgid "Album playtime: >, <"
+msgstr "Nome do Álbum"
+
+#: t_modules/t_main.py:36775
+#, fuzzy
+msgid "Invert tracks"
+msgstr "Faixa \"gostada\""
+
+#: t_modules/t_main.py:36778
+#, fuzzy
+msgid "Invert albums"
+msgstr "Importar Álbuns"
+
+#: t_modules/t_main.py:36781
+#, fuzzy
+msgid "Track rating: >, <"
+msgstr "Avaliação de faixa"
+
+#: t_modules/t_main.py:36784
+#, fuzzy
+msgid "Album rating: >, <"
+msgstr "Avaliação de álbum"
+
+#: t_modules/t_main.py:36787
+msgid "Modification date: >, <"
+msgstr ""
+
+#: t_modules/t_main.py:36793
+#, fuzzy
+msgid "Track number per album"
+msgstr "Número da Faixa"
+
+#: t_modules/t_main.py:36796
+#, fuzzy
+msgid "Year per artist"
+msgstr "Ordenar Ano por Artista"
+
+#: t_modules/t_main.py:36799
+msgid "Sort by column name: >, <"
+msgstr ""
+
+#: t_modules/t_main.py:36802
+msgid "Special"
+msgstr ""
+
+#: t_modules/t_main.py:36805
+msgid "Automatically reload on imports"
+msgstr ""
+
+#: t_modules/t_main.py:36810
+#, fuzzy
+msgid "Status:"
+msgstr "Estatísticas"
+
+#: t_modules/t_main.py:36814
+#, fuzzy
+msgid "Playlist not found"
+msgstr "Apagar todas outras pastas no alvo"
+
+#: t_modules/t_main.py:36816
+#, fuzzy
+msgid "Result is empty"
+msgstr "A Fila está Vazia"
+
+#: t_modules/t_main.py:36818
+msgid "Close quotation..."
+msgstr ""
 
 #: t_modules/t_main.py:37283
 msgid "View..."
@@ -4241,6 +4562,11 @@ msgstr ""
 msgid "Up Next:"
 msgstr "Próximo(a)"
 
+#: t_modules/t_main.py:39400
+#, fuzzy
+msgid " Track"
+msgstr "Faixa"
+
 #: t_modules/t_main.py:39862
 #, fuzzy
 msgid "No artist name found"
@@ -4290,6 +4616,10 @@ msgstr ""
 msgid "Edit..."
 msgstr "Editar..."
 
+#: t_modules/t_main.py:40927
+msgid "New"
+msgstr ""
+
 #: t_modules/t_main.py:41056
 msgid "Playing"
 msgstr "A Reproduzir"
@@ -4331,6 +4661,14 @@ msgstr "App de edição de etiquetas parece não estar instalada."
 #, fuzzy
 msgid "Image download failed."
 msgstr "Remoção de imagem falhou."
+
+#: t_modules/t_main.py:42027 t_modules/t_main.py:42042
+msgid "You"
+msgstr ""
+
+#: t_modules/t_main.py:42053 t_modules/t_main.py:42068
+msgid "Liked on Spotify"
+msgstr ""
 
 #: t_modules/t_main.py:42305
 msgid "ERROR: No backend found"
@@ -4383,6 +4721,10 @@ msgstr "Faixa já foi curtida"
 msgid "Error loading theme file"
 msgstr "Erro ao apagar o ficheiro"
 
+#: t_modules/t_main.py:45698 t_modules/t_main.py:45712
+msgid "Various Artists"
+msgstr ""
+
 #: t_modules/t_main.py:45944
 msgid "Rescan folders complete."
 msgstr "Reexame de Pastas Concluído."
@@ -4410,6 +4752,10 @@ msgstr "Caminho"
 #: t_modules/t_main.py:47053
 msgid "Samplerate"
 msgstr "Samplerate"
+
+#: t_modules/t_main.py:47070
+msgid " kbps"
+msgstr ""
 
 #: t_modules/t_main.py:47112 t_modules/t_main.py:47134
 msgid " of "
@@ -4467,6 +4813,18 @@ msgstr "Move past 2 nível acima e apaga a pasta recipiente"
 msgid "Deletes some unnecessary files from folder"
 msgstr "Apaga alguns ficheiros desnecessários de pasta"
 
+#: t_modules/t_main.py:47350
+msgid "PATH"
+msgstr ""
+
+#: t_modules/t_main.py:47357
+msgid "OLD"
+msgstr ""
+
+#: t_modules/t_main.py:47362
+msgid "NEW"
+msgstr ""
+
 #: t_modules/t_main.py:47444
 msgid "Folder filter mode. Enter path segment."
 msgstr ""
@@ -4492,98 +4850,49 @@ msgstr "Desgostar da faixa"
 msgid "Lines copied to clipboard"
 msgstr "URL copiado para o clipboard"
 
-#: t_modules/t_phazor.py:113
-msgid "SPP: Error, librespot not found"
-msgstr ""
-
-#: t_modules/t_phazor.py:510
-msgid "Server: File not found"
-msgstr ""
-
-#: t_modules/t_phazor.py:514
 #, fuzzy
-msgid "Server Error"
-msgstr "URL do Servidor"
+#~ msgid "Failed to start indicator"
+#~ msgstr "Falha ao conectar!"
 
-#: t_modules/t_phazor.py:520
-msgid "Error"
-msgstr ""
-
-#: t_modules/t_phazor.py:1114
 #, fuzzy
-msgid "Error loading track"
-msgstr "Erro ao apagar o ficheiro"
+#~ msgid "Could not establish connection to server."
+#~ msgstr "Não foi possível conectar"
 
-#: t_modules/t_spot.py:71
-msgid "Dependency Tekore not found"
-msgstr ""
-
-#: t_modules/t_spot.py:135
 #, fuzzy
-msgid "Please re-authenticate Spotify in settings"
-msgstr "Por favor autorize o Spotify nas configurações!"
+#~ msgid "Error connecting to Jellyfin"
+#~ msgstr "Erro ao ligar ao servidor PLEX"
 
-#: t_modules/t_spot.py:139
 #, fuzzy
-msgid "Please authenticate Spotify in settings"
-msgstr "Por favor autorize o Spotify nas configurações!"
+#~ msgid "Error connecting to Jellyfin for Import"
+#~ msgstr "Erro ao ligar ao servidor PLEX"
 
-#: t_modules/t_spot.py:149
-msgid "python-tekore not installed"
-msgstr ""
-
-#: t_modules/t_spot.py:150
-msgid ""
-"If you installed via AUR, you'll need to install this optional dependency, "
-"then restart Tauon."
-msgstr ""
-
-#: t_modules/t_spot.py:153
-msgid "Invalid client ID. See Spotify tab in settings."
-msgstr ""
-
-#: t_modules/t_spot.py:215
-msgid "It looks like there are no more active Spotify devices"
-msgstr ""
-
-#: t_modules/t_spot.py:416
-msgid "Nothing playing"
-msgstr ""
-
-#: t_modules/t_spot.py:427
-msgid "Error - Tauon device not found"
-msgstr ""
-
-#: t_modules/t_spot.py:441
-msgid ""
-"Error. You may need to click Authorise in Settings > Accounts > Spotify."
-msgstr ""
-
-#: t_modules/t_spot.py:885
-msgid "Spotify upload error!"
-msgstr ""
-
-#: t_modules/t_spot.py:1218
 #, fuzzy
-msgid "No Spotify context found"
-msgstr "Conta do Spotify conectada"
+#~ msgid "Error accessing Jellyfin"
+#~ msgstr "Erro ao apagar o ficheiro"
 
-#: t_modules/t_stream.py:137
 #, fuzzy
-msgid "Failed to establish a connection"
-msgstr "Não foi possível conectar"
+#~ msgid "Server Error"
+#~ msgstr "URL do Servidor"
 
-#: t_modules/t_stream.py:515
-msgid "Data malformation detected. Stream aborted."
-msgstr ""
+#, fuzzy
+#~ msgid "Error loading track"
+#~ msgstr "Erro ao apagar o ficheiro"
 
-#: t_modules/t_tidal.py:33 t_modules/t_tidal.py:56
-msgid "Tidalapi package not loaded"
-msgstr ""
+#, fuzzy
+#~ msgid "Please re-authenticate Spotify in settings"
+#~ msgstr "Por favor autorize o Spotify nas configurações!"
 
-#: t_modules/t_tidal.py:83
-msgid "Failed to load TIDAL login, please try log in again"
-msgstr ""
+#, fuzzy
+#~ msgid "Please authenticate Spotify in settings"
+#~ msgstr "Por favor autorize o Spotify nas configurações!"
+
+#, fuzzy
+#~ msgid "No Spotify context found"
+#~ msgstr "Conta do Spotify conectada"
+
+#, fuzzy
+#~ msgid "Failed to establish a connection"
+#~ msgstr "Não foi possível conectar"
 
 #~ msgid ""
 #~ "DANGER! This will delete the original files. You may want to have backups "
@@ -4624,9 +4933,6 @@ msgstr ""
 
 #~ msgid "Remove from Spotify Library"
 #~ msgstr "Remover da Biblioteca Spotify"
-
-#~ msgid "Import Albums"
-#~ msgstr "Importar Álbuns"
 
 #~ msgid "Import Liked Songs"
 #~ msgstr "Importar Músicas Curtidas"
