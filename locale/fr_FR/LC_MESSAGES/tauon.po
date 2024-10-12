@@ -2476,7 +2476,8 @@ msgstr "Scrobbling en cours"
 #: t_modules/t_main.py:24146 t_modules/t_main.py:24151
 msgid "Unknown Track"
 msgstr "Piste inconnue"
-ules/t_main.py:24156
+
+#: t_modules/t_main.py:24156
 msgid "Unknown Album"
 msgstr "Album inconnu"
 
