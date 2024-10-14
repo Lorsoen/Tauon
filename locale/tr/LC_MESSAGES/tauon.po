@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2024-10-12 23:40+0200\n"
+"POT-Creation-Date: 2024-10-14 15:40+0200\n"
 "PO-Revision-Date: 2024-06-27 21:09+0000\n"
 "Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/tauon-music-box/"
@@ -78,6 +78,10 @@ msgstr "PLEX sunucusuna bağlanırken hata oluştu"
 #, fuzzy
 msgid "Error accessing Jellyfin"
 msgstr "Dosya silinemedi"
+
+#: t_modules/t_jellyfin.py:530
+msgid "Jellyfin Collection"
+msgstr ""
 
 #: t_modules/t_main.py:1921 t_modules/t_main.py:1923
 msgid "No artist image found."
@@ -164,6 +168,10 @@ msgstr "Web yetkilendirme sayfası açıldı"
 msgid "You need to log in first"
 msgstr "Önce giriş yapmanız gerekiyor"
 
+#: t_modules/t_main.py:7241
+msgid "Error - Not authorized"
+msgstr ""
+
 #: t_modules/t_main.py:7254
 msgid "Logout will complete on app restart."
 msgstr ""
@@ -231,27 +239,6 @@ msgstr "Sonuç bulunamadı"
 #, fuzzy
 msgid "User has no loved tracks."
 msgstr "Parça, beğenilen parçalara eklendi"
-
-#: t_modules/t_main.py:7679
-msgid " matched tracks are up to date."
-msgstr ""
-
-#: t_modules/t_main.py:7682
-msgid " tracks matched. "
-msgstr ""
-
-#: t_modules/t_main.py:7682
-msgid " were updated."
-msgstr ""
-
-#: t_modules/t_main.py:7685
-msgid " loved tracks, no matches were found in local db"
-msgstr ""
-
-#: t_modules/t_main.py:7685
-#, fuzzy
-msgid "Of "
-msgstr "Kapalı"
 
 #: t_modules/t_main.py:7688
 msgid "This doesn't seem to be working :("
@@ -409,6 +396,11 @@ msgstr ""
 msgid "Starting download..."
 msgstr ""
 
+#: t_modules/t_main.py:8466
+#, fuzzy
+msgid "Download failed"
+msgstr "Resim silinemedi."
+
 #: t_modules/t_main.py:8470
 msgid "Download completed but checksum failed"
 msgstr ""
@@ -511,24 +503,11 @@ msgstr "Spotify çalma listesi oluşturma hatası"
 msgid "Sorry about that."
 msgstr ""
 
-#: t_modules/t_main.py:13974
-msgid " out of "
-msgstr ""
-
-#: t_modules/t_main.py:13974
-#, fuzzy
-msgid " tracks."
-msgstr "En Uzun Parçalar"
-
-#: t_modules/t_main.py:13974
-msgid "Failed to locate "
-msgstr ""
-
 #: t_modules/t_main.py:14729
 msgid "Playlists + Queue"
 msgstr "Çalma Listeleri + Sıra"
 
-#: t_modules/t_main.py:14730 t_modules/t_main.py:39127
+#: t_modules/t_main.py:14730 t_modules/t_main.py:39128
 msgid "Queue"
 msgstr "Sıra"
 
@@ -558,7 +537,7 @@ msgstr ""
 msgid "Track Renaming"
 msgstr "Parça Yeniden Adlandırma"
 
-#: t_modules/t_main.py:14812 t_modules/t_main.py:47305
+#: t_modules/t_main.py:14812 t_modules/t_main.py:47308
 msgid "Default"
 msgstr "Öntanımlı"
 
@@ -823,7 +802,7 @@ msgid "Open Folder"
 msgstr "Klasörü Aç"
 
 #: t_modules/t_main.py:15823 t_modules/t_main.py:15824
-#: t_modules/t_main.py:15825 t_modules/t_main.py:37281
+#: t_modules/t_main.py:15825 t_modules/t_main.py:37282
 msgid "Filter to New Playlist"
 msgstr "Yeni Çalma Listesine Filtrele"
 
@@ -906,7 +885,7 @@ msgid "Stop requesting lyrics AAAAAA."
 msgstr ""
 
 #: t_modules/t_main.py:16071 t_modules/t_main.py:21791
-#: t_modules/t_main.py:21847 t_modules/t_main.py:36261
+#: t_modules/t_main.py:21847 t_modules/t_main.py:36262
 msgid "Searching..."
 msgstr "Aranıyor..."
 
@@ -1093,12 +1072,16 @@ msgstr "Gömülü Sil | Klasör"
 msgid "Delete Embedded | Track"
 msgstr "Gömülü Sil | Parça"
 
+#: t_modules/t_main.py:16733
+msgid "This will erase any embedded image in %d files. Are you sure?"
+msgstr ""
+
 #: t_modules/t_main.py:16740 t_modules/t_main.py:16778
 msgid "Quick-Fetch Cover Art"
 msgstr ""
 
-#: t_modules/t_main.py:16772 t_modules/t_main.py:30213
-#: t_modules/t_main.py:30218
+#: t_modules/t_main.py:16772 t_modules/t_main.py:30214
+#: t_modules/t_main.py:30219
 msgid "Next"
 msgstr ""
 
@@ -1116,7 +1099,7 @@ msgid "Paste Spotify Album"
 msgstr "Spotify Albümünü Yapıştır"
 
 #: t_modules/t_main.py:17017 t_modules/t_main.py:17018
-#: t_modules/t_main.py:47316
+#: t_modules/t_main.py:47319
 msgid "Rename"
 msgstr "Yeniden Adlandır"
 
@@ -1178,77 +1161,66 @@ msgstr "Klasörler yeniden taranıyor..."
 
 #: t_modules/t_main.py:17693
 #, fuzzy
-msgid "Playlist:\n"
+msgid "Playlist:"
 msgstr "Çalma Listesi…"
 
 #: t_modules/t_main.py:17694
 #, fuzzy
-msgid "Generated:\n"
+msgid "Generated:"
 msgstr "Oluştur…"
 
 #: t_modules/t_main.py:17695
 #, fuzzy
-msgid "Tracks in playlist:\n"
+msgid "Tracks in playlist:"
 msgstr "Çalma listesindeki parçalar"
 
 #: t_modules/t_main.py:17697
 #, fuzzy
-msgid "Repeats in playlist:\n"
+msgid "Repeats in playlist:"
 msgstr "Çalma listesini yinele"
 
 #: t_modules/t_main.py:17701
 #, fuzzy
-msgid "Total local size:\n"
+msgid "Total local size:"
 msgstr "Toplam çalma süresi"
 
 #: t_modules/t_main.py:17702
 #, fuzzy
-msgid "Playlist duration:\n"
+msgid "Playlist duration:"
 msgstr "Çalma listesi süresi"
 
 #: t_modules/t_main.py:17703
 #, fuzzy
-msgid "Total playtime:\n"
+msgid "Total playtime:"
 msgstr "Toplam çalma süresi"
 
 #: t_modules/t_main.py:17705
 #, fuzzy
-msgid "Track types:\n"
+msgid "Track types:"
 msgstr "Parça başlığı"
 
 #: t_modules/t_main.py:17721
-msgid "Percent of tracks are CUE type:\n"
+msgid "Percent of tracks are CUE type:"
 msgstr ""
 
 #: t_modules/t_main.py:17734
-msgid "MP3 bitrates (kbps):\n"
+msgid "MP3 bitrates (kbps):"
 msgstr ""
 
 #: t_modules/t_main.py:17753
-msgid "OGG bitrates (kbps):\n"
+msgid "OGG bitrates (kbps):"
 msgstr ""
 
 #: t_modules/t_main.py:17791
-msgid ""
-"\n"
-"-------------- Top Artists --------------------\n"
-"\n"
+msgid "-------------- Top Artists --------------------"
 msgstr ""
 
 #: t_modules/t_main.py:17797
-msgid ""
-"\n"
-"\n"
-"-------------- Top Albums --------------------\n"
-"\n"
+msgid "-------------- Top Albums --------------------"
 msgstr ""
 
 #: t_modules/t_main.py:17801
-msgid ""
-"\n"
-"\n"
-"-------------- Top Genres --------------------\n"
-"\n"
+msgid "-------------- Top Genres --------------------"
 msgstr ""
 
 #: t_modules/t_main.py:17821 t_modules/t_main.py:17832
@@ -1257,7 +1229,7 @@ msgid "Playlist is locked"
 msgstr "Çalma listesi kilitli"
 
 #: t_modules/t_main.py:17948 t_modules/t_main.py:17950
-#: t_modules/t_main.py:47325
+#: t_modules/t_main.py:47328
 msgid "Delete"
 msgstr "Sil"
 
@@ -1297,7 +1269,7 @@ msgid ""
 msgstr ""
 
 #: t_modules/t_main.py:18796 t_modules/t_main.py:22926
-#: t_modules/t_main.py:22930 t_modules/t_main.py:45980
+#: t_modules/t_main.py:22930 t_modules/t_main.py:45983
 msgid "New Playlist"
 msgstr "Yeni Çalma Listesi"
 
@@ -1411,11 +1383,11 @@ msgstr "Eşitleme uyarısı"
 msgid "One or more folders is missing"
 msgstr "Eşitlenecek bir veya daha fazla klasör aynı ada sahip. Atlanıyor."
 
-#: t_modules/t_main.py:19000 t_modules/t_main.py:31926
+#: t_modules/t_main.py:19000 t_modules/t_main.py:31927
 msgid "Folders Remaining"
 msgstr "Kalan Klasörler"
 
-#: t_modules/t_main.py:19002 t_modules/t_main.py:31924
+#: t_modules/t_main.py:19002 t_modules/t_main.py:31925
 msgid "Folder Remaining"
 msgstr "Kalan Klasör"
 
@@ -1764,7 +1736,7 @@ msgstr "Spotify Parçayı Beğen"
 msgid "Un-like Spotify Track"
 msgstr "Spotify Parçayı Beğenme"
 
-#: t_modules/t_main.py:20712 t_modules/t_main.py:39125
+#: t_modules/t_main.py:20712 t_modules/t_main.py:39126
 msgid "Add to Queue"
 msgstr "Sıraya Ekle"
 
@@ -1990,7 +1962,7 @@ msgstr "Etiket düzenleme uygulaması kurulmamış görünüyor."
 msgid "App not found on host OR insufficient Flatpak permissions."
 msgstr "Uygulama bilgisayarda bulunamadı VEYA yetersiz Flatpak izinleri."
 
-#: t_modules/t_main.py:21271 t_modules/t_main.py:43367
+#: t_modules/t_main.py:21271 t_modules/t_main.py:43370
 msgid " For details, see https://%s"
 msgstr ""
 
@@ -2093,7 +2065,7 @@ msgid "Cut"
 msgstr "Kes"
 
 #: t_modules/t_main.py:21733 t_modules/t_main.py:21741
-#: t_modules/t_main.py:21742 t_modules/t_main.py:40712
+#: t_modules/t_main.py:21742 t_modules/t_main.py:40715
 msgid "Remove"
 msgstr "Kaldır"
 
@@ -2199,7 +2171,7 @@ msgid "Time"
 msgstr "Süre"
 
 #: t_modules/t_main.py:22396 t_modules/t_main.py:22427
-#: t_modules/t_main.py:36790
+#: t_modules/t_main.py:36791
 msgid "Filepath"
 msgstr "Dosya yolu"
 
@@ -2215,37 +2187,37 @@ msgstr "Çubuğu gizle"
 msgid "Show bar"
 msgstr "Çubuğu göster"
 
-#: t_modules/t_main.py:22406 t_modules/t_main.py:38856
+#: t_modules/t_main.py:22406 t_modules/t_main.py:38857
 msgid "Remove This"
 msgstr "Bunu Kaldır"
 
-#: t_modules/t_main.py:22408 t_modules/t_main.py:46990
-#: t_modules/t_main.py:46996
+#: t_modules/t_main.py:22408 t_modules/t_main.py:46993
+#: t_modules/t_main.py:46999
 msgid "Artist"
 msgstr "Sanatçı"
 
-#: t_modules/t_main.py:22409 t_modules/t_main.py:46971
-#: t_modules/t_main.py:46977
+#: t_modules/t_main.py:22409 t_modules/t_main.py:46974
+#: t_modules/t_main.py:46980
 msgid "Title"
 msgstr "Başlık"
 
-#: t_modules/t_main.py:22410 t_modules/t_main.py:47009
-#: t_modules/t_main.py:47015
+#: t_modules/t_main.py:22410 t_modules/t_main.py:47012
+#: t_modules/t_main.py:47018
 msgid "Album"
 msgstr "Albüm"
 
-#: t_modules/t_main.py:22411 t_modules/t_main.py:47099
-#: t_modules/t_main.py:47105
+#: t_modules/t_main.py:22411 t_modules/t_main.py:47102
+#: t_modules/t_main.py:47108
 msgid "Duration"
 msgstr "Süre"
 
-#: t_modules/t_main.py:22412 t_modules/t_main.py:47161
-#: t_modules/t_main.py:47167
+#: t_modules/t_main.py:22412 t_modules/t_main.py:47164
+#: t_modules/t_main.py:47170
 msgid "Date"
 msgstr "Tarih"
 
-#: t_modules/t_main.py:22413 t_modules/t_main.py:47146
-#: t_modules/t_main.py:47152
+#: t_modules/t_main.py:22413 t_modules/t_main.py:47149
+#: t_modules/t_main.py:47155
 msgid "Genre"
 msgstr "Tür"
 
@@ -2258,7 +2230,7 @@ msgid "Play Count"
 msgstr "Çalma Sayısı"
 
 #: t_modules/t_main.py:22417 t_modules/t_main.py:29774
-#: t_modules/t_main.py:47066
+#: t_modules/t_main.py:47069
 msgid "Bitrate"
 msgstr "Bit hızı"
 
@@ -2278,13 +2250,13 @@ msgstr "Puan"
 msgid "More…"
 msgstr ""
 
-#: t_modules/t_main.py:22425 t_modules/t_main.py:47079
-#: t_modules/t_main.py:47085
+#: t_modules/t_main.py:22425 t_modules/t_main.py:47082
+#: t_modules/t_main.py:47088
 msgid "Album Artist"
 msgstr "Albüm Sanatçısı"
 
-#: t_modules/t_main.py:22426 t_modules/t_main.py:47231
-#: t_modules/t_main.py:47237
+#: t_modules/t_main.py:22426 t_modules/t_main.py:47234
+#: t_modules/t_main.py:47240
 msgid "Comment"
 msgstr "Yorum"
 
@@ -2292,8 +2264,8 @@ msgstr "Yorum"
 msgid "Scrobble Count"
 msgstr ""
 
-#: t_modules/t_main.py:22429 t_modules/t_main.py:47176
-#: t_modules/t_main.py:47182
+#: t_modules/t_main.py:22429 t_modules/t_main.py:47179
+#: t_modules/t_main.py:47185
 msgid "Composer"
 msgstr "Besteci"
 
@@ -2476,7 +2448,7 @@ msgstr ""
 msgid "Revert"
 msgstr ""
 
-#: t_modules/t_main.py:23336 t_modules/t_main.py:38862
+#: t_modules/t_main.py:23336 t_modules/t_main.py:38863
 msgid "Clear Queue"
 msgstr ""
 
@@ -2903,7 +2875,7 @@ msgstr ""
 msgid "Transcode"
 msgstr ""
 
-#: t_modules/t_main.py:27913 t_modules/t_main.py:47219
+#: t_modules/t_main.py:27913 t_modules/t_main.py:47222
 msgid "Lyrics"
 msgstr ""
 
@@ -2960,7 +2932,7 @@ msgid "Based on"
 msgstr ""
 
 #: t_modules/t_main.py:28097 t_modules/t_main.py:28176
-#: t_modules/t_main.py:29736 t_modules/t_main.py:30354
+#: t_modules/t_main.py:29736 t_modules/t_main.py:30355
 msgid "Return"
 msgstr ""
 
@@ -3088,8 +3060,8 @@ msgstr ""
 msgid "Zoom album art to fit"
 msgstr ""
 
-#: t_modules/t_main.py:28434 t_modules/t_main.py:41623
-#: t_modules/t_main.py:41626
+#: t_modules/t_main.py:28434 t_modules/t_main.py:41626
+#: t_modules/t_main.py:41629
 msgid "Gallery"
 msgstr ""
 
@@ -3333,7 +3305,7 @@ msgstr ""
 msgid "Missing dependency python-pypresence"
 msgstr ""
 
-#: t_modules/t_main.py:28679 t_modules/t_main.py:36824
+#: t_modules/t_main.py:28679 t_modules/t_main.py:36825
 msgid "Disabled"
 msgstr ""
 
@@ -3459,7 +3431,7 @@ msgid ""
 "Due to Spotify authentication changes, local audio playback may be broken"
 msgstr ""
 
-#: t_modules/t_main.py:29101 t_modules/t_main.py:43443
+#: t_modules/t_main.py:29101 t_modules/t_main.py:43446
 msgid ""
 "It is highly recommended to disable this setting to avoid your account being "
 "locked."
@@ -3533,7 +3505,7 @@ msgstr ""
 msgid "Fanart.tv can be used for sourcing of artist images and cover art."
 msgstr ""
 
-#: t_modules/t_main.py:29397 t_modules/t_main.py:37418
+#: t_modules/t_main.py:29397 t_modules/t_main.py:37419
 msgid "They encourage you to contribute at https://%s"
 msgstr ""
 
@@ -3553,7 +3525,7 @@ msgstr ""
 msgid "Reset flips"
 msgstr ""
 
-#: t_modules/t_main.py:29425 t_modules/t_main.py:36822
+#: t_modules/t_main.py:29425 t_modules/t_main.py:36823
 msgid "OK"
 msgstr ""
 
@@ -3619,6 +3591,12 @@ msgstr ""
 #, fuzzy
 msgid "Error, not  connected to last.fm"
 msgstr "Last.fm beğeni güncelleme hatası!"
+
+#: t_modules/t_main.py:29611
+#, fuzzy
+msgid "Warning: This process will take approximately %d minutes to complete."
+msgstr ""
+"Uyarı: Bu işlemin tamamlanması uzun sürebilir! (bir saat veya daha fazla)"
 
 #: t_modules/t_main.py:29612 t_modules/t_main.py:29634
 msgid "Press again while holding Shift if you understand"
@@ -3780,1078 +3758,1065 @@ msgstr ""
 msgid "This program comes with absolutely no warranty."
 msgstr ""
 
-#: t_modules/t_main.py:30017
-msgid "See the license for details: https://"
-msgstr ""
-
-#: t_modules/t_main.py:30031
+#: t_modules/t_main.py:30032
 msgid "Created by"
 msgstr ""
 
-#: t_modules/t_main.py:30036
+#: t_modules/t_main.py:30037
 msgid "Contributors"
 msgstr ""
 
-#: t_modules/t_main.py:30049
+#: t_modules/t_main.py:30050
 msgid "Open source software used"
 msgstr ""
 
-#: t_modules/t_main.py:30086 t_modules/t_main.py:30127
-#: t_modules/t_main.py:30169
+#: t_modules/t_main.py:30087 t_modules/t_main.py:30128
+#: t_modules/t_main.py:30170
 msgid "Open source software used (cont'd)"
 msgstr ""
 
-#: t_modules/t_main.py:30091
+#: t_modules/t_main.py:30092
 msgid "Public Domain"
 msgstr ""
 
-#: t_modules/t_main.py:30213 t_modules/t_main.py:30216
+#: t_modules/t_main.py:30214 t_modules/t_main.py:30217
 msgid "Credits"
 msgstr ""
 
-#: t_modules/t_main.py:30230
+#: t_modules/t_main.py:30231
 msgid "Chart Grid Generator"
 msgstr ""
 
-#: t_modules/t_main.py:30233
+#: t_modules/t_main.py:30234
 msgid "Target playlist:   "
 msgstr "Hedef çalma listesi:   "
 
-#: t_modules/t_main.py:30242
+#: t_modules/t_main.py:30243
 #, fuzzy
 msgid "Level 1"
 msgstr "Seviye Ölçer"
 
-#: t_modules/t_main.py:30245
+#: t_modules/t_main.py:30246
 #, fuzzy
 msgid "Level 2"
 msgstr "Seviye Ölçer"
 
-#: t_modules/t_main.py:30248
+#: t_modules/t_main.py:30249
 #, fuzzy
 msgid "Level 3"
 msgstr "Seviye Ölçer"
 
-#: t_modules/t_main.py:30252 t_modules/t_main.py:30254
-#: t_modules/t_main.py:30256
+#: t_modules/t_main.py:30253 t_modules/t_main.py:30255
+#: t_modules/t_main.py:30257
 msgid "by"
 msgstr ""
 
-#: t_modules/t_main.py:30261
+#: t_modules/t_main.py:30262
 msgid "Rows"
 msgstr ""
 
-#: t_modules/t_main.py:30263
+#: t_modules/t_main.py:30264
 msgid "Columns"
 msgstr ""
 
-#: t_modules/t_main.py:30269
+#: t_modules/t_main.py:30270
 msgid "Cascade style"
 msgstr ""
 
-#: t_modules/t_main.py:30271
+#: t_modules/t_main.py:30272
 msgid "Use padding"
 msgstr ""
 
-#: t_modules/t_main.py:30276
+#: t_modules/t_main.py:30277
 msgid "Include album titles"
 msgstr ""
 
-#: t_modules/t_main.py:30278
+#: t_modules/t_main.py:30279
 msgid "Sort by top played"
 msgstr "En çok çalınana göre sırala"
 
-#: t_modules/t_main.py:30284
-msgid "Randomize BG"
+#: t_modules/t_main.py:30285
+msgid "Randomise BG"
 msgstr ""
 
-#: t_modules/t_main.py:30320
+#: t_modules/t_main.py:30321
 msgid "Generate"
 msgstr ""
 
-#: t_modules/t_main.py:30322
+#: t_modules/t_main.py:30323
 msgid "Be patient!"
 msgstr ""
 
-#: t_modules/t_main.py:30334
+#: t_modules/t_main.py:30335
 msgid "Generating..."
 msgstr ""
 
-#: t_modules/t_main.py:30342
+#: t_modules/t_main.py:30343
 msgid "Album chart"
 msgstr ""
 
-#: t_modules/t_main.py:30347
+#: t_modules/t_main.py:30348
 msgid "Not enough albums in the playlist!"
 msgstr "Çalma listesinde yeterli albüm yok!"
 
-#: t_modules/t_main.py:30366 t_modules/t_main.py:30367
+#: t_modules/t_main.py:30367 t_modules/t_main.py:30368
 msgid "Chart generator..."
 msgstr ""
 
-#: t_modules/t_main.py:30374 t_modules/t_main.py:30414
+#: t_modules/t_main.py:30375 t_modules/t_main.py:30415
 msgid "Tracks in playlist"
 msgstr "Çalma listesindeki parçalar"
 
-#: t_modules/t_main.py:30375 t_modules/t_main.py:30417
+#: t_modules/t_main.py:30376 t_modules/t_main.py:30418
 msgid "Albums in playlist"
 msgstr "Çalma listesindeki albümler"
 
-#: t_modules/t_main.py:30376 t_modules/t_main.py:30420
+#: t_modules/t_main.py:30377 t_modules/t_main.py:30421
 msgid "Playlist duration"
 msgstr "Çalma listesi süresi"
 
-#: t_modules/t_main.py:30377 t_modules/t_main.py:30448
+#: t_modules/t_main.py:30378 t_modules/t_main.py:30449
 msgid "Tracks in database"
 msgstr ""
 
-#: t_modules/t_main.py:30378 t_modules/t_main.py:30451
+#: t_modules/t_main.py:30379 t_modules/t_main.py:30452
 msgid "Total albums"
 msgstr ""
 
-#: t_modules/t_main.py:30379 t_modules/t_main.py:30455
+#: t_modules/t_main.py:30380 t_modules/t_main.py:30456
 msgid "Total playtime"
 msgstr "Toplam çalma süresi"
 
-#: t_modules/t_main.py:30516
+#: t_modules/t_main.py:30517
 msgid "Track ratings"
 msgstr ""
 
-#: t_modules/t_main.py:30518
+#: t_modules/t_main.py:30519
 msgid "Album ratings"
 msgstr ""
 
-#: t_modules/t_main.py:30526
+#: t_modules/t_main.py:30527
 msgid "Show track loves"
 msgstr ""
 
-#: t_modules/t_main.py:30534
+#: t_modules/t_main.py:30535
 msgid "Represent playtime as stars"
 msgstr "Çalma süresini yıldızlarla temsil et"
 
-#: t_modules/t_main.py:30543
+#: t_modules/t_main.py:30544
 msgid "Represent playcount as lines"
 msgstr "Çalma sayısını satır olarak göster"
 
-#: t_modules/t_main.py:30561
+#: t_modules/t_main.py:30562
 msgid "Left align title style"
 msgstr ""
 
-#: t_modules/t_main.py:30568
+#: t_modules/t_main.py:30569
 msgid "Show album genre"
 msgstr ""
 
-#: t_modules/t_main.py:30571
+#: t_modules/t_main.py:30572
 msgid "Show album release year"
 msgstr ""
 
-#: t_modules/t_main.py:30574
+#: t_modules/t_main.py:30575
 msgid "Show album duration"
 msgstr ""
 
-#: t_modules/t_main.py:30586
+#: t_modules/t_main.py:30587
 msgid "Font Size"
 msgstr ""
 
-#: t_modules/t_main.py:30588
+#: t_modules/t_main.py:30589
 msgid "Row Size"
 msgstr ""
 
-#: t_modules/t_main.py:30590
+#: t_modules/t_main.py:30591
 msgid "Baseline offset"
 msgstr ""
 
-#: t_modules/t_main.py:30595
+#: t_modules/t_main.py:30596
 msgid "Thin default"
 msgstr ""
 
-#: t_modules/t_main.py:30597
+#: t_modules/t_main.py:30598
 msgid "Thick default"
 msgstr ""
 
-#: t_modules/t_main.py:30935
+#: t_modules/t_main.py:30936
 msgid "Okay, it's a normal playlist now."
 msgstr ""
 
-#: t_modules/t_main.py:30944
+#: t_modules/t_main.py:30945
 msgid ""
 "You added tracks to a generator playlist. Do you want to clear the generator?"
 msgstr ""
 
-#: t_modules/t_main.py:31027
+#: t_modules/t_main.py:31028
 msgid "Tauon Music Box SHUFFLE!"
 msgstr ""
 
-#: t_modules/t_main.py:31029
+#: t_modules/t_main.py:31030
 msgid "Tauon Music Box ALBUM SHUFFLE!"
 msgstr ""
 
-#: t_modules/t_main.py:31462 t_modules/t_main.py:36567
-#: t_modules/t_main.py:40931
+#: t_modules/t_main.py:31463 t_modules/t_main.py:36568
+#: t_modules/t_main.py:40934
 msgid "Added station to: "
 msgstr ""
 
-#: t_modules/t_main.py:31677
+#: t_modules/t_main.py:31678
 msgid "MENU"
 msgstr ""
 
-#: t_modules/t_main.py:31757
+#: t_modules/t_main.py:31758
 msgid "It looks like something is being downloaded..."
 msgstr ""
 
-#: t_modules/t_main.py:31757
+#: t_modules/t_main.py:31758
 msgid "Let's check back later..."
 msgstr ""
 
-#: t_modules/t_main.py:31784
+#: t_modules/t_main.py:31785
 #, fuzzy
 msgid "Importing XSPF playlist"
 msgstr "Spotify çalma listesi oluşturma hatası"
 
-#: t_modules/t_main.py:31786
+#: t_modules/t_main.py:31787
 #, fuzzy
 msgid "Importing XSPF playlist..."
 msgstr "Spotify çalma listesi oluşturma hatası"
 
-#: t_modules/t_main.py:31788
+#: t_modules/t_main.py:31789
 msgid "Extracting Archive..."
 msgstr ""
 
-#: t_modules/t_main.py:31790
+#: t_modules/t_main.py:31791
 msgid "Importing...  "
 msgstr ""
 
-#: t_modules/t_main.py:31796
+#: t_modules/t_main.py:31797
 #, fuzzy
 msgid "Scanning Tags...  "
 msgstr "Chromecast Aranıyor..."
 
-#: t_modules/t_main.py:31796 t_modules/t_main.py:31806
+#: t_modules/t_main.py:31797 t_modules/t_main.py:31807
 #, fuzzy
 msgid " remaining"
 msgstr "Kalan Klasör"
 
-#: t_modules/t_main.py:31799
+#: t_modules/t_main.py:31800
 msgid "File copy in progress..."
 msgstr ""
 
-#: t_modules/t_main.py:31803
+#: t_modules/t_main.py:31804
 #, fuzzy
 msgid "Cleaning db...  "
 msgstr "Klasörler yeniden taranıyor..."
 
-#: t_modules/t_main.py:31806
+#: t_modules/t_main.py:31807
 #, fuzzy
 msgid "Rescanning Tags...  "
 msgstr "Klasörler yeniden taranıyor..."
 
-#: t_modules/t_main.py:31809
+#: t_modules/t_main.py:31810
 msgid "Accessing PLEX library..."
 msgstr ""
 
-#: t_modules/t_main.py:31814
+#: t_modules/t_main.py:31815
 msgid "Launching Spotify..."
 msgstr ""
 
-#: t_modules/t_main.py:31817
+#: t_modules/t_main.py:31818
 #, fuzzy
 msgid "Preparing Spotify Playback..."
 msgstr "Spotify çalma listeleri içe aktarılıyor..."
 
-#: t_modules/t_main.py:31820
+#: t_modules/t_main.py:31821
 #, fuzzy
 msgid "Accessing Spotify library..."
 msgstr "Spotify çalma listeleri içe aktarılıyor..."
 
-#: t_modules/t_main.py:31823
+#: t_modules/t_main.py:31824
 msgid "Accessing AIRSONIC library..."
 msgstr ""
 
-#: t_modules/t_main.py:31828
+#: t_modules/t_main.py:31829
 msgid "Accessing KOEL library..."
 msgstr ""
 
-#: t_modules/t_main.py:31831
+#: t_modules/t_main.py:31832
 msgid "Accessing JELLYFIN library..."
 msgstr ""
 
-#: t_modules/t_main.py:31834
+#: t_modules/t_main.py:31835
 #, fuzzy
 msgid "Chromecast Mode"
 msgstr "Chromecast…"
 
-#: t_modules/t_main.py:31843
+#: t_modules/t_main.py:31844
 msgid "Stopping transcode..."
 msgstr ""
 
-#: t_modules/t_main.py:31845
+#: t_modules/t_main.py:31846
 #, fuzzy
 msgid "Scanning: "
 msgstr "Eşitleme uyarısı"
 
-#: t_modules/t_main.py:31848
+#: t_modules/t_main.py:31849
 #, fuzzy
 msgid "Scanning Scrobbles..."
 msgstr "Klasörler yeniden taranıyor..."
 
-#: t_modules/t_main.py:31851
+#: t_modules/t_main.py:31852
 msgid "Buffering... "
 msgstr ""
 
-#: t_modules/t_main.py:31856
+#: t_modules/t_main.py:31857
 msgid "Network error. Will try again later."
 msgstr ""
 
-#: t_modules/t_main.py:31867
+#: t_modules/t_main.py:31868
 msgid "%d listening along"
 msgstr ""
 
-#: t_modules/t_main.py:31885
+#: t_modules/t_main.py:31886
 #, fuzzy
 msgid "Transcoding"
 msgstr "Tek Dönüştür"
 
-#: t_modules/t_main.py:32506 t_modules/t_main.py:33104
+#: t_modules/t_main.py:32507 t_modules/t_main.py:33105
 msgid "Play, RC: Go to playing"
 msgstr "Çal, RC: Çalmaya git"
 
-#: t_modules/t_main.py:32531 t_modules/t_main.py:33129
+#: t_modules/t_main.py:32532 t_modules/t_main.py:33130
 msgid "Pause"
 msgstr "Duraklat"
 
-#: t_modules/t_main.py:32547
+#: t_modules/t_main.py:32548
 msgid "Stop, RC: Toggle auto-stop"
 msgstr ""
 
-#: t_modules/t_main.py:32570 t_modules/t_main.py:33150
+#: t_modules/t_main.py:32571 t_modules/t_main.py:33151
 msgid "Shuffle On"
 msgstr ""
 
-#: t_modules/t_main.py:32573 t_modules/t_main.py:33153
+#: t_modules/t_main.py:32574 t_modules/t_main.py:33154
 msgid "Shuffle Off"
 msgstr ""
 
-#: t_modules/t_main.py:32604
+#: t_modules/t_main.py:32605
 msgid "Repeat On"
 msgstr ""
 
-#: t_modules/t_main.py:32607
+#: t_modules/t_main.py:32608
 msgid "Repeat Off"
 msgstr ""
 
-#: t_modules/t_main.py:32614
+#: t_modules/t_main.py:32615
 msgid "Back, RC: Toggle repeat, MC: Revert"
 msgstr ""
 
-#: t_modules/t_main.py:32631
+#: t_modules/t_main.py:32632
 #, fuzzy
 msgid "Playback menu"
 msgstr "Çalma süresi"
 
-#: t_modules/t_main.py:32672 t_modules/t_main.py:32674
+#: t_modules/t_main.py:32673 t_modules/t_main.py:32675
 msgid "Shuffle"
 msgstr ""
 
-#: t_modules/t_main.py:32732 t_modules/t_main.py:32740
+#: t_modules/t_main.py:32733 t_modules/t_main.py:32741
 msgid "Repeat album"
 msgstr ""
 
-#: t_modules/t_main.py:32734 t_modules/t_main.py:32742
+#: t_modules/t_main.py:32735 t_modules/t_main.py:32743
 msgid "Repeat track"
 msgstr ""
 
-#: t_modules/t_main.py:34391
+#: t_modules/t_main.py:34392
 msgid "Playlist is empty"
 msgstr "Çalma listesi boş"
 
-#: t_modules/t_main.py:34393
+#: t_modules/t_main.py:34394
 msgid "Drag and drop files to import"
 msgstr "İçe aktarmak için dosyaları sürükleyip bırakın"
 
-#: t_modules/t_main.py:34415
+#: t_modules/t_main.py:34416
 msgid "End of Playlist"
 msgstr "Çalma Listesi Sonu"
 
-#: t_modules/t_main.py:35460
+#: t_modules/t_main.py:35461
 #, fuzzy
 msgid "Fetching image..."
 msgstr "Aranıyor..."
 
-#: t_modules/t_main.py:35727
+#: t_modules/t_main.py:35728
 msgid "Search Tag"
 msgstr ""
 
-#: t_modules/t_main.py:35728
+#: t_modules/t_main.py:35729
 msgid "Search Country Code"
 msgstr ""
 
-#: t_modules/t_main.py:35729
+#: t_modules/t_main.py:35730
 msgid "Search Title"
 msgstr ""
 
-#: t_modules/t_main.py:36055
+#: t_modules/t_main.py:36056
 msgid "Search text…"
 msgstr ""
 
-#: t_modules/t_main.py:36062
+#: t_modules/t_main.py:36063
 msgid "Search"
 msgstr ""
 
-#: t_modules/t_main.py:36072 t_modules/t_main.py:36076
+#: t_modules/t_main.py:36073 t_modules/t_main.py:36077
 msgid "Get Top Voted"
 msgstr ""
 
-#: t_modules/t_main.py:36078
+#: t_modules/t_main.py:36079
 msgid "Developer Picks"
 msgstr ""
 
-#: t_modules/t_main.py:36220
+#: t_modules/t_main.py:36221
 msgid "Add Station"
 msgstr ""
 
-#: t_modules/t_main.py:36222
+#: t_modules/t_main.py:36223
 msgid "Edit Station"
 msgstr ""
 
-#: t_modules/t_main.py:36247
+#: t_modules/t_main.py:36248
 msgid "Station Browser"
 msgstr ""
 
-#: t_modules/t_main.py:36251
+#: t_modules/t_main.py:36252
 msgid "Connecting..."
 msgstr ""
 
-#: t_modules/t_main.py:36254
+#: t_modules/t_main.py:36255
 msgid "Failed to connect!"
 msgstr ""
 
-#: t_modules/t_main.py:36269
+#: t_modules/t_main.py:36270
 msgid "kbps"
 msgstr ""
 
-#: t_modules/t_main.py:36302
+#: t_modules/t_main.py:36303
 msgid "Name / Title"
 msgstr ""
 
-#: t_modules/t_main.py:36319
+#: t_modules/t_main.py:36320
 msgid "Raw Stream URL http://example.stream:1234"
 msgstr ""
 
-#: t_modules/t_main.py:36324 t_modules/t_main.py:36571
+#: t_modules/t_main.py:36325 t_modules/t_main.py:36572
 msgid "Save"
 msgstr ""
 
-#: t_modules/t_main.py:36328
+#: t_modules/t_main.py:36329
 msgid "Enter a stream URL"
 msgstr ""
 
-#: t_modules/t_main.py:36342
+#: t_modules/t_main.py:36343
 msgid "Could not validate URL. Must start with https:// or http://"
 msgstr "URL doğrulanamadı. https:// veya http:// ile başlamalıdır"
 
-#: t_modules/t_main.py:36503 t_modules/t_main.py:36509
-#: t_modules/t_main.py:36515
+#: t_modules/t_main.py:36504 t_modules/t_main.py:36510
+#: t_modules/t_main.py:36516
 msgid "Record and auto split songs"
 msgstr ""
 
-#: t_modules/t_main.py:36505
+#: t_modules/t_main.py:36506
 msgid "Please stop playback first before toggling this setting"
 msgstr "Lütfen bu ayarı değiştirmeden önce çalmayı durdurun"
 
-#: t_modules/t_main.py:36511
+#: t_modules/t_main.py:36512
 msgid "Please stop playback first to end current recording"
 msgstr "Geçerli kaydı sonlandırmak için lütfen önce çalmayı durdurun"
 
-#: t_modules/t_main.py:36518
+#: t_modules/t_main.py:36519
 msgid "Tracks will now be recorded."
 msgstr ""
 
-#: t_modules/t_main.py:36519
+#: t_modules/t_main.py:36520
 msgid "Tip: You can press F9 to view the output folder."
 msgstr ""
 
-#: t_modules/t_main.py:36522
+#: t_modules/t_main.py:36523
 msgid "Browse"
 msgstr ""
 
-#: t_modules/t_main.py:36526
+#: t_modules/t_main.py:36527
 msgid "Saved"
 msgstr ""
 
-#: t_modules/t_main.py:36570 t_modules/t_main.py:40703
+#: t_modules/t_main.py:36571 t_modules/t_main.py:40706
 msgid "Visit Website"
 msgstr ""
 
-#: t_modules/t_main.py:36675
+#: t_modules/t_main.py:36676
 msgid "Type codes separated by spaces. Codes will be executed left to right."
 msgstr ""
 
-#: t_modules/t_main.py:36678
+#: t_modules/t_main.py:36679
 #, fuzzy
 msgid "Select sources: (default: all playlists)"
 msgstr "Kaynak çalma listesi seç"
 
-#: t_modules/t_main.py:36681
+#: t_modules/t_main.py:36682
 #, fuzzy
 msgid "Select source playlist by name"
 msgstr "Kaynak çalma listesi seç"
 
-#: t_modules/t_main.py:36684
+#: t_modules/t_main.py:36685
 #, fuzzy
 msgid "Select playlist itself"
 msgstr "Seçilen çalma listesi:"
 
-#: t_modules/t_main.py:36687
+#: t_modules/t_main.py:36688
 msgid "Add tracks from sources: (at least 1 required)"
 msgstr ""
 
-#: t_modules/t_main.py:36691
+#: t_modules/t_main.py:36692
 #, fuzzy
 msgid "Search artist name"
 msgstr "Sanatçıyı Bandcamp'te Ara"
 
-#: t_modules/t_main.py:36694
+#: t_modules/t_main.py:36695
 msgid "Search genre"
 msgstr ""
 
-#: t_modules/t_main.py:36701
+#: t_modules/t_main.py:36702
 msgid "Find / Search / Path"
 msgstr ""
 
-#: t_modules/t_main.py:36709
+#: t_modules/t_main.py:36710
 #, fuzzy
 msgid "Add all tracks"
 msgstr "En Uzun Parçalar"
 
-#: t_modules/t_main.py:36712
+#: t_modules/t_main.py:36713
 #, fuzzy
 msgid "Filters"
 msgstr "Sözleri Aç/Kapat"
 
-#: t_modules/t_main.py:36715
+#: t_modules/t_main.py:36716
 msgid "Limit to number of tracks"
 msgstr ""
 
-#: t_modules/t_main.py:36718
+#: t_modules/t_main.py:36719
 msgid "Year: >, <, ="
 msgstr ""
 
-#: t_modules/t_main.py:36721
+#: t_modules/t_main.py:36722
 #, fuzzy
 msgid "Play count: >, <"
 msgstr "Çalma sayısı"
 
-#: t_modules/t_main.py:36724
+#: t_modules/t_main.py:36725
 msgid "Duration (seconds): >, <"
 msgstr ""
 
-#: t_modules/t_main.py:36727
+#: t_modules/t_main.py:36728
 msgid "Track rating 0-5: >, <, ="
 msgstr ""
 
-#: t_modules/t_main.py:36730
+#: t_modules/t_main.py:36731
 #, fuzzy
 msgid "Loved tracks"
 msgstr "En Uzun Parçalar"
 
-#: t_modules/t_main.py:36733
+#: t_modules/t_main.py:36734
 #, fuzzy
 msgid "Has lyrics"
 msgstr "Sözlüler"
 
-#: t_modules/t_main.py:36736
+#: t_modules/t_main.py:36737
 msgid "Search and keep"
 msgstr ""
 
-#: t_modules/t_main.py:36739
+#: t_modules/t_main.py:36740
 #, fuzzy
 msgid "Search and exclude"
 msgstr "Parçayı Genius'ta Ara"
 
-#: t_modules/t_main.py:36753
+#: t_modules/t_main.py:36754
 msgid "Sorters"
 msgstr ""
 
-#: t_modules/t_main.py:36757
+#: t_modules/t_main.py:36758
 #, fuzzy
 msgid "Shuffle tracks"
 msgstr "Parçaları Karıştır"
 
-#: t_modules/t_main.py:36760
+#: t_modules/t_main.py:36761
 #, fuzzy
 msgid "Shuffle albums"
 msgstr "Karıştırılmış Albümler"
 
-#: t_modules/t_main.py:36763
+#: t_modules/t_main.py:36764
 msgid "Year: >, <"
 msgstr ""
 
-#: t_modules/t_main.py:36766
+#: t_modules/t_main.py:36767
 #, fuzzy
 msgid "Duration: >, <"
 msgstr "Süre"
 
-#: t_modules/t_main.py:36769
+#: t_modules/t_main.py:36770
 #, fuzzy
 msgid "Track Playtime: >, <"
 msgstr "Çalma Sürelerini Sıkıştır"
 
-#: t_modules/t_main.py:36772
+#: t_modules/t_main.py:36773
 #, fuzzy
 msgid "Album playtime: >, <"
 msgstr "Albüm adı"
 
-#: t_modules/t_main.py:36775
+#: t_modules/t_main.py:36776
 #, fuzzy
 msgid "Invert tracks"
 msgstr "En Uzun Parçalar"
 
-#: t_modules/t_main.py:36778
+#: t_modules/t_main.py:36779
 #, fuzzy
 msgid "Invert albums"
 msgstr "Tamamlanmamış Albümler"
 
-#: t_modules/t_main.py:36781
+#: t_modules/t_main.py:36782
 #, fuzzy
 msgid "Track rating: >, <"
 msgstr "Parça Yeniden Adlandırma"
 
-#: t_modules/t_main.py:36784
+#: t_modules/t_main.py:36785
 #, fuzzy
 msgid "Album rating: >, <"
 msgstr "Albüm Sanatçısı"
 
-#: t_modules/t_main.py:36787
+#: t_modules/t_main.py:36788
 msgid "Modification date: >, <"
 msgstr ""
 
-#: t_modules/t_main.py:36793
+#: t_modules/t_main.py:36794
 #, fuzzy
 msgid "Track number per album"
 msgstr "Parça Numarası"
 
-#: t_modules/t_main.py:36796
+#: t_modules/t_main.py:36797
 #, fuzzy
 msgid "Year per artist"
 msgstr "Sanatçıya göre Yılı Sırala"
 
-#: t_modules/t_main.py:36799
+#: t_modules/t_main.py:36800
 msgid "Sort by column name: >, <"
 msgstr ""
 
-#: t_modules/t_main.py:36802
+#: t_modules/t_main.py:36803
 msgid "Special"
 msgstr ""
 
-#: t_modules/t_main.py:36805
+#: t_modules/t_main.py:36806
 msgid "Automatically reload on imports"
 msgstr ""
 
-#: t_modules/t_main.py:36810
+#: t_modules/t_main.py:36811
 msgid "Status:"
 msgstr ""
 
-#: t_modules/t_main.py:36814
+#: t_modules/t_main.py:36815
 #, fuzzy
 msgid "Playlist not found"
 msgstr "Çalma listesi boş"
 
-#: t_modules/t_main.py:36816
+#: t_modules/t_main.py:36817
 #, fuzzy
 msgid "Result is empty"
 msgstr "Çalma listesi boş"
 
-#: t_modules/t_main.py:36818
+#: t_modules/t_main.py:36819
 msgid "Close quotation..."
 msgstr ""
 
-#: t_modules/t_main.py:37283
+#: t_modules/t_main.py:37284
 msgid "View..."
 msgstr ""
 
-#: t_modules/t_main.py:37317
+#: t_modules/t_main.py:37318
 msgid "Filter Small Artists"
 msgstr ""
 
-#: t_modules/t_main.py:37321 t_modules/t_main.py:37322
+#: t_modules/t_main.py:37322 t_modules/t_main.py:37323
 msgid "Include All Artists"
 msgstr ""
 
-#: t_modules/t_main.py:37324
+#: t_modules/t_main.py:37325
 msgid "Sort Alphabetically"
 msgstr ""
 
-#: t_modules/t_main.py:37325
+#: t_modules/t_main.py:37326
 msgid "Sort by Popularity"
 msgstr ""
 
-#: t_modules/t_main.py:37326
+#: t_modules/t_main.py:37327
 msgid "Sort by Playtime"
 msgstr "Çalma Süresine Göre Sırala"
 
-#: t_modules/t_main.py:37327
+#: t_modules/t_main.py:37328
 msgid "Toggle Thumbnails"
 msgstr ""
 
-#: t_modules/t_main.py:37328
+#: t_modules/t_main.py:37329
 #, fuzzy
 msgid "Toggle Filter"
 msgstr "Sözleri Aç/Kapat"
 
-#: t_modules/t_main.py:37417
+#: t_modules/t_main.py:37418
 msgid "Notice: Artist image sourced from fanart.tv"
 msgstr ""
 
-#: t_modules/t_main.py:37735 t_modules/t_main.py:37871
+#: t_modules/t_main.py:37736 t_modules/t_main.py:37872
 msgid "Downloading data..."
 msgstr ""
 
-#: t_modules/t_main.py:38191
+#: t_modules/t_main.py:38192
 msgid "No artists in playlist"
 msgstr "Çalma listesinde sanatçı yok"
 
-#: t_modules/t_main.py:38194
+#: t_modules/t_main.py:38195
 msgid "Artist threshold not met"
 msgstr ""
 
-#: t_modules/t_main.py:38196
+#: t_modules/t_main.py:38197
 msgid "Loading Artist List..."
 msgstr ""
 
-#: t_modules/t_main.py:38198
+#: t_modules/t_main.py:38199
 msgid "Busy..."
 msgstr ""
 
-#: t_modules/t_main.py:38409
+#: t_modules/t_main.py:38410
 msgid "Loading Folder Tree..."
 msgstr ""
 
-#: t_modules/t_main.py:38418 t_modules/t_main.py:38434
+#: t_modules/t_main.py:38419 t_modules/t_main.py:38435
 msgid "Folder Tree"
 msgstr ""
 
-#: t_modules/t_main.py:38823
+#: t_modules/t_main.py:38824
 msgid "Resume Queue"
 msgstr ""
 
-#: t_modules/t_main.py:38825
+#: t_modules/t_main.py:38826
 msgid "Pause Queue"
 msgstr "Sırayı Duraklat"
 
-#: t_modules/t_main.py:38857
+#: t_modules/t_main.py:38858
 msgid "Play Now"
 msgstr "Şimdi Çal"
 
-#: t_modules/t_main.py:38864
+#: t_modules/t_main.py:38865
 msgid "↳ Except for This"
 msgstr ""
 
-#: t_modules/t_main.py:38866
+#: t_modules/t_main.py:38867
 msgid "Queue to New Playlist"
 msgstr "Yeni Çalma Listesine Sırala"
 
-#: t_modules/t_main.py:39010
+#: t_modules/t_main.py:39011
 msgid "Cancel Auto-Stop"
 msgstr ""
 
-#: t_modules/t_main.py:39012
+#: t_modules/t_main.py:39013
 msgid "Auto-Stop"
 msgstr ""
 
-#: t_modules/t_main.py:39023
+#: t_modules/t_main.py:39024
 msgid "Eh?"
 msgstr ""
 
-#: t_modules/t_main.py:39031
+#: t_modules/t_main.py:39032
 msgid "Looks like it's gone now anyway"
 msgstr ""
 
-#: t_modules/t_main.py:39146
+#: t_modules/t_main.py:39147
 msgid "Up Next:"
 msgstr ""
 
-#: t_modules/t_main.py:39400
-#, fuzzy
-msgid " Track"
-msgstr "Parçayı Yinele"
-
-#: t_modules/t_main.py:39862
+#: t_modules/t_main.py:39865
 #, fuzzy
 msgid "No artist name found"
 msgstr "Sanatçı resmi bulunamadı."
 
-#: t_modules/t_main.py:39873 t_modules/t_main.py:40115
+#: t_modules/t_main.py:39876 t_modules/t_main.py:40118
 msgid "Looking up..."
 msgstr ""
 
-#: t_modules/t_main.py:39915
+#: t_modules/t_main.py:39918
 msgid "Cooldown..."
 msgstr ""
 
-#: t_modules/t_main.py:39930
+#: t_modules/t_main.py:39933
 msgid "Loading..."
 msgstr ""
 
-#: t_modules/t_main.py:40107
+#: t_modules/t_main.py:40110
 msgid "No artist data downloaded"
 msgstr ""
 
-#: t_modules/t_main.py:40121
+#: t_modules/t_main.py:40124
 msgid "No artist bio found"
 msgstr ""
 
-#: t_modules/t_main.py:40208
+#: t_modules/t_main.py:40211
 msgid "Load Failed"
 msgstr ""
 
-#: t_modules/t_main.py:40230
+#: t_modules/t_main.py:40233
 msgid "Download Artist Data"
 msgstr ""
 
-#: t_modules/t_main.py:40231
+#: t_modules/t_main.py:40234
 msgid "Clear Bio"
 msgstr ""
 
-#: t_modules/t_main.py:40271
+#: t_modules/t_main.py:40274
 msgid "Clipboard has no text"
 msgstr ""
 
-#: t_modules/t_main.py:40383
+#: t_modules/t_main.py:40386
 msgid "Could not find matching track on GuitarParty"
 msgstr ""
 
-#: t_modules/t_main.py:40702
+#: t_modules/t_main.py:40705
 msgid "Edit..."
 msgstr ""
 
-#: t_modules/t_main.py:40927
-msgid "New"
-msgstr ""
-
-#: t_modules/t_main.py:41056
+#: t_modules/t_main.py:41059
 msgid "Playing"
 msgstr "Çalıyor"
 
-#: t_modules/t_main.py:41130
+#: t_modules/t_main.py:41133
 msgid "Auto-Scroll"
 msgstr ""
 
-#: t_modules/t_main.py:41608
+#: t_modules/t_main.py:41611
 msgid "Tracks + Art"
 msgstr ""
 
-#: t_modules/t_main.py:41640
+#: t_modules/t_main.py:41643
 msgid "Tracks only"
 msgstr ""
 
-#: t_modules/t_main.py:41655
+#: t_modules/t_main.py:41658
 msgid "Showcase + Lyrics"
 msgstr ""
 
-#: t_modules/t_main.py:41668
+#: t_modules/t_main.py:41671
 msgid "Radio"
 msgstr ""
 
-#: t_modules/t_main.py:41682
+#: t_modules/t_main.py:41685
 msgid "Toggle columns"
 msgstr ""
 
-#: t_modules/t_main.py:42011
+#: t_modules/t_main.py:42014
 msgid "Image types other than PNG or JPEG are currently not supported"
 msgstr ""
 
-#: t_modules/t_main.py:42013
+#: t_modules/t_main.py:42016
 #, fuzzy
 msgid "The link does not appear to refer to an image file."
 msgstr "Etiket düzenleme uygulaması kurulmamış görünüyor."
 
-#: t_modules/t_main.py:42017
+#: t_modules/t_main.py:42020
 #, fuzzy
 msgid "Image download failed."
 msgstr "Resim silinemedi."
 
-#: t_modules/t_main.py:42027 t_modules/t_main.py:42042
+#: t_modules/t_main.py:42030 t_modules/t_main.py:42045
 msgid "You"
 msgstr ""
 
-#: t_modules/t_main.py:42053 t_modules/t_main.py:42068
+#: t_modules/t_main.py:42056 t_modules/t_main.py:42071
 msgid "Liked on Spotify"
 msgstr ""
 
-#: t_modules/t_main.py:42305
+#: t_modules/t_main.py:42308
 msgid "ERROR: No backend found"
 msgstr ""
 
-#: t_modules/t_main.py:42317
+#: t_modules/t_main.py:42320
 #, fuzzy
 msgid "There are no more steps to undo."
 msgstr "Hiçbir söz kaynağı etkinleştirilmemiş."
 
-#: t_modules/t_main.py:43166 t_modules/t_main.py:48364
+#: t_modules/t_main.py:43169 t_modules/t_main.py:48367
 msgid "Permission error encountered while writing database"
 msgstr ""
 
-#: t_modules/t_main.py:43366
+#: t_modules/t_main.py:43369
 msgid "Could not access! Possible insufficient Flatpak permissions."
 msgstr ""
 
-#: t_modules/t_main.py:43442
+#: t_modules/t_main.py:43445
 msgid ""
 "Due to Spotify authentication changes, local Spotify audio playback may be "
 "broken"
 msgstr ""
 
-#: t_modules/t_main.py:43443
+#: t_modules/t_main.py:43446
 msgid "See MENU > SETTINGS > ACCOUNT > SPOTIFY > Enable local audio playback."
 msgstr ""
 
-#: t_modules/t_main.py:44339
+#: t_modules/t_main.py:44342
 msgid "Enabled auto theme"
 msgstr ""
 
-#: t_modules/t_main.py:44341
+#: t_modules/t_main.py:44344
 msgid "Disabled auto theme"
 msgstr ""
 
-#: t_modules/t_main.py:44384
+#: t_modules/t_main.py:44387
 msgid "First select a source track by copying it into clipboard"
 msgstr "Önce panoya kopyalayarak bir kaynak parça seçin"
 
-#: t_modules/t_main.py:44680
+#: t_modules/t_main.py:44683
 #, fuzzy
 msgid "Track already has lyrics"
 msgstr "Parça zaten beğenilmiş"
 
-#: t_modules/t_main.py:44866
+#: t_modules/t_main.py:44869
 #, fuzzy
 msgid "Error loading theme file"
 msgstr "Dosya silinemedi"
 
-#: t_modules/t_main.py:45698 t_modules/t_main.py:45712
+#: t_modules/t_main.py:45701 t_modules/t_main.py:45715
 msgid "Various Artists"
 msgstr ""
 
-#: t_modules/t_main.py:45944
+#: t_modules/t_main.py:45947
 msgid "Rescan folders complete."
 msgstr ""
 
-#: t_modules/t_main.py:45985
+#: t_modules/t_main.py:45988
 msgid "Auto sort skipped because playlist is locked."
 msgstr ""
 
-#: t_modules/t_main.py:46594
+#: t_modules/t_main.py:46597
 msgid "Queue is Empty"
 msgstr ""
 
-#: t_modules/t_main.py:46973 t_modules/t_main.py:46992
-#: t_modules/t_main.py:47011 t_modules/t_main.py:47034
-#: t_modules/t_main.py:47081 t_modules/t_main.py:47102
-#: t_modules/t_main.py:47148 t_modules/t_main.py:47163
-#: t_modules/t_main.py:47178 t_modules/t_main.py:47233
+#: t_modules/t_main.py:46976 t_modules/t_main.py:46995
+#: t_modules/t_main.py:47014 t_modules/t_main.py:47037
+#: t_modules/t_main.py:47084 t_modules/t_main.py:47105
+#: t_modules/t_main.py:47151 t_modules/t_main.py:47166
+#: t_modules/t_main.py:47181 t_modules/t_main.py:47236
 msgid "Copied text to clipboard"
 msgstr ""
 
-#: t_modules/t_main.py:47032 t_modules/t_main.py:47038
+#: t_modules/t_main.py:47035 t_modules/t_main.py:47041
 msgid "Path"
 msgstr ""
 
-#: t_modules/t_main.py:47053
+#: t_modules/t_main.py:47056
 msgid "Samplerate"
 msgstr ""
 
-#: t_modules/t_main.py:47070
+#: t_modules/t_main.py:47073
 msgid " kbps"
 msgstr ""
 
-#: t_modules/t_main.py:47112 t_modules/t_main.py:47134
+#: t_modules/t_main.py:47115 t_modules/t_main.py:47137
 msgid " of "
 msgstr ""
 
-#: t_modules/t_main.py:47114 t_modules/t_main.py:47774
+#: t_modules/t_main.py:47117 t_modules/t_main.py:47777
 msgid "Track"
 msgstr ""
 
-#: t_modules/t_main.py:47122 t_modules/t_main.py:47128
+#: t_modules/t_main.py:47125 t_modules/t_main.py:47131
 msgid "File size"
 msgstr ""
 
-#: t_modules/t_main.py:47136
+#: t_modules/t_main.py:47139
 msgid "Disc"
 msgstr ""
 
-#: t_modules/t_main.py:47200
+#: t_modules/t_main.py:47203
 msgid "Play count"
 msgstr "Çalma sayısı"
 
-#: t_modules/t_main.py:47213
+#: t_modules/t_main.py:47216
 msgid "Play time"
 msgstr "Çalma süresi"
 
-#: t_modules/t_main.py:47302
+#: t_modules/t_main.py:47305
 msgid "Folder Modification"
 msgstr ""
 
-#: t_modules/t_main.py:47317
+#: t_modules/t_main.py:47320
 msgid "Renames the physical folder based on the template"
 msgstr ""
 
-#: t_modules/t_main.py:47322
+#: t_modules/t_main.py:47325
 msgid "Trash"
 msgstr ""
 
-#: t_modules/t_main.py:47323
+#: t_modules/t_main.py:47326
 msgid "Moves folder to system trash"
 msgstr ""
 
-#: t_modules/t_main.py:47326
+#: t_modules/t_main.py:47329
 msgid "Physically deletes folder from disk"
 msgstr ""
 
-#: t_modules/t_main.py:47338
+#: t_modules/t_main.py:47341
 msgid "Raise"
 msgstr ""
 
-#: t_modules/t_main.py:47339
+#: t_modules/t_main.py:47342
 msgid "Moves folder up 2 levels and deletes the old container folder"
 msgstr ""
 
-#: t_modules/t_main.py:47346
+#: t_modules/t_main.py:47349
 msgid "Deletes some unnecessary files from folder"
 msgstr ""
 
-#: t_modules/t_main.py:47350
+#: t_modules/t_main.py:47353
 msgid "PATH"
 msgstr ""
 
-#: t_modules/t_main.py:47357
+#: t_modules/t_main.py:47360
 msgid "OLD"
 msgstr ""
 
-#: t_modules/t_main.py:47362
+#: t_modules/t_main.py:47365
 msgid "NEW"
 msgstr ""
 
-#: t_modules/t_main.py:47444
+#: t_modules/t_main.py:47447
 msgid "Folder filter mode. Enter path segment."
 msgstr ""
 
-#: t_modules/t_main.py:47448
+#: t_modules/t_main.py:47451
 msgid "UP / DOWN to navigate. SHIFT + RETURN for new playlist."
 msgstr ""
 
-#: t_modules/t_main.py:47450
+#: t_modules/t_main.py:47453
 msgid "Quick find"
 msgstr ""
 
-#: t_modules/t_main.py:47738
+#: t_modules/t_main.py:47741
 msgid "Loved track"
 msgstr ""
 
-#: t_modules/t_main.py:47741
+#: t_modules/t_main.py:47744
 msgid "Un-Loved track"
 msgstr ""
 
-#: t_modules/t_main.py:47863
+#: t_modules/t_main.py:47866
 #, fuzzy
 msgid "Lines copied to clipboard"
 msgstr "URL panoya kopyalandı"
@@ -4950,6 +4915,18 @@ msgstr ""
 #: t_modules/t_tidal.py:83
 msgid "Failed to load TIDAL login, please try log in again"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Of "
+#~ msgstr "Kapalı"
+
+#, fuzzy
+#~ msgid " tracks."
+#~ msgstr "En Uzun Parçalar"
+
+#, fuzzy
+#~ msgid " Track"
+#~ msgstr "Parçayı Yinele"
 
 #~ msgid "Broadcast This"
 #~ msgstr "Bunu Yayınla"
