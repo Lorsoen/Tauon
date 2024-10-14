@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2024-10-14 16:31+0200\n"
+"POT-Creation-Date: 2024-10-14 21:20+0200\n"
 "PO-Revision-Date: 2024-10-06 10:39+0000\n"
 "Last-Translator: Lorsoen <fashim99@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/tauon-music-box/"
@@ -270,6 +270,22 @@ msgstr "Nom d'utilisateur introuvable"
 msgid "User has no loved tracks."
 msgstr "L'utilisateur n'a pas de pistes 'Loved'."
 
+#: t_modules/t_main.py:7679
+#, fuzzy
+msgid "{track} matched tracks are up to date.)"
+msgstr " pistes trouvée.s sont à jour."
+
+#: t_modules/t_main.py:7682
+#, fuzzy
+msgid "{track} tracks matched. {track_upd} were updated."
+msgstr " pistes trouvée.s sont à jour."
+
+#: t_modules/t_main.py:7685
+#, fuzzy
+msgid "Of {track} loved tracks, no matches were found in local db"
+msgstr ""
+" pistes 'Loved', aucune correspondance n'a été trouvé dans la base locale"
+
 #: t_modules/t_main.py:7688
 msgid "This doesn't seem to be working :("
 msgstr "Ça n'a pas l'air de fonctionner :("
@@ -422,6 +438,11 @@ msgstr "Quitter"
 msgid "Starting download..."
 msgstr "Démarrage du téléchargement..."
 
+#: t_modules/t_main.py:8463
+#, fuzzy
+msgid "Downloading... %d/80MB"
+msgstr "Téléchargement..."
+
 #: t_modules/t_main.py:8466
 msgid "Download failed"
 msgstr "Échec du téléchargement"
@@ -546,6 +567,10 @@ msgstr "Erreur à l'import de la playlist XSPF."
 #: t_modules/t_main.py:13841
 msgid "Sorry about that."
 msgstr "Désolé."
+
+#: t_modules/t_main.py:13974
+msgid "Failed to locate {quantity} out of {total} tracks."
+msgstr ""
 
 #: t_modules/t_main.py:14729
 msgid "Playlists + Queue"
@@ -1229,6 +1254,10 @@ msgstr "Pourcentage de pistes avec un relevé musical :"
 msgid "MP3 bitrates (kbps):"
 msgstr "Débit des fichiers MP3 (ko/s) :"
 
+#: t_modules/t_main.py:17748 t_modules/t_main.py:17767
+msgid "Others"
+msgstr ""
+
 #: t_modules/t_main.py:17753
 msgid "OGG bitrates (kbps):"
 msgstr "Débit des fichiers OGG (ko/s) :"
@@ -1355,6 +1384,15 @@ msgstr "Ajouter l'élément en cours de lecture"
 #: t_modules/t_main.py:18852
 msgid "Export…"
 msgstr "Exporter…"
+
+#: t_modules/t_main.py:18870
+#, fuzzy
+msgid "No duplicates were found"
+msgstr "Aucun tag « ReplayGain » trouvé."
+
+#: t_modules/t_main.py:18872
+msgid "{quantity} duplicates removed"
+msgstr ""
 
 #: t_modules/t_main.py:18879
 msgid ""
@@ -2280,6 +2318,10 @@ msgstr "Relevé musical"
 #: t_modules/t_main.py:22924
 msgid "New Radio List"
 msgstr "Nouvelle liste de radio"
+
+#: t_modules/t_main.py:22943
+msgid "Done! {quantity} old items were removed."
+msgstr ""
 
 #: t_modules/t_main.py:22948 t_modules/t_main.py:22951
 msgid "Clean Database!"
@@ -3768,6 +3810,11 @@ msgstr "Préférer x11 lors d'une session Wayland"
 msgid "This program comes with absolutely no warranty."
 msgstr "Ce logiciel est distribué sans aucune garantie."
 
+#: t_modules/t_main.py:30018
+#, fuzzy
+msgid "See the {link} license for details."
+msgstr "Pour plus de détails, voir la licence : https://"
+
 #: t_modules/t_main.py:30032
 msgid "Created by"
 msgstr "Créé par"
@@ -4523,6 +4570,16 @@ msgstr "Il a complètement...   Disparu ?"
 msgid "Up Next:"
 msgstr "Suivant :"
 
+#: t_modules/t_main.py:39398
+#, fuzzy
+msgid "{number_of} Track"
+msgstr "Limiter au nombre de pistes"
+
+#: t_modules/t_main.py:39401
+#, fuzzy
+msgid "{number_of} Tracks"
+msgstr "Limiter au nombre de pistes"
+
 #: t_modules/t_main.py:39865
 msgid "No artist name found"
 msgstr "Aucun nom d'artiste trouvé."
@@ -4887,18 +4944,15 @@ msgstr ""
 "Échec du chargement de l'authentification. Veuillez réessayer de vous "
 "connecter."
 
-#~ msgid " matched tracks are up to date."
-#~ msgstr " pistes trouvée.s sont à jour."
+#: t_modules/t_webserve.py:756
+msgid "You can close this now and return to Tauon Music Box"
+msgstr ""
 
 #~ msgid " tracks matched. "
 #~ msgstr " pistes trouvée.s."
 
 #~ msgid " were updated."
 #~ msgstr " mise.s à jour."
-
-#~ msgid " loved tracks, no matches were found in local db"
-#~ msgstr ""
-#~ " pistes 'Loved', aucune correspondance n'a été trouvé dans la base locale"
 
 #~ msgid "Of "
 #~ msgstr "Sur "
@@ -4911,9 +4965,6 @@ msgstr ""
 
 #~ msgid "Failed to locate "
 #~ msgstr "Impossible de localiser "
-
-#~ msgid "See the license for details: https://"
-#~ msgstr "Pour plus de détails, voir la licence : https://"
 
 #~ msgid " Track"
 #~ msgstr " Piste"

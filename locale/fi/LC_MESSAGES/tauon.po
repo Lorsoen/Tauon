@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2024-10-14 16:31+0200\n"
+"POT-Creation-Date: 2024-10-14 21:20+0200\n"
 "PO-Revision-Date: 2024-04-03 09:02+0000\n"
 "Last-Translator: Roosa Huovinen <roosa.h@proton.me>\n"
 "Language-Team: Finnish <https://hosted.weblate.org/projects/tauon-music-box/"
@@ -258,6 +258,18 @@ msgstr "Esittäjän kuvaa ei löydy."
 msgid "User has no loved tracks."
 msgstr "Kappale lisätty tykättyihin kappaleisiin"
 
+#: t_modules/t_main.py:7679
+msgid "{track} matched tracks are up to date.)"
+msgstr ""
+
+#: t_modules/t_main.py:7682
+msgid "{track} tracks matched. {track_upd} were updated."
+msgstr ""
+
+#: t_modules/t_main.py:7685
+msgid "Of {track} loved tracks, no matches were found in local db"
+msgstr ""
+
 #: t_modules/t_main.py:7688
 msgid "This doesn't seem to be working :("
 msgstr ""
@@ -410,6 +422,10 @@ msgstr "Sulje"
 msgid "Starting download..."
 msgstr ""
 
+#: t_modules/t_main.py:8463
+msgid "Downloading... %d/80MB"
+msgstr ""
+
 #: t_modules/t_main.py:8466
 msgid "Download failed"
 msgstr ""
@@ -529,6 +545,10 @@ msgstr ""
 
 #: t_modules/t_main.py:13841
 msgid "Sorry about that."
+msgstr ""
+
+#: t_modules/t_main.py:13974
+msgid "Failed to locate {quantity} out of {total} tracks."
 msgstr ""
 
 #: t_modules/t_main.py:14729
@@ -1208,6 +1228,10 @@ msgstr ""
 msgid "MP3 bitrates (kbps):"
 msgstr ""
 
+#: t_modules/t_main.py:17748 t_modules/t_main.py:17767
+msgid "Others"
+msgstr ""
+
 #: t_modules/t_main.py:17753
 msgid "OGG bitrates (kbps):"
 msgstr ""
@@ -1331,6 +1355,15 @@ msgstr ""
 
 #: t_modules/t_main.py:18852
 msgid "Export…"
+msgstr ""
+
+#: t_modules/t_main.py:18870
+#, fuzzy
+msgid "No duplicates were found"
+msgstr "Esittäjän kuvaa ei löydy."
+
+#: t_modules/t_main.py:18872
+msgid "{quantity} duplicates removed"
 msgstr ""
 
 #: t_modules/t_main.py:18879
@@ -2247,6 +2280,10 @@ msgstr ""
 
 #: t_modules/t_main.py:22924
 msgid "New Radio List"
+msgstr ""
+
+#: t_modules/t_main.py:22943
+msgid "Done! {quantity} old items were removed."
 msgstr ""
 
 #: t_modules/t_main.py:22948 t_modules/t_main.py:22951
@@ -3678,6 +3715,10 @@ msgstr ""
 msgid "This program comes with absolutely no warranty."
 msgstr ""
 
+#: t_modules/t_main.py:30018
+msgid "See the {link} license for details."
+msgstr ""
+
 #: t_modules/t_main.py:30032
 msgid "Created by"
 msgstr ""
@@ -4431,6 +4472,14 @@ msgstr ""
 msgid "Up Next:"
 msgstr ""
 
+#: t_modules/t_main.py:39398
+msgid "{number_of} Track"
+msgstr ""
+
+#: t_modules/t_main.py:39401
+msgid "{number_of} Tracks"
+msgstr ""
+
 #: t_modules/t_main.py:39865
 #, fuzzy
 msgid "No artist name found"
@@ -4789,6 +4838,10 @@ msgstr ""
 
 #: t_modules/t_tidal.py:83
 msgid "Failed to load TIDAL login, please try log in again"
+msgstr ""
+
+#: t_modules/t_webserve.py:756
+msgid "You can close this now and return to Tauon Music Box"
 msgstr ""
 
 #, fuzzy

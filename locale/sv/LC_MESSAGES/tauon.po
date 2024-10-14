@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2024-10-14 16:31+0200\n"
+"POT-Creation-Date: 2024-10-14 21:20+0200\n"
 "PO-Revision-Date: 2022-12-03 15:47+0000\n"
 "Last-Translator: Micke Nilsson <mikni@proton.me>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/tauon-music-box/"
@@ -270,6 +270,18 @@ msgstr "Inga träffar"
 msgid "User has no loved tracks."
 msgstr "Av-älska spår"
 
+#: t_modules/t_main.py:7679
+msgid "{track} matched tracks are up to date.)"
+msgstr ""
+
+#: t_modules/t_main.py:7682
+msgid "{track} tracks matched. {track_upd} were updated."
+msgstr ""
+
+#: t_modules/t_main.py:7685
+msgid "Of {track} loved tracks, no matches were found in local db"
+msgstr ""
+
 #: t_modules/t_main.py:7688
 msgid "This doesn't seem to be working :("
 msgstr ""
@@ -431,6 +443,11 @@ msgstr "Avsluta"
 msgid "Starting download..."
 msgstr ""
 
+#: t_modules/t_main.py:8463
+#, fuzzy
+msgid "Downloading... %d/80MB"
+msgstr "Laddar ner data..."
+
 #: t_modules/t_main.py:8466
 #, fuzzy
 msgid "Download failed"
@@ -560,6 +577,10 @@ msgstr "Kan inte skapa Spotify-lista"
 
 #: t_modules/t_main.py:13841
 msgid "Sorry about that."
+msgstr ""
+
+#: t_modules/t_main.py:13974
+msgid "Failed to locate {quantity} out of {total} tracks."
 msgstr ""
 
 #: t_modules/t_main.py:14729
@@ -1268,6 +1289,10 @@ msgstr ""
 msgid "MP3 bitrates (kbps):"
 msgstr ""
 
+#: t_modules/t_main.py:17748 t_modules/t_main.py:17767
+msgid "Others"
+msgstr ""
+
 #: t_modules/t_main.py:17753
 msgid "OGG bitrates (kbps):"
 msgstr ""
@@ -1399,6 +1424,15 @@ msgstr "Lägg till låten som spelas nu"
 #: t_modules/t_main.py:18852
 msgid "Export…"
 msgstr "Exportera…"
+
+#: t_modules/t_main.py:18870
+#, fuzzy
+msgid "No duplicates were found"
+msgstr "Ingen spår med text hittades."
+
+#: t_modules/t_main.py:18872
+msgid "{quantity} duplicates removed"
+msgstr ""
 
 #: t_modules/t_main.py:18879
 msgid ""
@@ -2363,6 +2397,10 @@ msgstr ""
 #, fuzzy
 msgid "New Radio List"
 msgstr "Ny spelningslista"
+
+#: t_modules/t_main.py:22943
+msgid "Done! {quantity} old items were removed."
+msgstr ""
 
 #: t_modules/t_main.py:22948 t_modules/t_main.py:22951
 #, fuzzy
@@ -3885,6 +3923,11 @@ msgstr ""
 msgid "This program comes with absolutely no warranty."
 msgstr ""
 
+#: t_modules/t_main.py:30018
+#, fuzzy
+msgid "See the {link} license for details."
+msgstr "Se här för detaljerad användning av utsändningsfunktionen:"
+
 #: t_modules/t_main.py:30032
 msgid "Created by"
 msgstr ""
@@ -4691,6 +4734,14 @@ msgstr ""
 msgid "Up Next:"
 msgstr ""
 
+#: t_modules/t_main.py:39398
+msgid "{number_of} Track"
+msgstr ""
+
+#: t_modules/t_main.py:39401
+msgid "{number_of} Tracks"
+msgstr ""
+
 #: t_modules/t_main.py:39865
 #, fuzzy
 msgid "No artist name found"
@@ -5062,6 +5113,10 @@ msgstr ""
 msgid "Failed to load TIDAL login, please try log in again"
 msgstr ""
 
+#: t_modules/t_webserve.py:756
+msgid "You can close this now and return to Tauon Music Box"
+msgstr ""
+
 #, fuzzy
 #~ msgid "Of "
 #~ msgstr "Av"
@@ -5077,10 +5132,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Failed to locate "
 #~ msgstr "Kunde inte ansluta!"
-
-#, fuzzy
-#~ msgid "See the license for details: https://"
-#~ msgstr "Se här för detaljerad användning av utsändningsfunktionen:"
 
 #, fuzzy
 #~ msgid " Track"
