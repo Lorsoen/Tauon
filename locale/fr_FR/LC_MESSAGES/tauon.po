@@ -398,9 +398,8 @@ msgid "Starting download..."
 msgstr "Démarrage du téléchargement..."
 
 #: t_modules/t_main.py:8466
-#, fuzzy
 msgid "Download failed"
-msgstr "Échec du téléchargement de l'image."
+msgstr "Échec du téléchargement"
 
 #: t_modules/t_main.py:8470
 msgid "Download completed but checksum failed"
@@ -1149,85 +1148,61 @@ msgid "Rescanning folders..."
 msgstr "Réanalyse des dossiers…"
 
 #: t_modules/t_main.py:17693
-#, fuzzy
 msgid "Playlist:"
-msgstr "Playlist :\n"
+msgstr "Playlist :"
 
 #: t_modules/t_main.py:17694
-#, fuzzy
 msgid "Generated:"
-msgstr "Générée.s :\n"
+msgstr "Générée.s :"
 
 #: t_modules/t_main.py:17695
-#, fuzzy
 msgid "Tracks in playlist:"
-msgstr "Pistes dans la playlist :\n"
+msgstr "Pistes dans la playlist :"
 
 #: t_modules/t_main.py:17697
-#, fuzzy
 msgid "Repeats in playlist:"
-msgstr "Boucles dans la playlist :\n"
+msgstr "Boucles dans la playlist :"
 
 #: t_modules/t_main.py:17701
-#, fuzzy
 msgid "Total local size:"
-msgstr "Taille locale totale :\n"
+msgstr "Taille locale totale :"
 
 #: t_modules/t_main.py:17702
-#, fuzzy
 msgid "Playlist duration:"
-msgstr "Durée de la playlist :\n"
+msgstr "Durée de la playlist :"
 
 #: t_modules/t_main.py:17703
-#, fuzzy
 msgid "Total playtime:"
-msgstr "Durée totale :\n"
+msgstr "Durée totale :"
 
 #: t_modules/t_main.py:17705
-#, fuzzy
 msgid "Track types:"
-msgstr "Types de piste :\n"
+msgstr "Types de piste :"
 
 #: t_modules/t_main.py:17721
-#, fuzzy
 msgid "Percent of tracks are CUE type:"
-msgstr "Pourcentage de pistes avec un relevé musical :\n"
+msgstr "Pourcentage de pistes avec un relevé musical :"
 
 #: t_modules/t_main.py:17734
-#, fuzzy
 msgid "MP3 bitrates (kbps):"
-msgstr "Débit des fichiers MP3 (ko/s) :\n"
+msgstr "Débit des fichiers MP3 (ko/s) :"
 
 #: t_modules/t_main.py:17753
-#, fuzzy
 msgid "OGG bitrates (kbps):"
-msgstr "Débit des fichiers OGG (ko/s) :\n"
+msgstr "Débit des fichiers OGG (ko/s) :"
 
 #: t_modules/t_main.py:17791
-#, fuzzy
 msgid "-------------- Top Artists --------------------"
-msgstr ""
-"\n"
-"-------------- Top des artistes ------------------\n"
-"\n"
+msgstr "-------------- Top des artistes ---------------"
 
 #: t_modules/t_main.py:17797
-#, fuzzy
 msgid "-------------- Top Albums --------------------"
-msgstr ""
-"\n"
-"\n"
-"-------------- Top des albums --------------------\n"
-"\n"
+msgstr "-------------- Top des albums ----------------"
+
 
 #: t_modules/t_main.py:17801
-#, fuzzy
 msgid "-------------- Top Genres --------------------"
-msgstr ""
-"\n"
-"\n"
-"-------------- Top des genres --------------------\n"
-"\n"
+msgstr "-------------- Top des genres ----------------"
 
 #: t_modules/t_main.py:17821 t_modules/t_main.py:17832
 #: t_modules/t_main.py:17851 t_modules/t_main.py:22294
@@ -3588,11 +3563,9 @@ msgid "Error, not  connected to last.fm"
 msgstr "Erreur, non connecté à last.fm"
 
 #: t_modules/t_main.py:29611
-#, fuzzy
 msgid "Warning: This process will take approximately %d minutes to complete."
 msgstr ""
-"Attention : Ce processus peut prendre beaucoup de temps ! (jusqu’à une heure "
-"ou plus)"
+"Attention : Ce processus se terminera en %d minutes environ."
 
 #: t_modules/t_main.py:29612 t_modules/t_main.py:29634
 msgid "Press again while holding Shift if you understand"
@@ -3834,7 +3807,6 @@ msgid "Sort by top played"
 msgstr "Trier par les plus joués"
 
 #: t_modules/t_main.py:30285
-#, fuzzy
 msgid "Randomise BG"
 msgstr "Fond aléatoire"
 
