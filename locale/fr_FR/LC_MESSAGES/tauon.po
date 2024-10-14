@@ -564,7 +564,7 @@ msgstr "Désolé."
 
 #: t_modules/t_main.py:13974
 msgid "Failed to locate {quantity} out of {total} tracks."
-msgstr "{quantity} piste.s sur {total} n'a pas été trouvée."
+msgstr "{quantity} pistes sur {total} n'ont pas été trouvées."
 
 #: t_modules/t_main.py:14729
 msgid "Playlists + Queue"
