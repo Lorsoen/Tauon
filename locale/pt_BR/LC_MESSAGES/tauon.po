@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Tauon Music Box v6.0.3\n"
-"POT-Creation-Date: 2024-10-14 21:53+0200\n"
+"POT-Creation-Date: 2024-10-14 22:51+0200\n"
 "PO-Revision-Date: 2023-05-07 11:52+0000\n"
 "Last-Translator: Marcelo dos Santos Mafra <msmafra@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
@@ -634,6 +634,10 @@ msgstr ""
 
 #: t_modules/t_main.py:14856
 msgid "Warning: A track has incomplete metadata"
+msgstr ""
+
+#: t_modules/t_main.py:14860
+msgid "Write"
 msgstr ""
 
 #: t_modules/t_main.py:14864

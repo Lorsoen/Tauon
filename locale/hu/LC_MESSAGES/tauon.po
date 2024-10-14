@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2024-10-14 21:53+0200\n"
+"POT-Creation-Date: 2024-10-14 22:51+0200\n"
 "PO-Revision-Date: 2023-04-06 06:52+0000\n"
 "Last-Translator: Daniel Uhrinyi <daniel.uhrinyi@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/tauon-music-"
@@ -616,6 +616,10 @@ msgstr ""
 
 #: t_modules/t_main.py:14856
 msgid "Warning: A track has incomplete metadata"
+msgstr ""
+
+#: t_modules/t_main.py:14860
+msgid "Write"
 msgstr ""
 
 #: t_modules/t_main.py:14864

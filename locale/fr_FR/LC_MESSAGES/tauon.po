@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2024-10-14 21:53+0200\n"
+"POT-Creation-Date: 2024-10-14 22:51+0200\n"
 "PO-Revision-Date: 2024-10-06 10:39+0000\n"
 "Last-Translator: Lorsoen <fashim99@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/tauon-music-box/"
@@ -625,6 +625,10 @@ msgstr "Attention : Le nom du fichier existe peut-être déjà"
 #: t_modules/t_main.py:14856
 msgid "Warning: A track has incomplete metadata"
 msgstr "Attention : Il manque des métadonnées sur une piste"
+
+#: t_modules/t_main.py:14860
+msgid "Write"
+msgstr "Écrire"
 
 #: t_modules/t_main.py:14864
 msgid "Physically renames all the tracks in the folder"

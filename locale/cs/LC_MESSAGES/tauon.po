@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2024-10-14 21:53+0200\n"
+"POT-Creation-Date: 2024-10-14 22:51+0200\n"
 "PO-Revision-Date: 2023-02-06 17:41+0000\n"
 "Last-Translator: Fjuro <ifjuro@proton.me>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/tauon-music-box/"
@@ -603,6 +603,10 @@ msgstr ""
 
 #: t_modules/t_main.py:14856
 msgid "Warning: A track has incomplete metadata"
+msgstr ""
+
+#: t_modules/t_main.py:14860
+msgid "Write"
 msgstr ""
 
 #: t_modules/t_main.py:14864
