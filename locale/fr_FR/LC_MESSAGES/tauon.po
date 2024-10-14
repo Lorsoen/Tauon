@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2024-10-14 21:20+0200\n"
+"POT-Creation-Date: 2024-10-14 21:53+0200\n"
 "PO-Revision-Date: 2024-10-06 10:39+0000\n"
 "Last-Translator: Lorsoen <fashim99@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/tauon-music-box/"
@@ -77,7 +77,7 @@ msgstr "Erreur d'accès à Jellyfin"
 
 #: t_modules/t_jellyfin.py:530
 msgid "Jellyfin Collection"
-msgstr ""
+msgstr "Collection Jellyfin"
 
 #: t_modules/t_main.py:1921 t_modules/t_main.py:1923
 msgid "No artist image found."
@@ -163,11 +163,11 @@ msgstr ""
 
 #: t_modules/t_main.py:4421
 msgid "Detected unsuitable UI scaling."
-msgstr ""
+msgstr "Échelle d'IU anormale détectée."
 
 #: t_modules/t_main.py:4421
 msgid "Scaling setting reset to 1x"
-msgstr ""
+msgstr "L'option a été réinitialisée à 1x"
 
 #: t_modules/t_main.py:7172
 msgid "End of playlist"
@@ -191,12 +191,11 @@ msgstr "Vous devez d'abord vous identifier"
 
 #: t_modules/t_main.py:7241
 msgid "Error - Not authorized"
-msgstr ""
+msgstr "Erreur - Non autorisé"
 
 #: t_modules/t_main.py:7243
-#, fuzzy
 msgid "Unknown error."
-msgstr "Piste inconnue"
+msgstr "Erreur inconnue."
 
 #: t_modules/t_main.py:7243 t_modules/t_phazor.py:520
 msgid "Error"
@@ -260,7 +259,7 @@ msgstr "Une erreur s’est produite lors de la récupération des 'Love' amis"
 
 #: t_modules/t_main.py:7628
 msgid "Scanning loved tracks for: %s"
-msgstr ""
+msgstr "Analyse des pistes 'loved' pour : %s"
 
 #: t_modules/t_main.py:7632
 msgid "No username found"
@@ -271,20 +270,18 @@ msgid "User has no loved tracks."
 msgstr "L'utilisateur n'a pas de pistes 'Loved'."
 
 #: t_modules/t_main.py:7679
-#, fuzzy
-msgid "{track} matched tracks are up to date.)"
-msgstr " pistes trouvée.s sont à jour."
+msgid "{quantity} matched tracks are up to date."
+msgstr "{quantity} pistes trouvée.s sont à jour."
 
 #: t_modules/t_main.py:7682
-#, fuzzy
-msgid "{track} tracks matched. {track_upd} were updated."
-msgstr " pistes trouvée.s sont à jour."
+msgid "{quantity} tracks matched. {total} were updated."
+msgstr "{quantity} pistes trouvée.s. {total} ont été.s mises à jour."
 
 #: t_modules/t_main.py:7685
-#, fuzzy
-msgid "Of {track} loved tracks, no matches were found in local db"
+msgid "Of {quantity} loved tracks, no matches were found in local db"
 msgstr ""
-" pistes 'Loved', aucune correspondance n'a été trouvé dans la base locale"
+"Sur {quantity} pistes 'Loved', aucune correspondance n'a été trouvé dans la "
+"base locale"
 
 #: t_modules/t_main.py:7688
 msgid "This doesn't seem to be working :("
@@ -439,9 +436,8 @@ msgid "Starting download..."
 msgstr "Démarrage du téléchargement..."
 
 #: t_modules/t_main.py:8463
-#, fuzzy
 msgid "Downloading... %d/80MB"
-msgstr "Téléchargement..."
+msgstr "Téléchargement... %d / 80 Mo"
 
 #: t_modules/t_main.py:8466
 msgid "Download failed"
@@ -537,23 +533,21 @@ msgstr "Arrêtez la synchronisation avant de quitter !"
 
 #: t_modules/t_main.py:10206 t_modules/t_main.py:10208
 #: t_modules/t_main.py:10210
-#, fuzzy
 msgid "App will need to be restarted."
-msgstr "Sera appliqué au redémarrage de Tauon"
+msgstr "Vous devrez relancer Tauon."
 
 #: t_modules/t_main.py:10206 t_modules/t_main.py:10208
 #: t_modules/t_main.py:10210
 msgid "Playback thread has crashed. Sorry about that."
-msgstr ""
+msgstr "La lecture a plantée. Désolé."
 
 #: t_modules/t_main.py:12391 t_modules/t_main.py:16313
 msgid "Saving network images not implemented"
 msgstr "L'édition de pistes en réseau est déconseillée !"
 
 #: t_modules/t_main.py:12396
-#, fuzzy
 msgid "No embedded album art."
-msgstr "Aucune illustration intégrée n'a été trouvée."
+msgstr "Aucune illustration intégrée."
 
 #: t_modules/t_main.py:12396 t_modules/t_main.py:16320
 #: t_modules/t_main.py:16341
@@ -570,7 +564,7 @@ msgstr "Désolé."
 
 #: t_modules/t_main.py:13974
 msgid "Failed to locate {quantity} out of {total} tracks."
-msgstr ""
+msgstr "{quantity} piste.s sur {total} n'a pas été trouvée."
 
 #: t_modules/t_main.py:14729
 msgid "Playlists + Queue"
@@ -1131,6 +1125,8 @@ msgstr "Supprimer l'image des métadonnées | Piste"
 #: t_modules/t_main.py:16733
 msgid "This will erase any embedded image in %d files. Are you sure?"
 msgstr ""
+"Cette action supprimera toute image intégrée dans %d fichiers. Êtes-vous sûr."
+"e ?"
 
 #: t_modules/t_main.py:16740 t_modules/t_main.py:16778
 msgid "Quick-Fetch Cover Art"
@@ -1256,7 +1252,7 @@ msgstr "Débit des fichiers MP3 (ko/s) :"
 
 #: t_modules/t_main.py:17748 t_modules/t_main.py:17767
 msgid "Others"
-msgstr ""
+msgstr "Autres"
 
 #: t_modules/t_main.py:17753
 msgid "OGG bitrates (kbps):"
@@ -1386,13 +1382,12 @@ msgid "Export…"
 msgstr "Exporter…"
 
 #: t_modules/t_main.py:18870
-#, fuzzy
 msgid "No duplicates were found"
-msgstr "Aucun tag « ReplayGain » trouvé."
+msgstr "Aucun doublon n'a été trouvé."
 
 #: t_modules/t_main.py:18872
 msgid "{quantity} duplicates removed"
-msgstr ""
+msgstr "{quantity} doublons supprimés"
 
 #: t_modules/t_main.py:18879
 msgid ""
@@ -2321,7 +2316,7 @@ msgstr "Nouvelle liste de radio"
 
 #: t_modules/t_main.py:22943
 msgid "Done! {quantity} old items were removed."
-msgstr ""
+msgstr "Terminé ! {quantity} anciens objets ont été retirés."
 
 #: t_modules/t_main.py:22948 t_modules/t_main.py:22951
 msgid "Clean Database!"
@@ -3811,9 +3806,8 @@ msgid "This program comes with absolutely no warranty."
 msgstr "Ce logiciel est distribué sans aucune garantie."
 
 #: t_modules/t_main.py:30018
-#, fuzzy
 msgid "See the {link} license for details."
-msgstr "Pour plus de détails, voir la licence : https://"
+msgstr "Pour plus de détails, voir la licence {link}"
 
 #: t_modules/t_main.py:30032
 msgid "Created by"
@@ -3903,7 +3897,7 @@ msgstr "Un peu de patience !"
 
 #: t_modules/t_main.py:30326
 msgid "No font set in config"
-msgstr ""
+msgstr "Aucune police n'est configurée"
 
 #: t_modules/t_main.py:30335
 msgid "Generating..."
@@ -4571,14 +4565,12 @@ msgid "Up Next:"
 msgstr "Suivant :"
 
 #: t_modules/t_main.py:39398
-#, fuzzy
 msgid "{number_of} Track"
-msgstr "Limiter au nombre de pistes"
+msgstr "{number_of} piste"
 
 #: t_modules/t_main.py:39401
-#, fuzzy
 msgid "{number_of} Tracks"
-msgstr "Limiter au nombre de pistes"
+msgstr "{number_of} pistes"
 
 #: t_modules/t_main.py:39865
 msgid "No artist name found"
@@ -4947,35 +4939,4 @@ msgstr ""
 #: t_modules/t_webserve.py:756
 msgid "You can close this now and return to Tauon Music Box"
 msgstr ""
-
-#~ msgid " tracks matched. "
-#~ msgstr " pistes trouvée.s."
-
-#~ msgid " were updated."
-#~ msgstr " mise.s à jour."
-
-#~ msgid "Of "
-#~ msgstr "Sur "
-
-#~ msgid " out of "
-#~ msgstr " pistes sur "
-
-#~ msgid " tracks."
-#~ msgstr " échouée."
-
-#~ msgid "Failed to locate "
-#~ msgstr "Impossible de localiser "
-
-#~ msgid " Track"
-#~ msgstr " Piste"
-
-#~ msgid "New"
-#~ msgstr "Nouveau"
-
-#~ msgid "Generate..."
-#~ msgstr "Génération..."
-
-#~ msgid "See here to learn more:https://github.com/krateng/maloja"
-#~ msgstr ""
-#~ "Cliquez ici pour en savoir plus (en anglais) : https://github.com/krateng/"
-#~ "maloja"
+"Vous pouvez maintenant fermer cet onglet et retourner à Tauon Music Box"

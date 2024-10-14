@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2024-10-14 21:20+0200\n"
+"POT-Creation-Date: 2024-10-14 21:53+0200\n"
 "PO-Revision-Date: 2019-05-01 22:39+1200\n"
 "Last-Translator:  <captain.gxj@gmail.com>\n"
 "Language-Team: Language ja\n"
@@ -263,15 +263,15 @@ msgid "User has no loved tracks."
 msgstr "好きじゃない"
 
 #: t_modules/t_main.py:7679
-msgid "{track} matched tracks are up to date.)"
+msgid "{quantity} matched tracks are up to date."
 msgstr ""
 
 #: t_modules/t_main.py:7682
-msgid "{track} tracks matched. {track_upd} were updated."
+msgid "{quantity} tracks matched. {total} were updated."
 msgstr ""
 
 #: t_modules/t_main.py:7685
-msgid "Of {track} loved tracks, no matches were found in local db"
+msgid "Of {quantity} loved tracks, no matches were found in local db"
 msgstr ""
 
 #: t_modules/t_main.py:7688

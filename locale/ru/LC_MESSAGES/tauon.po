@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2024-10-14 21:20+0200\n"
+"POT-Creation-Date: 2024-10-14 21:53+0200\n"
 "PO-Revision-Date: 2024-09-22 13:45+0000\n"
 "Last-Translator: Andrei Stepanov <adem4ik@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/tauon-music-box/"
@@ -270,15 +270,15 @@ msgid "User has no loved tracks."
 msgstr "Не понравившаяся дорожка"
 
 #: t_modules/t_main.py:7679
-msgid "{track} matched tracks are up to date.)"
+msgid "{quantity} matched tracks are up to date."
 msgstr ""
 
 #: t_modules/t_main.py:7682
-msgid "{track} tracks matched. {track_upd} were updated."
+msgid "{quantity} tracks matched. {total} were updated."
 msgstr ""
 
 #: t_modules/t_main.py:7685
-msgid "Of {track} loved tracks, no matches were found in local db"
+msgid "Of {quantity} loved tracks, no matches were found in local db"
 msgstr ""
 
 #: t_modules/t_main.py:7688
