@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2024-10-14 15:40+0200\n"
+"POT-Creation-Date: 2024-10-14 16:31+0200\n"
 "PO-Revision-Date: 2022-12-03 15:47+0000\n"
 "Last-Translator: Micke Nilsson <mikni@proton.me>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/tauon-music-box/"
@@ -154,9 +154,21 @@ msgid ""
 "settings"
 msgstr ""
 
+#: t_modules/t_main.py:4421
+msgid "Detected unsuitable UI scaling."
+msgstr ""
+
+#: t_modules/t_main.py:4421
+msgid "Scaling setting reset to 1x"
+msgstr ""
+
 #: t_modules/t_main.py:7172
 msgid "End of playlist"
 msgstr "Slut på spelningslistan"
+
+#: t_modules/t_main.py:7209 t_modules/t_main.py:27536
+msgid "Optional module python-pylast not installed"
+msgstr ""
 
 #: t_modules/t_main.py:7218
 msgid "Once authorised click the 'done' button."
@@ -172,6 +184,15 @@ msgstr "Du måste logga in först"
 
 #: t_modules/t_main.py:7241
 msgid "Error - Not authorized"
+msgstr ""
+
+#: t_modules/t_main.py:7243
+#, fuzzy
+msgid "Unknown error."
+msgstr "Av-älska spår"
+
+#: t_modules/t_main.py:7243 t_modules/t_phazor.py:520
+msgid "Error"
 msgstr ""
 
 #: t_modules/t_main.py:7254
@@ -234,6 +255,10 @@ msgstr "Detta kan ta mycket lång tid."
 #, fuzzy
 msgid "There was an error getting friends loves"
 msgstr "Ett fel uppstod när diagrammet skulle skapas"
+
+#: t_modules/t_main.py:7628
+msgid "Scanning loved tracks for: %s"
+msgstr ""
 
 #: t_modules/t_main.py:7632
 #, fuzzy
@@ -503,8 +528,29 @@ msgstr ""
 msgid "Stop the sync before exiting!"
 msgstr "Stoppa synkronisering före avslut!"
 
+#: t_modules/t_main.py:10206 t_modules/t_main.py:10208
+#: t_modules/t_main.py:10210
+#, fuzzy
+msgid "App will need to be restarted."
+msgstr "Ändringar tillämpas efter omstart."
+
+#: t_modules/t_main.py:10206 t_modules/t_main.py:10208
+#: t_modules/t_main.py:10210
+msgid "Playback thread has crashed. Sorry about that."
+msgstr ""
+
 #: t_modules/t_main.py:12391 t_modules/t_main.py:16313
 msgid "Saving network images not implemented"
+msgstr ""
+
+#: t_modules/t_main.py:12396
+#, fuzzy
+msgid "No embedded album art."
+msgstr "Inga ofullständiga album hittades."
+
+#: t_modules/t_main.py:12396 t_modules/t_main.py:16320
+#: t_modules/t_main.py:16341
+msgid "Image save error."
 msgstr ""
 
 #: t_modules/t_main.py:13841
@@ -982,10 +1028,6 @@ msgstr "Artistinfo på/av"
 #, fuzzy
 msgid "No embedded album art found file."
 msgstr "Inga ofullständiga album hittades."
-
-#: t_modules/t_main.py:16320 t_modules/t_main.py:16341
-msgid "Image save error."
-msgstr ""
 
 #: t_modules/t_main.py:16341
 msgid "A mysterious error occurred"
@@ -2867,10 +2909,6 @@ msgstr "Externa anslutningar kommer att accepteras."
 msgid "Web server starting"
 msgstr "Webbserver startar"
 
-#: t_modules/t_main.py:27536
-msgid "Optional module python-pylast not installed"
-msgstr ""
-
 #: t_modules/t_main.py:27548
 msgid "Can't enable this if there's no token."
 msgstr ""
@@ -3937,6 +3975,10 @@ msgstr "Generera"
 msgid "Be patient!"
 msgstr ""
 
+#: t_modules/t_main.py:30326
+msgid "No font set in config"
+msgstr ""
+
 #: t_modules/t_main.py:30335
 msgid "Generating..."
 msgstr "Genererar..."
@@ -4052,7 +4094,7 @@ msgid "Tauon Music Box ALBUM SHUFFLE!"
 msgstr ""
 
 #: t_modules/t_main.py:31463 t_modules/t_main.py:36568
-#: t_modules/t_main.py:40934
+#: t_modules/t_main.py:40785 t_modules/t_main.py:40934
 msgid "Added station to: "
 msgstr ""
 
@@ -4942,10 +4984,6 @@ msgstr ""
 #, fuzzy
 msgid "Server Error"
 msgstr "Server-URL"
-
-#: t_modules/t_phazor.py:520
-msgid "Error"
-msgstr ""
 
 #: t_modules/t_phazor.py:1114
 #, fuzzy

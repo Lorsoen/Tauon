@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2024-10-14 15:40+0200\n"
+"POT-Creation-Date: 2024-10-14 16:31+0200\n"
 "PO-Revision-Date: 2023-06-28 20:47+0000\n"
 "Last-Translator: ssantos <ssantos@web.de>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/tauon-music-"
@@ -152,9 +152,21 @@ msgid ""
 "settings"
 msgstr ""
 
+#: t_modules/t_main.py:4421
+msgid "Detected unsuitable UI scaling."
+msgstr ""
+
+#: t_modules/t_main.py:4421
+msgid "Scaling setting reset to 1x"
+msgstr ""
+
 #: t_modules/t_main.py:7172
 msgid "End of playlist"
 msgstr "Fim da lista de reprodução"
+
+#: t_modules/t_main.py:7209 t_modules/t_main.py:27536
+msgid "Optional module python-pylast not installed"
+msgstr ""
 
 #: t_modules/t_main.py:7218
 msgid "Once authorised click the 'done' button."
@@ -170,6 +182,15 @@ msgstr "Precisa fazer o login primeiro"
 
 #: t_modules/t_main.py:7241
 msgid "Error - Not authorized"
+msgstr ""
+
+#: t_modules/t_main.py:7243
+#, fuzzy
+msgid "Unknown error."
+msgstr "Desgostar da Faixa"
+
+#: t_modules/t_main.py:7243 t_modules/t_phazor.py:520
+msgid "Error"
 msgstr ""
 
 #: t_modules/t_main.py:7254
@@ -232,6 +253,10 @@ msgstr "Isto pode levar bastante tempo."
 #, fuzzy
 msgid "There was an error getting friends loves"
 msgstr "Houve um erro ao gerar o gráfico"
+
+#: t_modules/t_main.py:7628
+msgid "Scanning loved tracks for: %s"
+msgstr ""
 
 #: t_modules/t_main.py:7632
 #, fuzzy
@@ -495,10 +520,31 @@ msgstr ""
 msgid "Stop the sync before exiting!"
 msgstr "Pare a sincronização antes de sair!"
 
+#: t_modules/t_main.py:10206 t_modules/t_main.py:10208
+#: t_modules/t_main.py:10210
+#, fuzzy
+msgid "App will need to be restarted."
+msgstr "As alterações serão aplicadas ao reiniciar."
+
+#: t_modules/t_main.py:10206 t_modules/t_main.py:10208
+#: t_modules/t_main.py:10210
+msgid "Playback thread has crashed. Sorry about that."
+msgstr ""
+
 #: t_modules/t_main.py:12391 t_modules/t_main.py:16313
 #, fuzzy
 msgid "Saving network images not implemented"
 msgstr "Editar faixas de rede não é recomendado!"
+
+#: t_modules/t_main.py:12396
+#, fuzzy
+msgid "No embedded album art."
+msgstr "Álbuns incompletos não encontrados."
+
+#: t_modules/t_main.py:12396 t_modules/t_main.py:16320
+#: t_modules/t_main.py:16341
+msgid "Image save error."
+msgstr ""
 
 #: t_modules/t_main.py:13841
 #, fuzzy
@@ -973,10 +1019,6 @@ msgstr "Alternar info do artista"
 #, fuzzy
 msgid "No embedded album art found file."
 msgstr "Álbuns incompletos não encontrados."
-
-#: t_modules/t_main.py:16320 t_modules/t_main.py:16341
-msgid "Image save error."
-msgstr ""
 
 #: t_modules/t_main.py:16341
 msgid "A mysterious error occurred"
@@ -2821,10 +2863,6 @@ msgstr "Conexões externas serão aceitas."
 msgid "Web server starting"
 msgstr "Servidor web a iniciar"
 
-#: t_modules/t_main.py:27536
-msgid "Optional module python-pylast not installed"
-msgstr ""
-
 #: t_modules/t_main.py:27548
 msgid "Can't enable this if there's no token."
 msgstr ""
@@ -3880,6 +3918,10 @@ msgstr "Gerar"
 msgid "Be patient!"
 msgstr ""
 
+#: t_modules/t_main.py:30326
+msgid "No font set in config"
+msgstr ""
+
 #: t_modules/t_main.py:30335
 msgid "Generating..."
 msgstr "A gerar..."
@@ -3997,7 +4039,7 @@ msgid "Tauon Music Box ALBUM SHUFFLE!"
 msgstr "Abrir Tauon Music Box"
 
 #: t_modules/t_main.py:31463 t_modules/t_main.py:36568
-#: t_modules/t_main.py:40934
+#: t_modules/t_main.py:40785 t_modules/t_main.py:40934
 msgid "Added station to: "
 msgstr "Estação adicionada para: "
 
@@ -4879,10 +4921,6 @@ msgstr ""
 #, fuzzy
 msgid "Server Error"
 msgstr "URL do Servidor"
-
-#: t_modules/t_phazor.py:520
-msgid "Error"
-msgstr ""
 
 #: t_modules/t_phazor.py:1114
 #, fuzzy
