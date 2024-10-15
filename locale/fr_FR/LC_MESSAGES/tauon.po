@@ -2401,7 +2401,7 @@ msgstr "Importer des évaluations POPM"
 #: t_modules/t_main.py:23168
 msgid "This will delete all track and album ratings from the local database!"
 msgstr ""
-"Cetet action supprimera toutes les évaluations des pistes et albums de la "
+"Cette action supprimera toutes les évaluations des pistes et albums de la "
 "base de données !"
 
 #: t_modules/t_main.py:23169 t_modules/t_main.py:29594
@@ -2725,7 +2725,7 @@ msgid ""
 "Maybe archive is corrupted? Does disk have enough space and have write "
 "permission?"
 msgstr ""
-"Peut-être que l'archive est corrompue ? Est'ce qu'il les bonnes "
+"Peut-être que l'archive est corrompue ? Est'ce qu'il y a les bonnes "
 "autorisations et assez d'espace sur le disque ?"
 
 #: t_modules/t_main.py:26402
@@ -4536,35 +4536,35 @@ msgstr "Téléchargement..."
 
 #: t_modules/t_main.py:38054
 msgid "First of artist's albums ({N} albums)"
-msgstr ""
+msgstr "Premier des albums de l'artiste ({N} albums)"
 
 #: t_modules/t_main.py:38058
 msgid "Last of artist's albums ({N} albums)"
-msgstr ""
+msgstr "Dernier des albums de l'artiste ({N} albums)"
 
 #: t_modules/t_main.py:38071
 msgid "Start of location {N} of {T} ({Nb} albums)"
-msgstr ""
+msgstr "Début du {N}e sur {T} ({Nb} albums)"
 
 #: t_modules/t_main.py:38074 t_modules/t_main.py:38084
 msgid "Location {N} of {T}"
-msgstr ""
+msgstr "N°{N} sur {T}"
 
 #: t_modules/t_main.py:38081
 msgid "End of location {N} of {T} ({Nb} albums)"
-msgstr ""
+msgstr "Fin du {N}e sur {T} ({Nb} albums)"
 
 #: t_modules/t_main.py:38093
 msgid "Start of location 1 of {N} ({Nb} albums)"
-msgstr ""
+msgstr "Début du 1er sur {T} ({Nb} albums)"
 
 #: t_modules/t_main.py:38096
 msgid "Location 1 of {N} ({Nb} albums)"
-msgstr ""
+msgstr "N°1 sur {T} ({Nb} albums)"
 
 #: t_modules/t_main.py:38099
 msgid "Location 1 of {N}"
-msgstr ""
+msgstr "N°1 sur {T}"
 
 #: t_modules/t_main.py:38205
 msgid "No artists in playlist"
