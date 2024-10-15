@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2024-10-15 15:28+0200\n"
+"POT-Creation-Date: 2024-10-15 17:27+0200\n"
 "PO-Revision-Date: 2024-09-22 13:45+0000\n"
 "Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/tauon-music-box/"
@@ -233,7 +233,7 @@ msgid "Scanning scrobbles complete"
 msgstr "Escaneo de scrobbles completado"
 
 #: t_modules/t_main.py:7576
-msgid "Removed {} loves."
+msgid "Removed {N} loves."
 msgstr ""
 
 #: t_modules/t_main.py:7589
@@ -255,7 +255,7 @@ msgid "There was an error getting friends loves"
 msgstr "Hubo un error generando el cuadro"
 
 #: t_modules/t_main.py:7628
-msgid "Scanning loved tracks for: {name}"
+msgid "Scanning loved tracks for: {username}"
 msgstr ""
 
 #: t_modules/t_main.py:7632
@@ -269,16 +269,18 @@ msgid "User has no loved tracks."
 msgstr "Canción no en Favoritos"
 
 #: t_modules/t_main.py:7679
-msgid "{quantity} matched tracks are up to date."
+msgid "{N} matched tracks are up to date."
 msgstr ""
 
 #: t_modules/t_main.py:7682
-msgid "{quantity} tracks matched. {total} were updated."
-msgstr ""
+#, fuzzy
+msgid "{N} tracks matched. {T} were updated."
+msgstr "No se encontraron canciones con letra."
 
 #: t_modules/t_main.py:7685
-msgid "Of {quantity} loved tracks, no matches were found in local db"
-msgstr ""
+#, fuzzy
+msgid "Of {N} loved tracks, no matches were found in local db"
+msgstr "No se encontraron Letras para esta Canción"
 
 #: t_modules/t_main.py:7688
 msgid "This doesn't seem to be working :("
@@ -440,7 +442,7 @@ msgstr ""
 
 #: t_modules/t_main.py:8463
 #, fuzzy
-msgid "Downloading... {data}/80MB"
+msgid "Downloading... {N}/80MB"
 msgstr "Descargando datos..."
 
 #: t_modules/t_main.py:8466
@@ -575,14 +577,15 @@ msgid "Sorry about that."
 msgstr ""
 
 #: t_modules/t_main.py:13974
-msgid "Failed to locate {quantity} out of {total} tracks."
-msgstr ""
+#, fuzzy
+msgid "Failed to locate {N} out of {T} tracks."
+msgstr "¡Error al conectar!"
 
 #: t_modules/t_main.py:14729
 msgid "Playlists + Queue"
 msgstr "Lista de reproducción + Cola"
 
-#: t_modules/t_main.py:14730 t_modules/t_main.py:39139
+#: t_modules/t_main.py:14730 t_modules/t_main.py:39141
 msgid "Queue"
 msgstr "Cola"
 
@@ -612,7 +615,7 @@ msgstr ""
 msgid "Track Renaming"
 msgstr "Renombrado de pista"
 
-#: t_modules/t_main.py:14812 t_modules/t_main.py:47319
+#: t_modules/t_main.py:14812 t_modules/t_main.py:47321
 msgid "Default"
 msgstr "Defecto"
 
@@ -650,7 +653,7 @@ msgstr "Renombrado completo."
 
 #: t_modules/t_main.py:14926 t_modules/t_main.py:14930
 #, fuzzy
-msgid "{quantity} / {total} filenames were written."
+msgid "{N} / {T} filenames were written."
 msgstr " los nombres de archivo fueron escritos."
 
 #: t_modules/t_main.py:15004
@@ -678,7 +681,7 @@ msgstr ""
 
 #: t_modules/t_main.py:15012
 #, fuzzy
-msgid "Number of tracks selected: {quantity}"
+msgid "Number of tracks selected: {N}"
 msgstr "Número de canciones seleccionadas: %d"
 
 #: t_modules/t_main.py:15047
@@ -732,7 +735,7 @@ msgstr ""
 
 #: t_modules/t_main.py:15154
 #, fuzzy
-msgid "{qunatity} files rewritten"
+msgid "{N} files rewritten"
 msgstr "%d archivos reescritos"
 
 #: t_modules/t_main.py:15220
@@ -1151,7 +1154,7 @@ msgid "Delete Embedded | Track"
 msgstr "Eliminar Incrustado | Pista"
 
 #: t_modules/t_main.py:16734
-msgid "This will erase any embedded image in {quantity} files. Are you sure?"
+msgid "This will erase any embedded image in {N} files. Are you sure?"
 msgstr ""
 
 #: t_modules/t_main.py:16741 t_modules/t_main.py:16779
@@ -1177,7 +1180,7 @@ msgid "Paste Spotify Album"
 msgstr "Pegar álbum de Spotify"
 
 #: t_modules/t_main.py:17018 t_modules/t_main.py:17019
-#: t_modules/t_main.py:47330
+#: t_modules/t_main.py:47332
 msgid "Rename"
 msgstr "Renombrar"
 
@@ -1315,7 +1318,7 @@ msgid "Playlist is locked"
 msgstr "La lista de reproducción está bloqueada"
 
 #: t_modules/t_main.py:17949 t_modules/t_main.py:17951
-#: t_modules/t_main.py:47339
+#: t_modules/t_main.py:47341
 msgid "Delete"
 msgstr "Eliminar"
 
@@ -1357,7 +1360,7 @@ msgstr ""
 "generador...\""
 
 #: t_modules/t_main.py:18797 t_modules/t_main.py:22927
-#: t_modules/t_main.py:22931 t_modules/t_main.py:45994
+#: t_modules/t_main.py:22931 t_modules/t_main.py:45996
 msgid "New Playlist"
 msgstr "Nueva lista de reproducción"
 
@@ -1428,8 +1431,9 @@ msgid "No duplicates were found"
 msgstr "No se encontraron canciones con letra."
 
 #: t_modules/t_main.py:18873
-msgid "{quantity} duplicates removed"
-msgstr ""
+#, fuzzy
+msgid "{N} duplicates removed"
+msgstr "No se encontraron canciones con letra."
 
 #: t_modules/t_main.py:18880
 msgid ""
@@ -1480,12 +1484,12 @@ msgstr "Uno o más campos vacíos."
 
 #: t_modules/t_main.py:19001
 #, fuzzy
-msgid "{quantity} Folders Remaining"
+msgid "{N} Folders Remaining"
 msgstr "Carpetas Restantes"
 
 #: t_modules/t_main.py:19003
 #, fuzzy
-msgid "{quantity} Folder Remaining"
+msgid "{N} Folder Remaining"
 msgstr "Carpeta Restante"
 
 #: t_modules/t_main.py:19046
@@ -1835,7 +1839,7 @@ msgstr "Dar \"Me Gusta\" en Spotify"
 msgid "Un-like Spotify Track"
 msgstr "Quitar \"Me Gusta\" en Spotify"
 
-#: t_modules/t_main.py:20713 t_modules/t_main.py:39137
+#: t_modules/t_main.py:20713 t_modules/t_main.py:39139
 msgid "Add to Queue"
 msgstr "Añadir a la cola"
 
@@ -2004,7 +2008,7 @@ msgstr "Árbol de las carpetas"
 
 #: t_modules/t_main.py:20954
 #, fuzzy
-msgid "Renamed to: {object}"
+msgid "Renamed to: {name}"
 msgstr "Renombrar"
 
 #: t_modules/t_main.py:20975
@@ -2060,7 +2064,7 @@ msgstr "No se encontró ningun editor de etiquetas instalado."
 msgid "App not found on host OR insufficient Flatpak permissions."
 msgstr "Aplicación no encontrada O permisos de flatpak insuficientes."
 
-#: t_modules/t_main.py:21272 t_modules/t_main.py:43381
+#: t_modules/t_main.py:21272 t_modules/t_main.py:43383
 msgid " For details, see {link}"
 msgstr ""
 
@@ -2150,8 +2154,8 @@ msgstr "Desguardar el álbum de Spotify"
 
 #: t_modules/t_main.py:21711
 #, fuzzy
-msgid "Queue {quantity}"
-msgstr "La cola esta vacía"
+msgid "Queue {N}"
+msgstr "Cola"
 
 #: t_modules/t_main.py:21716
 msgid "Add to queue"
@@ -2162,7 +2166,7 @@ msgid "Cut"
 msgstr "Cortar"
 
 #: t_modules/t_main.py:21734 t_modules/t_main.py:21742
-#: t_modules/t_main.py:21743 t_modules/t_main.py:40726
+#: t_modules/t_main.py:21743 t_modules/t_main.py:40728
 msgid "Remove"
 msgstr "Borrar"
 
@@ -2280,37 +2284,37 @@ msgstr "Ocultar Barra"
 msgid "Show bar"
 msgstr "Mostrar Barra"
 
-#: t_modules/t_main.py:22407 t_modules/t_main.py:38868
+#: t_modules/t_main.py:22407 t_modules/t_main.py:38870
 msgid "Remove This"
 msgstr "Borrar esto"
 
-#: t_modules/t_main.py:22409 t_modules/t_main.py:47004
-#: t_modules/t_main.py:47010
+#: t_modules/t_main.py:22409 t_modules/t_main.py:47006
+#: t_modules/t_main.py:47012
 msgid "Artist"
 msgstr "Artista"
 
-#: t_modules/t_main.py:22410 t_modules/t_main.py:46985
-#: t_modules/t_main.py:46991
+#: t_modules/t_main.py:22410 t_modules/t_main.py:46987
+#: t_modules/t_main.py:46993
 msgid "Title"
 msgstr "Título"
 
-#: t_modules/t_main.py:22411 t_modules/t_main.py:47023
-#: t_modules/t_main.py:47029
+#: t_modules/t_main.py:22411 t_modules/t_main.py:47025
+#: t_modules/t_main.py:47031
 msgid "Album"
 msgstr "Álbum"
 
-#: t_modules/t_main.py:22412 t_modules/t_main.py:47113
-#: t_modules/t_main.py:47119
+#: t_modules/t_main.py:22412 t_modules/t_main.py:47115
+#: t_modules/t_main.py:47121
 msgid "Duration"
 msgstr "Duración"
 
-#: t_modules/t_main.py:22413 t_modules/t_main.py:47175
-#: t_modules/t_main.py:47181
+#: t_modules/t_main.py:22413 t_modules/t_main.py:47177
+#: t_modules/t_main.py:47183
 msgid "Date"
 msgstr "Fecha"
 
-#: t_modules/t_main.py:22414 t_modules/t_main.py:47160
-#: t_modules/t_main.py:47166
+#: t_modules/t_main.py:22414 t_modules/t_main.py:47162
+#: t_modules/t_main.py:47168
 msgid "Genre"
 msgstr "Género"
 
@@ -2323,7 +2327,7 @@ msgid "Play Count"
 msgstr "Recuento de las reproducciones"
 
 #: t_modules/t_main.py:22418 t_modules/t_main.py:29775
-#: t_modules/t_main.py:47080
+#: t_modules/t_main.py:47082
 msgid "Bitrate"
 msgstr "Bitrate"
 
@@ -2343,13 +2347,13 @@ msgstr "Calificación"
 msgid "More…"
 msgstr "Más …"
 
-#: t_modules/t_main.py:22426 t_modules/t_main.py:47093
-#: t_modules/t_main.py:47099
+#: t_modules/t_main.py:22426 t_modules/t_main.py:47095
+#: t_modules/t_main.py:47101
 msgid "Album Artist"
 msgstr "Artista del Álbum"
 
-#: t_modules/t_main.py:22427 t_modules/t_main.py:47245
-#: t_modules/t_main.py:47251
+#: t_modules/t_main.py:22427 t_modules/t_main.py:47247
+#: t_modules/t_main.py:47253
 msgid "Comment"
 msgstr "Comentario"
 
@@ -2357,8 +2361,8 @@ msgstr "Comentario"
 msgid "Scrobble Count"
 msgstr "Recuento de Scrobble"
 
-#: t_modules/t_main.py:22430 t_modules/t_main.py:47190
-#: t_modules/t_main.py:47196
+#: t_modules/t_main.py:22430 t_modules/t_main.py:47192
+#: t_modules/t_main.py:47198
 msgid "Composer"
 msgstr "Compositor"
 
@@ -2375,7 +2379,7 @@ msgid "New Radio List"
 msgstr "Una nueva lista con emisoras de radio"
 
 #: t_modules/t_main.py:22944
-msgid "Done! {quantity} old items were removed."
+msgid "Done! {N} old items were removed."
 msgstr ""
 
 #: t_modules/t_main.py:22949 t_modules/t_main.py:22952
@@ -2450,7 +2454,7 @@ msgstr "Borrar Pistas Faltantes"
 
 #: t_modules/t_main.py:23122
 #, fuzzy
-msgid "{quantity} ratings imported"
+msgid "{N} ratings imported"
 msgstr "Ordenado por Duración"
 
 #: t_modules/t_main.py:23126
@@ -2541,7 +2545,7 @@ msgstr "Radio Aleatoria"
 msgid "Revert"
 msgstr "Revertir"
 
-#: t_modules/t_main.py:23337 t_modules/t_main.py:38874
+#: t_modules/t_main.py:23337 t_modules/t_main.py:38876
 msgid "Clear Queue"
 msgstr "Limpiar Cola"
 
@@ -2841,7 +2845,7 @@ msgstr ""
 
 #: t_modules/t_main.py:26717
 #, fuzzy
-msgid "Could not delete {object}"
+msgid "Could not delete {name}"
 msgstr "No se puede establecer conexión"
 
 #: t_modules/t_main.py:26717
@@ -2855,7 +2859,7 @@ msgstr "Renombrado completo."
 
 #: t_modules/t_main.py:26722 t_modules/t_main.py:26724
 #, fuzzy
-msgid "Folder name: {object}"
+msgid "Folder name: {name}"
 msgstr "Árbol de las carpetas"
 
 #: t_modules/t_main.py:26724
@@ -2869,7 +2873,7 @@ msgid "Cleaning complete."
 msgstr "Renombrado completo."
 
 #: t_modules/t_main.py:26770
-msgid "{quantity} items were removed from the database."
+msgid "{N} items were removed from the database."
 msgstr ""
 
 #: t_modules/t_main.py:26883
@@ -3000,7 +3004,7 @@ msgstr "Vista"
 msgid "Transcode"
 msgstr "Codec"
 
-#: t_modules/t_main.py:27914 t_modules/t_main.py:47233
+#: t_modules/t_main.py:27914 t_modules/t_main.py:47235
 msgid "Lyrics"
 msgstr "Letra"
 
@@ -3187,8 +3191,8 @@ msgstr "Usar estilo centrado"
 msgid "Zoom album art to fit"
 msgstr "Ampliar la carátula del álbum"
 
-#: t_modules/t_main.py:28435 t_modules/t_main.py:41637
-#: t_modules/t_main.py:41640
+#: t_modules/t_main.py:28435 t_modules/t_main.py:41639
+#: t_modules/t_main.py:41642
 msgid "Gallery"
 msgstr "Galería"
 
@@ -3561,7 +3565,7 @@ msgid ""
 "Due to Spotify authentication changes, local audio playback may be broken"
 msgstr ""
 
-#: t_modules/t_main.py:29102 t_modules/t_main.py:43457
+#: t_modules/t_main.py:29102 t_modules/t_main.py:43459
 msgid ""
 "It is highly recommended to disable this setting to avoid your account being "
 "locked."
@@ -3725,8 +3729,7 @@ msgstr "¡Error al actualizar el favorito a last.fm!"
 
 #: t_modules/t_main.py:29612
 #, fuzzy
-msgid ""
-"Warning: This process will take approximately {time} minutes to complete."
+msgid "Warning: This process will take approximately {T} minutes to complete."
 msgstr ""
 "Aviso: Este proceso puede tomar timepo en completarse (hasta una hora o más)"
 
@@ -4109,7 +4112,7 @@ msgid "Tauon Music Box ALBUM SHUFFLE!"
 msgstr "Abrir Tauon Music Box"
 
 #: t_modules/t_main.py:31464 t_modules/t_main.py:36568
-#: t_modules/t_main.py:40796 t_modules/t_main.py:40945
+#: t_modules/t_main.py:40798 t_modules/t_main.py:40947
 msgid "Added station to: "
 msgstr "Estación añadida a: "
 
@@ -4146,7 +4149,7 @@ msgstr ""
 
 #: t_modules/t_main.py:31798
 #, fuzzy
-msgid "Scanning Tags...  {quantity} remaining"
+msgid "Scanning Tags...  {N} remaining"
 msgstr "Buscando Chromecasts..."
 
 #: t_modules/t_main.py:31800
@@ -4160,7 +4163,7 @@ msgstr "Volviendo a escanear carpetas..."
 
 #: t_modules/t_main.py:31807
 #, fuzzy
-msgid "Rescanning Tags...  {quantity} remaining"
+msgid "Rescanning Tags...  {N} remaining"
 msgstr "Volviendo a escanear carpetas..."
 
 #: t_modules/t_main.py:31810
@@ -4222,7 +4225,7 @@ msgid "Network error. Will try again later."
 msgstr ""
 
 #: t_modules/t_main.py:31868
-msgid "{quantity} listening along"
+msgid "{N} listening along"
 msgstr ""
 
 #: t_modules/t_main.py:31886
@@ -4232,12 +4235,12 @@ msgstr "Transcodificación simple"
 
 #: t_modules/t_main.py:31925
 #, fuzzy
-msgid "{quantity} Folder Remaining {total}"
+msgid "{N} Folder Remaining {T}"
 msgstr "Carpeta Restante"
 
 #: t_modules/t_main.py:31927
 #, fuzzy
-msgid "{quantity} Folders Remaining {total}"
+msgid "{N} Folders Remaining {T}"
 msgstr "Carpetas Restantes"
 
 #: t_modules/t_main.py:32507 t_modules/t_main.py:33105
@@ -4407,7 +4410,7 @@ msgstr "Navegar"
 msgid "Saved"
 msgstr "Guardado"
 
-#: t_modules/t_main.py:36571 t_modules/t_main.py:40717
+#: t_modules/t_main.py:36571 t_modules/t_main.py:40719
 msgid "Visit Website"
 msgstr "Visitar Sitio-Web"
 
@@ -4638,397 +4641,400 @@ msgstr "Imágen del artista de fanart.tv"
 #: t_modules/t_main.py:37726 t_modules/t_main.py:37732
 #: t_modules/t_main.py:37864 t_modules/t_main.py:37870
 #, fuzzy
-msgid "{quantity} tracks"
+msgid "{N} tracks"
 msgstr "Canción en Favoritos"
 
 #: t_modules/t_main.py:37728 t_modules/t_main.py:37734
 #: t_modules/t_main.py:37866 t_modules/t_main.py:37872
-msgid "{quantity} track"
-msgstr ""
+#, fuzzy
+msgid "{N} track"
+msgstr "Canción en Favoritos"
 
 #: t_modules/t_main.py:37738 t_modules/t_main.py:37876
 msgid "Downloading data..."
 msgstr "Descargando datos..."
 
 #: t_modules/t_main.py:38054
-msgid "First of artist's albums ({quantity} albums)"
+msgid "First of artist's albums ({N} albums)"
 msgstr ""
 
-#: t_modules/t_main.py:38057
-msgid "Last of artist's albums ({quantity} albums)"
+#: t_modules/t_main.py:38058
+msgid "Last of artist's albums ({N} albums)"
 msgstr ""
 
-#: t_modules/t_main.py:38069
-msgid "Start of location {current} of {total} ({quantity} albums)"
+#: t_modules/t_main.py:38071
+msgid "Start of location {N} of {T} ({Nb} albums)"
 msgstr ""
 
-#: t_modules/t_main.py:38072 t_modules/t_main.py:38082
-msgid "Location {current} of {total}"
+#: t_modules/t_main.py:38074 t_modules/t_main.py:38084
+msgid "Location {N} of {T}"
 msgstr ""
 
-#: t_modules/t_main.py:38079
-msgid "End of location {current} of {total} ({quantity} albums)"
+#: t_modules/t_main.py:38081
+msgid "End of location {N} of {T} ({Nb} albums)"
 msgstr ""
 
-#: t_modules/t_main.py:38091
-msgid "Start of location 1 of {total} ({quantity} albums)"
+#: t_modules/t_main.py:38093
+msgid "Start of location 1 of {N} ({Nb} albums)"
 msgstr ""
 
-#: t_modules/t_main.py:38094
-msgid "Location 1 of {total} ({quantity} albums)"
+#: t_modules/t_main.py:38096
+msgid "Location 1 of {N} ({Nb} albums)"
 msgstr ""
 
-#: t_modules/t_main.py:38097
-msgid "Location 1 of {total}"
+#: t_modules/t_main.py:38099
+msgid "Location 1 of {N}"
 msgstr ""
 
-#: t_modules/t_main.py:38203
+#: t_modules/t_main.py:38205
 msgid "No artists in playlist"
 msgstr "No hay artistas en la playlist"
 
-#: t_modules/t_main.py:38206
+#: t_modules/t_main.py:38208
 msgid "Artist threshold not met"
 msgstr "Mínimo de artistas no alcanzado"
 
-#: t_modules/t_main.py:38208
+#: t_modules/t_main.py:38210
 msgid "Loading Artist List..."
 msgstr "Cargando Lista del Artista..."
 
-#: t_modules/t_main.py:38210
+#: t_modules/t_main.py:38212
 msgid "Busy..."
 msgstr "Ocupado..."
 
-#: t_modules/t_main.py:38421
+#: t_modules/t_main.py:38423
 msgid "Loading Folder Tree..."
 msgstr "Cargando el árbol de las carpetas..."
 
-#: t_modules/t_main.py:38430 t_modules/t_main.py:38446
+#: t_modules/t_main.py:38432 t_modules/t_main.py:38448
 msgid "Folder Tree"
 msgstr "Árbol de las carpetas"
 
-#: t_modules/t_main.py:38835
+#: t_modules/t_main.py:38837
 msgid "Resume Queue"
 msgstr "Reanudar Cola"
 
-#: t_modules/t_main.py:38837
+#: t_modules/t_main.py:38839
 msgid "Pause Queue"
 msgstr "Pausar Cola"
 
-#: t_modules/t_main.py:38869
+#: t_modules/t_main.py:38871
 msgid "Play Now"
 msgstr "Reproducir Ahora"
 
-#: t_modules/t_main.py:38876
+#: t_modules/t_main.py:38878
 msgid "↳ Except for This"
 msgstr "↳ Exceptuando Esto"
 
-#: t_modules/t_main.py:38878
+#: t_modules/t_main.py:38880
 msgid "Queue to New Playlist"
 msgstr "Cola a la Nueva Playlist"
 
-#: t_modules/t_main.py:39022
+#: t_modules/t_main.py:39024
 msgid "Cancel Auto-Stop"
 msgstr "Cancelar Auto-Stop"
 
-#: t_modules/t_main.py:39024
+#: t_modules/t_main.py:39026
 msgid "Auto-Stop"
 msgstr "Parada automática"
 
-#: t_modules/t_main.py:39035
+#: t_modules/t_main.py:39037
 msgid "Eh?"
 msgstr ""
 
-#: t_modules/t_main.py:39043
+#: t_modules/t_main.py:39045
 msgid "Looks like it's gone now anyway"
 msgstr ""
 
-#: t_modules/t_main.py:39158
+#: t_modules/t_main.py:39160
 #, fuzzy
 msgid "Up Next:"
 msgstr "Siguiente"
 
-#: t_modules/t_main.py:39409
-msgid "{number_of} Track"
-msgstr ""
+#: t_modules/t_main.py:39411
+#, fuzzy
+msgid "{N} Track"
+msgstr "Pista"
 
-#: t_modules/t_main.py:39412
-msgid "{number_of} Tracks"
-msgstr ""
+#: t_modules/t_main.py:39414
+#, fuzzy
+msgid "{N} Tracks"
+msgstr "Pista"
 
-#: t_modules/t_main.py:39876
+#: t_modules/t_main.py:39878
 #, fuzzy
 msgid "No artist name found"
 msgstr "No se encontró ninguna imagen de artista."
 
-#: t_modules/t_main.py:39887 t_modules/t_main.py:40129
+#: t_modules/t_main.py:39889 t_modules/t_main.py:40131
 msgid "Looking up..."
 msgstr "Mirando..."
 
-#: t_modules/t_main.py:39929
+#: t_modules/t_main.py:39931
 msgid "Cooldown..."
 msgstr "Enfriandose..."
 
-#: t_modules/t_main.py:39944
+#: t_modules/t_main.py:39946
 msgid "Loading..."
 msgstr "Cargando..."
 
-#: t_modules/t_main.py:40121
+#: t_modules/t_main.py:40123
 msgid "No artist data downloaded"
 msgstr "No se descargan los datos de los artistas"
 
-#: t_modules/t_main.py:40135
+#: t_modules/t_main.py:40137
 msgid "No artist bio found"
 msgstr "No se ha encontrado ninguna biografía del artista."
 
-#: t_modules/t_main.py:40222
+#: t_modules/t_main.py:40224
 msgid "Load Failed"
 msgstr ""
 
-#: t_modules/t_main.py:40244
+#: t_modules/t_main.py:40246
 msgid "Download Artist Data"
 msgstr "Descargar los datos del artista"
 
-#: t_modules/t_main.py:40245
+#: t_modules/t_main.py:40247
 msgid "Clear Bio"
 msgstr "Limpiar Bio"
 
-#: t_modules/t_main.py:40285
+#: t_modules/t_main.py:40287
 msgid "Clipboard has no text"
 msgstr ""
 
-#: t_modules/t_main.py:40397
+#: t_modules/t_main.py:40399
 msgid "Could not find matching track on GuitarParty"
 msgstr ""
 
-#: t_modules/t_main.py:40716
+#: t_modules/t_main.py:40718
 msgid "Edit..."
 msgstr "Editar..."
 
-#: t_modules/t_main.py:41070
+#: t_modules/t_main.py:41072
 msgid "Playing"
 msgstr "Reproduciendo"
 
-#: t_modules/t_main.py:41144
+#: t_modules/t_main.py:41146
 msgid "Auto-Scroll"
 msgstr "Autodesplazamiento"
 
-#: t_modules/t_main.py:41622
+#: t_modules/t_main.py:41624
 msgid "Tracks + Art"
 msgstr "Pistas + Arte"
 
-#: t_modules/t_main.py:41654
+#: t_modules/t_main.py:41656
 msgid "Tracks only"
 msgstr "Pistas sólo"
 
-#: t_modules/t_main.py:41669
+#: t_modules/t_main.py:41671
 msgid "Showcase + Lyrics"
 msgstr "Pre-visualización + Letra"
 
-#: t_modules/t_main.py:41682
+#: t_modules/t_main.py:41684
 msgid "Radio"
 msgstr "Radio"
 
-#: t_modules/t_main.py:41696
+#: t_modules/t_main.py:41698
 msgid "Toggle columns"
 msgstr "Conmutar columnas"
 
-#: t_modules/t_main.py:42025
+#: t_modules/t_main.py:42027
 msgid "Image types other than PNG or JPEG are currently not supported"
 msgstr ""
 
-#: t_modules/t_main.py:42027
+#: t_modules/t_main.py:42029
 #, fuzzy
 msgid "The link does not appear to refer to an image file."
 msgstr "No se encontró ningun editor de etiquetas instalado."
 
-#: t_modules/t_main.py:42031
+#: t_modules/t_main.py:42033
 #, fuzzy
 msgid "Image download failed."
 msgstr "Falló eliminar la imagen."
 
-#: t_modules/t_main.py:42041 t_modules/t_main.py:42056
+#: t_modules/t_main.py:42043 t_modules/t_main.py:42058
 msgid "You"
 msgstr ""
 
-#: t_modules/t_main.py:42067 t_modules/t_main.py:42082
+#: t_modules/t_main.py:42069 t_modules/t_main.py:42084
 msgid "Liked on Spotify"
 msgstr ""
 
-#: t_modules/t_main.py:42319
+#: t_modules/t_main.py:42321
 msgid "ERROR: No backend found"
 msgstr ""
 
-#: t_modules/t_main.py:42331
+#: t_modules/t_main.py:42333
 #, fuzzy
 msgid "There are no more steps to undo."
 msgstr "No hay fuentes de Letras habilitadas."
 
-#: t_modules/t_main.py:43180 t_modules/t_main.py:48378
+#: t_modules/t_main.py:43182 t_modules/t_main.py:48380
 #, fuzzy
 msgid "Permission error encountered while writing database"
 msgstr "Error de permisos al acceder uno o más archivos"
 
-#: t_modules/t_main.py:43380
+#: t_modules/t_main.py:43382
 msgid "Could not access! Possible insufficient Flatpak permissions."
 msgstr "!No se pudo acceder¡ Permisos de flatpak probablemente insuficientes."
 
-#: t_modules/t_main.py:43456
+#: t_modules/t_main.py:43458
 msgid ""
 "Due to Spotify authentication changes, local Spotify audio playback may be "
 "broken"
 msgstr ""
 
-#: t_modules/t_main.py:43457
+#: t_modules/t_main.py:43459
 msgid "See MENU > SETTINGS > ACCOUNT > SPOTIFY > Enable local audio playback."
 msgstr ""
 
-#: t_modules/t_main.py:44353
+#: t_modules/t_main.py:44355
 msgid "Enabled auto theme"
 msgstr "Apariencia Automática Encendida"
 
-#: t_modules/t_main.py:44355
+#: t_modules/t_main.py:44357
 msgid "Disabled auto theme"
 msgstr "Apariencia Automática Apagada"
 
-#: t_modules/t_main.py:44398
+#: t_modules/t_main.py:44400
 msgid "First select a source track by copying it into clipboard"
 msgstr "Primero seleciona una pista copiándola en el portapapeles"
 
-#: t_modules/t_main.py:44694
+#: t_modules/t_main.py:44696
 #, fuzzy
 msgid "Track already has lyrics"
 msgstr "La canción ya está en favoritos"
 
-#: t_modules/t_main.py:44880
+#: t_modules/t_main.py:44882
 #, fuzzy
 msgid "Error loading theme file"
 msgstr "Error al borrar archivo"
 
-#: t_modules/t_main.py:45712 t_modules/t_main.py:45726
+#: t_modules/t_main.py:45714 t_modules/t_main.py:45728
 msgid "Various Artists"
 msgstr ""
 
-#: t_modules/t_main.py:45958
+#: t_modules/t_main.py:45960
 msgid "Rescan folders complete."
 msgstr "Reescaneo completado."
 
-#: t_modules/t_main.py:45999
+#: t_modules/t_main.py:46001
 msgid "Auto sort skipped because playlist is locked."
 msgstr ""
 
-#: t_modules/t_main.py:46608
+#: t_modules/t_main.py:46610
 msgid "Queue is Empty"
 msgstr "La cola esta vacía"
 
-#: t_modules/t_main.py:46987 t_modules/t_main.py:47006
-#: t_modules/t_main.py:47025 t_modules/t_main.py:47048
-#: t_modules/t_main.py:47095 t_modules/t_main.py:47116
-#: t_modules/t_main.py:47162 t_modules/t_main.py:47177
-#: t_modules/t_main.py:47192 t_modules/t_main.py:47247
+#: t_modules/t_main.py:46989 t_modules/t_main.py:47008
+#: t_modules/t_main.py:47027 t_modules/t_main.py:47050
+#: t_modules/t_main.py:47097 t_modules/t_main.py:47118
+#: t_modules/t_main.py:47164 t_modules/t_main.py:47179
+#: t_modules/t_main.py:47194 t_modules/t_main.py:47249
 msgid "Copied text to clipboard"
 msgstr "Texto copiado al portapapeles"
 
-#: t_modules/t_main.py:47046 t_modules/t_main.py:47052
+#: t_modules/t_main.py:47048 t_modules/t_main.py:47054
 msgid "Path"
 msgstr "Ruta"
 
-#: t_modules/t_main.py:47067
+#: t_modules/t_main.py:47069
 msgid "Samplerate"
 msgstr "Velocidad de Muestreo"
 
-#: t_modules/t_main.py:47084
+#: t_modules/t_main.py:47086
 msgid " kbps"
 msgstr ""
 
-#: t_modules/t_main.py:47126 t_modules/t_main.py:47148
+#: t_modules/t_main.py:47128 t_modules/t_main.py:47150
 msgid " of "
 msgstr " de "
 
-#: t_modules/t_main.py:47128 t_modules/t_main.py:47788
+#: t_modules/t_main.py:47130 t_modules/t_main.py:47790
 msgid "Track"
 msgstr "Pista"
 
-#: t_modules/t_main.py:47136 t_modules/t_main.py:47142
+#: t_modules/t_main.py:47138 t_modules/t_main.py:47144
 msgid "File size"
 msgstr "Tamaño de archivo"
 
-#: t_modules/t_main.py:47150
+#: t_modules/t_main.py:47152
 msgid "Disc"
 msgstr "Disco"
 
-#: t_modules/t_main.py:47214
+#: t_modules/t_main.py:47216
 msgid "Play count"
 msgstr "Numero de reproducciones"
 
-#: t_modules/t_main.py:47227
+#: t_modules/t_main.py:47229
 msgid "Play time"
 msgstr "Tiempo de reproducción"
 
-#: t_modules/t_main.py:47316
+#: t_modules/t_main.py:47318
 msgid "Folder Modification"
 msgstr "Modificación de Carpeta"
 
-#: t_modules/t_main.py:47331
+#: t_modules/t_main.py:47333
 msgid "Renames the physical folder based on the template"
 msgstr "Renombra la carpeta basado en la plantilla"
 
-#: t_modules/t_main.py:47336
+#: t_modules/t_main.py:47338
 msgid "Trash"
 msgstr "Basura"
 
-#: t_modules/t_main.py:47337
+#: t_modules/t_main.py:47339
 msgid "Moves folder to system trash"
 msgstr "Mover carpeta a la papelera del sistema"
 
-#: t_modules/t_main.py:47340
+#: t_modules/t_main.py:47342
 msgid "Physically deletes folder from disk"
 msgstr "Borrar físicamente del disco"
 
-#: t_modules/t_main.py:47352
+#: t_modules/t_main.py:47354
 msgid "Raise"
 msgstr "Levantar"
 
-#: t_modules/t_main.py:47353
+#: t_modules/t_main.py:47355
 msgid "Moves folder up 2 levels and deletes the old container folder"
 msgstr "Mover la carpeta 2 niveles y borrar la antigua carpeta contenedora"
 
-#: t_modules/t_main.py:47360
+#: t_modules/t_main.py:47362
 msgid "Deletes some unnecessary files from folder"
 msgstr "Borrar archivos inecesarios de la carpeta"
 
-#: t_modules/t_main.py:47364
+#: t_modules/t_main.py:47366
 msgid "PATH"
 msgstr ""
 
-#: t_modules/t_main.py:47371
+#: t_modules/t_main.py:47373
 msgid "OLD"
 msgstr ""
 
-#: t_modules/t_main.py:47376
+#: t_modules/t_main.py:47378
 msgid "NEW"
 msgstr ""
 
-#: t_modules/t_main.py:47458
+#: t_modules/t_main.py:47460
 msgid "Folder filter mode. Enter path segment."
 msgstr ""
 
-#: t_modules/t_main.py:47462
+#: t_modules/t_main.py:47464
 msgid "UP / DOWN to navigate. SHIFT + RETURN for new playlist."
 msgstr ""
 
-#: t_modules/t_main.py:47464
+#: t_modules/t_main.py:47466
 msgid "Quick find"
 msgstr ""
 
-#: t_modules/t_main.py:47752
+#: t_modules/t_main.py:47754
 msgid "Loved track"
 msgstr "Canción en Favoritos"
 
-#: t_modules/t_main.py:47755
+#: t_modules/t_main.py:47757
 msgid "Un-Loved track"
 msgstr "Canción no en Favoritos"
 
-#: t_modules/t_main.py:47877
+#: t_modules/t_main.py:47879
 #, fuzzy
 msgid "Lines copied to clipboard"
 msgstr "URL copiada al portapapeles"
@@ -5128,6 +5134,18 @@ msgstr ""
 msgid "You can close this now and return to Tauon Music Box"
 msgstr ""
 
+#, fuzzy
+#~ msgid "Queue {quantity}"
+#~ msgstr "La cola esta vacía"
+
+#, fuzzy
+#~ msgid "{quantity} Folders Remaining {total}"
+#~ msgstr "Carpetas Restantes"
+
+#, fuzzy
+#~ msgid "{quantity} tracks"
+#~ msgstr "Canción en Favoritos"
+
 #~ msgid "Queue %d"
 #~ msgstr "Cola %d"
 
@@ -5142,18 +5160,6 @@ msgstr ""
 #, fuzzy
 #~ msgid " out of "
 #~ msgstr " de "
-
-#, fuzzy
-#~ msgid " tracks."
-#~ msgstr "Canción en Favoritos"
-
-#, fuzzy
-#~ msgid "Failed to locate "
-#~ msgstr "¡Error al conectar!"
-
-#, fuzzy
-#~ msgid " Track"
-#~ msgstr "Pista"
 
 #~ msgid ""
 #~ "DANGER! This will delete the original files. You may want to have backups "
