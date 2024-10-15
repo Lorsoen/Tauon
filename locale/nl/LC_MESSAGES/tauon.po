@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2024-10-15 17:27+0200\n"
+"POT-Creation-Date: 2024-10-15 17:33+0200\n"
 "PO-Revision-Date: 2024-06-05 13:09+0000\n"
 "Last-Translator: zeskeertwee <zeskeertwee@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/tauon-music-box/"
@@ -1081,7 +1081,7 @@ msgid "Deleted embedded picture from file"
 msgstr ""
 
 #: t_modules/t_main.py:16673
-msgid "{quantity} files processed"
+msgid "{N} files processed"
 msgstr ""
 
 #: t_modules/t_main.py:16692

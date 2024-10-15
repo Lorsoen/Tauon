@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2024-10-15 17:27+0200\n"
+"POT-Creation-Date: 2024-10-15 18:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1063,7 +1063,7 @@ msgid "Deleted embedded picture from file"
 msgstr ""
 
 #: t_modules/t_main.py:16673
-msgid "{quantity} files processed"
+msgid "{N} files processed"
 msgstr ""
 
 #: t_modules/t_main.py:16692

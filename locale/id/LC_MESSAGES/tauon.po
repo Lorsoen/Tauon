@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2024-10-15 17:27+0200\n"
+"POT-Creation-Date: 2024-10-15 17:33+0200\n"
 "PO-Revision-Date: 2024-06-26 07:09+0000\n"
 "Last-Translator: Lieba Natur Brilian <gingalibadeidara@gmail.com>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/tauon-music-"
@@ -1129,7 +1129,7 @@ msgstr "Gambar yang disematkan dihapus dari file"
 
 #: t_modules/t_main.py:16673
 #, fuzzy
-msgid "{quantity} files processed"
+msgid "{N} files processed"
 msgstr "%d berkas diproses"
 
 #: t_modules/t_main.py:16692

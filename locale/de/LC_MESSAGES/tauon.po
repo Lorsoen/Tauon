@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2024-10-15 17:27+0200\n"
+"POT-Creation-Date: 2024-10-15 17:33+0200\n"
 "PO-Revision-Date: 2024-02-07 19:01+0000\n"
 "Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/tauon-music-box/"
@@ -1135,7 +1135,7 @@ msgstr "Eingebettetes Bild aus Datei gelöscht"
 
 #: t_modules/t_main.py:16673
 #, fuzzy
-msgid "{quantity} files processed"
+msgid "{N} files processed"
 msgstr "%d Dateien verarbeitet"
 
 #: t_modules/t_main.py:16692

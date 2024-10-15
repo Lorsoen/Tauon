@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2024-10-15 17:27+0200\n"
+"POT-Creation-Date: 2024-10-15 18:01+0200\n"
 "PO-Revision-Date: 2024-10-06 10:39+0000\n"
 "Last-Translator: Lorsoen <fashim99@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/tauon-music-box/"
@@ -238,9 +238,8 @@ msgid "Scanning scrobbles complete"
 msgstr "Analyse des scrobbles terminée"
 
 #: t_modules/t_main.py:7576
-#, fuzzy
 msgid "Removed {N} loves."
-msgstr "{} loves ont été retirés."
+msgstr "{N} loves ont été retirés."
 
 #: t_modules/t_main.py:7589
 msgid "There was an error, try re-log in"
@@ -259,9 +258,8 @@ msgid "There was an error getting friends loves"
 msgstr "Une erreur s’est produite lors de la récupération des 'Love' amis"
 
 #: t_modules/t_main.py:7628
-#, fuzzy
 msgid "Scanning loved tracks for: {username}"
-msgstr "Analyse des pistes 'loved' pour : %s"
+msgstr "Analyse des pistes 'loved' pour : {username}"
 
 #: t_modules/t_main.py:7632
 msgid "No username found"
@@ -272,21 +270,18 @@ msgid "User has no loved tracks."
 msgstr "L'utilisateur n'a pas de pistes 'Loved'."
 
 #: t_modules/t_main.py:7679
-#, fuzzy
 msgid "{N} matched tracks are up to date."
-msgstr "{quantity} pistes trouvée.s sont à jour."
+msgstr "{N} pistes trouvée.s sont à jour."
 
 #: t_modules/t_main.py:7682
-#, fuzzy
 msgid "{N} tracks matched. {T} were updated."
-msgstr "{quantity} pistes trouvée.s. {total} ont été.s mises à jour."
+msgstr "{N} pistes trouvée.s. {T} ont été.s mises à jour."
 
 #: t_modules/t_main.py:7685
-#, fuzzy
 msgid "Of {N} loved tracks, no matches were found in local db"
 msgstr ""
-"Sur {quantity} pistes 'Loved', aucune correspondance n'a été trouvé dans la "
-"base locale"
+"Sur {N} pistes 'Loved', aucune correspondance n'a été trouvé dans la base "
+"locale"
 
 #: t_modules/t_main.py:7688
 msgid "This doesn't seem to be working :("
@@ -441,9 +436,8 @@ msgid "Starting download..."
 msgstr "Démarrage du téléchargement..."
 
 #: t_modules/t_main.py:8463
-#, fuzzy
 msgid "Downloading... {N}/80MB"
-msgstr "Téléchargement... %d / 80 Mo"
+msgstr "Téléchargement... {N} / 80 Mo"
 
 #: t_modules/t_main.py:8466
 msgid "Download failed"
@@ -569,9 +563,8 @@ msgid "Sorry about that."
 msgstr "Désolé."
 
 #: t_modules/t_main.py:13974
-#, fuzzy
 msgid "Failed to locate {N} out of {T} tracks."
-msgstr "{quantity} pistes sur {total} n'ont pas été trouvées."
+msgstr "{N} pistes sur {T} n'ont pas été trouvées."
 
 #: t_modules/t_main.py:14729
 msgid "Playlists + Queue"
@@ -646,9 +639,8 @@ msgid "Rename complete."
 msgstr "Renommage terminé."
 
 #: t_modules/t_main.py:14926 t_modules/t_main.py:14930
-#, fuzzy
 msgid "{N} / {T} filenames were written."
-msgstr " fichiers ont été renommés."
+msgstr "{N} / {T} fichiers ont été écrits."
 
 #: t_modules/t_main.py:15004
 msgid "Simple tag editor"
@@ -674,9 +666,8 @@ msgstr ""
 "mêmes. (Optionnel mais recommandé)"
 
 #: t_modules/t_main.py:15012
-#, fuzzy
 msgid "Number of tracks selected: {N}"
-msgstr "Nombre de pistes sélectionnées : %d"
+msgstr "Nombre de pistes sélectionnées : {N}"
 
 #: t_modules/t_main.py:15047
 msgid "<Multiple selected>"
@@ -730,9 +721,8 @@ msgstr ""
 "tags dédié"
 
 #: t_modules/t_main.py:15154
-#, fuzzy
 msgid "{N} files rewritten"
-msgstr "%d fichiers renommés"
+msgstr "{N} fichiers renommés"
 
 #: t_modules/t_main.py:15220
 msgid "Substitute Lyric Search"
@@ -1116,9 +1106,8 @@ msgid "Deleted embedded picture from file"
 msgstr "Supprimer l'image des métadonnées du fichier"
 
 #: t_modules/t_main.py:16673
-#, fuzzy
-msgid "{quantity} files processed"
-msgstr "%d fichiers traités"
+msgid "{N} files processed"
+msgstr "{N} fichiers traités"
 
 #: t_modules/t_main.py:16692
 msgid "Something went wrong"
@@ -1138,10 +1127,9 @@ msgid "Delete Embedded | Track"
 msgstr "Supprimer l'image des métadonnées | Piste"
 
 #: t_modules/t_main.py:16734
-#, fuzzy
 msgid "This will erase any embedded image in {N} files. Are you sure?"
 msgstr ""
-"Cette action supprimera toute image intégrée dans %d fichiers. Êtes-vous sûr."
+"Cette action supprimera toute image intégrée dans {N} fichiers. Êtes-vous sûr."
 "e ?"
 
 #: t_modules/t_main.py:16741 t_modules/t_main.py:16779
@@ -1219,9 +1207,8 @@ msgid "Try again while holding shift to confirm"
 msgstr "Réessayez tout en maintenant la touche Maj enfoncée pour confirmer"
 
 #: t_modules/t_main.py:17434
-#, fuzzy
 msgid "Are you sure you want to delete playlist: {name}?"
-msgstr "Êtes-vous sûr·e de vouloir supprimer la playlist : %s ?"
+msgstr "Êtes-vous sûr·e de vouloir supprimer la playlist : {name} ?"
 
 #: t_modules/t_main.py:17475
 msgid "Rescanning folders..."
@@ -1403,9 +1390,8 @@ msgid "No duplicates were found"
 msgstr "Aucun doublon n'a été trouvé."
 
 #: t_modules/t_main.py:18873
-#, fuzzy
 msgid "{N} duplicates removed"
-msgstr "{quantity} doublons supprimés"
+msgstr "{N} doublons supprimés"
 
 #: t_modules/t_main.py:18880
 msgid ""
@@ -1460,14 +1446,12 @@ msgid "One or more folders is missing"
 msgstr "Un ou plusieurs dossiers sont manquants."
 
 #: t_modules/t_main.py:19001
-#, fuzzy
 msgid "{N} Folders Remaining"
-msgstr "Dossiers restants"
+msgstr "{N} Dossiers restants"
 
 #: t_modules/t_main.py:19003
-#, fuzzy
 msgid "{N} Folder Remaining"
-msgstr "Dossier restant"
+msgstr "{N} Dossier restant"
 
 #: t_modules/t_main.py:19046
 msgid "Sync completed"
@@ -1889,9 +1873,8 @@ msgid "Woah, careful there!"
 msgstr "Houla, attention !"
 
 #: t_modules/t_main.py:20821
-#, fuzzy
 msgid "Delete size safety limit reached! (1.5GB)"
-msgstr "Limite de sécurité de taille avant suppression atteinte !"
+msgstr "Limite de sécurité de taille avant suppression atteinte ! (1.5 Go)"
 
 #: t_modules/t_main.py:20845
 msgid "Folder deleted."
@@ -1966,9 +1949,8 @@ msgid "Folder renamed."
 msgstr "Dossier renommé"
 
 #: t_modules/t_main.py:20954
-#, fuzzy
 msgid "Renamed to: {name}"
-msgstr "Renommé en : "
+msgstr "Renommé en : {name}"
 
 #: t_modules/t_main.py:20975
 msgid "Not applicable for a network track."
@@ -2021,9 +2003,8 @@ msgstr ""
 "Application introuvable sur l'hôte OU permissions insuffisantes pour Flatpak."
 
 #: t_modules/t_main.py:21272 t_modules/t_main.py:43383
-#, fuzzy
 msgid " For details, see {link}"
-msgstr " Pour plus de détails, voir (en anglais) : https://%s"
+msgstr " Pour plus de détails, voir (en anglais) : {link}"
 
 #: t_modules/t_main.py:21343
 msgid "Sorry, this feature isn't (yet) available with Snap."
@@ -2110,9 +2091,8 @@ msgid "Un-save Spotify Album"
 msgstr "Supprimer l'album de Spotify"
 
 #: t_modules/t_main.py:21711
-#, fuzzy
 msgid "Queue {N}"
-msgstr "File d’attente"
+msgstr "File d’attente {N}"
 
 #: t_modules/t_main.py:21716
 msgid "Add to queue"
@@ -2335,9 +2315,8 @@ msgid "New Radio List"
 msgstr "Nouvelle liste de radio"
 
 #: t_modules/t_main.py:22944
-#, fuzzy
 msgid "Done! {N} old items were removed."
-msgstr "Terminé ! {quantity} anciens objets ont été retirés."
+msgstr "Terminé ! {N} anciens objets ont été retirés."
 
 #: t_modules/t_main.py:22949 t_modules/t_main.py:22952
 msgid "Clean Database!"
@@ -2408,9 +2387,8 @@ msgid "Remove Missing Tracks"
 msgstr "Supprimer les pistes manquantes"
 
 #: t_modules/t_main.py:23122
-#, fuzzy
 msgid "{N} ratings imported"
-msgstr " évaluations importées"
+msgstr "{N} évaluations importées"
 
 #: t_modules/t_main.py:23126
 msgid "Import FMPS Ratings"
@@ -2640,24 +2618,20 @@ msgid "output"
 msgstr "sortie"
 
 #: t_modules/t_main.py:24740
-#, fuzzy
 msgid "Artist: "
-msgstr "Artiste"
+msgstr "Artiste :"
 
 #: t_modules/t_main.py:24763
-#, fuzzy
 msgid "Year: "
-msgstr "Année : >, <"
+msgstr "Année : "
 
 #: t_modules/t_main.py:24786
-#, fuzzy
 msgid "Composer: "
-msgstr "Compositeur"
+msgstr "Compositeur : "
 
 #: t_modules/t_main.py:24857
-#, fuzzy
 msgid "Genre: "
-msgstr "Genre"
+msgstr "Genre : "
 
 #: t_modules/t_main.py:25004
 msgid "Press Tab key to switch to Spotify search"
@@ -2797,9 +2771,8 @@ msgid "The folder copy has failed!"
 msgstr "La copie de dossier à échouée !"
 
 #: t_modules/t_main.py:26717
-#, fuzzy
 msgid "Could not delete {name}"
-msgstr "Impossible de supprimer "
+msgstr "Impossible de supprimer {name}"
 
 #: t_modules/t_main.py:26717
 msgid "Something has gone horribly wrong!"
@@ -2810,9 +2783,8 @@ msgid "Folder move complete."
 msgstr "Déplacement de ficher terminé."
 
 #: t_modules/t_main.py:26722 t_modules/t_main.py:26724
-#, fuzzy
 msgid "Folder name: {name}"
-msgstr "Non de dossier : "
+msgstr "Non de dossier : {name}"
 
 #: t_modules/t_main.py:26724
 msgid "Folder copy complete."
@@ -2823,9 +2795,8 @@ msgid "Cleaning complete."
 msgstr "Nettoyage terminé."
 
 #: t_modules/t_main.py:26770
-#, fuzzy
 msgid "{N} items were removed from the database."
-msgstr " objets ont été retirés de la base de données."
+msgstr "{N} objets ont été retirés de la base de données."
 
 #: t_modules/t_main.py:26883
 msgid "An error was encountered."
@@ -3394,9 +3365,8 @@ msgid "Disabled"
 msgstr "Désactivé"
 
 #: t_modules/t_main.py:28683
-#, fuzzy
 msgid "Status: {state}"
-msgstr "Status :"
+msgstr "Status : {state}"
 
 #: t_modules/t_main.py:28879 t_modules/t_main.py:29560
 msgid "Show threshold marker"
@@ -3448,9 +3418,8 @@ msgid "Maloja is a self-hosted scrobble server."
 msgstr "Maloja est un serveur de scrobble auto-hébergé."
 
 #: t_modules/t_main.py:28962
-#, fuzzy
 msgid "See here to learn more: {link}"
-msgstr "Cliquez ici pour en savoir plus (en anglais) : https://%s"
+msgstr "Cliquez ici pour en savoir plus (en anglais) : {link}"
 
 #: t_modules/t_main.py:28972 t_modules/t_main.py:29178
 #: t_modules/t_main.py:29239 t_modules/t_main.py:29312
@@ -3599,9 +3568,8 @@ msgstr ""
 "pochettes."
 
 #: t_modules/t_main.py:29398 t_modules/t_main.py:37419
-#, fuzzy
 msgid "They encourage you to contribute at {link}"
-msgstr "Fanart.tv vous encourage à contribuer sur https://%s"
+msgstr "Fanart.tv vous encourage à contribuer sur {link}"
 
 #: t_modules/t_main.py:29404
 msgid "Cover art (Manual only)"
@@ -3689,9 +3657,8 @@ msgid "Error, not  connected to last.fm"
 msgstr "Erreur, non connecté à last.fm"
 
 #: t_modules/t_main.py:29612
-#, fuzzy
 msgid "Warning: This process will take approximately {T} minutes to complete."
-msgstr "Attention : Ce processus se terminera en %d minutes environ."
+msgstr "Attention : Ce processus se terminera en {T} minutes environ."
 
 #: t_modules/t_main.py:29613 t_modules/t_main.py:29635
 msgid "Press again while holding Shift if you understand"
@@ -4101,9 +4068,8 @@ msgid "Importing...  "
 msgstr "Importation..."
 
 #: t_modules/t_main.py:31798
-#, fuzzy
 msgid "Scanning Tags...  {N} remaining"
-msgstr "Analyse des tags..."
+msgstr "Analyse des tags... {N} restant.s"
 
 #: t_modules/t_main.py:31800
 msgid "File copy in progress..."
@@ -4114,9 +4080,8 @@ msgid "Cleaning db...  "
 msgstr "Nettoyage de la base..."
 
 #: t_modules/t_main.py:31807
-#, fuzzy
 msgid "Rescanning Tags...  {N} remaining"
-msgstr "Réanalyse des tags..."
+msgstr "Réanalyse des tags... {N} restant.s"
 
 #: t_modules/t_main.py:31810
 msgid "Accessing PLEX library..."
@@ -4171,23 +4136,20 @@ msgid "Network error. Will try again later."
 msgstr "Erreur réseau. Nouvel essai à venir."
 
 #: t_modules/t_main.py:31868
-#, fuzzy
 msgid "{N} listening along"
-msgstr "%d en écoute partagée"
+msgstr "{N} en écoute partagée"
 
 #: t_modules/t_main.py:31886
 msgid "Transcoding"
 msgstr "Encodage"
 
 #: t_modules/t_main.py:31925
-#, fuzzy
 msgid "{N} Folder Remaining {T}"
-msgstr "Dossier restant"
+msgstr "{N} Dossier restant {T}"
 
 #: t_modules/t_main.py:31927
-#, fuzzy
 msgid "{N} Folders Remaining {T}"
-msgstr "Dossiers restants"
+msgstr "{N} Dossiers restants {T}"
 
 #: t_modules/t_main.py:32507 t_modules/t_main.py:33105
 msgid "Play, RC: Go to playing"
@@ -4560,15 +4522,13 @@ msgstr "Info : L'image de l'artiste sera téléchargée depuis fanart.tv"
 
 #: t_modules/t_main.py:37726 t_modules/t_main.py:37732
 #: t_modules/t_main.py:37864 t_modules/t_main.py:37870
-#, fuzzy
 msgid "{N} tracks"
-msgstr "Inverser les pistes"
+msgstr "{N} pistes"
 
 #: t_modules/t_main.py:37728 t_modules/t_main.py:37734
 #: t_modules/t_main.py:37866 t_modules/t_main.py:37872
-#, fuzzy
 msgid "{N} track"
-msgstr "Piste suivante"
+msgstr "{N} piste"
 
 #: t_modules/t_main.py:37738 t_modules/t_main.py:37876
 msgid "Downloading data..."
@@ -4671,14 +4631,12 @@ msgid "Up Next:"
 msgstr "Suivant :"
 
 #: t_modules/t_main.py:39411
-#, fuzzy
 msgid "{N} Track"
-msgstr "Piste suivante"
+msgstr "{N} Piste"
 
 #: t_modules/t_main.py:39414
-#, fuzzy
 msgid "{N} Tracks"
-msgstr "Piste suivante"
+msgstr "{N} Pistes"
 
 #: t_modules/t_main.py:39878
 msgid "No artist name found"
@@ -5048,26 +5006,3 @@ msgstr ""
 msgid "You can close this now and return to Tauon Music Box"
 msgstr ""
 "Vous pouvez maintenant fermer cet onglet et retourner à Tauon Music Box"
-
-#, fuzzy
-#~ msgid "Queue {quantity}"
-#~ msgstr "La file d’attente est vide"
-
-#, fuzzy
-#~ msgid "{quantity} Folders Remaining {total}"
-#~ msgstr "Dossiers restants"
-
-#~ msgid "{number_of} Track"
-#~ msgstr "{number_of} piste"
-
-#~ msgid "{number_of} Tracks"
-#~ msgstr "{number_of} pistes"
-
-#~ msgid " (1.5GB)"
-#~ msgstr " (1,5Go)"
-
-#~ msgid "Queue %d"
-#~ msgstr "File d’attente %d"
-
-#~ msgid " remaining"
-#~ msgstr " restant"

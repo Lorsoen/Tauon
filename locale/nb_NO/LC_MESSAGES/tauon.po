@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2024-10-15 17:27+0200\n"
+"POT-Creation-Date: 2024-10-15 17:33+0200\n"
 "PO-Revision-Date: 2021-05-07 10:05+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/tauon-"
@@ -1132,7 +1132,7 @@ msgstr ""
 
 #: t_modules/t_main.py:16673
 #, fuzzy
-msgid "{quantity} files processed"
+msgid "{N} files processed"
 msgstr " filnavn ble skrevet."
 
 #: t_modules/t_main.py:16692

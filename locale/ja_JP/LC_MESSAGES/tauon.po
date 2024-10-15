@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2024-10-15 17:27+0200\n"
+"POT-Creation-Date: 2024-10-15 17:33+0200\n"
 "PO-Revision-Date: 2019-05-01 22:39+1200\n"
 "Last-Translator:  <captain.gxj@gmail.com>\n"
 "Language-Team: Language ja\n"
@@ -1141,7 +1141,7 @@ msgstr "ファイルから埋め込み画像を削除しました"
 
 #: t_modules/t_main.py:16673
 #, fuzzy
-msgid "{quantity} files processed"
+msgid "{N} files processed"
 msgstr "　ファイル名が書き込まれました。"
 
 #: t_modules/t_main.py:16692

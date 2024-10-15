@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2024-10-15 17:27+0200\n"
+"POT-Creation-Date: 2024-10-15 17:33+0200\n"
 "PO-Revision-Date: 2024-09-12 13:09+0000\n"
 "Last-Translator: 無情天 <kofzhanganguo@126.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
@@ -1126,7 +1126,7 @@ msgstr "从文件中删除内置图片"
 
 #: t_modules/t_main.py:16673
 #, fuzzy
-msgid "{quantity} files processed"
+msgid "{N} files processed"
 msgstr "已处理 %d 个文件"
 
 #: t_modules/t_main.py:16692
