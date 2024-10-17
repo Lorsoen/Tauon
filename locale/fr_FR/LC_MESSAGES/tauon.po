@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2024-10-15 18:01+0200\n"
+"POT-Creation-Date: 2024-10-17 11:48+0200\n"
 "PO-Revision-Date: 2024-10-06 10:39+0000\n"
 "Last-Translator: Lorsoen <fashim99@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/tauon-music-box/"
@@ -79,15 +79,22 @@ msgstr "Erreur d'accès à Jellyfin"
 msgid "Jellyfin Collection"
 msgstr "Collection Jellyfin"
 
-#: t_modules/t_main.py:1921 t_modules/t_main.py:1923
+#: t_modules/t_main.py:2006 t_modules/t_main.py:2053 t_modules/t_main.py:3388
+#: t_modules/t_main.py:13621 t_modules/t_main.py:13629
+#: t_modules/t_main.py:14812 t_modules/t_main.py:17304
+#: t_modules/t_main.py:45976 t_modules/t_main.py:47321
+msgid "Default"
+msgstr "Par défaut"
+
+#: t_modules/t_main.py:2524 t_modules/t_main.py:2526
 msgid "No artist image found."
 msgstr "Aucune image de l'artiste trouvée."
 
-#: t_modules/t_main.py:1923
+#: t_modules/t_main.py:2526
 msgid "No providers are enabled in settings!"
 msgstr "Aucune source définie dans les options !"
 
-#: t_modules/t_main.py:3367
+#: t_modules/t_main.py:3970
 msgid ""
 "Error loading old database, did the program not exit properly after "
 "updating? Oh well."
@@ -95,34 +102,34 @@ msgstr ""
 "Erreur du chargement de l'ancienne base de données, est-ce que Tauon s'est "
 "correctement arrété après la mise à jour ? Bon..."
 
-#: t_modules/t_main.py:3374
+#: t_modules/t_main.py:3977
 msgid "Upgrade complete. Run a tag rescan if you want enable ReplayGain"
 msgstr ""
 "Mise à jour terminée. Une ré-analyse des tags est nécessaire pour ReplayGain"
 
-#: t_modules/t_main.py:3380
+#: t_modules/t_main.py:3983
 msgid "Upgrade complete. New sorting option may require tag rescan."
 msgstr ""
 "Mise à jour terminée. Une ré-analyse des tags est conseillée pour les "
 "nouvelles options de tri"
 
-#: t_modules/t_main.py:3387
+#: t_modules/t_main.py:3990
 msgid "Updated to v2.6.3"
 msgstr "Mise à jour vers v2.6.3 terminée."
 
-#: t_modules/t_main.py:3439
+#: t_modules/t_main.py:4042
 msgid ""
 "Welcome to v4.4.0. Run a tag rescan if you want enable Composer metadata."
 msgstr ""
 "Bienvene en v4.4.0. Une ré-analyse des tags est nécessaire pour pouvoir "
 "activer les métadonnées des compositeurs."
 
-#: t_modules/t_main.py:3596
+#: t_modules/t_main.py:4199
 msgid "Welcome to v6.1.0. Due to changes, please re-authorise Spotify"
 msgstr ""
 "Bienvenue en v6.1.0. Veuillez ré-autoriser Spotify si vous l'utilisiez."
 
-#: t_modules/t_main.py:3597
+#: t_modules/t_main.py:4200
 msgid ""
 "You can do this by clicking 'Forget Account', then 'Authroise' in Settings > "
 "Accounts > Spotify"
@@ -130,29 +137,29 @@ msgstr ""
 "Pour cela, cliquez sur « Oublier le compte », puis « Autoriser » dans "
 "Options > Comptes > Spotify"
 
-#: t_modules/t_main.py:3610
+#: t_modules/t_main.py:4213
 msgid "Welcome to v6.3.0. Due to an upgrade, please re-authorise Spotify"
 msgstr ""
 "Bienvenue en v6.3.0. Veuillez ré-autoriser Spotify si vous l'utilisiez."
 
-#: t_modules/t_main.py:3611
+#: t_modules/t_main.py:4214
 msgid ""
 "You can do this by clicking 'Authroise' in Settings > Accounts > Spotify"
 msgstr "Pour cela, cliquez sur « Autoriser » dans Options > Comptes > Spotify"
 
-#: t_modules/t_main.py:3665
+#: t_modules/t_main.py:4268
 msgid "Upgrade to v6.5.1. It looks like you are using Spotify."
 msgstr "Mis à jour en v6.5.1. Tauon a détecté un compte Spotify."
 
-#: t_modules/t_main.py:3666
+#: t_modules/t_main.py:4269
 msgid "Please click 'Authorise' again in the settings"
 msgstr "Veuillez cliquer de nouveau sur « Autoriser » dans les options"
 
-#: t_modules/t_main.py:3676
+#: t_modules/t_main.py:4279
 msgid "Upgrade to v6.5.3 complete"
 msgstr "Mise à jour en v6.5.3 terminée"
 
-#: t_modules/t_main.py:3677
+#: t_modules/t_main.py:4280
 msgid ""
 "It looks like you are using Spotify. Please re-setup Spotify again in the "
 "settings"
@@ -483,6 +490,10 @@ msgstr ""
 "Essayez de vérifier les identifiants de connexion et que ce serveur est "
 "accessible."
 
+#: t_modules/t_main.py:8730
+msgid "PLEX Collection"
+msgstr "Collection PLEX"
+
 #: t_modules/t_main.py:8786
 msgid "Subsonic Error: "
 msgstr "Erreur Subsonic: "
@@ -495,6 +506,10 @@ msgstr "Erreur de connection au serveur Airsonic"
 msgid "Error reading Airsonic directory!"
 msgstr "Erreur à la lecture du dossier de Airsonic !"
 
+#: t_modules/t_main.py:8983
+msgid "Airsonic Collection"
+msgstr "Collection Airsonic"
+
 #: t_modules/t_main.py:9121
 msgid "Missing username, password and/or server URL"
 msgstr "Nom d’utilisateur, mot de passe ou lien du serveur manquant"
@@ -506,6 +521,10 @@ msgstr "Impossible d'établir la connexion"
 #: t_modules/t_main.py:9169
 msgid "Could not establish connection/authorisation"
 msgstr "Impossible d’établir la connexion / l’autorisation"
+
+#: t_modules/t_main.py:9306
+msgid "Koel Collection"
+msgstr "Collection Koel"
 
 #: t_modules/t_main.py:9334
 msgid "Network error"
@@ -601,10 +620,6 @@ msgstr ""
 #: t_modules/t_main.py:14809
 msgid "Track Renaming"
 msgstr "Renommage de piste"
-
-#: t_modules/t_main.py:14812 t_modules/t_main.py:47321
-msgid "Default"
-msgstr "Par défaut"
 
 #: t_modules/t_main.py:14836
 msgid "BEFORE"
@@ -1129,8 +1144,8 @@ msgstr "Supprimer l'image des métadonnées | Piste"
 #: t_modules/t_main.py:16734
 msgid "This will erase any embedded image in {N} files. Are you sure?"
 msgstr ""
-"Cette action supprimera toute image intégrée dans {N} fichiers. Êtes-vous sûr."
-"e ?"
+"Cette action supprimera toute image intégrée dans {N} fichiers. Êtes-vous "
+"sûr.e ?"
 
 #: t_modules/t_main.py:16741 t_modules/t_main.py:16779
 msgid "Quick-Fetch Cover Art"
@@ -1284,6 +1299,16 @@ msgstr "La playlist est verrouillée"
 msgid "Delete"
 msgstr "Supprimer"
 
+#: t_modules/t_main.py:17977 t_modules/t_main.py:22925
+msgid "New Radio List"
+msgstr "Nouvelle liste de radio"
+
+#: t_modules/t_main.py:17983 t_modules/t_main.py:18797
+#: t_modules/t_main.py:22927 t_modules/t_main.py:22931
+#: t_modules/t_main.py:45996
+msgid "New Playlist"
+msgstr "Nouvelle playlist"
+
 #: t_modules/t_main.py:18023
 msgid "Add Spotify Album"
 msgstr "Ajouter un album Spotify"
@@ -1318,11 +1343,6 @@ msgid ""
 "You remove or edit this behavior by going \"Misc...\" > \"Edit generator...\""
 msgstr ""
 "Vous pouvez changer ça en allant dans > Divers... > Modifier le génerateur..."
-
-#: t_modules/t_main.py:18797 t_modules/t_main.py:22927
-#: t_modules/t_main.py:22931 t_modules/t_main.py:45996
-msgid "New Playlist"
-msgstr "Nouvelle playlist"
 
 #: t_modules/t_main.py:18807 t_modules/t_main.py:18815
 msgid "Upload"
@@ -1569,9 +1589,9 @@ msgstr "Albums non-complets"
 msgid "No incomplete albums were found."
 msgstr "Aucun album non-complet trouvé."
 
-#: t_modules/t_main.py:19444 t_modules/t_main.py:22417
-msgid "Codec"
-msgstr "Codec"
+#: t_modules/t_main.py:19444
+msgid "Codec: "
+msgstr "Codec : "
 
 #: t_modules/t_main.py:19500 t_modules/t_main.py:19507
 #: t_modules/t_main.py:19508
@@ -1594,6 +1614,10 @@ msgstr "Commentaires intéressants"
 #: t_modules/t_main.py:19568
 msgid "Nothing of interest was found."
 msgstr "Rien d'intéressant n'a été trouvé"
+
+#: t_modules/t_main.py:19579
+msgid "ReplayGain Tracks"
+msgstr "Pistes ReplayGain"
 
 #: t_modules/t_main.py:19583
 msgid "No replay gain tags were found."
@@ -2262,6 +2286,10 @@ msgstr "Numéro de piste"
 msgid "Play Count"
 msgstr "Nombre de lectures"
 
+#: t_modules/t_main.py:22417
+msgid "Codec"
+msgstr "Codec"
+
 #: t_modules/t_main.py:22418 t_modules/t_main.py:29775
 #: t_modules/t_main.py:47082
 msgid "Bitrate"
@@ -2310,10 +2338,6 @@ msgstr "Numéro du disque"
 msgid "Is CUE Sheet"
 msgstr "Relevé musical"
 
-#: t_modules/t_main.py:22925
-msgid "New Radio List"
-msgstr "Nouvelle liste de radio"
-
 #: t_modules/t_main.py:22944
 msgid "Done! {N} old items were removed."
 msgstr "Terminé ! {N} anciens objets ont été retirés."
@@ -2361,6 +2385,10 @@ msgstr "Activer la sauvegarde de l'état"
 #: t_modules/t_main.py:23021
 msgid "Disable Saving State"
 msgstr "Désactiver la sauvegarde de l'état"
+
+#: t_modules/t_main.py:23077
+msgid "Play History"
+msgstr "Historique de lecture"
 
 #: t_modules/t_main.py:23085
 msgid "Export as CSV"
@@ -2617,7 +2645,8 @@ msgstr "Avertissement : Un ou plusieurs fichiers manquants"
 msgid "output"
 msgstr "sortie"
 
-#: t_modules/t_main.py:24740
+#: t_modules/t_main.py:24740 t_modules/t_main.py:37252
+#: t_modules/t_main.py:37271
 msgid "Artist: "
 msgstr "Artiste :"
 
@@ -4610,6 +4639,10 @@ msgstr "↳ Sauf pour celle-ci"
 msgid "Queue to New Playlist"
 msgstr "Ajouter à une nouvelle playlist"
 
+#: t_modules/t_main.py:38918
+msgid "Queued Tracks"
+msgstr "Pistes en attente"
+
 #: t_modules/t_main.py:39024
 msgid "Cancel Auto-Stop"
 msgstr "Annuler l'arrêt automatique"
@@ -4901,6 +4934,10 @@ msgstr "HAUT / BAS pour naviguer. MAJ + ENTRÉE pour une nouvelle playlist."
 #: t_modules/t_main.py:47466
 msgid "Quick find"
 msgstr "Recherche rapide"
+
+#: t_modules/t_main.py:47531
+msgid "Search Results"
+msgstr "Résultats de recherche"
 
 #: t_modules/t_main.py:47754
 msgid "Loved track"

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2024-10-15 17:33+0200\n"
+"POT-Creation-Date: 2024-10-17 11:48+0200\n"
 "PO-Revision-Date: 2024-02-07 19:01+0000\n"
 "Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/tauon-music-box/"
@@ -83,70 +83,77 @@ msgstr "Fehler beim Löschen"
 msgid "Jellyfin Collection"
 msgstr ""
 
-#: t_modules/t_main.py:1921 t_modules/t_main.py:1923
+#: t_modules/t_main.py:2006 t_modules/t_main.py:2053 t_modules/t_main.py:3388
+#: t_modules/t_main.py:13621 t_modules/t_main.py:13629
+#: t_modules/t_main.py:14812 t_modules/t_main.py:17304
+#: t_modules/t_main.py:45976 t_modules/t_main.py:47321
+msgid "Default"
+msgstr "Standard"
+
+#: t_modules/t_main.py:2524 t_modules/t_main.py:2526
 msgid "No artist image found."
 msgstr "Kein Bild des Künstlers gefunden."
 
-#: t_modules/t_main.py:1923
+#: t_modules/t_main.py:2526
 msgid "No providers are enabled in settings!"
 msgstr "Es sind keine Anbieter eingeschaltet!"
 
-#: t_modules/t_main.py:3367
+#: t_modules/t_main.py:3970
 msgid ""
 "Error loading old database, did the program not exit properly after "
 "updating? Oh well."
 msgstr ""
 
-#: t_modules/t_main.py:3374
+#: t_modules/t_main.py:3977
 msgid "Upgrade complete. Run a tag rescan if you want enable ReplayGain"
 msgstr ""
 
-#: t_modules/t_main.py:3380
+#: t_modules/t_main.py:3983
 msgid "Upgrade complete. New sorting option may require tag rescan."
 msgstr ""
 
-#: t_modules/t_main.py:3387
+#: t_modules/t_main.py:3990
 msgid "Updated to v2.6.3"
 msgstr ""
 
-#: t_modules/t_main.py:3439
+#: t_modules/t_main.py:4042
 msgid ""
 "Welcome to v4.4.0. Run a tag rescan if you want enable Composer metadata."
 msgstr ""
 
-#: t_modules/t_main.py:3596
+#: t_modules/t_main.py:4199
 msgid "Welcome to v6.1.0. Due to changes, please re-authorise Spotify"
 msgstr ""
 
-#: t_modules/t_main.py:3597
+#: t_modules/t_main.py:4200
 msgid ""
 "You can do this by clicking 'Forget Account', then 'Authroise' in Settings > "
 "Accounts > Spotify"
 msgstr ""
 
-#: t_modules/t_main.py:3610
+#: t_modules/t_main.py:4213
 msgid "Welcome to v6.3.0. Due to an upgrade, please re-authorise Spotify"
 msgstr ""
 
-#: t_modules/t_main.py:3611
+#: t_modules/t_main.py:4214
 msgid ""
 "You can do this by clicking 'Authroise' in Settings > Accounts > Spotify"
 msgstr ""
 
-#: t_modules/t_main.py:3665
+#: t_modules/t_main.py:4268
 msgid "Upgrade to v6.5.1. It looks like you are using Spotify."
 msgstr ""
 
-#: t_modules/t_main.py:3666
+#: t_modules/t_main.py:4269
 #, fuzzy
 msgid "Please click 'Authorise' again in the settings"
 msgstr "Bitte Spotify in den Einstellungen autorisieren!"
 
-#: t_modules/t_main.py:3676
+#: t_modules/t_main.py:4279
 msgid "Upgrade to v6.5.3 complete"
 msgstr ""
 
-#: t_modules/t_main.py:3677
+#: t_modules/t_main.py:4280
 msgid ""
 "It looks like you are using Spotify. Please re-setup Spotify again in the "
 "settings"
@@ -488,6 +495,10 @@ msgstr "Fehler beim Verbinden zum PLEX-Server"
 msgid "Try check login credentials and that server is accessible."
 msgstr "Prüfen Sie die Anmeldedaten und die Verbindung zum Server."
 
+#: t_modules/t_main.py:8730
+msgid "PLEX Collection"
+msgstr ""
+
 #: t_modules/t_main.py:8786
 msgid "Subsonic Error: "
 msgstr ""
@@ -502,6 +513,10 @@ msgstr "Fehler beim Verbinden zum PLEX-Server"
 msgid "Error reading Airsonic directory!"
 msgstr "Fehler beim Verbinden zum PLEX-Server"
 
+#: t_modules/t_main.py:8983
+msgid "Airsonic Collection"
+msgstr ""
+
 #: t_modules/t_main.py:9121
 msgid "Missing username, password and/or server URL"
 msgstr "Benutzername, Passwort oder Server-URL fehlen"
@@ -513,6 +528,10 @@ msgstr "Konnte keine Verbindung herstellen"
 #: t_modules/t_main.py:9169
 msgid "Could not establish connection/authorisation"
 msgstr "Fehler bei Verbindungsaufbau oder Anmeldung"
+
+#: t_modules/t_main.py:9306
+msgid "Koel Collection"
+msgstr ""
 
 #: t_modules/t_main.py:9334
 msgid "Network error"
@@ -613,10 +632,6 @@ msgstr ""
 #: t_modules/t_main.py:14809
 msgid "Track Renaming"
 msgstr "Umbenennung des Titels"
-
-#: t_modules/t_main.py:14812 t_modules/t_main.py:47321
-msgid "Default"
-msgstr "Standard"
 
 #: t_modules/t_main.py:14836
 msgid "BEFORE"
@@ -1322,6 +1337,16 @@ msgstr "Wiedergabeliste ist gesperrt"
 msgid "Delete"
 msgstr "Löschen"
 
+#: t_modules/t_main.py:17977 t_modules/t_main.py:22925
+msgid "New Radio List"
+msgstr "Neue Radioliste"
+
+#: t_modules/t_main.py:17983 t_modules/t_main.py:18797
+#: t_modules/t_main.py:22927 t_modules/t_main.py:22931
+#: t_modules/t_main.py:45996
+msgid "New Playlist"
+msgstr "Neue Wiedergabeliste"
+
 #: t_modules/t_main.py:18023
 msgid "Add Spotify Album"
 msgstr "Spotify-Album hinzufügen"
@@ -1357,11 +1382,6 @@ msgid ""
 msgstr ""
 "Dieses Vorgehen kann unter „Misc …“ > „Generator bearbeiten …“ geändert "
 "werden"
-
-#: t_modules/t_main.py:18797 t_modules/t_main.py:22927
-#: t_modules/t_main.py:22931 t_modules/t_main.py:45996
-msgid "New Playlist"
-msgstr "Neue Wiedergabeliste"
 
 #: t_modules/t_main.py:18807 t_modules/t_main.py:18815
 msgid "Upload"
@@ -1610,8 +1630,9 @@ msgstr "Unvollständige Alben"
 msgid "No incomplete albums were found."
 msgstr "Keine Unvollständigen Alben gefunden."
 
-#: t_modules/t_main.py:19444 t_modules/t_main.py:22417
-msgid "Codec"
+#: t_modules/t_main.py:19444
+#, fuzzy
+msgid "Codec: "
 msgstr "Codec"
 
 #: t_modules/t_main.py:19500 t_modules/t_main.py:19507
@@ -1637,6 +1658,11 @@ msgstr "Interessante Kommentare"
 #, fuzzy
 msgid "Nothing of interest was found."
 msgstr "Keinen passenden Künstler gefunden"
+
+#: t_modules/t_main.py:19579
+#, fuzzy
+msgid "ReplayGain Tracks"
+msgstr "Replay-Gain"
 
 #: t_modules/t_main.py:19583
 #, fuzzy
@@ -2324,6 +2350,10 @@ msgstr "Titelnummer"
 msgid "Play Count"
 msgstr "Anzahl Abgespielt"
 
+#: t_modules/t_main.py:22417
+msgid "Codec"
+msgstr "Codec"
+
 #: t_modules/t_main.py:22418 t_modules/t_main.py:29775
 #: t_modules/t_main.py:47082
 msgid "Bitrate"
@@ -2372,10 +2402,6 @@ msgstr "Titelnummer"
 #: t_modules/t_main.py:22433
 msgid "Is CUE Sheet"
 msgstr ""
-
-#: t_modules/t_main.py:22925
-msgid "New Radio List"
-msgstr "Neue Radioliste"
 
 #: t_modules/t_main.py:22944
 msgid "Done! {N} old items were removed."
@@ -2427,6 +2453,11 @@ msgstr ""
 #, fuzzy
 msgid "Disable Saving State"
 msgstr "Auto-Theme deaktiviert"
+
+#: t_modules/t_main.py:23077
+#, fuzzy
+msgid "Play History"
+msgstr "Verlauf zu Wiedergabeliste abspielen"
 
 #: t_modules/t_main.py:23085
 msgid "Export as CSV"
@@ -2694,7 +2725,8 @@ msgstr "Berechtigungs-Fehler beim Zugriff auf Dateien"
 msgid "output"
 msgstr ""
 
-#: t_modules/t_main.py:24740
+#: t_modules/t_main.py:24740 t_modules/t_main.py:37252
+#: t_modules/t_main.py:37271
 #, fuzzy
 msgid "Artist: "
 msgstr "Künstler"
@@ -4745,6 +4777,11 @@ msgstr "↳ Außer dieses"
 msgid "Queue to New Playlist"
 msgstr "Warteschlange zu neuer Wiedergabeliste"
 
+#: t_modules/t_main.py:38918
+#, fuzzy
+msgid "Queued Tracks"
+msgstr "Geliebte Titel"
+
 #: t_modules/t_main.py:39024
 msgid "Cancel Auto-Stop"
 msgstr "Auto-Stop abbrechen"
@@ -5045,6 +5082,11 @@ msgstr ""
 #: t_modules/t_main.py:47466
 msgid "Quick find"
 msgstr ""
+
+#: t_modules/t_main.py:47531
+#, fuzzy
+msgid "Search Results"
+msgstr "Text suchen …"
 
 #: t_modules/t_main.py:47754
 msgid "Loved track"
