@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2024-10-17 11:48+0200\n"
+"POT-Creation-Date: 2024-10-25 19:22+0200\n"
 "PO-Revision-Date: 2021-05-07 10:05+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/tauon-"
@@ -83,76 +83,69 @@ msgstr "Kunne ikke koble til PLEX-tjener"
 msgid "Jellyfin Collection"
 msgstr ""
 
-#: t_modules/t_main.py:2006 t_modules/t_main.py:2053 t_modules/t_main.py:3388
-#: t_modules/t_main.py:13621 t_modules/t_main.py:13629
-#: t_modules/t_main.py:14812 t_modules/t_main.py:17304
-#: t_modules/t_main.py:45976 t_modules/t_main.py:47321
-msgid "Default"
-msgstr "Forvalg"
-
-#: t_modules/t_main.py:2524 t_modules/t_main.py:2526
+#: t_modules/t_main.py:1921 t_modules/t_main.py:1923
 msgid "No artist image found."
 msgstr "Fant ikke artistbilde."
 
-#: t_modules/t_main.py:2526
+#: t_modules/t_main.py:1923
 msgid "No providers are enabled in settings!"
 msgstr "Ingen tilbydere lagt til i innstillingene."
 
-#: t_modules/t_main.py:3970
+#: t_modules/t_main.py:3367
 msgid ""
 "Error loading old database, did the program not exit properly after "
 "updating? Oh well."
 msgstr ""
 
-#: t_modules/t_main.py:3977
+#: t_modules/t_main.py:3374
 msgid "Upgrade complete. Run a tag rescan if you want enable ReplayGain"
 msgstr ""
 
-#: t_modules/t_main.py:3983
+#: t_modules/t_main.py:3380
 msgid "Upgrade complete. New sorting option may require tag rescan."
 msgstr ""
 
-#: t_modules/t_main.py:3990
+#: t_modules/t_main.py:3387
 msgid "Updated to v2.6.3"
 msgstr ""
 
-#: t_modules/t_main.py:4042
+#: t_modules/t_main.py:3439
 msgid ""
 "Welcome to v4.4.0. Run a tag rescan if you want enable Composer metadata."
 msgstr ""
 
-#: t_modules/t_main.py:4199
+#: t_modules/t_main.py:3596
 msgid "Welcome to v6.1.0. Due to changes, please re-authorise Spotify"
 msgstr ""
 
-#: t_modules/t_main.py:4200
+#: t_modules/t_main.py:3597
 msgid ""
 "You can do this by clicking 'Forget Account', then 'Authroise' in Settings > "
 "Accounts > Spotify"
 msgstr ""
 
-#: t_modules/t_main.py:4213
+#: t_modules/t_main.py:3610
 msgid "Welcome to v6.3.0. Due to an upgrade, please re-authorise Spotify"
 msgstr ""
 
-#: t_modules/t_main.py:4214
+#: t_modules/t_main.py:3611
 msgid ""
 "You can do this by clicking 'Authroise' in Settings > Accounts > Spotify"
 msgstr ""
 
-#: t_modules/t_main.py:4268
+#: t_modules/t_main.py:3665
 msgid "Upgrade to v6.5.1. It looks like you are using Spotify."
 msgstr ""
 
-#: t_modules/t_main.py:4269
+#: t_modules/t_main.py:3666
 msgid "Please click 'Authorise' again in the settings"
 msgstr ""
 
-#: t_modules/t_main.py:4279
+#: t_modules/t_main.py:3676
 msgid "Upgrade to v6.5.3 complete"
 msgstr ""
 
-#: t_modules/t_main.py:4280
+#: t_modules/t_main.py:3677
 msgid ""
 "It looks like you are using Spotify. Please re-setup Spotify again in the "
 "settings"
@@ -627,6 +620,10 @@ msgstr ""
 msgid "Track Renaming"
 msgstr ""
 
+#: t_modules/t_main.py:14812 t_modules/t_main.py:47321
+msgid "Default"
+msgstr "Forvalg"
+
 #: t_modules/t_main.py:14836
 msgid "BEFORE"
 msgstr "FØR"
@@ -969,6 +966,10 @@ msgstr "Vis sangtekster"
 
 #: t_modules/t_main.py:16046
 msgid "There are no lyric sources enabled."
+msgstr ""
+
+#: t_modules/t_main.py:16047
+msgid "See 'lyrics settings' under 'functions' tab in settings."
 msgstr ""
 
 #: t_modules/t_main.py:16055
@@ -1317,15 +1318,17 @@ msgid "OGG bitrates (kbps):"
 msgstr ""
 
 #: t_modules/t_main.py:17792
-msgid "-------------- Top Artists --------------------"
-msgstr ""
+#, fuzzy
+msgid "Top Artists"
+msgstr "Artistliste"
 
 #: t_modules/t_main.py:17798
-msgid "-------------- Top Albums --------------------"
-msgstr ""
+#, fuzzy
+msgid "Top Albums"
+msgstr "Tilfeldige album"
 
 #: t_modules/t_main.py:17802
-msgid "-------------- Top Genres --------------------"
+msgid "Top Genres"
 msgstr ""
 
 #: t_modules/t_main.py:17822 t_modules/t_main.py:17833
@@ -2127,7 +2130,7 @@ msgstr ""
 msgid "Cannot edit tags of a network track."
 msgstr "Kan ikke laste ned omslag for nettverksspor."
 
-#: t_modules/t_main.py:21391
+#: t_modules/t_main.py:21391 t_modules/t_main.py:21724
 msgid "Edit with "
 msgstr ""
 

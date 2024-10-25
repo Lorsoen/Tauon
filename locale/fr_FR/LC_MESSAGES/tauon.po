@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2024-10-17 11:48+0200\n"
+"POT-Creation-Date: 2024-10-25 19:22+0200\n"
 "PO-Revision-Date: 2024-10-06 10:39+0000\n"
 "Last-Translator: Lorsoen <fashim99@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/tauon-music-box/"
@@ -79,22 +79,15 @@ msgstr "Erreur d'accès à Jellyfin"
 msgid "Jellyfin Collection"
 msgstr "Collection Jellyfin"
 
-#: t_modules/t_main.py:2006 t_modules/t_main.py:2053 t_modules/t_main.py:3388
-#: t_modules/t_main.py:13621 t_modules/t_main.py:13629
-#: t_modules/t_main.py:14812 t_modules/t_main.py:17304
-#: t_modules/t_main.py:45976 t_modules/t_main.py:47321
-msgid "Default"
-msgstr "Par défaut"
-
-#: t_modules/t_main.py:2524 t_modules/t_main.py:2526
+#: t_modules/t_main.py:1921 t_modules/t_main.py:1923
 msgid "No artist image found."
 msgstr "Aucune image de l'artiste trouvée."
 
-#: t_modules/t_main.py:2526
+#: t_modules/t_main.py:1923
 msgid "No providers are enabled in settings!"
 msgstr "Aucune source définie dans les options !"
 
-#: t_modules/t_main.py:3970
+#: t_modules/t_main.py:3367
 msgid ""
 "Error loading old database, did the program not exit properly after "
 "updating? Oh well."
@@ -102,34 +95,34 @@ msgstr ""
 "Erreur du chargement de l'ancienne base de données, est-ce que Tauon s'est "
 "correctement arrété après la mise à jour ? Bon..."
 
-#: t_modules/t_main.py:3977
+#: t_modules/t_main.py:3374
 msgid "Upgrade complete. Run a tag rescan if you want enable ReplayGain"
 msgstr ""
 "Mise à jour terminée. Une ré-analyse des tags est nécessaire pour ReplayGain"
 
-#: t_modules/t_main.py:3983
+#: t_modules/t_main.py:3380
 msgid "Upgrade complete. New sorting option may require tag rescan."
 msgstr ""
 "Mise à jour terminée. Une ré-analyse des tags est conseillée pour les "
 "nouvelles options de tri"
 
-#: t_modules/t_main.py:3990
+#: t_modules/t_main.py:3387
 msgid "Updated to v2.6.3"
 msgstr "Mise à jour vers v2.6.3 terminée."
 
-#: t_modules/t_main.py:4042
+#: t_modules/t_main.py:3439
 msgid ""
 "Welcome to v4.4.0. Run a tag rescan if you want enable Composer metadata."
 msgstr ""
 "Bienvene en v4.4.0. Une ré-analyse des tags est nécessaire pour pouvoir "
 "activer les métadonnées des compositeurs."
 
-#: t_modules/t_main.py:4199
+#: t_modules/t_main.py:3596
 msgid "Welcome to v6.1.0. Due to changes, please re-authorise Spotify"
 msgstr ""
 "Bienvenue en v6.1.0. Veuillez ré-autoriser Spotify si vous l'utilisiez."
 
-#: t_modules/t_main.py:4200
+#: t_modules/t_main.py:3597
 msgid ""
 "You can do this by clicking 'Forget Account', then 'Authroise' in Settings > "
 "Accounts > Spotify"
@@ -137,29 +130,29 @@ msgstr ""
 "Pour cela, cliquez sur « Oublier le compte », puis « Autoriser » dans "
 "Options > Comptes > Spotify"
 
-#: t_modules/t_main.py:4213
+#: t_modules/t_main.py:3610
 msgid "Welcome to v6.3.0. Due to an upgrade, please re-authorise Spotify"
 msgstr ""
 "Bienvenue en v6.3.0. Veuillez ré-autoriser Spotify si vous l'utilisiez."
 
-#: t_modules/t_main.py:4214
+#: t_modules/t_main.py:3611
 msgid ""
 "You can do this by clicking 'Authroise' in Settings > Accounts > Spotify"
 msgstr "Pour cela, cliquez sur « Autoriser » dans Options > Comptes > Spotify"
 
-#: t_modules/t_main.py:4268
+#: t_modules/t_main.py:3665
 msgid "Upgrade to v6.5.1. It looks like you are using Spotify."
 msgstr "Mis à jour en v6.5.1. Tauon a détecté un compte Spotify."
 
-#: t_modules/t_main.py:4269
+#: t_modules/t_main.py:3666
 msgid "Please click 'Authorise' again in the settings"
 msgstr "Veuillez cliquer de nouveau sur « Autoriser » dans les options"
 
-#: t_modules/t_main.py:4279
+#: t_modules/t_main.py:3676
 msgid "Upgrade to v6.5.3 complete"
 msgstr "Mise à jour en v6.5.3 terminée"
 
-#: t_modules/t_main.py:4280
+#: t_modules/t_main.py:3677
 msgid ""
 "It looks like you are using Spotify. Please re-setup Spotify again in the "
 "settings"
@@ -621,6 +614,10 @@ msgstr ""
 msgid "Track Renaming"
 msgstr "Renommage de piste"
 
+#: t_modules/t_main.py:14812 t_modules/t_main.py:47321
+msgid "Default"
+msgstr "Par défaut"
+
 #: t_modules/t_main.py:14836
 msgid "BEFORE"
 msgstr "AVANT"
@@ -956,6 +953,10 @@ msgstr "Afficher les paroles"
 msgid "There are no lyric sources enabled."
 msgstr "Aucune source activée pour les paroles."
 
+#: t_modules/t_main.py:16047
+msgid "See 'lyrics settings' under 'functions' tab in settings."
+msgstr ""
+
 #: t_modules/t_main.py:16055
 msgid "Let's be polite and try later."
 msgstr "Soyons courtois et réessayons plus tard."
@@ -1278,16 +1279,19 @@ msgid "OGG bitrates (kbps):"
 msgstr "Débit des fichiers OGG (ko/s) :"
 
 #: t_modules/t_main.py:17792
-msgid "-------------- Top Artists --------------------"
-msgstr "-------------- Top des artistes ---------------"
+#, fuzzy
+msgid "Top Artists"
+msgstr "Artiste"
 
 #: t_modules/t_main.py:17798
-msgid "-------------- Top Albums --------------------"
-msgstr "-------------- Top des albums ----------------"
+#, fuzzy
+msgid "Top Albums"
+msgstr "Albums les mieux évalués"
 
 #: t_modules/t_main.py:17802
-msgid "-------------- Top Genres --------------------"
-msgstr "-------------- Top des genres ----------------"
+#, fuzzy
+msgid "Top Genres"
+msgstr "Genre"
 
 #: t_modules/t_main.py:17822 t_modules/t_main.py:17833
 #: t_modules/t_main.py:17852 t_modules/t_main.py:22295
@@ -2038,7 +2042,7 @@ msgstr "Désolé, cette fonctionnalité n'est pas (encore) dispo sur Snap."
 msgid "Cannot edit tags of a network track."
 msgstr "Impossible d'éditer les tags d'une piste réseau."
 
-#: t_modules/t_main.py:21391
+#: t_modules/t_main.py:21391 t_modules/t_main.py:21724
 msgid "Edit with "
 msgstr "Modifier avec "
 
@@ -5043,3 +5047,12 @@ msgstr ""
 msgid "You can close this now and return to Tauon Music Box"
 msgstr ""
 "Vous pouvez maintenant fermer cet onglet et retourner à Tauon Music Box"
+
+#~ msgid "-------------- Top Artists --------------------"
+#~ msgstr "-------------- Top des artistes ---------------"
+
+#~ msgid "-------------- Top Albums --------------------"
+#~ msgstr "-------------- Top des albums ----------------"
+
+#~ msgid "-------------- Top Genres --------------------"
+#~ msgstr "-------------- Top des genres ----------------"
