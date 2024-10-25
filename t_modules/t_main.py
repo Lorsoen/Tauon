@@ -908,6 +908,102 @@ if whicher('7z'):
 
 cargo = []
 
+# ---------------------------------------------------------------------
+# Player variables
+
+# pl_follow = False
+
+# List of encodings to check for with the fix mojibake function
+encodings = ['cp932', 'utf-8', 'big5hkscs', 'gbk']  # These seem to be the most common for Japanese
+
+track_box = False
+
+transcode_list = []
+transcode_state = ""
+
+taskbar_progress = True
+QUE = []
+
+playing_in_queue = 0
+draw_sep_hl = False
+
+# -------------------------------------------------------------------------------
+# Playlist Variables
+playlist_view_position = 0
+playlist_playing = -1
+
+loading_in_progress = False
+
+core_use = 0
+dl_use = 0
+
+random_mode = False
+repeat_mode = False
+
+
+# Functions to generate empty playlist
+# Playlist is [Name, playing, playlist, position, hide folder title, selected, uid, last_folder, hidden(bool)]
+
+# 0 Name (string)
+# 1 Playing (int)
+# 2 list  (list of int)
+# 3 View Position (int)
+# 4 hide playlist folder titles (bool)
+# 5 selected (int)
+# 6 Unique id (int)
+# 7 last folder import path (string)
+# 8 hidden (bool)
+# 9 Locked (bool)
+# 10 Filter parent playlist id (string)
+# 11 Persist time positioning
+
+
+def uid_gen():
+    return random.randrange(1, 100000000)
+
+
+notify_change = lambda: None
+
+
+def pl_gen(title='Default',
+           playing=0,
+           playlist=None,
+           position=0,
+           hide_title=0,
+           selected=0,
+           parent="",
+           hidden=False):
+    if playlist == None:
+        playlist = []
+
+    notify_change()
+
+    return copy.deepcopy(
+        [title, playing, playlist, position, hide_title, selected, uid_gen(), [], hidden, False, parent, False])
+
+
+multi_playlist = [pl_gen()]  # Create default playlist
+
+
+def queue_item_gen(trackid, position, pl_id, type=0, album_stage=0):
+    # type; 0 is track, 1 is album
+    auto_stop = False
+
+    return [trackid, position, pl_id, type, album_stage, uid_gen(), auto_stop]
+
+
+default_playlist = multi_playlist[0][2]
+playlist_active = 0
+
+quick_search_mode = False
+search_index = 0
+
+# ----------------------------------------
+# Playlist right click menu
+
+r_menu_index = 0
+r_menu_position = 0
+
 # Library and loader Variables--------------------------------------------------------
 master_library = {}
 
@@ -931,6 +1027,8 @@ folder_image_offsets = {}
 db_version = 0.0
 
 albums = []
+album_position = 0
+
 
 class Prefs:  # Used to hold any kind of settings
 
@@ -1343,714 +1441,13 @@ class Prefs:  # Used to hold any kind of settings
 
 prefs = Prefs()
 
-# Loading Config -----------------
-
-download_directories = []
-
-if os.path.isdir(download_directory):
-    download_directories.append(download_directory)
-
-if music_directory is not None and os.path.isdir(music_directory):
-    download_directories.append(music_directory)
-
-from t_modules.t_config import Config
-
-cf = Config()
-
-
-def save_prefs():
-    cf.update_value("sync-bypass-transcode", prefs.bypass_transcode)
-    cf.update_value("sync-bypass-low-bitrate", prefs.smart_bypass)
-    cf.update_value("radio-record-codec", prefs.radio_record_codec)
-
-    cf.update_value("plex-username", prefs.plex_username)
-    cf.update_value("plex-password", prefs.plex_password)
-    cf.update_value("plex-servername", prefs.plex_servername)
-
-    cf.update_value("subsonic-username", prefs.subsonic_user)
-    cf.update_value("subsonic-password", prefs.subsonic_password)
-    cf.update_value("subsonic-password-plain", prefs.subsonic_password_plain)
-    cf.update_value("subsonic-server-url", prefs.subsonic_server)
-
-    cf.update_value("jelly-username", prefs.jelly_username)
-    cf.update_value("jelly-password", prefs.jelly_password)
-    cf.update_value("jelly-server-url", prefs.jelly_server_url)
-
-    cf.update_value("koel-username", prefs.koel_username)
-    cf.update_value("koel-password", prefs.koel_password)
-    cf.update_value("koel-server-url", prefs.koel_server_url)
-    cf.update_value("stream-bitrate", prefs.network_stream_bitrate)
-
-    cf.update_value("display-language", prefs.ui_lang)
-    # cf.update_value("decode-search", prefs.diacritic_search)
-
-    # cf.update_value("use-log-volume-scale", prefs.log_vol)
-    # cf.update_value("audio-backend", prefs.backend)
-    cf.update_value("use-pipewire", prefs.pipewire)
-    cf.update_value("seek-interval", prefs.seek_interval)
-    cf.update_value("pause-fade-time", prefs.pause_fade_time)
-    cf.update_value("cross-fade-time", prefs.cross_fade_time)
-    cf.update_value("device-buffer-ms", prefs.device_buffer)
-    cf.update_value("output-samplerate", prefs.samplerate)
-    cf.update_value("resample-quality", prefs.resample)
-    cf.update_value("avoid_resampling", prefs.avoid_resampling)
-    # cf.update_value("fast-scrubbing", prefs.pa_fast_seek)
-    cf.update_value("precache-local-files", prefs.precache)
-    cf.update_value("cache-use-tmp", prefs.tmp_cache)
-    cf.update_value("cache-limit", prefs.cache_limit)
-    cf.update_value("always-ffmpeg", prefs.always_ffmpeg)
-    cf.update_value("volume-curve", prefs.volume_power)
-    # cf.update_value("force-mono", prefs.mono)
-    # cf.update_value("disconnect-device-pause", prefs.dc_device_setting)
-    # cf.update_value("use-short-buffering", prefs.short_buffer)
-
-    # cf.update_value("gst-output", prefs.gst_output)
-    # cf.update_value("gst-use-custom-output", prefs.gst_use_custom_output)
-
-    cf.update_value("separate-multi-genre", prefs.sep_genre_multi)
-
-    cf.update_value("tag-editor-name", prefs.tag_editor_name)
-    cf.update_value("tag-editor-target", prefs.tag_editor_target)
-
-    cf.update_value("playback-follow-cursor", prefs.playback_follow_cursor)
-    cf.update_value("spotify-prefer-web", prefs.launch_spotify_web)
-    cf.update_value("spotify-allow-local", prefs.launch_spotify_local)
-    cf.update_value("back-restarts", prefs.back_restarts)
-    cf.update_value("end-queue-stop", prefs.stop_end_queue)
-    cf.update_value("block-suspend", prefs.block_suspend)
-    cf.update_value("allow-video-formats", prefs.allow_video_formats)
-
-    cf.update_value("ui-scale", prefs.scale_want)
-    cf.update_value("auto-scale", prefs.x_scale)
-    cf.update_value("tracklist-y-text-offset", prefs.tracklist_y_text_offset)
-    cf.update_value("theme-name", prefs.theme_name)
-    cf.update_value("mac-style", prefs.macstyle)
-    cf.update_value("allow-art-zoom", prefs.zoom_art)
-
-    cf.update_value("scroll-gallery-by-row", prefs.gallery_row_scroll)
-    cf.update_value("prefs.gallery_scroll_wheel_px", prefs.gallery_row_scroll)
-    cf.update_value("scroll-spectrogram", prefs.spec2_scroll)
-    cf.update_value("mascot-opacity", prefs.custom_bg_opacity)
-    cf.update_value("synced-lyrics-time-offset", prefs.sync_lyrics_time_offset)
-
-    cf.update_value("artist-list-prefers-album-artist", prefs.artist_list_prefer_album_artist)
-    cf.update_value("side-panel-info-persists", prefs.meta_persists_stop)
-    cf.update_value("side-panel-info-selected", prefs.meta_shows_selected)
-    cf.update_value("side-panel-info-selected-always", prefs.meta_shows_selected_always)
-    cf.update_value("mini-mode-avoid-notifications", prefs.stop_notifications_mini_mode)
-    cf.update_value("hide-queue-when-empty", prefs.hide_queue)
-    # cf.update_value("show-playlist-list", prefs.show_playlist_list)
-    cf.update_value("enable-art-header-bar", prefs.art_in_top_panel)
-    cf.update_value("always-art-header-bar", prefs.always_art_header)
-    # cf.update_value("prefer-center-bg", prefs.center_bg)
-    cf.update_value("showcase-texture-background", prefs.showcase_overlay_texture)
-    cf.update_value("side-panel-style", prefs.side_panel_layout)
-    cf.update_value("side-lyrics-art", prefs.show_side_lyrics_art_panel)
-    cf.update_value("side-lyrics-art-on-top", prefs.lyric_metadata_panel_top)
-    cf.update_value("absolute-track-indices", prefs.use_absolute_track_index)
-    cf.update_value("auto-hide-bottom-title", prefs.hide_bottom_title)
-    cf.update_value("auto-show-playing", prefs.auto_goto_playing)
-    cf.update_value("notify-include-album", prefs.notify_include_album)
-    cf.update_value("show-rating-hint", prefs.rating_playtime_stars)
-    cf.update_value("drag-tab-to-unpin", prefs.drag_to_unpin)
-
-    cf.update_value("gallery-thin-borders", prefs.thin_gallery_borders)
-    cf.update_value("increase-row-spacing", prefs.increase_gallery_row_spacing)
-    cf.update_value("gallery-center-text", prefs.center_gallery_text)
-
-    cf.update_value("use-custom-fonts", prefs.use_custom_fonts)
-    cf.update_value("font-main-standard", prefs.linux_font)
-    cf.update_value("font-main-medium", prefs.linux_font_semibold)
-    cf.update_value("font-main-bold", prefs.linux_font_bold)
-    cf.update_value("font-main-condensed", prefs.linux_font_condensed)
-    cf.update_value("font-main-condensed-bold", prefs.linux_font_condensed_bold)
-
-    cf.update_value("force-subpixel-text", prefs.force_subpixel_text)
-
-    cf.update_value("double-digit-indices", prefs.dd_index)
-    cf.update_value("column-album-artist-fallsback", prefs.column_aa_fallback_artist)
-    cf.update_value("left-aligned-album-artist-title", prefs.left_align_album_artist_title)
-    cf.update_value("import-auto-sort", prefs.auto_sort)
-
-    cf.update_value("encode-output-dir", prefs.custom_encoder_output)
-    cf.update_value("sync-device-music-dir", prefs.sync_target)
-    cf.update_value("add_download_directory", prefs.download_dir1)
-
-    cf.update_value("use-system-tray", prefs.use_tray)
-    cf.update_value("use-gamepad", prefs.use_gamepad)
-    cf.update_value("enable-remote-interface", prefs.enable_remote)
-
-    cf.update_value("enable-mpris", prefs.enable_mpris)
-    cf.update_value("hide-maximize-button", prefs.force_hide_max_button)
-    cf.update_value("restore-window-position", prefs.save_window_position)
-    cf.update_value("mini-mode-always-on-top", prefs.mini_mode_on_top)
-    cf.update_value("resume-playback-on-restart", prefs.reload_play_state)
-    cf.update_value("resume-playback-on-wake", prefs.resume_play_wake)
-    cf.update_value("auto-dl-artist-data", prefs.auto_dl_artist_data)
-
-    cf.update_value("fanart.tv-cover", prefs.enable_fanart_cover)
-    cf.update_value("fanart.tv-artist", prefs.enable_fanart_artist)
-    cf.update_value("fanart.tv-background", prefs.enable_fanart_bg)
-    cf.update_value("auto-update-playlists", prefs.always_auto_update_playlists)
-    cf.update_value("write-ratings-to-tag", prefs.write_ratings)
-    cf.update_value("enable-spotify", prefs.spot_mode)
-    cf.update_value("enable-discord-rpc", prefs.discord_enable)
-    cf.update_value("auto-search-lyrics", prefs.auto_lyrics)
-    cf.update_value("shortcuts-ignore-keymap", prefs.use_scancodes)
-    cf.update_value("alpha_key_activate_search", prefs.search_on_letter)
-
-    cf.update_value("discogs-personal-access-token", prefs.discogs_pat)
-    cf.update_value("listenbrainz-token", prefs.lb_token)
-    cf.update_value("custom-listenbrainz-url", prefs.listenbrainz_url)
-
-    cf.update_value("maloja-key", prefs.maloja_key)
-    cf.update_value("maloja-url", prefs.maloja_url)
-    cf.update_value("maloja-enable", prefs.maloja_enable)
-
-    cf.update_value("tau-url", prefs.sat_url)
-
-    cf.update_value("lastfm-pull-love", prefs.lastfm_pull_love)
-
-    cf.update_value("broadcast-page-port", prefs.metadata_page_port)
-    cf.update_value("show-current-on-transition", prefs.show_current_on_transition)
-
-    cf.update_value("chart-columns", prefs.chart_columns)
-    cf.update_value("chart-rows", prefs.chart_rows)
-    cf.update_value("chart-uses-text", prefs.chart_text)
-    cf.update_value("chart-font", prefs.chart_font)
-    cf.update_value("chart-sorts-top-played", prefs.topchart_sorts_played)
-
-    if os.path.isdir(config_directory):
-        cf.dump(os.path.join(config_directory, "tauon.conf"))
-    else:
-        print("ERROR: Missing config directory")
-
-
-def load_prefs():
-    cf.reset()
-    cf.load(os.path.join(config_directory, "tauon.conf"))
-
-    cf.add_comment("Tauon Music Box configuration file")
-    cf.br()
-    cf.add_comment(
-        "This file will be regenerated while app is running. Formatting and additional comments will be lost.")
-    cf.add_comment("Tip: Use TOML syntax highlighting")
-
-    cf.br()
-    cf.add_text("[audio]")
-
-    # prefs.backend = cf.sync_add("int", "audio-backend", prefs.backend, "4: Built in backend (Phazor), 2: GStreamer")
-    prefs.pipewire = cf.sync_add("bool", "use-pipewire", prefs.pipewire,
-                                      "Experimental setting to use Pipewire native only.")
-
-    prefs.seek_interval = cf.sync_add("int", "seek-interval", prefs.seek_interval,
-                                      "In s. Interval to seek when using keyboard shortcut. Default is 15.")
-    # prefs.pause_fade_time = cf.sync_add("int", "pause-fade-time", prefs.pause_fade_time, "In milliseconds. Default is 400. (GStreamer Only)")
-
-    if prefs.pause_fade_time < 100:
-        prefs.pause_fade_time = 100
-    if prefs.pause_fade_time > 5000:
-        prefs.pause_fade_time = 5000
-
-    prefs.cross_fade_time = cf.sync_add("int", "cross-fade-time", prefs.cross_fade_time,
-                                        "In ms. Min: 200, Max: 2000, Default: 700. Applies to track change crossfades. End of track is always gapless.")
-
-    prefs.device_buffer = cf.sync_add("int", "device-buffer-ms", prefs.device_buffer, "Default: 80")
-    #prefs.samplerate = cf.sync_add("int", "output-samplerate", prefs.samplerate,
-    #                               "In hz. Default: 48000, alt: 44100. (restart app to apply change)")
-    prefs.avoid_resampling = cf.sync_add("bool", "avoid_resampling", prefs.avoid_resampling,
-                                 "Only implemented for FLAC, MP3, OGG, OPUS")
-    prefs.resample = cf.sync_add("int", "resample-quality", prefs.resample,
-                                 "0=best, 1=medium, 2=fast, 3=fastest. Default: 1. (applies on restart)")
-    if prefs.resample < 0 or prefs.resample > 4:
-        prefs.resample = 1
-    # prefs.pa_fast_seek = cf.sync_add("bool", "fast-scrubbing", prefs.pa_fast_seek, "Seek without a delay but may cause audible popping")
-    prefs.cache_limit = cf.sync_add("int", "cache-limit", prefs.cache_limit,
-                                    "Limit size of network audio file cache. In MB.")
-    prefs.tmp_cache = cf.sync_add("bool", "cache-use-tmp", prefs.tmp_cache,
-                                  "Use /tmp for cache. When enabled, above setting overridden to a small value. (applies on restart)")
-    prefs.precache = cf.sync_add("bool", "precache-local-files", prefs.precache,
-                                 "Cache files from local sources too. (Useful for mounted network drives)")
-    prefs.always_ffmpeg = cf.sync_add("bool", "always-ffmpeg", prefs.always_ffmpeg,
-                                      "Prefer decoding using FFMPEG. Fixes stuttering on Raspberry Pi OS.")
-    prefs.volume_power = cf.sync_add("int", "volume-curve", prefs.volume_power,
-                                     "1=Linear volume control. Values above one give greater control bias over lower volume range. Default: 2")
-
-    # prefs.mono = cf.sync_add("bool", "force-mono", prefs.mono, "This is a placeholder setting and currently has no effect.")
-    # prefs.dc_device_setting = cf.sync_add("string", "disconnect-device-pause", prefs.dc_device_setting, "Can be \"on\" or \"off\". BASS only. When off, connection to device will he held open.")
-    # prefs.short_buffer = cf.sync_add("bool", "use-short-buffering", prefs.short_buffer, "BASS only.")
-
-    # cf.br()
-    # cf.add_text("[audio (gstreamer only)]")
-    #
-    # prefs.gst_output = cf.sync_add("string", "gst-output", prefs.gst_output, "GStreamer output pipeline specification. Only used with GStreamer backend.")
-    # prefs.gst_use_custom_output = cf.sync_add("bool", "gst-use-custom-output", prefs.gst_use_custom_output, "Set this to true to apply any manual edits of the above string.")
-
-    if prefs.dc_device_setting == 'on':
-        prefs.dc_device = True
-    elif prefs.dc_device_setting == 'off':
-        prefs.dc_device = False
-
-    cf.br()
-    cf.add_text("[locale]")
-    prefs.ui_lang = cf.sync_add("string", "display-language", prefs.ui_lang, "Override display language to use if "
-                                                                             "available. E.g. \"en\", \"ja\", \"zh_CH\". "
-                                                                             "Default: \"auto\"")
-    # prefs.diacritic_search = cf.sync_add("bool", "decode-search", prefs.diacritic_search, "Allow searching of diacritics etc using ascii in search functions. (Disablng may speed up search)")
-    cf.br()
-    cf.add_text("[search]")
-    prefs.sep_genre_multi = cf.sync_add("bool", "separate-multi-genre", prefs.sep_genre_multi,
-                                        "If true, the standard genre result will exclude results from multi-value tags. These will be included in a separate result.")
-
-    cf.br()
-    cf.add_text("[tag-editor]")
-    if system == 'windows' or msys:
-        prefs.tag_editor_name = cf.sync_add("string", "tag-editor-name", "Picard", "Name to display in UI.")
-        prefs.tag_editor_target = cf.sync_add("string", "tag-editor-target",
-                                              "C:\\Program Files (x86)\\MusicBrainz Picard\\picard.exe",
-                                              "The path of the exe to run.")
-    else:
-        prefs.tag_editor_name = cf.sync_add("string", "tag-editor-name", "Picard", "Name to display in UI.")
-        prefs.tag_editor_target = cf.sync_add("string", "tag-editor-target", "picard",
-                                              "The name of the binary to call.")
-
-    cf.br()
-    cf.add_text("[playback]")
-    prefs.playback_follow_cursor = cf.sync_add("bool", "playback-follow-cursor", prefs.playback_follow_cursor,
-                                               "When advancing, always play the track that is selected.")
-    prefs.launch_spotify_web = cf.sync_add("bool", "spotify-prefer-web", prefs.launch_spotify_web,
-                                           "Launch the web client rather than attempting to launch the desktop client.")
-    prefs.launch_spotify_local = cf.sync_add("bool", "spotify-allow-local", prefs.launch_spotify_local,
-                                           "Play Spotify audio through Tauon.")
-    prefs.back_restarts = cf.sync_add("bool", "back-restarts", prefs.back_restarts,
-                                      "Pressing the back button restarts playing track on first press.")
-    prefs.stop_end_queue = cf.sync_add("bool", "end-queue-stop", prefs.stop_end_queue,
-                                       "Queue will always enable auto-stop on last track")
-    prefs.block_suspend = cf.sync_add("bool", "block-suspend", prefs.block_suspend,
-                                      "Prevent system suspend during playback")
-    prefs.allow_video_formats = cf.sync_add("bool", "allow-video-formats", prefs.allow_video_formats,
-                                      "Allow the import of MP4 and WEBM formats")
-    if prefs.allow_video_formats:
-        for item in VID_Formats:
-            if item not in DA_Formats:
-                DA_Formats.add(item)
-
-    cf.br()
-    cf.add_text("[HiDPI]")
-    prefs.scale_want = cf.sync_add("float", "ui-scale", prefs.scale_want,
-                                   "UI scale factor. Default is 1.0, try increase if using a HiDPI display.")
-    prefs.x_scale = cf.sync_add("bool", "auto-scale", prefs.x_scale, "Automatically choose above setting")
-    prefs.tracklist_y_text_offset = cf.sync_add("int", "tracklist-y-text-offset", prefs.tracklist_y_text_offset,
-                                                "If you're using a UI scale, you may need to tweak this.")
-
-    cf.br()
-    cf.add_text("[ui]")
-
-    prefs.theme_name = cf.sync_add("string", "theme-name", prefs.theme_name)
-    macstyle = cf.sync_add("bool", "mac-style", prefs.macstyle, "Use macOS style window buttons")
-    prefs.zoom_art = cf.sync_add("bool", "allow-art-zoom", prefs.zoom_art)
-    prefs.gallery_row_scroll = cf.sync_add("bool", "scroll-gallery-by-row", True)
-    prefs.gallery_scroll_wheel_px = cf.sync_add("int", "scroll-gallery-distance", 90,
-                                                "Only has effect if scroll-gallery-by-row is false.")
-    prefs.spec2_scroll = cf.sync_add("bool", "scroll-spectrogram", prefs.spec2_scroll)
-    prefs.custom_bg_opacity = cf.sync_add("int", "mascot-opacity", prefs.custom_bg_opacity)
-    if prefs.custom_bg_opacity < 0 or prefs.custom_bg_opacity > 100:
-        prefs.custom_bg_opacity = 40
-        print("Warning: Invalid value for mascot-opacity")
-
-    prefs.sync_lyrics_time_offset = cf.sync_add("int", "synced-lyrics-time-offset", prefs.sync_lyrics_time_offset,
-                                                "In milliseconds. May be negative.")
-    prefs.artist_list_prefer_album_artist = cf.sync_add("bool", "artist-list-prefers-album-artist",
-                                                        prefs.artist_list_prefer_album_artist,
-                                                        "May require restart for change to take effect.")
-    prefs.meta_persists_stop = cf.sync_add("bool", "side-panel-info-persists", prefs.meta_persists_stop,
-                                           "Show album art and metadata of last played track when stopped.")
-    prefs.meta_shows_selected = cf.sync_add("bool", "side-panel-info-selected", prefs.meta_shows_selected,
-                                            "Show album art and metadata of selected track when stopped. (overides above setting)")
-    prefs.meta_shows_selected_always = cf.sync_add("bool", "side-panel-info-selected-always",
-                                                   prefs.meta_shows_selected_always,
-                                                   "Show album art and metadata of selected track at all times. (overides the above 2 settings)")
-    prefs.stop_notifications_mini_mode = cf.sync_add("bool", "mini-mode-avoid-notifications",
-                                                     prefs.stop_notifications_mini_mode,
-                                                     "Avoid sending track change notifications when in Mini Mode")
-    prefs.hide_queue = cf.sync_add("bool", "hide-queue-when-empty", prefs.hide_queue)
-    # prefs.show_playlist_list = cf.sync_add("bool", "show-playlist-list", prefs.show_playlist_list)
-
-    prefs.show_current_on_transition = cf.sync_add("bool", "show-current-on-transition",
-                                                   prefs.show_current_on_transition,
-                                                   "Always jump to new playing track even with natural transition (broken setting, is always enabled")
-    prefs.art_in_top_panel = cf.sync_add("bool", "enable-art-header-bar", prefs.art_in_top_panel,
-                                         "Show art in top panel when window is narrow")
-    prefs.always_art_header = cf.sync_add("bool", "always-art-header-bar", prefs.always_art_header,
-                                          "Show art in top panel at any size. (Requires enable-art-header-bar)")
-
-    # prefs.center_bg = cf.sync_add("bool", "prefer-center-bg", prefs.center_bg, "Always center art for the background art function")
-    prefs.showcase_overlay_texture = cf.sync_add("bool", "showcase-texture-background", prefs.showcase_overlay_texture,
-                                                 "Draw pattern over background art")
-    prefs.side_panel_layout = cf.sync_add("int", "side-panel-style", prefs.side_panel_layout, "0:default, 1:centered")
-    prefs.show_side_lyrics_art_panel = cf.sync_add("bool", "side-lyrics-art", prefs.show_side_lyrics_art_panel)
-    prefs.lyric_metadata_panel_top = cf.sync_add("bool", "side-lyrics-art-on-top", prefs.lyric_metadata_panel_top)
-    prefs.use_absolute_track_index = cf.sync_add("bool", "absolute-track-indices", prefs.use_absolute_track_index,
-                                                 "For playlists with titles disabled only")
-    prefs.hide_bottom_title = cf.sync_add("bool", "auto-hide-bottom-title", prefs.hide_bottom_title,
-                                          "Hide title in bottom panel when already shown in side panel")
-    prefs.auto_goto_playing = cf.sync_add("bool", "auto-show-playing", prefs.auto_goto_playing,
-                                          "Show playing track in current playlist on track and playlist change even if not the playing playlist")
-
-    prefs.notify_include_album = cf.sync_add("bool", "notify-include-album", prefs.notify_include_album,
-                                             "Include album name in track change notifications")
-    prefs.rating_playtime_stars = cf.sync_add("bool", "show-rating-hint", prefs.rating_playtime_stars,
-                                              "Indicate playtime in rating stars")
-
-    prefs.drag_to_unpin = cf.sync_add("bool", "drag-tab-to-unpin", prefs.drag_to_unpin,
-                                      "Dragging a tab off the top-panel un-pins it")
-
-    cf.br()
-    cf.add_text("[gallery]")
-    prefs.thin_gallery_borders = cf.sync_add("bool", "gallery-thin-borders", prefs.thin_gallery_borders)
-    prefs.increase_gallery_row_spacing = cf.sync_add("bool", "increase-row-spacing", prefs.increase_gallery_row_spacing)
-    prefs.center_gallery_text = cf.sync_add("bool", "gallery-center-text", prefs.center_gallery_text)
-
-    # show-current-on-transition", prefs.show_current_on_transition)
-    if system != 'windows':
-        cf.br()
-        cf.add_text("[fonts]")
-        cf.add_comment("Changes will require app restart.")
-        prefs.use_custom_fonts = cf.sync_add("bool", "use-custom-fonts", prefs.use_custom_fonts,
-                                             "Setting to false will reset below settings to default on restart")
-        if prefs.use_custom_fonts:
-            prefs.linux_font = cf.sync_add("string", "font-main-standard", prefs.linux_font,
-                                           "Suggested alternate: Liberation Sans")
-            prefs.linux_font_semibold = cf.sync_add("string", "font-main-medium", prefs.linux_font_semibold)
-            prefs.linux_font_bold = cf.sync_add("string", "font-main-bold", prefs.linux_font_bold)
-            prefs.linux_font_condensed = cf.sync_add("string", "font-main-condensed", prefs.linux_font_condensed)
-            prefs.linux_font_condensed_bold = cf.sync_add("string", "font-main-condensed-bold", prefs.linux_font_condensed_bold)
-
-        else:
-            cf.sync_add("string", "font-main-standard", prefs.linux_font, "Suggested alternate: Liberation Sans")
-            cf.sync_add("string", "font-main-medium", prefs.linux_font_semibold)
-            cf.sync_add("string", "font-main-bold", prefs.linux_font_bold)
-            cf.sync_add("string", "font-main-condensed", prefs.linux_font_condensed)
-            cf.sync_add("string", "font-main-condensed-bold", prefs.linux_font_condensed_bold)
-
-        # prefs.force_subpixel_text = cf.sync_add("bool", "force-subpixel-text", prefs.force_subpixel_text, "(Subpixel rendering defaults to off with Flatpak)")
-
-    cf.br()
-    cf.add_text("[tracklist]")
-    prefs.dd_index = cf.sync_add("bool", "double-digit-indices", prefs.dd_index)
-    prefs.column_aa_fallback_artist = cf.sync_add("bool", "column-album-artist-fallsback",
-                                                  prefs.column_aa_fallback_artist,
-                                                  "'Album artist' column shows 'artist' if otherwise blank.")
-    prefs.left_align_album_artist_title = cf.sync_add("bool", "left-aligned-album-artist-title",
-                                                      prefs.left_align_album_artist_title,
-                                                      "Show 'Album artist' in the folder/album title. Uses colour 'column-album-artist' from theme file")
-    prefs.auto_sort = cf.sync_add("bool", "import-auto-sort", prefs.auto_sort,
-                                  "This setting is deprecated and will be removed in a future version")
-
-    cf.br()
-    cf.add_text("[transcode]")
-    prefs.bypass_transcode = cf.sync_add("bool", "sync-bypass-transcode", prefs.bypass_transcode,
-                                         "Don't transcode files with sync function")
-    prefs.smart_bypass = cf.sync_add("bool", "sync-bypass-low-bitrate", prefs.smart_bypass,
-                                     "Skip transcode of <=128kbs folders")
-    prefs.radio_record_codec = cf.sync_add("string", "radio-record-codec", prefs.radio_record_codec,
-                                           "Can be OPUS, OGG, FLAC, or MP3. Default: OPUS")
-
-    cf.br()
-    cf.add_text("[directories]")
-    cf.add_comment("Use full paths")
-    prefs.sync_target = cf.sync_add("string", "sync-device-music-dir", prefs.sync_target)
-    prefs.custom_encoder_output = cf.sync_add("string", "encode-output-dir", prefs.custom_encoder_output,
-                                              "E.g. \"/home/example/music/output\". If left blank, encode-output in home music dir will be used.")
-    if prefs.custom_encoder_output:
-        prefs.encoder_output = prefs.custom_encoder_output
-    prefs.download_dir1 = cf.sync_add("string", "add_download_directory", prefs.download_dir1,
-                                      "Add another folder to monitor in addition to home downloads and music.")
-    if prefs.download_dir1 and prefs.download_dir1 not in download_directories:
-        if os.path.isdir(prefs.download_dir1):
-            download_directories.append(prefs.download_dir1)
-        else:
-            print("Warning: Invalid download directory in config")
-
-    cf.br()
-    cf.add_text("[app]")
-    prefs.enable_remote = cf.sync_add("bool", "enable-remote-interface", prefs.enable_remote,
-                                      "For use with Tauon Music Remote for Android")
-    prefs.use_gamepad = cf.sync_add("bool", "use-gamepad", prefs.use_gamepad, "Use game controller for UI control, restart on change.")
-    prefs.use_tray = cf.sync_add("bool", "use-system-tray", prefs.use_tray)
-    prefs.force_hide_max_button = cf.sync_add("bool", "hide-maximize-button", prefs.force_hide_max_button)
-    prefs.save_window_position = cf.sync_add("bool", "restore-window-position", prefs.save_window_position,
-                                             "Save and restore the last window position on desktop on open")
-    prefs.mini_mode_on_top  = cf.sync_add("bool", "mini-mode-always-on-top", prefs.mini_mode_on_top)
-    prefs.enable_mpris = cf.sync_add("bool", "enable-mpris", prefs.enable_mpris)
-    prefs.reload_play_state = cf.sync_add("bool", "resume-playback-on-restart", prefs.reload_play_state)
-    prefs.resume_play_wake = cf.sync_add("bool", "resume-playback-on-wake", prefs.resume_play_wake)
-    prefs.auto_dl_artist_data = cf.sync_add("bool", "auto-dl-artist-data", prefs.auto_dl_artist_data,
-                                            "Enable automatic downloading of thumbnails in artist list")
-    prefs.enable_fanart_cover = cf.sync_add("bool", "fanart.tv-cover", prefs.enable_fanart_cover)
-    prefs.enable_fanart_artist = cf.sync_add("bool", "fanart.tv-artist", prefs.enable_fanart_artist)
-    prefs.enable_fanart_bg = cf.sync_add("bool", "fanart.tv-background", prefs.enable_fanart_bg)
-    prefs.always_auto_update_playlists = cf.sync_add("bool", "auto-update-playlists",
-                                                     prefs.always_auto_update_playlists,
-                                                     "Automatically update generator playlists")
-    prefs.write_ratings = cf.sync_add("bool", "write-ratings-to-tag", prefs.write_ratings,
-                                      "This writes FMPS_Rating tags on disk. Only writing to MP3, OGG and FLAC files is currently supported.")
-    prefs.spot_mode = cf.sync_add("bool", "enable-spotify", prefs.spot_mode, "Enable Spotify specific features")
-    prefs.discord_enable = cf.sync_add("bool", "enable-discord-rpc", prefs.discord_enable,
-                                       "Show track info in running Discord application")
-    prefs.auto_lyrics = cf.sync_add("bool", "auto-search-lyrics", prefs.auto_lyrics,
-                                    "Automatically search internet for lyrics when display is wanted")
-
-    prefs.use_scancodes = cf.sync_add("bool", "shortcuts-ignore-keymap", prefs.use_scancodes,
-                                    "When enabled, shortcuts will map to the physical keyboard layout")
-    prefs.search_on_letter = cf.sync_add("bool", "alpha_key_activate_search", prefs.search_on_letter,
-                                    "When enabled, pressing single letter keyboard key will activate the global search")
-
-    cf.br()
-    cf.add_text("[tokens]")
-    temp = cf.sync_add("string", "discogs-personal-access-token", prefs.discogs_pat,
-                       "Used for sourcing of artist thumbnails.")
-    if not temp:
-        prefs.discogs_pat = ""
-    elif len(temp) != 40:
-        print("Warning: Invalid discogs token in config")
-    else:
-        prefs.discogs_pat = temp
-
-    prefs.listenbrainz_url = cf.sync_add("string", "custom-listenbrainz-url", prefs.listenbrainz_url,
-                                         "Specify a custom Listenbrainz compatible api url. E.g. \"https://example.tld/apis/listenbrainz/\" Default: Blank")
-    prefs.lb_token = cf.sync_add("string", "listenbrainz-token", prefs.lb_token)
-
-    cf.br()
-    cf.add_text("[tauon_satellite]")
-    prefs.sat_url = cf.sync_add("string", "tau-url", prefs.sat_url, "Exclude the port")
-
-    cf.br()
-    cf.add_text("[lastfm]")
-    prefs.lastfm_pull_love = cf.sync_add("bool", "lastfm-pull-love", prefs.lastfm_pull_love,
-                                   "Overwrite local love status on scrobble")
-
-
-    cf.br()
-    cf.add_text("[maloja_account]")
-    prefs.maloja_url = cf.sync_add("string", "maloja-url", prefs.maloja_url,
-                                   "A Maloja server URL, e.g. http://localhost:32400")
-    prefs.maloja_key = cf.sync_add("string", "maloja-key", prefs.maloja_key, "One of your Maloja API keys")
-    prefs.maloja_enable = cf.sync_add("bool", "maloja-enable", prefs.maloja_enable)
-
-    cf.br()
-    cf.add_text("[plex_account]")
-    prefs.plex_username = cf.sync_add("string", "plex-username", prefs.plex_username,
-                                      "Probably the email address you used to make your PLEX account.")
-    prefs.plex_password = cf.sync_add("string", "plex-password", prefs.plex_password,
-                                      "The password associated with your PLEX account.")
-    prefs.plex_servername = cf.sync_add("string", "plex-servername", prefs.plex_servername,
-                                        "Probably your servers hostname.")
-
-    cf.br()
-    cf.add_text("[subsonic_account]")
-    prefs.subsonic_user = cf.sync_add("string", "subsonic-username", prefs.subsonic_user)
-    prefs.subsonic_password = cf.sync_add("string", "subsonic-password", prefs.subsonic_password)
-    prefs.subsonic_password_plain = cf.sync_add("bool", "subsonic-password-plain", prefs.subsonic_password_plain)
-    prefs.subsonic_server = cf.sync_add("string", "subsonic-server-url", prefs.subsonic_server)
-
-    cf.br()
-    cf.add_text("[koel_account]")
-    prefs.koel_username = cf.sync_add("string", "koel-username", prefs.koel_username, "E.g. admin@example.com")
-    prefs.koel_password = cf.sync_add("string", "koel-password", prefs.koel_password, "The default is admin")
-    prefs.koel_server_url = cf.sync_add("string", "koel-server-url", prefs.koel_server_url,
-                                        "The URL or IP:Port where the Koel server is hosted. E.g. http://localhost:8050 or https://localhost:8060")
-    prefs.koel_server_url = prefs.koel_server_url.rstrip("/")
-
-    cf.br()
-    cf.add_text("[jellyfin_account]")
-    prefs.jelly_username = cf.sync_add("string", "jelly-username", prefs.jelly_username, "")
-    prefs.jelly_password = cf.sync_add("string", "jelly-password", prefs.jelly_password, "")
-    prefs.jelly_server_url = cf.sync_add("string", "jelly-server-url", prefs.jelly_server_url,
-                                         "The IP:Port where the jellyfin server is hosted.")
-    prefs.jelly_server_url = prefs.jelly_server_url.rstrip("/")
-
-    cf.br()
-    cf.add_text("[network]")
-    prefs.network_stream_bitrate = cf.sync_add("int", "stream-bitrate", prefs.network_stream_bitrate,
-                                               "Optional bitrate koel/subsonic should transcode to (Server may need to be configured for this). Set to 0 to disable transcoding.")
-
-    cf.br()
-    cf.add_text("[listenalong]")
-    prefs.metadata_page_port = cf.sync_add("int", "broadcast-page-port", prefs.metadata_page_port,
-                                           "Change applies on app restart or setting re-enable")
-
-    cf.br()
-    cf.add_text("[chart]")
-    prefs.chart_columns = cf.sync_add("int", "chart-columns", prefs.chart_columns)
-    prefs.chart_rows = cf.sync_add("int", "chart-rows", prefs.chart_rows)
-    prefs.chart_text = cf.sync_add("bool", "chart-uses-text", prefs.chart_text)
-    prefs.topchart_sorts_played = cf.sync_add("bool", "chart-sorts-top-played", prefs.topchart_sorts_played)
-    prefs.chart_font = cf.sync_add("string", "chart-font", prefs.chart_font,
-                                   "Format is fontname + size. Default is Monospace 10")
-
-
-load_prefs()
-save_prefs()
-
-# Temporary
-if 0 < db_version <= 34:
-    prefs.theme_name = get_theme_name(theme)
-if 0 < db_version <= 66:
-    prefs.device_buffer = 80
-if 0 < db_version <= 53:
-    print("Resetting fonts to defaults")
-    prefs.linux_font = "Noto Sans"
-    prefs.linux_font_semibold = "Noto Sans Medium"
-    prefs.linux_font_bold = "Noto Sans Bold"
-    save_prefs()
-
-lang = ""
-
-locale_dir = os.path.join(install_directory, "locale")
-
-if flatpak_mode:
-    locale_dir = "/app/share/locale"
-elif install_directory.startswith("/opt/") or install_directory.startswith("/usr/"):
-    locale_dir = "/usr/share/locale"
-
-lang = []
-if prefs.ui_lang != "auto" or prefs.ui_lang == "":
-    lang = [prefs.ui_lang]
-
-if lang:
-    # Force set lang
-    f = gettext.find('tauon', localedir=locale_dir, languages=lang)
-
-    if f:
-        translation = gettext.translation('tauon', localedir=locale_dir, languages=lang)
-        translation.install()
-        _ = translation.gettext
-
-        print("Translation file loaded")
-    else:
-        print("No translation file available")
-
-else:
-    # Auto detect lang
-    f = gettext.find('tauon', localedir=locale_dir)
-
-    if f:
-        translation = gettext.translation('tauon', localedir=locale_dir)
-        translation.install()
-        _ = translation.gettext
-
-        print("Translation file loaded")
-    # else:
-    #     print("No translation file available")
-
-# ----
-
-# ---------------------------------------------------------------------
-# Player variables
-
-# pl_follow = False
-
-# List of encodings to check for with the fix mojibake function
-encodings = ['cp932', 'utf-8', 'big5hkscs', 'gbk']  # These seem to be the most common for Japanese
-
-track_box = False
-
-transcode_list = []
-transcode_state = ""
-
-taskbar_progress = True
-QUE = []
-
-playing_in_queue = 0
-draw_sep_hl = False
-
-# -------------------------------------------------------------------------------
-# Playlist Variables
-playlist_view_position = 0
-playlist_playing = -1
-
-loading_in_progress = False
-
-core_use = 0
-dl_use = 0
-
-random_mode = False
-repeat_mode = False
-
-
-# Functions to generate empty playlist
-# Playlist is [Name, playing, playlist, position, hide folder title, selected, uid, last_folder, hidden(bool)]
-
-# 0 Name (string)
-# 1 Playing (int)
-# 2 list  (list of int)
-# 3 View Position (int)
-# 4 hide playlist folder titles (bool)
-# 5 selected (int)
-# 6 Unique id (int)
-# 7 last folder import path (string)
-# 8 hidden (bool)
-# 9 Locked (bool)
-# 10 Filter parent playlist id (string)
-# 11 Persist time positioning
-
-
-def uid_gen():
-    return random.randrange(1, 100000000)
-
-
-notify_change = lambda: None
-
-
-def pl_gen(title=_('Default'),
-           playing=0,
-           playlist=None,
-           position=0,
-           hide_title=0,
-           selected=0,
-           parent="",
-           hidden=False):
-    if playlist == None:
-        playlist = []
-
-    notify_change()
-
-    return copy.deepcopy(
-        [title, playing, playlist, position, hide_title, selected, uid_gen(), [], hidden, False, parent, False])
-
-
-multi_playlist = [pl_gen()]  # Create default playlist
-
-
-def queue_item_gen(trackid, position, pl_id, type=0, album_stage=0):
-    # type; 0 is track, 1 is album
-    auto_stop = False
-
-    return [trackid, position, pl_id, type, album_stage, uid_gen(), auto_stop]
-
-
-default_playlist = multi_playlist[0][2]
-playlist_active = 0
-
-quick_search_mode = False
-search_index = 0
-
-# ----------------------------------------
-# Playlist right click menu
-
-r_menu_index = 0
-r_menu_position = 0
-
-album_position = 0
-
 
 def open_uri(uri):
     print("OPEN URI")
     load_order = LoadClass()
 
     for w in range(len(pctl.multi_playlist)):
-        if pctl.multi_playlist[w][0] == _("Default"):
+        if pctl.multi_playlist[w][0] == "Default":
             load_order.playlist = pctl.multi_playlist[w][6]
             break
     else:
@@ -3385,7 +2782,7 @@ except:
 
 perf_timer.set()
 
-radio_playlists = [{"uid": uid_gen(), "name": _("Default"), "items": []}]
+radio_playlists = [{"uid": uid_gen(), "name": "Default", "items": []}]
 
 primary_stations = []
 station = {
@@ -4349,6 +3746,609 @@ if playing_in_queue > len(QUE) - 1:
 shoot = threading.Thread(target=keymaps.load)
 shoot.daemon = True
 shoot.start()
+
+# Loading Config -----------------
+
+download_directories = []
+
+if os.path.isdir(download_directory):
+    download_directories.append(download_directory)
+
+if music_directory is not None and os.path.isdir(music_directory):
+    download_directories.append(music_directory)
+
+from t_modules.t_config import Config
+
+cf = Config()
+
+
+def save_prefs():
+    cf.update_value("sync-bypass-transcode", prefs.bypass_transcode)
+    cf.update_value("sync-bypass-low-bitrate", prefs.smart_bypass)
+    cf.update_value("radio-record-codec", prefs.radio_record_codec)
+
+    cf.update_value("plex-username", prefs.plex_username)
+    cf.update_value("plex-password", prefs.plex_password)
+    cf.update_value("plex-servername", prefs.plex_servername)
+
+    cf.update_value("subsonic-username", prefs.subsonic_user)
+    cf.update_value("subsonic-password", prefs.subsonic_password)
+    cf.update_value("subsonic-password-plain", prefs.subsonic_password_plain)
+    cf.update_value("subsonic-server-url", prefs.subsonic_server)
+
+    cf.update_value("jelly-username", prefs.jelly_username)
+    cf.update_value("jelly-password", prefs.jelly_password)
+    cf.update_value("jelly-server-url", prefs.jelly_server_url)
+
+    cf.update_value("koel-username", prefs.koel_username)
+    cf.update_value("koel-password", prefs.koel_password)
+    cf.update_value("koel-server-url", prefs.koel_server_url)
+    cf.update_value("stream-bitrate", prefs.network_stream_bitrate)
+
+    cf.update_value("display-language", prefs.ui_lang)
+    # cf.update_value("decode-search", prefs.diacritic_search)
+
+    # cf.update_value("use-log-volume-scale", prefs.log_vol)
+    # cf.update_value("audio-backend", prefs.backend)
+    cf.update_value("use-pipewire", prefs.pipewire)
+    cf.update_value("seek-interval", prefs.seek_interval)
+    cf.update_value("pause-fade-time", prefs.pause_fade_time)
+    cf.update_value("cross-fade-time", prefs.cross_fade_time)
+    cf.update_value("device-buffer-ms", prefs.device_buffer)
+    cf.update_value("output-samplerate", prefs.samplerate)
+    cf.update_value("resample-quality", prefs.resample)
+    cf.update_value("avoid_resampling", prefs.avoid_resampling)
+    # cf.update_value("fast-scrubbing", prefs.pa_fast_seek)
+    cf.update_value("precache-local-files", prefs.precache)
+    cf.update_value("cache-use-tmp", prefs.tmp_cache)
+    cf.update_value("cache-limit", prefs.cache_limit)
+    cf.update_value("always-ffmpeg", prefs.always_ffmpeg)
+    cf.update_value("volume-curve", prefs.volume_power)
+    # cf.update_value("force-mono", prefs.mono)
+    # cf.update_value("disconnect-device-pause", prefs.dc_device_setting)
+    # cf.update_value("use-short-buffering", prefs.short_buffer)
+
+    # cf.update_value("gst-output", prefs.gst_output)
+    # cf.update_value("gst-use-custom-output", prefs.gst_use_custom_output)
+
+    cf.update_value("separate-multi-genre", prefs.sep_genre_multi)
+
+    cf.update_value("tag-editor-name", prefs.tag_editor_name)
+    cf.update_value("tag-editor-target", prefs.tag_editor_target)
+
+    cf.update_value("playback-follow-cursor", prefs.playback_follow_cursor)
+    cf.update_value("spotify-prefer-web", prefs.launch_spotify_web)
+    cf.update_value("spotify-allow-local", prefs.launch_spotify_local)
+    cf.update_value("back-restarts", prefs.back_restarts)
+    cf.update_value("end-queue-stop", prefs.stop_end_queue)
+    cf.update_value("block-suspend", prefs.block_suspend)
+    cf.update_value("allow-video-formats", prefs.allow_video_formats)
+
+    cf.update_value("ui-scale", prefs.scale_want)
+    cf.update_value("auto-scale", prefs.x_scale)
+    cf.update_value("tracklist-y-text-offset", prefs.tracklist_y_text_offset)
+    cf.update_value("theme-name", prefs.theme_name)
+    cf.update_value("mac-style", prefs.macstyle)
+    cf.update_value("allow-art-zoom", prefs.zoom_art)
+
+    cf.update_value("scroll-gallery-by-row", prefs.gallery_row_scroll)
+    cf.update_value("prefs.gallery_scroll_wheel_px", prefs.gallery_row_scroll)
+    cf.update_value("scroll-spectrogram", prefs.spec2_scroll)
+    cf.update_value("mascot-opacity", prefs.custom_bg_opacity)
+    cf.update_value("synced-lyrics-time-offset", prefs.sync_lyrics_time_offset)
+
+    cf.update_value("artist-list-prefers-album-artist", prefs.artist_list_prefer_album_artist)
+    cf.update_value("side-panel-info-persists", prefs.meta_persists_stop)
+    cf.update_value("side-panel-info-selected", prefs.meta_shows_selected)
+    cf.update_value("side-panel-info-selected-always", prefs.meta_shows_selected_always)
+    cf.update_value("mini-mode-avoid-notifications", prefs.stop_notifications_mini_mode)
+    cf.update_value("hide-queue-when-empty", prefs.hide_queue)
+    # cf.update_value("show-playlist-list", prefs.show_playlist_list)
+    cf.update_value("enable-art-header-bar", prefs.art_in_top_panel)
+    cf.update_value("always-art-header-bar", prefs.always_art_header)
+    # cf.update_value("prefer-center-bg", prefs.center_bg)
+    cf.update_value("showcase-texture-background", prefs.showcase_overlay_texture)
+    cf.update_value("side-panel-style", prefs.side_panel_layout)
+    cf.update_value("side-lyrics-art", prefs.show_side_lyrics_art_panel)
+    cf.update_value("side-lyrics-art-on-top", prefs.lyric_metadata_panel_top)
+    cf.update_value("absolute-track-indices", prefs.use_absolute_track_index)
+    cf.update_value("auto-hide-bottom-title", prefs.hide_bottom_title)
+    cf.update_value("auto-show-playing", prefs.auto_goto_playing)
+    cf.update_value("notify-include-album", prefs.notify_include_album)
+    cf.update_value("show-rating-hint", prefs.rating_playtime_stars)
+    cf.update_value("drag-tab-to-unpin", prefs.drag_to_unpin)
+
+    cf.update_value("gallery-thin-borders", prefs.thin_gallery_borders)
+    cf.update_value("increase-row-spacing", prefs.increase_gallery_row_spacing)
+    cf.update_value("gallery-center-text", prefs.center_gallery_text)
+
+    cf.update_value("use-custom-fonts", prefs.use_custom_fonts)
+    cf.update_value("font-main-standard", prefs.linux_font)
+    cf.update_value("font-main-medium", prefs.linux_font_semibold)
+    cf.update_value("font-main-bold", prefs.linux_font_bold)
+    cf.update_value("font-main-condensed", prefs.linux_font_condensed)
+    cf.update_value("font-main-condensed-bold", prefs.linux_font_condensed_bold)
+
+    cf.update_value("force-subpixel-text", prefs.force_subpixel_text)
+
+    cf.update_value("double-digit-indices", prefs.dd_index)
+    cf.update_value("column-album-artist-fallsback", prefs.column_aa_fallback_artist)
+    cf.update_value("left-aligned-album-artist-title", prefs.left_align_album_artist_title)
+    cf.update_value("import-auto-sort", prefs.auto_sort)
+
+    cf.update_value("encode-output-dir", prefs.custom_encoder_output)
+    cf.update_value("sync-device-music-dir", prefs.sync_target)
+    cf.update_value("add_download_directory", prefs.download_dir1)
+
+    cf.update_value("use-system-tray", prefs.use_tray)
+    cf.update_value("use-gamepad", prefs.use_gamepad)
+    cf.update_value("enable-remote-interface", prefs.enable_remote)
+
+    cf.update_value("enable-mpris", prefs.enable_mpris)
+    cf.update_value("hide-maximize-button", prefs.force_hide_max_button)
+    cf.update_value("restore-window-position", prefs.save_window_position)
+    cf.update_value("mini-mode-always-on-top", prefs.mini_mode_on_top)
+    cf.update_value("resume-playback-on-restart", prefs.reload_play_state)
+    cf.update_value("resume-playback-on-wake", prefs.resume_play_wake)
+    cf.update_value("auto-dl-artist-data", prefs.auto_dl_artist_data)
+
+    cf.update_value("fanart.tv-cover", prefs.enable_fanart_cover)
+    cf.update_value("fanart.tv-artist", prefs.enable_fanart_artist)
+    cf.update_value("fanart.tv-background", prefs.enable_fanart_bg)
+    cf.update_value("auto-update-playlists", prefs.always_auto_update_playlists)
+    cf.update_value("write-ratings-to-tag", prefs.write_ratings)
+    cf.update_value("enable-spotify", prefs.spot_mode)
+    cf.update_value("enable-discord-rpc", prefs.discord_enable)
+    cf.update_value("auto-search-lyrics", prefs.auto_lyrics)
+    cf.update_value("shortcuts-ignore-keymap", prefs.use_scancodes)
+    cf.update_value("alpha_key_activate_search", prefs.search_on_letter)
+
+    cf.update_value("discogs-personal-access-token", prefs.discogs_pat)
+    cf.update_value("listenbrainz-token", prefs.lb_token)
+    cf.update_value("custom-listenbrainz-url", prefs.listenbrainz_url)
+
+    cf.update_value("maloja-key", prefs.maloja_key)
+    cf.update_value("maloja-url", prefs.maloja_url)
+    cf.update_value("maloja-enable", prefs.maloja_enable)
+
+    cf.update_value("tau-url", prefs.sat_url)
+
+    cf.update_value("lastfm-pull-love", prefs.lastfm_pull_love)
+
+    cf.update_value("broadcast-page-port", prefs.metadata_page_port)
+    cf.update_value("show-current-on-transition", prefs.show_current_on_transition)
+
+    cf.update_value("chart-columns", prefs.chart_columns)
+    cf.update_value("chart-rows", prefs.chart_rows)
+    cf.update_value("chart-uses-text", prefs.chart_text)
+    cf.update_value("chart-font", prefs.chart_font)
+    cf.update_value("chart-sorts-top-played", prefs.topchart_sorts_played)
+
+    if os.path.isdir(config_directory):
+        cf.dump(os.path.join(config_directory, "tauon.conf"))
+    else:
+        print("ERROR: Missing config directory")
+
+
+def load_prefs():
+    cf.reset()
+    cf.load(os.path.join(config_directory, "tauon.conf"))
+
+    cf.add_comment("Tauon Music Box configuration file")
+    cf.br()
+    cf.add_comment(
+        "This file will be regenerated while app is running. Formatting and additional comments will be lost.")
+    cf.add_comment("Tip: Use TOML syntax highlighting")
+
+    cf.br()
+    cf.add_text("[audio]")
+
+    # prefs.backend = cf.sync_add("int", "audio-backend", prefs.backend, "4: Built in backend (Phazor), 2: GStreamer")
+    prefs.pipewire = cf.sync_add("bool", "use-pipewire", prefs.pipewire,
+                                      "Experimental setting to use Pipewire native only.")
+
+    prefs.seek_interval = cf.sync_add("int", "seek-interval", prefs.seek_interval,
+                                      "In s. Interval to seek when using keyboard shortcut. Default is 15.")
+    # prefs.pause_fade_time = cf.sync_add("int", "pause-fade-time", prefs.pause_fade_time, "In milliseconds. Default is 400. (GStreamer Only)")
+
+    if prefs.pause_fade_time < 100:
+        prefs.pause_fade_time = 100
+    if prefs.pause_fade_time > 5000:
+        prefs.pause_fade_time = 5000
+
+    prefs.cross_fade_time = cf.sync_add("int", "cross-fade-time", prefs.cross_fade_time,
+                                        "In ms. Min: 200, Max: 2000, Default: 700. Applies to track change crossfades. End of track is always gapless.")
+
+    prefs.device_buffer = cf.sync_add("int", "device-buffer-ms", prefs.device_buffer, "Default: 80")
+    #prefs.samplerate = cf.sync_add("int", "output-samplerate", prefs.samplerate,
+    #                               "In hz. Default: 48000, alt: 44100. (restart app to apply change)")
+    prefs.avoid_resampling = cf.sync_add("bool", "avoid_resampling", prefs.avoid_resampling,
+                                 "Only implemented for FLAC, MP3, OGG, OPUS")
+    prefs.resample = cf.sync_add("int", "resample-quality", prefs.resample,
+                                 "0=best, 1=medium, 2=fast, 3=fastest. Default: 1. (applies on restart)")
+    if prefs.resample < 0 or prefs.resample > 4:
+        prefs.resample = 1
+    # prefs.pa_fast_seek = cf.sync_add("bool", "fast-scrubbing", prefs.pa_fast_seek, "Seek without a delay but may cause audible popping")
+    prefs.cache_limit = cf.sync_add("int", "cache-limit", prefs.cache_limit,
+                                    "Limit size of network audio file cache. In MB.")
+    prefs.tmp_cache = cf.sync_add("bool", "cache-use-tmp", prefs.tmp_cache,
+                                  "Use /tmp for cache. When enabled, above setting overridden to a small value. (applies on restart)")
+    prefs.precache = cf.sync_add("bool", "precache-local-files", prefs.precache,
+                                 "Cache files from local sources too. (Useful for mounted network drives)")
+    prefs.always_ffmpeg = cf.sync_add("bool", "always-ffmpeg", prefs.always_ffmpeg,
+                                      "Prefer decoding using FFMPEG. Fixes stuttering on Raspberry Pi OS.")
+    prefs.volume_power = cf.sync_add("int", "volume-curve", prefs.volume_power,
+                                     "1=Linear volume control. Values above one give greater control bias over lower volume range. Default: 2")
+
+    # prefs.mono = cf.sync_add("bool", "force-mono", prefs.mono, "This is a placeholder setting and currently has no effect.")
+    # prefs.dc_device_setting = cf.sync_add("string", "disconnect-device-pause", prefs.dc_device_setting, "Can be \"on\" or \"off\". BASS only. When off, connection to device will he held open.")
+    # prefs.short_buffer = cf.sync_add("bool", "use-short-buffering", prefs.short_buffer, "BASS only.")
+
+    # cf.br()
+    # cf.add_text("[audio (gstreamer only)]")
+    #
+    # prefs.gst_output = cf.sync_add("string", "gst-output", prefs.gst_output, "GStreamer output pipeline specification. Only used with GStreamer backend.")
+    # prefs.gst_use_custom_output = cf.sync_add("bool", "gst-use-custom-output", prefs.gst_use_custom_output, "Set this to true to apply any manual edits of the above string.")
+
+    if prefs.dc_device_setting == 'on':
+        prefs.dc_device = True
+    elif prefs.dc_device_setting == 'off':
+        prefs.dc_device = False
+
+    cf.br()
+    cf.add_text("[locale]")
+    prefs.ui_lang = cf.sync_add("string", "display-language", prefs.ui_lang, "Override display language to use if "
+                                                                             "available. E.g. \"en\", \"ja\", \"zh_CH\". "
+                                                                             "Default: \"auto\"")
+    # prefs.diacritic_search = cf.sync_add("bool", "decode-search", prefs.diacritic_search, "Allow searching of diacritics etc using ascii in search functions. (Disablng may speed up search)")
+    cf.br()
+    cf.add_text("[search]")
+    prefs.sep_genre_multi = cf.sync_add("bool", "separate-multi-genre", prefs.sep_genre_multi,
+                                        "If true, the standard genre result will exclude results from multi-value tags. These will be included in a separate result.")
+
+    cf.br()
+    cf.add_text("[tag-editor]")
+    if system == 'windows' or msys:
+        prefs.tag_editor_name = cf.sync_add("string", "tag-editor-name", "Picard", "Name to display in UI.")
+        prefs.tag_editor_target = cf.sync_add("string", "tag-editor-target",
+                                              "C:\\Program Files (x86)\\MusicBrainz Picard\\picard.exe",
+                                              "The path of the exe to run.")
+    else:
+        prefs.tag_editor_name = cf.sync_add("string", "tag-editor-name", "Picard", "Name to display in UI.")
+        prefs.tag_editor_target = cf.sync_add("string", "tag-editor-target", "picard",
+                                              "The name of the binary to call.")
+
+    cf.br()
+    cf.add_text("[playback]")
+    prefs.playback_follow_cursor = cf.sync_add("bool", "playback-follow-cursor", prefs.playback_follow_cursor,
+                                               "When advancing, always play the track that is selected.")
+    prefs.launch_spotify_web = cf.sync_add("bool", "spotify-prefer-web", prefs.launch_spotify_web,
+                                           "Launch the web client rather than attempting to launch the desktop client.")
+    prefs.launch_spotify_local = cf.sync_add("bool", "spotify-allow-local", prefs.launch_spotify_local,
+                                           "Play Spotify audio through Tauon.")
+    prefs.back_restarts = cf.sync_add("bool", "back-restarts", prefs.back_restarts,
+                                      "Pressing the back button restarts playing track on first press.")
+    prefs.stop_end_queue = cf.sync_add("bool", "end-queue-stop", prefs.stop_end_queue,
+                                       "Queue will always enable auto-stop on last track")
+    prefs.block_suspend = cf.sync_add("bool", "block-suspend", prefs.block_suspend,
+                                      "Prevent system suspend during playback")
+    prefs.allow_video_formats = cf.sync_add("bool", "allow-video-formats", prefs.allow_video_formats,
+                                      "Allow the import of MP4 and WEBM formats")
+    if prefs.allow_video_formats:
+        for item in VID_Formats:
+            if item not in DA_Formats:
+                DA_Formats.add(item)
+
+    cf.br()
+    cf.add_text("[HiDPI]")
+    prefs.scale_want = cf.sync_add("float", "ui-scale", prefs.scale_want,
+                                   "UI scale factor. Default is 1.0, try increase if using a HiDPI display.")
+    prefs.x_scale = cf.sync_add("bool", "auto-scale", prefs.x_scale, "Automatically choose above setting")
+    prefs.tracklist_y_text_offset = cf.sync_add("int", "tracklist-y-text-offset", prefs.tracklist_y_text_offset,
+                                                "If you're using a UI scale, you may need to tweak this.")
+
+    cf.br()
+    cf.add_text("[ui]")
+
+    prefs.theme_name = cf.sync_add("string", "theme-name", prefs.theme_name)
+    macstyle = cf.sync_add("bool", "mac-style", prefs.macstyle, "Use macOS style window buttons")
+    prefs.zoom_art = cf.sync_add("bool", "allow-art-zoom", prefs.zoom_art)
+    prefs.gallery_row_scroll = cf.sync_add("bool", "scroll-gallery-by-row", True)
+    prefs.gallery_scroll_wheel_px = cf.sync_add("int", "scroll-gallery-distance", 90,
+                                                "Only has effect if scroll-gallery-by-row is false.")
+    prefs.spec2_scroll = cf.sync_add("bool", "scroll-spectrogram", prefs.spec2_scroll)
+    prefs.custom_bg_opacity = cf.sync_add("int", "mascot-opacity", prefs.custom_bg_opacity)
+    if prefs.custom_bg_opacity < 0 or prefs.custom_bg_opacity > 100:
+        prefs.custom_bg_opacity = 40
+        print("Warning: Invalid value for mascot-opacity")
+
+    prefs.sync_lyrics_time_offset = cf.sync_add("int", "synced-lyrics-time-offset", prefs.sync_lyrics_time_offset,
+                                                "In milliseconds. May be negative.")
+    prefs.artist_list_prefer_album_artist = cf.sync_add("bool", "artist-list-prefers-album-artist",
+                                                        prefs.artist_list_prefer_album_artist,
+                                                        "May require restart for change to take effect.")
+    prefs.meta_persists_stop = cf.sync_add("bool", "side-panel-info-persists", prefs.meta_persists_stop,
+                                           "Show album art and metadata of last played track when stopped.")
+    prefs.meta_shows_selected = cf.sync_add("bool", "side-panel-info-selected", prefs.meta_shows_selected,
+                                            "Show album art and metadata of selected track when stopped. (overides above setting)")
+    prefs.meta_shows_selected_always = cf.sync_add("bool", "side-panel-info-selected-always",
+                                                   prefs.meta_shows_selected_always,
+                                                   "Show album art and metadata of selected track at all times. (overides the above 2 settings)")
+    prefs.stop_notifications_mini_mode = cf.sync_add("bool", "mini-mode-avoid-notifications",
+                                                     prefs.stop_notifications_mini_mode,
+                                                     "Avoid sending track change notifications when in Mini Mode")
+    prefs.hide_queue = cf.sync_add("bool", "hide-queue-when-empty", prefs.hide_queue)
+    # prefs.show_playlist_list = cf.sync_add("bool", "show-playlist-list", prefs.show_playlist_list)
+
+    prefs.show_current_on_transition = cf.sync_add("bool", "show-current-on-transition",
+                                                   prefs.show_current_on_transition,
+                                                   "Always jump to new playing track even with natural transition (broken setting, is always enabled")
+    prefs.art_in_top_panel = cf.sync_add("bool", "enable-art-header-bar", prefs.art_in_top_panel,
+                                         "Show art in top panel when window is narrow")
+    prefs.always_art_header = cf.sync_add("bool", "always-art-header-bar", prefs.always_art_header,
+                                          "Show art in top panel at any size. (Requires enable-art-header-bar)")
+
+    # prefs.center_bg = cf.sync_add("bool", "prefer-center-bg", prefs.center_bg, "Always center art for the background art function")
+    prefs.showcase_overlay_texture = cf.sync_add("bool", "showcase-texture-background", prefs.showcase_overlay_texture,
+                                                 "Draw pattern over background art")
+    prefs.side_panel_layout = cf.sync_add("int", "side-panel-style", prefs.side_panel_layout, "0:default, 1:centered")
+    prefs.show_side_lyrics_art_panel = cf.sync_add("bool", "side-lyrics-art", prefs.show_side_lyrics_art_panel)
+    prefs.lyric_metadata_panel_top = cf.sync_add("bool", "side-lyrics-art-on-top", prefs.lyric_metadata_panel_top)
+    prefs.use_absolute_track_index = cf.sync_add("bool", "absolute-track-indices", prefs.use_absolute_track_index,
+                                                 "For playlists with titles disabled only")
+    prefs.hide_bottom_title = cf.sync_add("bool", "auto-hide-bottom-title", prefs.hide_bottom_title,
+                                          "Hide title in bottom panel when already shown in side panel")
+    prefs.auto_goto_playing = cf.sync_add("bool", "auto-show-playing", prefs.auto_goto_playing,
+                                          "Show playing track in current playlist on track and playlist change even if not the playing playlist")
+
+    prefs.notify_include_album = cf.sync_add("bool", "notify-include-album", prefs.notify_include_album,
+                                             "Include album name in track change notifications")
+    prefs.rating_playtime_stars = cf.sync_add("bool", "show-rating-hint", prefs.rating_playtime_stars,
+                                              "Indicate playtime in rating stars")
+
+    prefs.drag_to_unpin = cf.sync_add("bool", "drag-tab-to-unpin", prefs.drag_to_unpin,
+                                      "Dragging a tab off the top-panel un-pins it")
+
+    cf.br()
+    cf.add_text("[gallery]")
+    prefs.thin_gallery_borders = cf.sync_add("bool", "gallery-thin-borders", prefs.thin_gallery_borders)
+    prefs.increase_gallery_row_spacing = cf.sync_add("bool", "increase-row-spacing", prefs.increase_gallery_row_spacing)
+    prefs.center_gallery_text = cf.sync_add("bool", "gallery-center-text", prefs.center_gallery_text)
+
+    # show-current-on-transition", prefs.show_current_on_transition)
+    if system != 'windows':
+        cf.br()
+        cf.add_text("[fonts]")
+        cf.add_comment("Changes will require app restart.")
+        prefs.use_custom_fonts = cf.sync_add("bool", "use-custom-fonts", prefs.use_custom_fonts,
+                                             "Setting to false will reset below settings to default on restart")
+        if prefs.use_custom_fonts:
+            prefs.linux_font = cf.sync_add("string", "font-main-standard", prefs.linux_font,
+                                           "Suggested alternate: Liberation Sans")
+            prefs.linux_font_semibold = cf.sync_add("string", "font-main-medium", prefs.linux_font_semibold)
+            prefs.linux_font_bold = cf.sync_add("string", "font-main-bold", prefs.linux_font_bold)
+            prefs.linux_font_condensed = cf.sync_add("string", "font-main-condensed", prefs.linux_font_condensed)
+            prefs.linux_font_condensed_bold = cf.sync_add("string", "font-main-condensed-bold", prefs.linux_font_condensed_bold)
+
+        else:
+            cf.sync_add("string", "font-main-standard", prefs.linux_font, "Suggested alternate: Liberation Sans")
+            cf.sync_add("string", "font-main-medium", prefs.linux_font_semibold)
+            cf.sync_add("string", "font-main-bold", prefs.linux_font_bold)
+            cf.sync_add("string", "font-main-condensed", prefs.linux_font_condensed)
+            cf.sync_add("string", "font-main-condensed-bold", prefs.linux_font_condensed_bold)
+
+        # prefs.force_subpixel_text = cf.sync_add("bool", "force-subpixel-text", prefs.force_subpixel_text, "(Subpixel rendering defaults to off with Flatpak)")
+
+    cf.br()
+    cf.add_text("[tracklist]")
+    prefs.dd_index = cf.sync_add("bool", "double-digit-indices", prefs.dd_index)
+    prefs.column_aa_fallback_artist = cf.sync_add("bool", "column-album-artist-fallsback",
+                                                  prefs.column_aa_fallback_artist,
+                                                  "'Album artist' column shows 'artist' if otherwise blank.")
+    prefs.left_align_album_artist_title = cf.sync_add("bool", "left-aligned-album-artist-title",
+                                                      prefs.left_align_album_artist_title,
+                                                      "Show 'Album artist' in the folder/album title. Uses colour 'column-album-artist' from theme file")
+    prefs.auto_sort = cf.sync_add("bool", "import-auto-sort", prefs.auto_sort,
+                                  "This setting is deprecated and will be removed in a future version")
+
+    cf.br()
+    cf.add_text("[transcode]")
+    prefs.bypass_transcode = cf.sync_add("bool", "sync-bypass-transcode", prefs.bypass_transcode,
+                                         "Don't transcode files with sync function")
+    prefs.smart_bypass = cf.sync_add("bool", "sync-bypass-low-bitrate", prefs.smart_bypass,
+                                     "Skip transcode of <=128kbs folders")
+    prefs.radio_record_codec = cf.sync_add("string", "radio-record-codec", prefs.radio_record_codec,
+                                           "Can be OPUS, OGG, FLAC, or MP3. Default: OPUS")
+
+    cf.br()
+    cf.add_text("[directories]")
+    cf.add_comment("Use full paths")
+    prefs.sync_target = cf.sync_add("string", "sync-device-music-dir", prefs.sync_target)
+    prefs.custom_encoder_output = cf.sync_add("string", "encode-output-dir", prefs.custom_encoder_output,
+                                              "E.g. \"/home/example/music/output\". If left blank, encode-output in home music dir will be used.")
+    if prefs.custom_encoder_output:
+        prefs.encoder_output = prefs.custom_encoder_output
+    prefs.download_dir1 = cf.sync_add("string", "add_download_directory", prefs.download_dir1,
+                                      "Add another folder to monitor in addition to home downloads and music.")
+    if prefs.download_dir1 and prefs.download_dir1 not in download_directories:
+        if os.path.isdir(prefs.download_dir1):
+            download_directories.append(prefs.download_dir1)
+        else:
+            print("Warning: Invalid download directory in config")
+
+    cf.br()
+    cf.add_text("[app]")
+    prefs.enable_remote = cf.sync_add("bool", "enable-remote-interface", prefs.enable_remote,
+                                      "For use with Tauon Music Remote for Android")
+    prefs.use_gamepad = cf.sync_add("bool", "use-gamepad", prefs.use_gamepad, "Use game controller for UI control, restart on change.")
+    prefs.use_tray = cf.sync_add("bool", "use-system-tray", prefs.use_tray)
+    prefs.force_hide_max_button = cf.sync_add("bool", "hide-maximize-button", prefs.force_hide_max_button)
+    prefs.save_window_position = cf.sync_add("bool", "restore-window-position", prefs.save_window_position,
+                                             "Save and restore the last window position on desktop on open")
+    prefs.mini_mode_on_top  = cf.sync_add("bool", "mini-mode-always-on-top", prefs.mini_mode_on_top)
+    prefs.enable_mpris = cf.sync_add("bool", "enable-mpris", prefs.enable_mpris)
+    prefs.reload_play_state = cf.sync_add("bool", "resume-playback-on-restart", prefs.reload_play_state)
+    prefs.resume_play_wake = cf.sync_add("bool", "resume-playback-on-wake", prefs.resume_play_wake)
+    prefs.auto_dl_artist_data = cf.sync_add("bool", "auto-dl-artist-data", prefs.auto_dl_artist_data,
+                                            "Enable automatic downloading of thumbnails in artist list")
+    prefs.enable_fanart_cover = cf.sync_add("bool", "fanart.tv-cover", prefs.enable_fanart_cover)
+    prefs.enable_fanart_artist = cf.sync_add("bool", "fanart.tv-artist", prefs.enable_fanart_artist)
+    prefs.enable_fanart_bg = cf.sync_add("bool", "fanart.tv-background", prefs.enable_fanart_bg)
+    prefs.always_auto_update_playlists = cf.sync_add("bool", "auto-update-playlists",
+                                                     prefs.always_auto_update_playlists,
+                                                     "Automatically update generator playlists")
+    prefs.write_ratings = cf.sync_add("bool", "write-ratings-to-tag", prefs.write_ratings,
+                                      "This writes FMPS_Rating tags on disk. Only writing to MP3, OGG and FLAC files is currently supported.")
+    prefs.spot_mode = cf.sync_add("bool", "enable-spotify", prefs.spot_mode, "Enable Spotify specific features")
+    prefs.discord_enable = cf.sync_add("bool", "enable-discord-rpc", prefs.discord_enable,
+                                       "Show track info in running Discord application")
+    prefs.auto_lyrics = cf.sync_add("bool", "auto-search-lyrics", prefs.auto_lyrics,
+                                    "Automatically search internet for lyrics when display is wanted")
+
+    prefs.use_scancodes = cf.sync_add("bool", "shortcuts-ignore-keymap", prefs.use_scancodes,
+                                    "When enabled, shortcuts will map to the physical keyboard layout")
+    prefs.search_on_letter = cf.sync_add("bool", "alpha_key_activate_search", prefs.search_on_letter,
+                                    "When enabled, pressing single letter keyboard key will activate the global search")
+
+    cf.br()
+    cf.add_text("[tokens]")
+    temp = cf.sync_add("string", "discogs-personal-access-token", prefs.discogs_pat,
+                       "Used for sourcing of artist thumbnails.")
+    if not temp:
+        prefs.discogs_pat = ""
+    elif len(temp) != 40:
+        print("Warning: Invalid discogs token in config")
+    else:
+        prefs.discogs_pat = temp
+
+    prefs.listenbrainz_url = cf.sync_add("string", "custom-listenbrainz-url", prefs.listenbrainz_url,
+                                         "Specify a custom Listenbrainz compatible api url. E.g. \"https://example.tld/apis/listenbrainz/\" Default: Blank")
+    prefs.lb_token = cf.sync_add("string", "listenbrainz-token", prefs.lb_token)
+
+    cf.br()
+    cf.add_text("[tauon_satellite]")
+    prefs.sat_url = cf.sync_add("string", "tau-url", prefs.sat_url, "Exclude the port")
+
+    cf.br()
+    cf.add_text("[lastfm]")
+    prefs.lastfm_pull_love = cf.sync_add("bool", "lastfm-pull-love", prefs.lastfm_pull_love,
+                                   "Overwrite local love status on scrobble")
+
+
+    cf.br()
+    cf.add_text("[maloja_account]")
+    prefs.maloja_url = cf.sync_add("string", "maloja-url", prefs.maloja_url,
+                                   "A Maloja server URL, e.g. http://localhost:32400")
+    prefs.maloja_key = cf.sync_add("string", "maloja-key", prefs.maloja_key, "One of your Maloja API keys")
+    prefs.maloja_enable = cf.sync_add("bool", "maloja-enable", prefs.maloja_enable)
+
+    cf.br()
+    cf.add_text("[plex_account]")
+    prefs.plex_username = cf.sync_add("string", "plex-username", prefs.plex_username,
+                                      "Probably the email address you used to make your PLEX account.")
+    prefs.plex_password = cf.sync_add("string", "plex-password", prefs.plex_password,
+                                      "The password associated with your PLEX account.")
+    prefs.plex_servername = cf.sync_add("string", "plex-servername", prefs.plex_servername,
+                                        "Probably your servers hostname.")
+
+    cf.br()
+    cf.add_text("[subsonic_account]")
+    prefs.subsonic_user = cf.sync_add("string", "subsonic-username", prefs.subsonic_user)
+    prefs.subsonic_password = cf.sync_add("string", "subsonic-password", prefs.subsonic_password)
+    prefs.subsonic_password_plain = cf.sync_add("bool", "subsonic-password-plain", prefs.subsonic_password_plain)
+    prefs.subsonic_server = cf.sync_add("string", "subsonic-server-url", prefs.subsonic_server)
+
+    cf.br()
+    cf.add_text("[koel_account]")
+    prefs.koel_username = cf.sync_add("string", "koel-username", prefs.koel_username, "E.g. admin@example.com")
+    prefs.koel_password = cf.sync_add("string", "koel-password", prefs.koel_password, "The default is admin")
+    prefs.koel_server_url = cf.sync_add("string", "koel-server-url", prefs.koel_server_url,
+                                        "The URL or IP:Port where the Koel server is hosted. E.g. http://localhost:8050 or https://localhost:8060")
+    prefs.koel_server_url = prefs.koel_server_url.rstrip("/")
+
+    cf.br()
+    cf.add_text("[jellyfin_account]")
+    prefs.jelly_username = cf.sync_add("string", "jelly-username", prefs.jelly_username, "")
+    prefs.jelly_password = cf.sync_add("string", "jelly-password", prefs.jelly_password, "")
+    prefs.jelly_server_url = cf.sync_add("string", "jelly-server-url", prefs.jelly_server_url,
+                                         "The IP:Port where the jellyfin server is hosted.")
+    prefs.jelly_server_url = prefs.jelly_server_url.rstrip("/")
+
+    cf.br()
+    cf.add_text("[network]")
+    prefs.network_stream_bitrate = cf.sync_add("int", "stream-bitrate", prefs.network_stream_bitrate,
+                                               "Optional bitrate koel/subsonic should transcode to (Server may need to be configured for this). Set to 0 to disable transcoding.")
+
+    cf.br()
+    cf.add_text("[listenalong]")
+    prefs.metadata_page_port = cf.sync_add("int", "broadcast-page-port", prefs.metadata_page_port,
+                                           "Change applies on app restart or setting re-enable")
+
+    cf.br()
+    cf.add_text("[chart]")
+    prefs.chart_columns = cf.sync_add("int", "chart-columns", prefs.chart_columns)
+    prefs.chart_rows = cf.sync_add("int", "chart-rows", prefs.chart_rows)
+    prefs.chart_text = cf.sync_add("bool", "chart-uses-text", prefs.chart_text)
+    prefs.topchart_sorts_played = cf.sync_add("bool", "chart-sorts-top-played", prefs.topchart_sorts_played)
+    prefs.chart_font = cf.sync_add("string", "chart-font", prefs.chart_font,
+                                   "Format is fontname + size. Default is Monospace 10")
+
+
+load_prefs()
+save_prefs()
+
+# Temporary
+if 0 < db_version <= 34:
+    prefs.theme_name = get_theme_name(theme)
+if 0 < db_version <= 66:
+    prefs.device_buffer = 80
+if 0 < db_version <= 53:
+    print("Resetting fonts to defaults")
+    prefs.linux_font = "Noto Sans"
+    prefs.linux_font_semibold = "Noto Sans Medium"
+    prefs.linux_font_bold = "Noto Sans Bold"
+    save_prefs()
+
+lang = ""
+
+locale_dir = os.path.join(install_directory, "locale")
+
+if flatpak_mode:
+    locale_dir = "/app/share/locale"
+elif install_directory.startswith("/opt/") or install_directory.startswith("/usr/"):
+    locale_dir = "/usr/share/locale"
+
+lang = []
+if prefs.ui_lang != "auto" or prefs.ui_lang == "":
+    lang = [prefs.ui_lang]
+
+if lang:
+    # Force set lang
+    f = gettext.find('tauon', localedir=locale_dir, languages=lang)
+
+    if f:
+        translation = gettext.translation('tauon', localedir=locale_dir, languages=lang)
+        translation.install()
+        _ = translation.gettext
+
+        print("Translation file loaded")
+    else:
+        print("No translation file available")
+
+else:
+    # Auto detect lang
+    f = gettext.find('tauon', localedir=locale_dir)
+
+    if f:
+        translation = gettext.translation('tauon', localedir=locale_dir)
+        translation.install()
+        _ = translation.gettext
+
+        print("Translation file loaded")
+    # else:
+    #     print("No translation file available")
+
+# ----
 
 sss = SDL_SysWMinfo()
 SDL_GetWindowWMInfo(t_window, sss)
@@ -8998,7 +8998,7 @@ class SubsonicService:
     #     try:
     #         a = self.r("getIndexes")
     #     except:
-    #         show_message(_("Error connecting to Airsonic server", mode="error")
+    #         show_message(_("Error connecting to Airsonic server"), mode="error")
     #         self.scanning = False
     #         return []
     #
@@ -9025,7 +9025,7 @@ class SubsonicService:
     #
     #         except json.decoder.JSONDecodeError:
     #             print("Error reading Airsonic directory")
-    #             show_message(_("Error reading Airsonic directory!", mode="warning")
+    #             show_message(_("Error reading Airsonic directory!)", mode="warning")
     #             return
     #
     #         items = d["subsonic-response"]["directory"]["child"]
@@ -13618,7 +13618,7 @@ def prep_gal():
 def add_stations(stations, name):
     if len(stations) == 1:
         for i, s in enumerate(pctl.radio_playlists):
-            if s["name"] == _("Default"):
+            if s["name"] == "Default":
                 s["items"].insert(0, stations[0])
                 s["scroll"] = 0
                 pctl.radio_playlist_viewing = i
@@ -13626,7 +13626,7 @@ def add_stations(stations, name):
         else:
             r = {}
             r["uid"] = uid_gen()
-            r["name"] = _('Default')
+            r["name"] = 'Default'
             r["items"] = stations
             r["scroll"] = 0
             pctl.radio_playlists.append(r)
@@ -16044,7 +16044,7 @@ def get_lyric_fire(track_object, silent=False):
     if not prefs.lyrics_enables:
         if not silent:
             show_message(_("There are no lyric sources enabled."),
-                         "See 'lyrics settings' under 'functions' tab in settings.", mode='info')
+                         _("See 'lyrics settings' under 'functions' tab in settings."), mode='info')
         return
 
     t = lyrics_fetch_timer.get()
@@ -17301,7 +17301,7 @@ def delete_playlist(index, force=False, check_lock=False):
     if gui.radio_view:
         del pctl.radio_playlists[index]
         if not pctl.radio_playlists:
-            pctl.radio_playlists = [{"uid": uid_gen(), "name": _("Default"), "items": []}]
+            pctl.radio_playlists = [{"uid": uid_gen(), "name": "Default", "items": []}]
         return
 
     global default_playlist
@@ -17789,17 +17789,17 @@ def export_stats(pl):
     #     line = line.rstrip("; ")
     #     line += "\n\n"
 
-    line += "\n" + _("-------------- Top Artists --------------------") + "\n\n"
+    line += "\n" + f"-------------- {_("Top Artists")} --------------------" + "\n\n"
 
     ls = stats_gen.artist_list
     for i, item in enumerate(ls[:50]):
         line += str(i + 1) + ".\t" + stt2(item[1]) + "\t" + item[0] + "\n"
 
-    line += "\n\n" + _("-------------- Top Albums --------------------") + "\n\n"
+    line += "\n\n" + f"-------------- {_("Top Albums")} --------------------" + "\n\n"
     ls = stats_gen.album_list
     for i, item in enumerate(ls[:50]):
         line += str(i + 1) + ".\t" + stt2(item[1]) + "\t" + item[0] + "\n"
-    line += "\n\n" + _("-------------- Top Genres --------------------") + "\n\n"
+    line += "\n\n" + f"-------------- {_("Top Genres")} --------------------" + "\n\n"
     ls = stats_gen.genre_list
     for i, item in enumerate(ls[:50]):
         line += str(i + 1) + ".\t" + stt2(item[1]) + "\t" + item[0] + "\n"
@@ -21721,7 +21721,7 @@ selection_menu.add(MenuItem(_('Rescan Tags'), reload_metadata_selection))
 
 selection_menu.add(MenuItem(_("Edit fields…"), activate_trans_editor))
 
-selection_menu.add(MenuItem("Edit with ", launch_editor_selection, pass_ref=True, pass_ref_deco=True, icon=edit_icon, render_func=edit_deco, disable_test=launch_editor_selection_disable_test))
+selection_menu.add(MenuItem(_("Edit with "), launch_editor_selection, pass_ref=True, pass_ref_deco=True, icon=edit_icon, render_func=edit_deco, disable_test=launch_editor_selection_disable_test))
 
 selection_menu.br()
 folder_menu.br()
@@ -21765,7 +21765,7 @@ def toggle_wiki(mode=0):
 #     if mode == 1:
 #         return prefs.discord_show
 #     if prefs.discord_show is False and discord_allow is False:
-#         show_message(_("Warning: pypresence package not installed")
+#         show_message(_("Warning: pypresence package not installed"))
 #     prefs.discord_show ^= True
 
 def toggle_gen(mode=0):
@@ -23076,7 +23076,7 @@ def export_database():
 def q_to_playlist():
     pctl.multi_playlist.append(pl_gen(title=_("Play History"),
                                       playing=0,
-                                      playlist=lisft(reversed(copy.deepcopy(pctl.track_queue))),
+                                      playlist=list(reversed(copy.deepcopy(pctl.track_queue))),
                                       position=0,
                                       hide_title=1,
                                       selected=0))
@@ -40946,7 +40946,7 @@ class RadioView:
             else:
                 toast(_("Added station to: ") + pctl.radio_playlists[pctl.radio_playlist_viewing]["name"])
 
-            radios[radios.index_("New")] = self.drag
+            radios[radios.index("New")] = self.drag
             self.drag = None
             gui.update += 1
 
@@ -45973,7 +45973,7 @@ while pctl.running:
                             pctl.active_playlist_playing = pctl.active_playlist_viewing
 
                             # If already in playlist, delete latest add
-                            if _("Default") == pctl.multi_playlist[target_pl][0]:
+                            if "Default" == pctl.multi_playlist[target_pl][0]:
                                 if default_playlist.count(order.tracks[0]) > 1:
                                     for q in reversed(range(len(default_playlist))):
                                         if default_playlist[q] == order.tracks[0]:
