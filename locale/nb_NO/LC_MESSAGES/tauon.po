@@ -738,6 +738,7 @@ msgstr ""
 #: t_modules/t_main.py:15154
 #, fuzzy
 msgid "{N} files rewritten"
+msgid "{N} files rewritten"
 msgstr " filnavn ble skrevet."
 
 #: t_modules/t_main.py:15220
@@ -1149,6 +1150,7 @@ msgstr ""
 #: t_modules/t_main.py:16673
 #, fuzzy
 msgid "{N} files processed"
+msgid "{N} files processed"
 msgstr " filnavn ble skrevet."
 
 #: t_modules/t_main.py:16692
@@ -1511,10 +1513,12 @@ msgstr ""
 #: t_modules/t_main.py:19001
 #, fuzzy
 msgid "{N} Folders Remaining"
+msgid "{N} Folders Remaining"
 msgstr "Mappenavigatør"
 
 #: t_modules/t_main.py:19003
 #, fuzzy
+msgid "{N} Folder Remaining"
 msgid "{N} Folder Remaining"
 msgstr "Mappenavigatør"
 

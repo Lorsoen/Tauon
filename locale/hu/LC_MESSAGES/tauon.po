@@ -1469,10 +1469,12 @@ msgstr ""
 #: t_modules/t_main.py:19001
 #, fuzzy
 msgid "{N} Folders Remaining"
+msgid "{N} Folders Remaining"
 msgstr "Mappa navigáció"
 
 #: t_modules/t_main.py:19003
 #, fuzzy
+msgid "{N} Folder Remaining"
 msgid "{N} Folder Remaining"
 msgstr "Mappa navigáció"
 
@@ -2134,6 +2136,7 @@ msgstr "Spotify albumok"
 
 #: t_modules/t_main.py:21711
 #, fuzzy
+msgid "Queue {N}"
 msgid "Queue {N}"
 msgstr "Sor"
 

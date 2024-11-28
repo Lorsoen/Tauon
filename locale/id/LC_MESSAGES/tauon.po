@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.6-rc\n"
+"X-Generator: Weblate 5.8.2-dev\n"
 "Generated-By: pygettext.py 1.5\n"
 
 #: t_modules/t_dbus.py:59
@@ -1141,7 +1141,7 @@ msgstr "Penghapusan gambar gagal."
 
 #: t_modules/t_main.py:16671
 msgid "Deleted embedded picture from file"
-msgstr "Gambar yang disematkan dihapus dari file"
+msgstr "Gambar yang disematkan dihapus dari berkas"
 
 #: t_modules/t_main.py:16673
 #, fuzzy
@@ -1355,11 +1355,11 @@ msgstr "Daftar putar berisi trek non-Spotify"
 
 #: t_modules/t_main.py:18134
 msgid "Created new Spotify playlist"
-msgstr "Membuat playlist Spotify baru"
+msgstr "Membuat daftar putar Spotify baru"
 
 #: t_modules/t_main.py:18140
 msgid "Error creating Spotify playlist"
-msgstr "Error membuat playlist Spotify"
+msgstr "kesalahan membuat daftar putar Spotify"
 
 #: t_modules/t_main.py:18143
 msgid "Updated Spotify playlist"
@@ -1372,14 +1372,14 @@ msgstr ""
 #: t_modules/t_main.py:18791
 msgid "OK. This playlist will automatically sort on import from now on"
 msgstr ""
-"BAIK. Mulai sekarang, playlist ini akan mengurutkan impor secara otomatis"
+"BAIK. Mulai sekarang, daftar putar ini akan mengurutkan impor secara otomatis"
 
 #: t_modules/t_main.py:18792
 msgid ""
 "You remove or edit this behavior by going \"Misc...\" > \"Edit generator...\""
 msgstr ""
 "Kamu menghapus atau mengedit perilaku ini dengan membuka \"Lain-lain ...\"> "
-"\"Edit generator ...\""
+"\"Sunting penghasil ...\""
 
 #: t_modules/t_main.py:18807 t_modules/t_main.py:18815
 msgid "Upload"
@@ -1408,16 +1408,16 @@ msgstr "Dari Saat Ini…"
 #: t_modules/t_main.py:18836
 #, fuzzy
 msgid "Sort by Imported Tracks"
-msgstr "Sortir menurut yang Diimpor"
+msgstr "Sortir menurut Trek yang Diimpor"
 
 #: t_modules/t_main.py:18837
 #, fuzzy
 msgid "Sort by Imported Folders"
-msgstr "Sortir menurut yang Diimpor"
+msgstr "Sortir menurut Folder yang Diimpor"
 
 #: t_modules/t_main.py:18838
 msgid "Sort by Filepath"
-msgstr "Urutkan berdasarkan Filepath"
+msgstr "Urutkan berdasarkan Lokasi berkas"
 
 #: t_modules/t_main.py:18839
 msgid "Sort Track Numbers"
@@ -1482,7 +1482,7 @@ msgstr "Menghapus folder..."
 
 #: t_modules/t_main.py:18969 t_modules/t_main.py:19035
 msgid "Copying files to device"
-msgstr "Menyalin file ke perangkat"
+msgstr "Menyalin berkas ke perangkat"
 
 #: t_modules/t_main.py:18975
 msgid "Sync aborted! Low disk space on target device"
@@ -1519,7 +1519,7 @@ msgstr "Sinkronisasi selesai"
 
 #: t_modules/t_main.py:19064 t_modules/t_main.py:19155
 msgid "Set as Sync Playlist"
-msgstr "Setel sebagai daftar putar yang diselaraskan"
+msgstr "Setel sebagai daftar putar yang disinkronkan"
 
 #: t_modules/t_main.py:19067
 msgid "Un-set as Sync Playlist"
@@ -1531,11 +1531,11 @@ msgstr "Setel sebagai Daftar Putar Unduhan"
 
 #: t_modules/t_main.py:19085
 msgid "Un-set as Downloads Playlist"
-msgstr "Batal disetel sebagai Daftar Putar Unduhan"
+msgstr "Batal atur sebagai Daftar Putar Unduhan"
 
 #: t_modules/t_main.py:19089
 msgid "Set Use Persistent Time"
-msgstr ""
+msgstr "Atur Gunakan Waktu Tetap"
 
 #: t_modules/t_main.py:19091
 msgid "Un-set Use Persistent Time"
@@ -1583,7 +1583,7 @@ msgstr "Libatkan Penambahan Cepat Galeri"
 #: t_modules/t_main.py:19159
 #, fuzzy
 msgid "Set podcast mode"
-msgstr "Hentikan Broadcast"
+msgstr "Atur mode siniar"
 
 #: t_modules/t_main.py:19161
 msgid "Remove Duplicates"
@@ -1734,7 +1734,7 @@ msgstr "Duplikat"
 
 #: t_modules/t_main.py:19887
 msgid "Filepath Sorted"
-msgstr "Filepath Diurutkan"
+msgstr "Lokasi berkas Diurutkan"
 
 #: t_modules/t_main.py:19902
 msgid "Artist Sorted"
@@ -1767,7 +1767,7 @@ msgstr "Klik \"Muat Ulang\" jika Anda membuat perubahan apa pun"
 
 #: t_modules/t_main.py:19966
 msgid "Config file opened."
-msgstr "File konfigurasi dibuka."
+msgstr "Berkas konfigurasi dibuka."
 
 #: t_modules/t_main.py:19976 t_modules/t_main.py:19989
 msgid "Input file missing"
@@ -1895,19 +1895,19 @@ msgstr "Tidak dapat menghapus trek jaringan"
 
 #: t_modules/t_main.py:20751 t_modules/t_main.py:20760
 msgid "File deleted"
-msgstr "File dihapus"
+msgstr "Berkas dihapus"
 
 #: t_modules/t_main.py:20753 t_modules/t_main.py:20762
 msgid "Error deleting file"
-msgstr "galat saat menghapus file"
+msgstr "Kesalahan saat menghapus berkas"
 
 #: t_modules/t_main.py:20755
 msgid "File moved to trash"
-msgstr "file dipindahkan ke tempat sampah"
+msgstr "Berkas dipindahkan ke tempat sampah"
 
 #: t_modules/t_main.py:20769
 msgid "Delete Track File"
-msgstr "Hapue file trek"
+msgstr "Hapue berkas trek"
 
 #: t_modules/t_main.py:20776
 msgid "Rename (Single track)"
@@ -2200,7 +2200,7 @@ msgstr "Hapus"
 
 #: t_modules/t_main.py:21735
 msgid "Delete Files"
-msgstr "Hapus file"
+msgstr "Hapus berkas"
 
 #: t_modules/t_main.py:21783
 msgid "No matching artist result found"
@@ -2377,7 +2377,7 @@ msgstr "Penilaian"
 
 #: t_modules/t_main.py:22424
 msgid "More…"
-msgstr ""
+msgstr "Selengkapnya…"
 
 #: t_modules/t_main.py:22426 t_modules/t_main.py:47095
 #: t_modules/t_main.py:47101
@@ -2401,10 +2401,14 @@ msgstr "Komposer"
 #: t_modules/t_main.py:22431
 #, fuzzy
 msgid "Disc Number"
-msgstr "Nomor Trek"
+msgstr "Nomor Disk"
 
 #: t_modules/t_main.py:22433
 msgid "Is CUE Sheet"
+msgstr "Sheet CUE"
+
+#: src/tauon/t_modules/t_main.py:22955
+msgid "Done! {N} old items were removed."
 msgstr ""
 
 #: t_modules/t_main.py:22944
@@ -2470,7 +2474,7 @@ msgstr "Ekspor sebagai CSV"
 #: t_modules/t_main.py:23086
 #, fuzzy
 msgid "Rescan All Folders"
-msgstr "Pindai Ulang Folder"
+msgstr "Pindai Ulang Semua Folder"
 
 #: t_modules/t_main.py:23087
 msgid "Play History to Playlist"
@@ -2694,7 +2698,7 @@ msgstr "Keluar dari Kunci Acak"
 
 #: t_modules/t_main.py:24218
 msgid "Donate"
-msgstr ""
+msgstr "Donasi"
 
 #: t_modules/t_main.py:24231
 msgid "Disengage Quick Add"
@@ -3013,7 +3017,7 @@ msgstr "Terjadi kesalahan saat membuat chart"
 
 #: t_modules/t_main.py:27861
 msgid "Chart generated"
-msgstr "Generated Chart"
+msgstr "Chart telah dibuat"
 
 #: t_modules/t_main.py:27907
 msgid "Function"
@@ -3177,12 +3181,12 @@ msgstr "Atur output perangkat audio"
 
 #: t_modules/t_main.py:28306
 msgid "PipeWire (unstable)"
-msgstr ""
+msgstr "PiperWire (tidak stabil)"
 
 #: t_modules/t_main.py:28308
 #, fuzzy
 msgid "PulseAudio"
-msgstr "Audio"
+msgstr "PulseAudio"
 
 #: t_modules/t_main.py:28310
 msgid "Please restart Tauon for this change to take effect"
@@ -3240,7 +3244,7 @@ msgstr "Sekali klik untuk putar"
 
 #: t_modules/t_main.py:28441
 msgid "Combine multi-discs"
-msgstr ""
+msgstr "Kombinasikan disk-multi"
 
 #: t_modules/t_main.py:28443
 msgid "Show titles"
@@ -3256,82 +3260,82 @@ msgstr "Ukuran thumbnail"
 
 #: t_modules/t_main.py:28459
 msgid "Prefer thinner padding"
-msgstr ""
+msgstr "Prefer padding tipis"
 
 #: t_modules/t_main.py:28478
 msgid "Enable Listen Along"
-msgstr ""
+msgstr "Aktifkan Mendengarkan Bersama"
 
 #: t_modules/t_main.py:28478
 msgid "Start server for remote web playback"
-msgstr ""
+msgstr "Mulai peladen untuk pemutaran web remote"
 
 #: t_modules/t_main.py:28499
 #, fuzzy
 msgid "Show artist info panel"
-msgstr "Tampilkan di Daftar Putar"
+msgstr "Tampilkan panel info artis"
 
 #: t_modules/t_main.py:28500
 msgid "You can also toggle this with ctrl+o"
-msgstr ""
+msgstr "Anda juga dapat mengaktifkan ini dengan ctrl+o"
 
 #: t_modules/t_main.py:28507
 msgid "Auto fetch artist data"
-msgstr ""
+msgstr "Otomatis mengambil data artis"
 
 #: t_modules/t_main.py:28508
 msgid "Downloads data in background when artist panel is open"
-msgstr ""
+msgstr "Unduh data di latar belakang ketika panel artis terbuka"
 
 #: t_modules/t_main.py:28512
 msgid "Auto regenerate playlists"
-msgstr ""
+msgstr "Otomatis buat ulang daftar putar"
 
 #: t_modules/t_main.py:28513
 msgid "Generated playlists reload when re-entering"
-msgstr ""
+msgstr "Daftar putar yang dihasilkan dimuat ulang saat masuk kembali"
 
 #: t_modules/t_main.py:28516
 msgid "Tabs in top panel"
-msgstr ""
+msgstr "Tab di panel atas"
 
 #: t_modules/t_main.py:28517
 msgid "Uncheck to disable the tab pin function"
-msgstr ""
+msgstr "Batal check untuk mematikan fungsi sematkan tab"
 
 #: t_modules/t_main.py:28522 t_modules/t_main.py:28528
 msgid "Open config file"
-msgstr ""
+msgstr "Buka berkas konfigurasi"
 
 #: t_modules/t_main.py:28524 t_modules/t_main.py:28534
 #, fuzzy
 msgid "Open data folder"
-msgstr "Buka Folder"
+msgstr "Buka folder data"
 
 #: t_modules/t_main.py:28532
 #, fuzzy
 msgid "Reload"
-msgstr "Unggah"
+msgstr "Muat ulang"
 
 #: t_modules/t_main.py:28538
 msgid "Enable/Disable track context menu functions:"
-msgstr ""
+msgstr "Aktifkan/Nonaktifkan fungsi menu konteks trek:"
 
 #: t_modules/t_main.py:28541
 msgid "Wikipedia artist search"
-msgstr ""
+msgstr "Cari artis di Wikipedia"
 
 #: t_modules/t_main.py:28543
 msgid "Sonemic artist search"
-msgstr ""
+msgstr "Cari Artis di sonemic"
 
 #: t_modules/t_main.py:28545
 msgid "Bandcamp artist page search"
-msgstr ""
+msgstr "Halaman pencarian artis bandcamp"
 
 #: t_modules/t_main.py:28549
 msgid "Genius track search"
-msgstr ""
+msgstr "Cari trek genius"
 
 #: t_modules/t_main.py:28551
 #, fuzzy
@@ -3341,63 +3345,63 @@ msgstr "Folder Transkode"
 #: t_modules/t_main.py:28557
 #, fuzzy
 msgid "End of playlist action"
-msgstr "Akhir playlist"
+msgstr "Tindakan di akhir daftar putar"
 
 #: t_modules/t_main.py:28560 t_modules/t_main.py:28564
 msgid "Stop playback"
-msgstr ""
+msgstr "Hentikan pemutaran"
 
 #: t_modules/t_main.py:28561 t_modules/t_main.py:28566
 #, fuzzy
 msgid "Repeat playlist"
-msgstr "Daftar putar baru"
+msgstr "Ulangi daftar putar"
 
 #: t_modules/t_main.py:28570
 #, fuzzy
 msgid "Play next playlist"
-msgstr "Putar Riwayat ke Daftar Putar"
+msgstr "Putar Daftar Putar selanjutnya"
 
 #: t_modules/t_main.py:28572
 msgid "Cycle all playlists"
-msgstr ""
+msgstr "Putar semua daftar putar"
 
 #: t_modules/t_main.py:28578
 #, fuzzy
 msgid "Extract archives"
-msgstr "Ekstrak Gambar"
+msgstr "Ekstrak arsip"
 
 #: t_modules/t_main.py:28579
 msgid "Extracts zip archives on drag and drop"
-msgstr ""
+msgstr "Ekstrak arsip zip dengan seret dan jatuhkan"
 
 #: t_modules/t_main.py:28581
 msgid "Enable download monitor"
-msgstr ""
+msgstr "Aktifkan pemantauan unduh"
 
 #: t_modules/t_main.py:28582
 msgid "One click import new archives and folders from downloads folder"
-msgstr ""
+msgstr "Impor arsip dan folder baru dari folder unduhan dengan sekali klik"
 
 #: t_modules/t_main.py:28584
 msgid "Trash archive after extraction"
-msgstr ""
+msgstr "Arsipkan sampah setelah pengekstrakan"
 
 #: t_modules/t_main.py:28586
 msgid "Always extract to Music folder"
-msgstr ""
+msgstr "Selalu ekstrak ke folder Musik"
 
 #: t_modules/t_main.py:28590
 msgid "Show icon in system tray"
-msgstr ""
+msgstr "Tampilkan ikon di baki sistem"
 
 #: t_modules/t_main.py:28593 t_modules/t_main.py:28608
 #, fuzzy
 msgid "Close to tray"
-msgstr "file dipindahkan ke tempat sampah"
+msgstr "Tutup ke baki"
 
 #: t_modules/t_main.py:28596
 msgid "Show title text"
-msgstr ""
+msgstr "Tampilkan teks judul"
 
 #: t_modules/t_main.py:28599
 msgid "Monochrome"
@@ -3457,17 +3461,23 @@ msgstr ""
 msgid ""
 "Tracks will now be recorded. Restart any playback for change to take effect."
 msgstr ""
+"Trek sekarang akan direkam, Mulai ulang beberapa pemutaran untuk menerapkan "
+"efek perubahan."
 
 #: t_modules/t_main.py:28644
 msgid "Tracks will be saved to \"Saved Radio Tracks\" playlist."
-msgstr ""
+msgstr "Trek akan disimpan di playlist\"Saved Radio Tracks\"."
 
 #: t_modules/t_main.py:28658
 msgid "Enable Discord Rich Presence"
-msgstr ""
+msgstr "Aktifkan Discord Rich Presence"
 
 #: t_modules/t_main.py:28662
 msgid "For troubleshooting Discord RP"
+msgstr "Untuk pemecahan masalah Discord RP"
+
+#: src/tauon/t_modules/t_main.py:28669
+msgid "Sorry, this feature is unavailable with snap"
 msgstr ""
 
 #: t_modules/t_main.py:28667
@@ -3489,6 +3499,10 @@ msgstr "Stats"
 
 #: t_modules/t_main.py:28879 t_modules/t_main.py:29560
 msgid "Show threshold marker"
+msgstr "Tampilkan penanda threshold"
+
+#: src/tauon/t_modules/t_main.py:28892
+msgid "Logout"
 msgstr ""
 
 #: t_modules/t_main.py:28890
@@ -3524,7 +3538,7 @@ msgstr "Buat Pengurutan Otomatis Daftar Putar"
 #: t_modules/t_main.py:28951
 #, fuzzy
 msgid "Get playlist"
-msgstr "Daftar putar baru"
+msgstr "Dapatkan daftar putar"
 
 #: t_modules/t_main.py:28953
 msgid "An operation is already running"
@@ -3536,7 +3550,7 @@ msgstr ""
 
 #: t_modules/t_main.py:28961
 msgid "Maloja is a self-hosted scrobble server."
-msgstr ""
+msgstr "Maloja adalah peladen scrobble yang di hosting sendiri."
 
 #: t_modules/t_main.py:28962
 msgid "See here to learn more: {link}"
@@ -3545,14 +3559,18 @@ msgstr ""
 #: t_modules/t_main.py:28972 t_modules/t_main.py:29178
 #: t_modules/t_main.py:29239 t_modules/t_main.py:29312
 msgid "Server URL"
-msgstr ""
+msgstr "URL Peladen"
 
 #: t_modules/t_main.py:28986
 msgid "API Key"
-msgstr ""
+msgstr "Key API"
 
 #: t_modules/t_main.py:29001 t_modules/t_main.py:29269
 msgid "Test connectivity"
+msgstr "Uji konektivitas"
+
+#: src/tauon/t_modules/t_main.py:29027
+msgid "Connection appeared successful but the API key was invalid"
 msgstr ""
 
 #: t_modules/t_main.py:29016
@@ -3575,34 +3593,39 @@ msgstr ""
 #: t_modules/t_main.py:29528 t_modules/t_main.py:29545
 #, fuzzy
 msgid "Get scrobble counts"
-msgstr "Jumlah Scrobble"
+msgstr "Dapatkan hitungan scrobble"
 
 #: t_modules/t_main.py:29039
 msgid "View setup instructions"
-msgstr ""
+msgstr "Lihat panduan pengaturan"
 
 #: t_modules/t_main.py:29046
 msgid "Client ID"
-msgstr ""
+msgstr "ID Klien"
 
 #: t_modules/t_main.py:29060
 msgid "Client Secret"
-msgstr ""
+msgstr "Klien Rahasia"
 
 #: t_modules/t_main.py:29076
 msgid "Forget Account"
-msgstr ""
+msgstr "Lupa Akun"
 
 #: t_modules/t_main.py:29083
 msgid "Authorise"
-msgstr ""
+msgstr "Otorisasi"
 
 #: t_modules/t_main.py:29093
 msgid "Prefer launching web player"
-msgstr ""
+msgstr "Lebih prefer menjalankan pemutar web"
 
 #: t_modules/t_main.py:29099
 msgid "Enable local audio playback"
+msgstr "Aktifkan pemutaran audio lokal"
+
+#: src/tauon/t_modules/t_main.py:29113
+msgid ""
+"Due to Spotify authentication changes, local audio playback may be broken"
 msgstr ""
 
 #: t_modules/t_main.py:29101
@@ -3636,35 +3659,35 @@ msgstr ""
 #: t_modules/t_main.py:29164 t_modules/t_main.py:29225
 #: t_modules/t_main.py:29298 t_modules/t_main.py:29355
 msgid "Password"
-msgstr ""
+msgstr "Kata Sandi"
 
 #: t_modules/t_main.py:29192 t_modules/t_main.py:29254
 #: t_modules/t_main.py:29327 t_modules/t_main.py:29383
 #, fuzzy
 msgid "Import music to playlist"
-msgstr "Error membuat playlist Spotify"
+msgstr "Kesalahaan saat membuat daftar putar Spotify"
 
 #: t_modules/t_main.py:29196
 msgid "Use plain text authentication"
-msgstr ""
+msgstr "Gunakan autentikasi teks plain"
 
 #: t_modules/t_main.py:29197
 msgid "Needed for Nextcloud Music"
-msgstr ""
+msgstr "Dibutuhkan untuk Nextcloud Music"
 
 #: t_modules/t_main.py:29201
 msgid "Jellyfin network streaming"
-msgstr ""
+msgstr "Streaming jaringan Jellyfin"
 
 #: t_modules/t_main.py:29211
 #, fuzzy
 msgid "Username"
-msgstr "Ganti nama"
+msgstr "Nama pengguna"
 
 #: t_modules/t_main.py:29257
 #, fuzzy
 msgid "Import playlists"
-msgstr "Error membuat playlist Spotify"
+msgstr "Impor daftar putar"
 
 #: t_modules/t_main.py:29264
 msgid "Run music import first"
@@ -3676,15 +3699,16 @@ msgstr ""
 
 #: t_modules/t_main.py:29331
 msgid "PLEX network streaming"
-msgstr ""
+msgstr "Streaming jaringan PLEX"
 
 #: t_modules/t_main.py:29369
 msgid "Server name"
-msgstr ""
+msgstr "Nama peladen"
 
 #: t_modules/t_main.py:29391
 msgid "Fanart.tv can be used for sourcing of artist images and cover art."
 msgstr ""
+"Fanart,tv juga dapat digunakan untuk sumber gambar artis dan sampul album."
 
 #: t_modules/t_main.py:29398 t_modules/t_main.py:37419
 msgid "They encourage you to contribute at {link}"
@@ -3721,32 +3745,40 @@ msgstr ""
 
 #: t_modules/t_main.py:29510
 msgid "Use LibreFM"
-msgstr ""
+msgstr "Gunakan LibreFM"
 
 #: t_modules/t_main.py:29514
 msgid ""
 "Click login to open the last.fm web authorisation page and follow prompt. "
 "Then return here and click \"Done\"."
 msgstr ""
+"Klik login untuk masuk halaman web otorisasi last,fm dan ikuti perintah. "
+"Lalu kembali kesini dan klik \"Selesai\"."
 
 #: t_modules/t_main.py:29518
 msgid "Forget account"
-msgstr ""
+msgstr "Ingat akun"
 
 #: t_modules/t_main.py:29525 t_modules/t_main.py:29533
 msgid "Get user loves"
-msgstr ""
+msgstr "Dapatkan love pengguna"
 
 #: t_modules/t_main.py:29526
 msgid "Clear local loves"
-msgstr ""
+msgstr "Hapus loves lokal"
 
 #: t_modules/t_main.py:29527 t_modules/t_main.py:29541
 msgid "Get friend loves"
-msgstr ""
+msgstr "Dapatkan teman loves"
 
 #: t_modules/t_main.py:29553
 msgid "Pull love on scrobble/rescan"
+msgstr "Dorong love di scrobble/pindai ulang"
+
+#: src/tauon/t_modules/t_main.py:29567
+msgid ""
+"Note that this will overwrite the local loved status if different to last.fm "
+"status"
 msgstr ""
 
 #: t_modules/t_main.py:29555
@@ -3758,11 +3790,11 @@ msgstr ""
 #: t_modules/t_main.py:29567 t_modules/t_main.py:29569
 #, fuzzy
 msgid "Paste Token"
-msgstr "Tempel"
+msgstr "Tempel Token"
 
 #: t_modules/t_main.py:29593
 msgid "This will mark all tracks in local database as unloved!"
-msgstr ""
+msgstr "Ini akan menandai semua trek di database lokal sebagai batal love!"
 
 #: t_modules/t_main.py:29603
 msgid "Cleared all loves"
@@ -3796,75 +3828,82 @@ msgid ""
 "Warning: This process can take a long time to complete! (up to an hour or "
 "more)"
 msgstr ""
+"Peringatan: Proses ini bisa mengambil berapa lama untuk menyelesaikan! "
+"(hingga perjam atau lebih)"
 
 #: t_modules/t_main.py:29634
 msgid "This feature is not recommended for accounts that have many friends."
 msgstr ""
+"Fitur ini tidak direkomendasikan untuk akun yang memiliki beberapa teman."
 
 #: t_modules/t_main.py:29673
 #, fuzzy
 msgid "Selected playlist:"
-msgstr "Akhir playlist"
+msgstr "Daftar putar yang dipilih:"
 
 #: t_modules/t_main.py:29677
 msgid "No sync playlist selected!"
-msgstr ""
+msgstr "Tidak ada daftar putar yang tersinkron dipilih!"
 
 #: t_modules/t_main.py:29680
 msgid "Path to device music folder:   "
-msgstr ""
+msgstr "Lokasi untuk perangkat folder music:   "
 
 #: t_modules/t_main.py:29698
 msgid "A mounted music folder was found!"
-msgstr ""
+msgstr "Folder musik yang di mount ditemukan!"
 
 #: t_modules/t_main.py:29700
 msgid "Could not auto-detect mounted device path."
-msgstr ""
+msgstr "Tidak dapat mendeteksi otomatis lokasi perangkat yang di mount."
 
 #: t_modules/t_main.py:29701
 msgid "Make sure the device is mounted and path is accessible."
-msgstr ""
+msgstr "Pastikan perangkat yang di mount dan lokasi bisa di akses."
 
 #: t_modules/t_main.py:29706
 msgid "Delete all other folders in target"
-msgstr ""
+msgstr "Hapus semua folder lain yang di tuju"
 
 #: t_modules/t_main.py:29709
 #, fuzzy
 msgid "Transcode files"
-msgstr "Transcode Tunggal"
+msgstr "Transcode Berkas"
 
 #: t_modules/t_main.py:29712
 msgid "Bypass low bitrate"
-msgstr ""
+msgstr "Bypass bitrate rendah"
 
 #: t_modules/t_main.py:29715
 #, fuzzy
 msgid "Start Transcode and Sync"
-msgstr "Transcode Tunggal"
+msgstr "Mulai Transkode dan Sinkronkan"
 
 #: t_modules/t_main.py:29718
 #, fuzzy
 msgid "Start Sync"
-msgstr "Membatalkan Sinkronisasi"
+msgstr "Mulai Sinkronisasi"
 
 #: t_modules/t_main.py:29722
 #, fuzzy
 msgid "Stopping..."
-msgstr "Mencari..."
+msgstr "Menghentikan..."
 
 #: t_modules/t_main.py:29728
 #, fuzzy
 msgid "Select a source playlist"
-msgstr "Setel sebagai daftar putar yang diselaraskan"
+msgstr "Pilih sebagai sumber daftar putar"
 
 #: t_modules/t_main.py:29729
 msgid "Right click tab > Misc... > Set as sync playlist"
-msgstr ""
+msgstr "Klik kanan tab > Lain-lain... > Atur sebagai daftar putar tersinkron"
 
 #: t_modules/t_main.py:29731
 msgid "Stop"
+msgstr "Berhenti"
+
+#: src/tauon/t_modules/t_main.py:29753
+msgid "See here for detailed instructions"
 msgstr ""
 
 #: t_modules/t_main.py:29741
@@ -3878,38 +3917,42 @@ msgstr ""
 #: t_modules/t_main.py:29750 t_modules/t_main.py:29751
 #, fuzzy
 msgid "Open output folder"
-msgstr "Buka Folder"
+msgstr "Buka folder output"
 
 #: t_modules/t_main.py:29753 t_modules/t_main.py:29754
 msgid "Sync..."
-msgstr ""
+msgstr "Sinkronkan..."
 
 #: t_modules/t_main.py:29762
 msgid "Save opus as .ogg extension"
-msgstr ""
+msgstr "Simpan opus sebagai ekstensi .ogg"
 
 #: t_modules/t_main.py:29783
 msgid "Save to output folder"
-msgstr ""
+msgstr "Simpan ke folder output"
 
 #: t_modules/t_main.py:29785
 msgid "Save and overwrite files inplace"
-msgstr ""
+msgstr "Simpan dan timpa berkas yang tidak ada"
 
 #: t_modules/t_main.py:29807
 msgid "Emit track change notifications"
-msgstr ""
+msgstr "Notifikasi perubahan emit trek"
 
 #: t_modules/t_main.py:29810
 msgid "Draw own window decorations"
-msgstr ""
+msgstr "Gambar sendiri dekorasi jendela"
 
 #: t_modules/t_main.py:29818
 msgid "Show playing in titlebar"
-msgstr ""
+msgstr "Tampilkan pemutaran di bilah judul"
 
 #: t_modules/t_main.py:29826
 msgid "Mini-mode always on top"
+msgstr "Mode-mini tetap di atas"
+
+#: src/tauon/t_modules/t_main.py:29840
+msgid "Always-on-top feature not yet implemented for Wayland mode"
 msgstr ""
 
 #: t_modules/t_main.py:29828
@@ -3930,15 +3973,19 @@ msgstr ""
 
 #: t_modules/t_main.py:29841
 msgid "UI scale for HiDPI displays"
-msgstr ""
+msgstr "Penyekalaan UI untuk tampilan HiDPI"
 
 #: t_modules/t_main.py:29899
 #, fuzzy
 msgid "Auto scale"
-msgstr "Ubah Ukuran Otomatis"
+msgstr "Skalakan Otomatis"
 
 #: t_modules/t_main.py:29911
 msgid "Prefer x11 when running in Wayland"
+msgstr "Lebih prefer x11 saat berjalan di Wayland"
+
+#: src/tauon/t_modules/t_main.py:30028
+msgid "This program comes with absolutely no warranty."
 msgstr ""
 
 #: t_modules/t_main.py:30016
@@ -3980,6 +4027,26 @@ msgstr ""
 
 #: t_modules/t_main.py:30235
 msgid "Target playlist:   "
+msgstr "Target daftar putar:   "
+
+#: src/tauon/t_modules/t_main.py:30256
+#, fuzzy
+msgid "Level 1"
+msgstr "Pengukur Level"
+
+#: src/tauon/t_modules/t_main.py:30259
+#, fuzzy
+msgid "Level 2"
+msgstr "Pengukur Level"
+
+#: src/tauon/t_modules/t_main.py:30262
+#, fuzzy
+msgid "Level 3"
+msgstr "Pengukur Level"
+
+#: src/tauon/t_modules/t_main.py:30266 src/tauon/t_modules/t_main.py:30268
+#: src/tauon/t_modules/t_main.py:30270
+msgid "by"
 msgstr ""
 
 #: t_modules/t_main.py:30244
@@ -4008,28 +4075,28 @@ msgstr ""
 
 #: t_modules/t_main.py:30265
 msgid "Columns"
-msgstr ""
+msgstr "Kolom"
 
 #: t_modules/t_main.py:30271
 msgid "Cascade style"
-msgstr ""
+msgstr "Style cascade"
 
 #: t_modules/t_main.py:30273
 msgid "Use padding"
-msgstr ""
+msgstr "Gunakan padding"
 
 #: t_modules/t_main.py:30278
 msgid "Include album titles"
-msgstr ""
+msgstr "Termasuk judul album"
 
 #: t_modules/t_main.py:30280
 #, fuzzy
 msgid "Sort by top played"
-msgstr "Sortir menurut yang Diimpor"
+msgstr "Sortir menurut pemutaran teratas"
 
 #: t_modules/t_main.py:30286
 msgid "Randomise BG"
-msgstr ""
+msgstr "Pengacakan Latar"
 
 #: t_modules/t_main.py:30322
 #, fuzzy
@@ -4047,50 +4114,50 @@ msgstr ""
 #: t_modules/t_main.py:30336
 #, fuzzy
 msgid "Generating..."
-msgstr "Sunting Generator..."
+msgstr "Menghasilkan..."
 
 #: t_modules/t_main.py:30344
 #, fuzzy
 msgid "Album chart"
-msgstr "Album Diurutkan"
+msgstr "Bagan album"
 
 #: t_modules/t_main.py:30349
 msgid "Not enough albums in the playlist!"
-msgstr ""
+msgstr "Album tidak cukup di daftar putar!"
 
 #: t_modules/t_main.py:30368 t_modules/t_main.py:30369
 #, fuzzy
 msgid "Chart generator..."
-msgstr "Sunting Generator..."
+msgstr "Penghasil bagan..."
 
 #: t_modules/t_main.py:30376 t_modules/t_main.py:30416
 #, fuzzy
 msgid "Tracks in playlist"
-msgstr "Lagu dengan lirik"
+msgstr "Trek di daftar putar"
 
 #: t_modules/t_main.py:30377 t_modules/t_main.py:30419
 #, fuzzy
 msgid "Albums in playlist"
-msgstr "Tampilkan di Daftar Putar"
+msgstr "Album di daftar putar"
 
 #: t_modules/t_main.py:30378 t_modules/t_main.py:30422
 #, fuzzy
 msgid "Playlist duration"
-msgstr "Buat Pengurutan Otomatis Daftar Putar"
+msgstr "Durasi daftar putar"
 
 #: t_modules/t_main.py:30379 t_modules/t_main.py:30450
 #, fuzzy
 msgid "Tracks in database"
-msgstr "Hapue file trek"
+msgstr "Trek di database"
 
 #: t_modules/t_main.py:30380 t_modules/t_main.py:30453
 #, fuzzy
 msgid "Total albums"
-msgstr "Album Peringkat Teratas"
+msgstr "Total album"
 
 #: t_modules/t_main.py:30381 t_modules/t_main.py:30457
 msgid "Total playtime"
-msgstr ""
+msgstr "Total waktu pemutaran"
 
 #: t_modules/t_main.py:30518
 #, fuzzy
@@ -4145,16 +4212,16 @@ msgstr ""
 #: t_modules/t_main.py:30597
 #, fuzzy
 msgid "Thin default"
-msgstr "Default"
+msgstr "Default thin"
 
 #: t_modules/t_main.py:30599
 #, fuzzy
 msgid "Thick default"
-msgstr "Default"
+msgstr "Default thick"
 
 #: t_modules/t_main.py:30937
 msgid "Okay, it's a normal playlist now."
-msgstr ""
+msgstr "Oke, ini adalah daftar putar normal."
 
 #: t_modules/t_main.py:30946
 msgid ""
@@ -4174,6 +4241,10 @@ msgstr "Buka Tauon Music Box"
 #: t_modules/t_main.py:31464 t_modules/t_main.py:36568
 #: t_modules/t_main.py:40798 t_modules/t_main.py:40947
 msgid "Added station to: "
+msgstr "Stasiun ditambahkan ke: "
+
+#: src/tauon/t_modules/t_main.py:31697
+msgid "MENU"
 msgstr ""
 
 #: t_modules/t_main.py:31679
@@ -4308,10 +4379,14 @@ msgstr "Folder tersisa"
 msgid "Play, RC: Go to playing"
 msgstr ""
 
+#: src/tauon/t_modules/t_main.py:31816
+msgid "Scanning Tags...  {N} remaining"
 #: t_modules/t_main.py:32532 t_modules/t_main.py:33130
 msgid "Pause"
 msgstr ""
 
+#: src/tauon/t_modules/t_main.py:31818
+msgid "File copy in progress..."
 #: t_modules/t_main.py:32548
 msgid "Stop, RC: Toggle auto-stop"
 msgstr ""
@@ -4334,11 +4409,11 @@ msgstr "Ulangi NONAKTIF"
 #: t_modules/t_main.py:32608
 #, fuzzy
 msgid "Repeat Off"
-msgstr "Ulangi NONAKTIF"
+msgstr "Ulangi Nonaktif"
 
 #: t_modules/t_main.py:32615
 msgid "Back, RC: Toggle repeat, MC: Revert"
-msgstr ""
+msgstr "Kembali, RC: Alihkan ulangi, MC: Kembalikan"
 
 #: t_modules/t_main.py:32632
 #, fuzzy
@@ -4348,17 +4423,17 @@ msgstr "Waktu pemutaran"
 #: t_modules/t_main.py:32673 t_modules/t_main.py:32675
 #, fuzzy
 msgid "Shuffle"
-msgstr "Acak NONAKTIF"
+msgstr "Acak"
 
 #: t_modules/t_main.py:32733 t_modules/t_main.py:32741
 #, fuzzy
 msgid "Repeat album"
-msgstr "Ulangi Album"
+msgstr "Ulangi album"
 
 #: t_modules/t_main.py:32735 t_modules/t_main.py:32743
 #, fuzzy
 msgid "Repeat track"
-msgstr "Ulangi Track"
+msgstr "Ulangi trek"
 
 #: t_modules/t_main.py:34392
 msgid "Playlist is empty"

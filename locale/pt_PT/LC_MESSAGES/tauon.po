@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.16.2-dev\n"
+"X-Generator: Weblate 5.8-dev\n"
 "Generated-By: pygettext.py 1.5\n"
 
 #: t_modules/t_dbus.py:59
@@ -5236,28 +5236,46 @@ msgstr ""
 
 #~ msgid "Start Broadcast"
 #~ msgstr "Começar Transmissão"
+#~ msgid "Start Broadcast"
+#~ msgstr "Começar Transmissão"
 
+#~ msgid "Ready broadcaster"
+#~ msgstr "Preparar Transmissor"
 #~ msgid "Ready broadcaster"
 #~ msgstr "Preparar Transmissor"
 
 #~ msgid "Artist backgrounds (Automatic)"
 #~ msgstr "Fundos do Artista (automático)"
+#~ msgid "Artist backgrounds (Automatic)"
+#~ msgstr "Fundos do Artista (automático)"
 
+#~ msgid "There are currently no connected clients"
+#~ msgstr "Não há clientes conectados atualmente"
 #~ msgid "There are currently no connected clients"
 #~ msgstr "Não há clientes conectados atualmente"
 
 #~ msgid "There is 1 inbound connection."
 #~ msgstr "Há uma conexão de entrada."
+#~ msgid "There is 1 inbound connection."
+#~ msgstr "Há uma conexão de entrada."
 
+#~ msgid "There are %d inbound connections."
+#~ msgstr "Existem %d conexões de entrada."
 #~ msgid "There are %d inbound connections."
 #~ msgstr "Existem %d conexões de entrada."
 
 #~ msgid "Sort by Imported"
 #~ msgstr "Ordenar por importado"
+#~ msgid "Sort by Imported"
+#~ msgstr "Ordenar por importado"
 
 #~ msgid "Stop Broadcast"
 #~ msgstr "Parar Transmissão"
+#~ msgid "Stop Broadcast"
+#~ msgstr "Parar Transmissão"
 
+#~ msgid "Start web server for broadcasting"
+#~ msgstr "Inicia servidor web para transmissão"
 #~ msgid "Start web server for broadcasting"
 #~ msgstr "Inicia servidor web para transmissão"
 
@@ -5362,9 +5380,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Set List Sorting..."
 #~ msgstr "A Carregar..."
-
-#~ msgid "Download URL"
-#~ msgstr "Descarregar URL"
 
 #~ msgid "Track gain"
 #~ msgstr "Track Gain"

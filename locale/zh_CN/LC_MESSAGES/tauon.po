@@ -5252,9 +5252,6 @@ msgstr ""
 #~ msgid "Set List Sorting..."
 #~ msgstr "搜索中..."
 
-#~ msgid "Download URL"
-#~ msgstr "下载URL"
-
 #~ msgid "Open keymap file"
 #~ msgstr "打开按键映射文件"
 

@@ -638,7 +638,7 @@ def fader_timer(time_point, start, duration, off=True, range=255):
 
 
 id3_genre_dict = {
-    
+
     0: "Blues",
     1: "Classic Rock",
     2: "Country",
@@ -989,3 +989,4 @@ def sleep_timeout(condition_function, time_limit=2):
         time.sleep(0.01)
         if timer.get() > time_limit:
             break
+

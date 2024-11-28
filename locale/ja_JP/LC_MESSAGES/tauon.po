@@ -5382,9 +5382,6 @@ msgstr ""
 #~ msgid "Set List Sorting..."
 #~ msgstr "検索中..."
 
-#~ msgid "Download URL"
-#~ msgstr "ダウンロードURL"
-
 #~ msgid "Track gain"
 #~ msgstr "トラックゲイン"
 

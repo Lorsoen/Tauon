@@ -5243,28 +5243,46 @@ msgstr ""
 
 #~ msgid "Start Broadcast"
 #~ msgstr "Übertragung starten"
+#~ msgid "Start Broadcast"
+#~ msgstr "Übertragung starten"
 
+#~ msgid "Ready broadcaster"
+#~ msgstr "Übertragen starten"
 #~ msgid "Ready broadcaster"
 #~ msgstr "Übertragen starten"
 
 #~ msgid "Artist backgrounds (Automatic)"
 #~ msgstr "Künstlerhintergründe (automatisch)"
+#~ msgid "Artist backgrounds (Automatic)"
+#~ msgstr "Künstlerhintergründe (automatisch)"
 
+#~ msgid "There are currently no connected clients"
+#~ msgstr "Derzeit sind keine Clients verbunden"
 #~ msgid "There are currently no connected clients"
 #~ msgstr "Derzeit sind keine Clients verbunden"
 
 #~ msgid "There is 1 inbound connection."
 #~ msgstr "Es gibt 1 eingehende Verbindung."
+#~ msgid "There is 1 inbound connection."
+#~ msgstr "Es gibt 1 eingehende Verbindung."
 
+#~ msgid "There are %d inbound connections."
+#~ msgstr "Es gibt %d eingehende Verbindungen."
 #~ msgid "There are %d inbound connections."
 #~ msgstr "Es gibt %d eingehende Verbindungen."
 
 #~ msgid "Sort by Imported"
 #~ msgstr "Nach Importdatum sortieren"
+#~ msgid "Sort by Imported"
+#~ msgstr "Nach Importdatum sortieren"
 
 #~ msgid "Stop Broadcast"
 #~ msgstr "Übertragung beenden"
+#~ msgid "Stop Broadcast"
+#~ msgstr "Übertragung beenden"
 
+#~ msgid "Start web server for broadcasting"
+#~ msgstr "Webserver fürs Übertragen einschalten"
 #~ msgid "Start web server for broadcasting"
 #~ msgstr "Webserver fürs Übertragen einschalten"
 
@@ -5365,9 +5383,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Set List Sorting..."
 #~ msgstr "Stoppen …"
-
-#~ msgid "Download URL"
-#~ msgstr "URL herunterladen"
 
 #~ msgid "Track gain"
 #~ msgstr "Titel-Gain"

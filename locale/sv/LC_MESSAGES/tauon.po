@@ -750,6 +750,7 @@ msgstr ""
 #: t_modules/t_main.py:15154
 #, fuzzy
 msgid "{N} files rewritten"
+msgid "{N} files rewritten"
 msgstr " filnamn skrevs."
 
 #: t_modules/t_main.py:15220
@@ -1155,6 +1156,7 @@ msgstr "Tog bort inbäddad bild från filen"
 
 #: t_modules/t_main.py:16673
 #, fuzzy
+msgid "{N} files processed"
 msgid "{N} files processed"
 msgstr " filnamn skrevs."
 
@@ -2204,6 +2206,7 @@ msgstr "Klistra in Spotify-album"
 
 #: t_modules/t_main.py:21711
 #, fuzzy
+msgid "Queue {N}"
 msgid "Queue {N}"
 msgstr "Köa"
 
@@ -5403,9 +5406,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Set List Sorting..."
 #~ msgstr "Stoppar..."
-
-#~ msgid "Download URL"
-#~ msgstr "Nerladdnings-URL"
 
 #~ msgid "Track gain"
 #~ msgstr "Spår gain"

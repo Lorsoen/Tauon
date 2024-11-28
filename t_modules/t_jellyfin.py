@@ -608,3 +608,4 @@ class Jellyfin():
                 "x-emby-authorization": self._get_jellyfin_auth(),
                 "Content-Type": "application/json"
             })
+

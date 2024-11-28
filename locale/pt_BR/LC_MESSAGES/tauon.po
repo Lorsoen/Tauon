@@ -5355,9 +5355,6 @@ msgstr ""
 #~ msgid "Set List Sorting..."
 #~ msgstr "Definir Ordem de Lista..."
 
-#~ msgid "Download URL"
-#~ msgstr "Baixar URL"
-
 #~ msgid "Track gain"
 #~ msgstr "Ganho de Faixa"
 

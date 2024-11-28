@@ -1137,6 +1137,7 @@ msgstr "Gömülü resmi dosyadan sil"
 #: t_modules/t_main.py:16673
 #, fuzzy
 msgid "{N} files processed"
+msgid "{N} files processed"
 msgstr "%d dosya yeniden yazıldı"
 
 #: t_modules/t_main.py:16692
