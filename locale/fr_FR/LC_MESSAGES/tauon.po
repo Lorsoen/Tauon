@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.12-dev\n"
+"X-Generator: Poedit 3.8\n"
 "Generated-By: pygettext.py 1.5\n"
 
 #: src/tauon/t_modules/t_db_migrate.py:169
@@ -305,11 +305,12 @@ msgstr "Cela peut prendre un très long moment."
 
 #: src/tauon/t_modules/t_main.py:4339
 msgid "There was an error getting friends loves"
-msgstr "Une erreur s’est produite lors de la récupération des « Loved » amis"
+msgstr ""
+"Une erreur s’est produite lors de la récupération des coups de cœur amis"
 
 #: src/tauon/t_modules/t_main.py:4347
 msgid "Scanning loved tracks for: {username}"
-msgstr "Analyse des pistes « Loved » pour : {username}"
+msgstr "Analyse des pistes Coup de cœur pour : {username}"
 
 #: src/tauon/t_modules/t_main.py:4351
 msgid "No username found"
@@ -317,7 +318,7 @@ msgstr "Nom d'utilisateur introuvable"
 
 #: src/tauon/t_modules/t_main.py:4395
 msgid "User has no loved tracks."
-msgstr "L'utilisateur n'a pas de pistes « Loved »."
+msgstr "L'utilisateur n'a pas de pistes Coup de cœur."
 
 #: src/tauon/t_modules/t_main.py:4398
 msgid "{N} matched tracks are up to date."
@@ -330,8 +331,8 @@ msgstr "{N} pistes trouvée.s. {T} ont été.s mises à jour."
 #: src/tauon/t_modules/t_main.py:4403
 msgid "Of {N} loved tracks, no matches were found in local db"
 msgstr ""
-"Sur {N} pistes « Loved », aucune correspondance n'a été trouvé dans la base "
-"locale"
+"Sur {N} pistes Coup de cœur, aucune correspondance n'a été trouvé dans la "
+"base locale"
 
 #: src/tauon/t_modules/t_main.py:4407
 msgid "This doesn't seem to be working :("
@@ -468,11 +469,11 @@ msgstr "{N} pistes sur {T} n'ont pas été trouvées."
 
 #: src/tauon/t_modules/t_main.py:7143 src/tauon/t_modules/t_main.py:43385
 msgid "Shuffle Lockdown"
-msgstr "Aléatoire verrouillé"
+msgstr "Mode Aléatoire"
 
 #: src/tauon/t_modules/t_main.py:7144 src/tauon/t_modules/t_main.py:44047
 msgid "Exit Shuffle Lockdown"
-msgstr "Déverrouiller le mode aléatoire"
+msgstr "Quitter le mode Aléatoire"
 
 #: src/tauon/t_modules/t_main.py:7168
 msgid "Make Large Size"
@@ -1572,7 +1573,7 @@ msgstr "Piste inconnue"
 #: src/tauon/t_modules/t_main.py:11856
 #, fuzzy
 msgid "Unknown Artist"
-msgstr "Album inconnu"
+msgstr "Artiste inconnu"
 
 #: src/tauon/t_modules/t_main.py:11906
 msgid "Error - Discord not running?"
@@ -2383,7 +2384,7 @@ msgstr "Utiliser la pochette comme arrière-plan"
 
 #: src/tauon/t_modules/t_main.py:24010
 msgid "Transparent accent"
-msgstr ""
+msgstr "Style transparent"
 
 #: src/tauon/t_modules/t_main.py:24016
 msgid "Prefer artist backgrounds"
@@ -2824,7 +2825,7 @@ msgstr "Désolé, cette fonctionnalité est indisponible sur Snap."
 #: src/tauon/t_modules/t_main.py:24751
 #, fuzzy
 msgid "Missing dependency python-lynxpresence"
-msgstr "Dépendance python-pypresence manquante"
+msgstr "Dépendance python-lynxpresence manquante"
 
 #: src/tauon/t_modules/t_main.py:24760 src/tauon/t_modules/t_main.py:32378
 msgid "Disabled"
@@ -2931,7 +2932,7 @@ msgstr "Communication avec le serveur Maloja impossible"
 #: src/tauon/t_modules/t_main.py:25123 src/tauon/t_modules/t_main.py:25125
 #: src/tauon/t_modules/t_main.py:25600 src/tauon/t_modules/t_main.py:25617
 msgid "Get scrobble counts"
-msgstr "Obtenir le nombre de scrobbles"
+msgstr "Récupérer le nombre de scrobbles"
 
 #: src/tauon/t_modules/t_main.py:25124 src/tauon/t_modules/t_main.py:25127
 #: src/tauon/t_modules/t_main.py:25601 src/tauon/t_modules/t_main.py:25606
@@ -3072,8 +3073,9 @@ msgid ""
 "Click login to open the last.fm web authorisation page (paste from clipboard "
 "if it didn't open) and follow prompt. Then return here and click \"Done\"."
 msgstr ""
-"Cliquez sur « Se connecter » pour ouvrir la page de connexion à last.fm, "
-"suivez les instructions, puis revenez ici et appuyez sur « Valider »."
+"Cliquez « Se connecter » pour ouvrir la page de connexion (coller le lien en "
+"cas d'échec), suivez les instructions puis revenez ici et cliquez "
+"« Valider »."
 
 #: src/tauon/t_modules/t_main.py:25590
 msgid "Forget account"
@@ -3081,7 +3083,7 @@ msgstr "Oublier le compte"
 
 #: src/tauon/t_modules/t_main.py:25597 src/tauon/t_modules/t_main.py:25605
 msgid "Get user loves"
-msgstr "Charger les favoris de l’utilisateur"
+msgstr "Récupérer C.d.c. de l'utilisateur"
 
 #: src/tauon/t_modules/t_main.py:25598
 msgid "Clear local loves"
@@ -3089,19 +3091,19 @@ msgstr "Vider les favoris locaux"
 
 #: src/tauon/t_modules/t_main.py:25599 src/tauon/t_modules/t_main.py:25613
 msgid "Get friend loves"
-msgstr "Charger les favoris des ami⋅e⋅s"
+msgstr "Récupérer C.d.c. des ami⋅e⋅s"
 
 #: src/tauon/t_modules/t_main.py:25626
 msgid "Pull love on scrobble/rescan"
-msgstr "Récupérer « Loved » au scrobble / re-scan"
+msgstr "Récupérer C.d.c au scrobble / re-scan"
 
 #: src/tauon/t_modules/t_main.py:25628
 msgid ""
 "Note that this will overwrite the local loved status if different to last.fm "
 "status"
 msgstr ""
-"Notez que l'état des favoris sur Tauon sera écrasé s'il diffère des "
-"« Loved » sur last.fm"
+"Notez que l'état des favoris sur Tauon sera écrasé s'il diffère des coups de "
+"cœur sur last.fm"
 
 #: src/tauon/t_modules/t_main.py:25641 src/tauon/t_modules/t_main.py:25643
 msgid "Paste Token"
@@ -3211,7 +3213,7 @@ msgstr ""
 
 #: src/tauon/t_modules/t_main.py:25812
 msgid "Stop"
-msgstr "Arrêt"
+msgstr "Arrêter"
 
 #: src/tauon/t_modules/t_main.py:25823
 msgid "See here for detailed instructions"
@@ -3395,7 +3397,7 @@ msgstr "Génération en cours..."
 #: src/tauon/t_modules/t_main.py:26413
 #, fuzzy
 msgid "{N} Album chart"
-msgstr "albums sur la planche"
+msgstr "{N} albums sur la planche"
 
 #: src/tauon/t_modules/t_main.py:26419
 msgid "Not enough albums in the playlist!"
@@ -3479,21 +3481,21 @@ msgstr "Décalage de base"
 
 #: src/tauon/t_modules/t_main.py:26678
 msgid "Thin default"
-msgstr "Fin par défaut"
+msgstr "Petit interligne"
 
 #: src/tauon/t_modules/t_main.py:26680
 msgid "Thick default"
-msgstr "Large par défaut"
+msgstr "Grand interligne"
 
 #: src/tauon/t_modules/t_main.py:27069
 #, fuzzy
 msgid "Tauon SHUFFLE!"
-msgstr "Tauon Music Box MÉLANGÉ !"
+msgstr "Tauon MÉLANGÉ"
 
 #: src/tauon/t_modules/t_main.py:27071
 #, fuzzy
 msgid "ALBUM SHUFFLE"
-msgstr "Tauon Music Box ALBUMS MÉLANGÉS !"
+msgstr "ALBUMS MÉLANGÉS"
 
 #: src/tauon/t_modules/t_main.py:27704
 msgid "MENU"
@@ -3961,11 +3963,11 @@ msgstr "Téléchargement..."
 #: src/tauon/t_modules/t_main.py:33198
 #, fuzzy
 msgid "{N} albums"
-msgstr "Nombre d'albums"
+msgstr "{N} albums"
 
 #: src/tauon/t_modules/t_main.py:33200
 msgid "{N} album"
-msgstr ""
+msgstr "{N} album"
 
 #: src/tauon/t_modules/t_main.py:33382
 msgid "First of artist's albums ({N} albums)"
@@ -4879,7 +4881,7 @@ msgstr "Enlever les doublons"
 #: src/tauon/t_modules/t_main.py:43578
 #, fuzzy
 msgid "Toggle Console"
-msgstr "Permuter les colonnes"
+msgstr "Permuter la console"
 
 #: src/tauon/t_modules/t_main.py:43600 src/tauon/t_modules/t_main.py:43601
 msgid "Longest Tracks"
@@ -5024,25 +5026,25 @@ msgstr "Copier le lien de la piste"
 
 #: src/tauon/t_modules/t_main.py:43848
 msgid "Always stop after album"
-msgstr ""
+msgstr "Toujours arrêter après l'album"
 
 #: src/tauon/t_modules/t_main.py:43849
 msgid "Always stop after track"
-msgstr ""
+msgstr "Toujours arrêter après la piste"
 
 #: src/tauon/t_modules/t_main.py:43850
 #, fuzzy
 msgid "Stop after album"
-msgstr "Albums les mieux évalués"
+msgstr "Arrêter après l'album"
 
 #: src/tauon/t_modules/t_main.py:43851
 #, fuzzy
 msgid "Stop after track"
-msgstr "Pistes les mieux évaluées"
+msgstr "Arrêter après la piste"
 
 #: src/tauon/t_modules/t_main.py:43852
 msgid "Continue Play"
-msgstr ""
+msgstr "Continuer la lecture"
 
 #: src/tauon/t_modules/t_main.py:43854
 msgid "Minimize"
