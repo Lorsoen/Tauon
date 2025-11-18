@@ -11,8 +11,12 @@ msgstr ""
 "PO-Revision-Date: 2025-05-04 09:06+0000\n"
 =======
 "POT-Creation-Date: 2025-11-18 00:20+0100\n"
+<<<<<<< HEAD
 "PO-Revision-Date: 2025-11-18 03:37+0100\n"
 >>>>>>> 277941f6 (First iteration)
+=======
+"PO-Revision-Date: 2025-11-18 20:08+0100\n"
+>>>>>>> 8d37bed2 (Corrections)
 "Last-Translator: Patricio Carrau <duckycb@proton.me>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/tauon-music-box/"
 "tauon-music-box/fr/>\n"
@@ -1222,7 +1226,7 @@ msgstr "Tauon ne sait pas écrire des paroles vers ce type de fichier :"
 
 #: src/tauon/t_modules/t_main.py:7795 src/tauon/t_modules/t_main.py:7814
 msgid "(We still saved to the internal database)"
-msgstr "(Mais "
+msgstr "(Elles ont bien été sauvegardées dans la base de données)"
 
 #: src/tauon/t_modules/t_main.py:7813
 msgid "File doesn't exist or is not accessible"
@@ -5327,15 +5331,12 @@ msgstr "Ne se lance que pendant une réanalyse de tous les dossiers"
 #: src/tauon/t_modules/t_main.py:24688
 msgid "Save \"simple\" lyrics changes back to their original files"
 msgstr ""
-"Sauvegarder les modifications « simples » des paroles vers leur fichiers "
-"d'origine"
+"Sauvegarder les modifications « simples » des paroles vers leur fichier"
 
 #: src/tauon/t_modules/t_main.py:24689
 msgid ""
 "Includes search, clear, paste, etc. Manual edits will always save this way."
-msgstr ""
-"Inclut les recherches, les suppressions, les collages, etc. Les changements "
-"manuels seront toujours sauvegardées ainsi."
+msgstr "Inclut les recherches, les suppressions, les collages, etc."
 
 #: src/tauon/t_modules/t_main.py:24696
 msgid "Enable remote control"
@@ -8191,7 +8192,7 @@ msgstr "Auto-sauvegardes..."
 
 #: src/tauon/t_modules/t_main.py:37196
 msgid "Load Current Backup"
-msgstr "Charger la sauvegarde actuelle"
+msgstr "Charger l'auto-sauvegarde actuelle"
 
 #: src/tauon/t_modules/t_main.py:37197
 msgid "Visit Current Backup"
@@ -8219,7 +8220,7 @@ msgstr "Sauvegarde complète avant reprise"
 
 #: src/tauon/t_modules/t_main.py:37225
 msgid "Save synced to .lrc"
-msgstr "Afficher les paroles dynamiques"
+msgstr "Sauvegarder synchro. vers .lrc"
 
 #: src/tauon/t_modules/t_main.py:37249 src/tauon/t_modules/t_main.py:37555
 #: src/tauon/t_modules/t_main.py:37567 src/tauon/t_modules/t_main.py:37582
@@ -8430,7 +8431,7 @@ msgstr "Veuillez vous assurer que les points soient dans l'ordre."
 
 #: src/tauon/t_modules/t_main.py:37499 src/tauon/t_modules/t_main.py:37505
 msgid "Synced lyrics saved successfully"
-msgstr "Sauvegarde des paroles"
+msgstr "Paroles dynamiques sauvegardées"
 
 #: src/tauon/t_modules/t_main.py:37500 src/tauon/t_modules/t_main.py:37518
 msgid "Destroyed previously existing lyrics in file"
@@ -8442,7 +8443,7 @@ msgstr "Paroles statiques sauvegardées"
 
 #: src/tauon/t_modules/t_main.py:37587
 msgid "Backup file does not exist"
-msgstr "Le fichier de sauvegarde auto. n'existe pas"
+msgstr "Le fichier d'auto-sauvegarde n'existe pas"
 
 #: src/tauon/t_modules/t_main.py:37595
 msgid "Put the lyrics in this file."
@@ -10527,11 +10528,11 @@ msgstr "Disque"
 
 #: src/tauon/t_modules/t_main.py:48045
 msgid "Play count"
-msgstr "Écouté X"
+msgstr "Écoutes"
 
 #: src/tauon/t_modules/t_main.py:48057
 msgid "Play time"
-msgstr "Pendant"
+msgstr "Tps. écoute"
 
 #: src/tauon/t_modules/t_main.py:48147
 msgid "Folder Modification"
