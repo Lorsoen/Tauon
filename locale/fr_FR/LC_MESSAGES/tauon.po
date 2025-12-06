@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2025-12-04 13:28+0100\n"
-"PO-Revision-Date: 2025-12-06 13:21+0000\n"
+"PO-Revision-Date: 2025-12-06 15:40+0100\n"
 "Last-Translator: Lorsoen <fashim99@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/tauon-music-box/"
 "tauon-music-box/fr/>\n"
@@ -16,13 +16,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Poedit 3.8\n"
 "Generated-By: pygettext.py 1.5\n"
 
 #: src/tauon/t_modules/t_db_migrate.py:169
 msgid ""
-"Error loading old database, did the program not exit properly after "
-"updating? Oh well."
+"Error loading old database, did the program not exit properly after updating? "
+"Oh well."
 msgstr ""
 "Erreur du chargement de l'ancienne base de données, est-ce que Tauon s'est "
 "correctement arrêté après la mise à jour ? Bon..."
@@ -51,8 +51,7 @@ msgstr ""
 
 #: src/tauon/t_modules/t_db_migrate.py:397
 msgid "Welcome to v6.1.0. Due to changes, please re-authorise Spotify"
-msgstr ""
-"Bienvenue en v6.1.0. Veuillez ré-autoriser Spotify si vous l'utilisiez."
+msgstr "Bienvenue en v6.1.0. Veuillez ré-autoriser Spotify si vous l'utilisiez."
 
 #: src/tauon/t_modules/t_db_migrate.py:398
 msgid ""
@@ -64,12 +63,10 @@ msgstr ""
 
 #: src/tauon/t_modules/t_db_migrate.py:413
 msgid "Welcome to v6.3.0. Due to an upgrade, please re-authorise Spotify"
-msgstr ""
-"Bienvenue en v6.3.0. Veuillez ré-autoriser Spotify si vous l'utilisiez."
+msgstr "Bienvenue en v6.3.0. Veuillez ré-autoriser Spotify si vous l'utilisiez."
 
 #: src/tauon/t_modules/t_db_migrate.py:414
-msgid ""
-"You can do this by clicking 'Authroise' in Settings > Accounts > Spotify"
+msgid "You can do this by clicking 'Authroise' in Settings > Accounts > Spotify"
 msgstr ""
 "Pour cela, cliquez sur « Autoriser » dans « Options > Comptes > Spotify »"
 
@@ -731,8 +728,7 @@ msgstr "Impossible d'utiliser des chemins relatifs"
 msgid ""
 "One or more tracks are stored on a separate drive from the playlist file."
 msgstr ""
-"Une ou plusieurs piste sont stockées sur un disque séparé du fichier "
-"playlist."
+"Une ou plusieurs piste sont stockées sur un disque séparé du fichier playlist."
 
 #: src/tauon/t_modules/t_main.py:8380
 msgid "Playlist is locked to prevent accidental erasure"
@@ -1486,8 +1482,7 @@ msgstr ""
 
 #: src/tauon/t_modules/t_main.py:11364 src/tauon/t_modules/t_main.py:25668
 msgid ""
-"Press button again while holding shift key if you're sure you want to do "
-"that."
+"Press button again while holding shift key if you're sure you want to do that."
 msgstr ""
 "Appuyez à nouveau sur le bouton tout en maintenant la touche Maj enfoncée si "
 "vous êtes sûr·e et certain.e."
@@ -1901,8 +1896,8 @@ msgstr "Notifications pour cet environnement de bureau indsponibles"
 msgid ""
 "Note that ratings are stored in the local database and not written to tags."
 msgstr ""
-"Notez que les évaluations sont stockées dans la base de données locale et "
-"non écrites dans les tags."
+"Notez que les évaluations sont stockées dans la base de données locale et non "
+"écrites dans les tags."
 
 #: src/tauon/t_modules/t_main.py:17673 src/tauon/t_modules/t_main.py:17685
 #: src/tauon/t_modules/t_main.py:17720
@@ -1945,9 +1940,9 @@ msgid ""
 "For safety, this setting will reset on restart. Embedded thumbnails are not "
 "kept so you may want to extract them first."
 msgstr ""
-"Pour des raisons de sécurité, cette option sera réinitialisée au "
-"redémarrage. Les miniatures intégrées ne sont pas conservées, vous "
-"souhaiterez peut-être les extraire en premier."
+"Pour des raisons de sécurité, cette option sera réinitialisée au redémarrage. "
+"Les miniatures intégrées ne sont pas conservées, vous souhaiterez peut-être "
+"les extraire en premier."
 
 #: src/tauon/t_modules/t_main.py:18079
 msgid "Could not access! Possible insufficient Flatpak permissions."
@@ -2793,8 +2788,7 @@ msgstr ""
 
 #: src/tauon/t_modules/t_main.py:24725
 msgid "Tracks will be saved to \"Saved Radio Tracks\" playlist."
-msgstr ""
-"Les pistes seront enregistrées dans la playlist « Saved Radio Tracks »."
+msgstr "Les pistes seront enregistrées dans la playlist « Saved Radio Tracks »."
 
 #: src/tauon/t_modules/t_main.py:24739
 msgid "Enable Discord Rich Presence"
@@ -3058,8 +3052,7 @@ msgid ""
 "if it didn't open) and follow prompt. Then return here and click \"Done\"."
 msgstr ""
 "Cliquez « Se connecter » pour ouvrir la page de connexion (coller le lien en "
-"cas d'échec), suivez les instructions puis revenez ici et cliquez « Valider "
-"»."
+"cas d'échec), suivez les instructions puis revenez ici et cliquez « Valider »."
 
 #: src/tauon/t_modules/t_main.py:25590
 msgid "Forget account"
@@ -3744,8 +3737,7 @@ msgstr "Veuillez arrêter la lecture avant de changer cette préférence"
 
 #: src/tauon/t_modules/t_main.py:32098
 msgid "Please stop playback first to end current recording"
-msgstr ""
-"Veuillez arrêter la lecture avant de terminer l’enregistrement en cours"
+msgstr "Veuillez arrêter la lecture avant de terminer l’enregistrement en cours"
 
 #: src/tauon/t_modules/t_main.py:32107
 msgid "Tracks will now be recorded."
@@ -3766,8 +3758,8 @@ msgstr "Enregistré"
 #: src/tauon/t_modules/t_main.py:32230
 msgid "Type codes separated by spaces. Codes will be executed left to right."
 msgstr ""
-"Entrez des codes séparés par des espaces. Les codes seront exécutés de "
-"gauche à droite."
+"Entrez des codes séparés par des espaces. Les codes seront exécutés de gauche "
+"à droite."
 
 #: src/tauon/t_modules/t_main.py:32232
 msgid "Select sources: (default: all playlists)"
@@ -4228,8 +4220,7 @@ msgid ""
 "Saving one type will now OVERWRITE the other in the files. (Tauon itself "
 "doesn't care.)"
 msgstr ""
-"Enregistrer un type ÉCRASERA les autres des fichiers (Tauon, lui, s'en fiche)"
-"."
+"Enregistrer un type ÉCRASERA les autres des fichiers (Tauon, lui, s'en fiche)."
 
 #: src/tauon/t_modules/t_main.py:37475
 msgid "Lyrics will misbehave if only some of them are timed."
@@ -4304,7 +4295,7 @@ msgstr "ACTUEL"
 #: src/tauon/t_modules/t_main.py:38135 src/tauon/t_modules/t_main.py:38205
 #: src/tauon/t_modules/t_main.py:38206
 msgid "ADD TIME"
-msgstr "+"
+msgstr "AJOUTER"
 
 #: src/tauon/t_modules/t_main.py:38135 src/tauon/t_modules/t_main.py:38208
 #: src/tauon/t_modules/t_main.py:38209
@@ -5451,10 +5442,8 @@ msgid "Error - Tauon device not found"
 msgstr "Erreur - Appareil Tauon introuvable"
 
 #: src/tauon/t_modules/t_spot.py:474
-msgid ""
-"Error. You may need to click Authorise in Settings > Accounts > Spotify."
-msgstr ""
-"Erreur. Cliquez sur « Autoriser » dans « Options > Comptes > Spotify »."
+msgid "Error. You may need to click Authorise in Settings > Accounts > Spotify."
+msgstr "Erreur. Cliquez sur « Autoriser » dans « Options > Comptes > Spotify »."
 
 #: src/tauon/t_modules/t_spot.py:922
 msgid "Spotify upload error!"
@@ -5484,8 +5473,7 @@ msgstr ""
 
 #: src/tauon/t_modules/t_webserve.py:893
 msgid "You can close this now and return to Tauon Music Box"
-msgstr ""
-"Vous pouvez maintenant fermer cet onglet et revenir sur Tauon Music Box"
+msgstr "Vous pouvez maintenant fermer cet onglet et revenir sur Tauon Music Box"
 
 #~ msgid "App will need to be restarted."
 #~ msgstr "Vous devrez relancer Tauon."
@@ -5537,8 +5525,8 @@ msgstr ""
 #~ msgstr "Pause, RC : permuter l'arrêt auto."
 
 #~ msgid ""
-#~ "Due to Spotify authentication changes, local Spotify audio playback may "
-#~ "be broken"
+#~ "Due to Spotify authentication changes, local Spotify audio playback may be "
+#~ "broken"
 #~ msgstr ""
 #~ "La lecture locale de Spotify peut avoir des problèmes à cause de "
 #~ "changements sur l'authentification à ce service"
@@ -5563,8 +5551,7 @@ msgstr ""
 #~ msgstr "Diffuser"
 
 #~ msgid "You need to start the broadcast web server in settings."
-#~ msgstr ""
-#~ "Vous devez démarrer le serveur Web de diffusion dans les paramètres."
+#~ msgstr "Vous devez démarrer le serveur Web de diffusion dans les paramètres."
 
 #~ msgid "Start Broadcast"
 #~ msgstr "Lancer la diffusion"
@@ -5730,8 +5717,8 @@ msgstr ""
 #~ "Installing will enable features: Crossfade, Broadcasting/Streaming and "
 #~ "Visualisers."
 #~ msgstr ""
-#~ "L'installation permet d'activer le fondu enchaîné, le service de "
-#~ "diffusion et le spectrogramme."
+#~ "L'installation permet d'activer le fondu enchaîné, le service de diffusion "
+#~ "et le spectrogramme."
 
 #~ msgid "Transitions"
 #~ msgstr "Transitions"

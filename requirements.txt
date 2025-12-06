@@ -15,7 +15,6 @@ dbus-python;                 sys_platform == 'linux'
 jxlpy
 keyboard;                    sys_platform == 'win32'
 lynxtray;                    sys_platform == 'win32'
-opencc;                      sys_platform != 'win32' # optional
 opencc-python-reimplemented; sys_platform == 'win32' # optional
 lynxpresence>=4.4.1 # optional
 tekore # optional
