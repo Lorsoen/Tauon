@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE martif PUBLIC 'ISO 12200:1999A//DTD MARTIF core (DXFcdV04)//EN' 'TBXcdv04.dtd'>
+<martif type="TBX" xml:lang="en_US">
+  <text>
+    <body>
+      <termEntry id="lorenzo-0">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>Cover</term>
+          </tig>
+          <tig>
+            <term>Art</term>
+          </tig>
+        </langSet>
+        <langSet xml:lang="fr">
+          <tig>
+            <term>Album</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="lorenzo-1">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>Album cover</term>
+          </tig>
+          <tig>
+            <term>Album art</term>
+          </tig>
+        </langSet>
+        <langSet xml:lang="fr">
+          <tig>
+            <term>Pochette d'album</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="lorenzo-2">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>Synced lyrics</term>
+          </tig>
+        </langSet>
+        <langSet xml:lang="fr">
+          <tig>
+            <term>Paroles dynamiques</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="lorenzo-3">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>Static lyrics</term>
+          </tig>
+        </langSet>
+        <langSet xml:lang="fr">
+          <tig>
+            <term>Paroles statiques</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="lorenzo-4">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>Playlist</term>
+          </tig>
+        </langSet>
+        <langSet xml:lang="fr">
+          <tig>
+            <term>Playlist</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="lorenzo-7">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>hi-res</term>
+          </tig>
+        </langSet>
+        <langSet xml:lang="fr">
+          <tig>
+            <term>hi-fi</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="lorenzo-5">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>self-hosted scrobble server.</term>
+          </tig>
+        </langSet>
+        <langSet xml:lang="fr">
+          <tig>
+            <term>serveur de scrobbling auto-hébergé.</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="lorenzo-6">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>remove track from queue</term>
+          </tig>
+        </langSet>
+        <langSet xml:lang="fr">
+          <tig>
+            <term>enlever la piste de la file d'attente</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="lorenzo-8">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>Remove</term>
+          </tig>
+        </langSet>
+        <langSet xml:lang="fr">
+          <tig>
+            <term>Enlever</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="lorenzo-9">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>album ratings</term>
+          </tig>
+        </langSet>
+        <langSet xml:lang="fr">
+          <tig>
+            <term>note de l'album</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="lorenzo-10">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>Rating</term>
+          </tig>
+          <tig>
+            <term>Ratings</term>
+          </tig>
+        </langSet>
+        <langSet xml:lang="fr">
+          <tig>
+            <term>Note</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="lorenzo-11">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>tip: you can also toggle this from a right-click context menu</term>
+          </tig>
+        </langSet>
+        <langSet xml:lang="fr">
+          <tig>
+            <term>conseil : vous pouvez basculer cette option depuis un menu contextuel 
+accessible par clic droit</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="lorenzo-12">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>Toggle</term>
+          </tig>
+        </langSet>
+        <langSet xml:lang="fr">
+          <tig>
+            <term>Basculer</term>
+          </tig>
+        </langSet>
+      </termEntry>
+    </body>
+  </text>
+</martif>
