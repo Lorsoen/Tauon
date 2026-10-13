@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2026-10-13 16:08+0200\n"
-"PO-Revision-Date: 2026-10-13 17:08+0200\n"
+"PO-Revision-Date: 2026-10-13 17:26+0200\n"
 "Last-Translator: Lorsoen <fashim99@gmail.com>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
 "Language: fr_FR\n"
@@ -3749,7 +3749,7 @@ msgstr "Taille et titres des miniatures de galerie"
 
 #: src/tauon/t_modules/t_main.py:31629 src/tauon/t_modules/t_main.py:32597
 msgid "Tracklist columns, font size and row height"
-msgstr "Colonnes Tracklist, taille Police et hauteur Ligne"
+msgstr "Colonnes Tracklist, taille Police, hauteur Ligne"
 
 #: src/tauon/t_modules/t_main.py:31630 src/tauon/t_modules/t_main.py:32598
 msgid "Track menu search links"
