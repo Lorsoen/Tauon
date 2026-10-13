@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2026-10-13 16:08+0200\n"
-"PO-Revision-Date: 2026-10-13 17:26+0200\n"
+"PO-Revision-Date: 2026-10-13 17:37+0200\n"
 "Last-Translator: Lorsoen <fashim99@gmail.com>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
 "Language: fr_FR\n"
@@ -1203,7 +1203,7 @@ msgstr "Aucune source activée pour les paroles."
 
 #: src/tauon/t_modules/t_main.py:10135
 msgid "Turn one on in Settings › Library › Lyrics."
-msgstr "Activez-en un dans les Options > Bibiothèque > Paroles."
+msgstr "Activez-en un dans les Options › Bibiothèque › Paroles."
 
 #: src/tauon/t_modules/t_main.py:10144
 msgid "Let's be polite and try later."
@@ -4112,7 +4112,7 @@ msgstr "Clic droit sur la galerie"
 
 #: src/tauon/t_modules/t_main.py:32597 src/tauon/t_modules/t_main.py:32598
 msgid "Right-click a track › Layout"
-msgstr "Clic droit sur une piste > Structure"
+msgstr "Clic droit sur une piste › Structure"
 
 #: src/tauon/t_modules/t_main.py:32599 src/tauon/t_modules/t_main.py:33220
 msgid "Right-click the top panel"
@@ -4399,7 +4399,7 @@ msgstr "Ce dossier n'existe pas."
 #: src/tauon/t_modules/t_main.py:33106
 msgid "Runs during Database… › \"Reload All Folders\" only."
 msgstr ""
-"Lors de Base de données... > « Recharger tous les dossiers » uniquement."
+"Lors de Base de données... › « Recharger tous les dossiers » uniquement."
 
 #: src/tauon/t_modules/t_main.py:33135
 msgid "This program comes with absolutely no warranty."
@@ -4411,11 +4411,11 @@ msgstr "Menu principal"
 
 #: src/tauon/t_modules/t_main.py:33221
 msgid "Top panel › Side panel button"
-msgstr "Panneau supérieur > Bouton Panneau latéral"
+msgstr "Panneau supérieur › Bouton Panneau latéral"
 
 #: src/tauon/t_modules/t_main.py:33222
 msgid "Top panel › Layout button"
-msgstr "Panneau supérieur > Bouton Structure"
+msgstr "Panneau supérieur › Bouton Structure"
 
 #: src/tauon/t_modules/t_main.py:33223
 msgid "Right-click a playlist tab"
@@ -4515,7 +4515,7 @@ msgstr "Clic droit sur une station de radio"
 
 #: src/tauon/t_modules/t_main.py:33247
 msgid "Radio list › Station options button"
-msgstr "Liste de radio > Bouton Options de station"
+msgstr "Liste de radio › Bouton Options de station"
 
 #: src/tauon/t_modules/t_main.py:33248
 msgid "Right-click a radio tab"
@@ -4527,7 +4527,7 @@ msgstr "Clic droit sur le panneau inférieur"
 
 #: src/tauon/t_modules/t_main.py:33250
 msgid "Bottom panel › Extras button"
-msgstr "Panneau inférieur > Boutons en plus"
+msgstr "Panneau inférieur › Boutons en plus"
 
 #: src/tauon/t_modules/t_main.py:33251
 msgid "Right-click the stop button"
@@ -4555,11 +4555,11 @@ msgstr "Clic droit sur le widget Galerie compacte"
 
 #: src/tauon/t_modules/t_main.py:33261
 msgid "Custom layout edit mode › Right-click a widget"
-msgstr "Mode édition de structure > Clic droit sur un widget"
+msgstr "Mode édition de structure › Clic droit sur un widget"
 
 #: src/tauon/t_modules/t_main.py:33262
 msgid "Custom layout edit mode › Right-click a tab"
-msgstr "Mode édition de structure > Clic droit sur un onglet"
+msgstr "Mode édition de structure › Clic droit sur un onglet"
 
 #: src/tauon/t_modules/t_main.py:33282
 msgid "Menus"
